@@ -1,0 +1,11 @@
+name: "ROS"
+description: "My content for the Why ROS? section of the new www.ros.org"
+
+url: "http://localhost:4000"
+
+paginate: 10
+
+# markdown: rdiscount
+markdown: kramdown
+permalink: pretty
+pygments: true
