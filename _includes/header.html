@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ site.description }}">
 
-    <link href="/www.ros.org/css/bootstrap.css" rel="stylesheet">
+    <link href="{{ site.baseurl }}/css/bootstrap.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="/www.ros.org/js/bootstrap.js"></script>
-    <script src="/www.ros.org/js/toc.js"></script>
+    <script src="{{ site.baseurl }}/js/bootstrap.js"></script>
+    <script src="{{ site.baseurl }}/js/toc.js"></script>
     <style>
       body {
         padding-top: 60px;
@@ -36,9 +36,9 @@ v-collapse">
           <a class="brand" href="/">{{ site.name }}</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li {% if page.title == "Why ROS?" %}class="active"{% endif %}><a href="/www.ros.org/">Why ROS?</a></li>
-              <li {% if page.title == "Features" %}class="active"{% endif %}><a href="/www.ros.org/features">Features</a></li>
-              <li {% if page.title == "Testimonials" %}class="active"{% endif %}><a href="/www.ros.org/testimonials">Testimonials</a></li>
+              <li {% if page.title == "Why ROS?" %}class="active"{% endif %}><a href="{{ site.baseurl }}">Why ROS?</a></li>
+              <li {% if page.title == "Features" %}class="active"{% endif %}><a href="{{ site.baseurl }}/features">Features</a></li>
+              <li {% if page.title == "Testimonials" %}class="active"{% endif %}><a href="{{ site.baseurl }}/testimonials">Testimonials</a></li>
             </ul>
           </div>
         </div>

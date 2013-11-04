@@ -1,7 +1,7 @@
 name: "ROS"
 description: "My content for the Why ROS? section of the new www.ros.org"
 
-url: "http://osrf.github.io/www.ros.org/"
+baseurl: "http://osrf.github.io/www.ros.org"
 
 paginate: 10
 

@@ -71,7 +71,7 @@ While the middleware provides a message IDL so that you can easily create your o
 
 ### Robot Geometry Library
 
-<img src="/www.ros.org/img/tf.png" style="float: right; width: 400px;" alt="tf - Transforms Library" />
+<img src="{{ site.baseurl }}/img/tf.png" style="float: right; width: 400px;" alt="tf - Transforms Library" />
 
 One of the problems which comes up almost immediately in most robotics projects, is the need to manage the robot's static and dynamic geometry. Whether you need to transform a laser scan from the sensors frame of reference to a global frame of reference or you need to get the location of the robot's end effector in the robot's local frame, the [tf](http://wiki.ros.org/tf) library can help you do that.
 
@@ -103,7 +103,7 @@ Robot systems are often complex and sophisticated systems, but that doesn't mean
 
 ### Rviz
 
-<img src="/www.ros.org/img/rviz.png" style="float: left; width: 400px; padding-right: 10px; padding-bottom: 10px;" alt="rviz" />
+<img src="{{ site.baseurl }}/img/rviz.png" style="float: left; width: 400px; padding-right: 10px; padding-bottom: 10px;" alt="rviz" />
 
 Probably the most well know tool in ROS, [rviz](http://wiki.ros.org/rviz) provides general purpose three dimensional visualization of standard sensor data types as well as robots described with the [urdf](http://wiki.ros.org/urdf) format.
 
@@ -111,7 +111,7 @@ Probably the most well know tool in ROS, [rviz](http://wiki.ros.org/rviz) provid
 
 ### rQt
 
-<img src="/www.ros.org/img/rqt.png" style="float: right; width: 400px; padding-right: 10px; padding-bottom: 10px;" alt="rqt" />
+<img src="{{ site.baseurl }}/img/rqt.png" style="float: right; width: 400px; padding-right: 10px; padding-bottom: 10px;" alt="rqt" />
 
 ROS provides a Qt based framework for developing dashboards for you robot called [rqt](http://wiki.ros.org/rqt). You can do this by organizing existing [rqt](http://wiki.ros.org/rqt) plugins as well as your own Qt/ROS plugins into tabs and split screen layouts.
 
