@@ -12,3 +12,9 @@ sudo gem install kramdown
 ```bash
 jekyll serve --watch --baseurl=
 ```
+
+## Open the Site
+
+http://localhost:4000/
+
+Changes to the source files will take effect immediately, just refresh the page (that's what the `--watch` option does).
