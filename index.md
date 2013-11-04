@@ -15,7 +15,7 @@ The distributed nature of ROS also fosters a large community of user contributed
 
 ## A Vibrant Community
 
-<img src="/img/user_map.png" style="float: right; width: 500px;" alt="ROS User Map" />
+<img src="/www.ros.org/img/user_map.png" style="float: right; width: 500px;" alt="ROS User Map" />
 
 Over the past several years ROS has grown to include a large community of users world wide. The majority of the users are in the Academic domain, but increasingly we are seeing more and more users in the industrial and service robotic products domain.
 
