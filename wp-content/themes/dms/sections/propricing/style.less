@@ -1,0 +1,68 @@
+.pp-plan{
+	text-align: center;
+	.border-radius(7px); 
+	box-shadow: 0 0 10px rgba(0,0,0,.3);
+	overflow:hidden;
+	.pp-header{
+		text-align: center;
+		color: @pl-base;
+		font-weight: 600;
+		text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+		.pp-title{
+			background: @linkColor;
+			font-size: 18px;
+			padding: 4px;
+		}
+		.pp-price{
+			background: darken( @linkColor, 10% );
+			padding: 20px;
+			
+			.price-pre{
+				vertical-align: top;
+				font-size: 1.2em;
+			}
+			.price{
+				font-size: 70px;
+				line-height: 70px;
+				font-weight: 800;
+				
+			}
+			.price-pre, 
+			.price-post,
+			.price-sub{
+				opacity: .7;
+			}
+			.price-sub{
+				font-style: italic; 
+				font-size: 12px;
+				font-weight: 400;
+				margin-top: 7px;
+				line-height: 1.5em;
+			}
+		}
+	}
+	.pp-attributes ul {
+		
+		li{
+			padding: 10px;
+			font-weight: 600;
+			border-top: 1px solid @baseContrastDark;
+			color: @textColorSubtle;
+			&.emphasis{
+				font-size: 120%;
+				color: @textColor;
+			}
+			&:nth-child( even ) { 
+				background: @baseContrast;
+			}
+			&.pp-link .btn{
+				
+				.border-radius(30px);
+				padding: 7px 40px; 
+				i{
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+}

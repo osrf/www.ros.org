@@ -1,0 +1,52 @@
+// Make wrapper ul behave like the grid
+body .pl-thumbnails,
+body .gallery{
+	margin-left: -@gridGutterWidth;
+	list-style: none;
+
+	.clearfix();
+	> li{
+	  float: left; // Explicity set the float since we don't require .span* classes
+	  margin-bottom: @baseLineHeight;
+	  margin-left: @gridGutterWidth;
+	}
+	
+}
+
+body .pl-thumbnails .thumbnail,
+body .gallery .gallery-icon a,
+.pl-thumbnail {
+	display: block;
+	padding: 4px;
+	line-height: @baseLineHeight;
+	border: 1px solid @baseContrast;
+	.border-radius(4px);
+	.box-shadow(0 1px 3px rgba(0,0,0,.055));
+	.transition(all .2s ease-in-out);
+	&[href]:hover{
+		border-color: @linkColor;
+		.box-shadow(0 1px 4px rgba(0,105,214,.25));
+	}
+	> img {
+	  display: block;
+	  max-width: 100%;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+	.caption, .gallery-caption {
+	  padding: 9px;
+	  color: @textColorAlt;
+	}
+}
+
+
+#gallery-1 img {
+	border: none!important;
+}
+.gallery-icon{
+	display: inline-block;
+}
+// Fluid rows have no left margin
+.row-fluid .thumbnails {
+  margin-left: 0;
+}

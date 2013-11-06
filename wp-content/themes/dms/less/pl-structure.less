@@ -1,0 +1,288 @@
+/*
+ * PAGELINES STRUCTURE AND RESPONSIVE
+ ***********************************/
+
+body {
+	position:relative;
+	zoom:1;
+	.site-wrap{
+		background: @bodyBackground;
+		z-index: 0;
+		position: relative;
+		.transition(all .3s ease-in-out);
+		
+		&.show-mm {
+			.translate3d(-260px, 0, 0);
+		}
+		
+	}
+	.pl-mobile-menu{
+		position: absolute; 
+		display: none;
+		width: 260px;
+		right: 0;
+		top: 0;
+		background:#0c0c0c;
+		height: 100%;
+		color: rgba(255,255,255,.5); 
+	
+		ul.mobile-menu{
+			margin-bottom: 25px;
+		}
+		a{
+			color:inherit;
+			&:hover{
+				color: #fff; 
+			}
+		}
+		ul.primary-menu{
+			li{
+				margin-bottom: 5px;
+				ul{
+					margin: 8px 0 5px 12px;
+					li{
+						line-height: 1em;
+					}
+					li a{
+						font-size: 14px; 
+						line-height: 1.3em;
+					}
+				}
+				
+			}
+			a{
+				font-size: @fontSizeLarge; 
+				line-height: 1.4em;
+			}
+		}
+		ul li {
+			
+			&.current_page_item a{
+				color: #fff; 
+			}
+		} 
+		.mm-holder{
+			padding: 20px 30px;
+		}
+		.mm-close{
+			float: right;
+			cursor: pointer;
+			opacity: .5;
+			&:hover, &:active{
+				opacity: 1;
+			}
+		}
+		.mm-icon{
+			margin-right: 10px;
+		}
+	}
+	
+
+	&.display-boxed .boxed-wrap{
+		position: relative;
+		margin: 0 auto;
+		max-width:  @plContentWidth;
+		background: @pl-base;
+		&.boxed-nobg{background: transparent;}
+		.pl-area-wrap > .pl-content {
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+	}
+	&.display-full .pl-content{
+		position: relative;
+		max-width: @plContentWidth;
+		margin: 0 auto;
+
+	}
+	.section-plcolumn{
+		margin-bottom: 0;
+	}
+
+	#footer section:last-child{
+		margin-bottom: 0;
+	}
+}
+
+
+
+/*
+ * SECTION STRUCTURE
+ ***********************************/
+
+.pl-section-pad{
+	padding: 11px 0;
+	.row:last-child > [class*="span"]{
+		margin-bottom: 0;
+	}
+	@media (max-width: 767px) {
+		padding: 11px;
+	}
+}
+
+body .pl-area .pl-section{
+	margin-bottom: 0;
+	.pl-section {
+		> .pl-section-pad{
+			padding: 8px;
+			margin-bottom: 1em;
+		}
+	}
+	&.section-plcolumn {
+		> .pl-section-pad{
+			padding: 0;
+		}
+		.pl-section:last-of-type{
+			margin-bottom: 0;
+		}
+	}
+}
+
+.pl-area-wrap{
+	background-position: 50% 0;
+}
+
+.pl-bg-cover{
+	.background-size(cover);
+}
+.pl-bg-repeat{
+	background-repeat: repeat;
+}
+
+
+
+/*
+ * STANDARD COLORING
+ ***********************************/
+.pl-contrast{
+	background: @baseContrastSlight;
+	.pl-contrast{
+		background: @baseContrast;
+	}
+}
+.pl-base{
+	background: @pl-base;
+}
+
+.pl-black,
+.pl-grey{
+	color: rgba(255,255,255,.7); 
+	h1, h2, h3, h4, h5, h6, a{
+		color:#fff; 
+	}
+	a:hover{
+		opacity: .7;
+		color:inherit;
+	}
+}
+.pl-black{
+	background:#000; 
+	.pl-contrast{
+		background: #222; 
+	}
+}
+
+.pl-grey{
+	background:#1c1c1c; 
+	.pl-contrast{
+		background: #000; 
+	}
+}
+
+.pl-dark-img{
+	background:#000; 
+	color: #fff; 
+	text-shadow: 0 -1px 0 rgba(0,0,0,.8);
+	.pl-contrast{
+		background: rgba(0,0,0,.2); 
+	}
+	a{
+		color: #fff;
+	}
+}
+
+.pl-light-img{
+	background:#fff; 
+	color: #000; 
+	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+	.pl-contrast{
+		background: rgba(255,255,255,.2); 
+	}
+}
+
+/*
+ * FIXED TOP
+ ***********************************/
+.pl-fixed-top{
+	position: fixed;
+	z-index: @zindexFixedNavbar;
+	left: 0;
+	width: 100%;
+}
+.fixed-top-pusher{
+	.transition(all 0.1s linear);
+}
+
+@media (max-width: @resPortraitTablet) {
+
+	.pl-fixed-top{
+		position: static;
+	}
+	.fixed-top-pusher{
+		display: none;
+	}
+
+}
+
+
+/*
+ * RESPONSIVE: GLOBAL
+ ****************************************/
+body{
+
+	// Images
+	.pl-content img {
+		max-width: 100%;
+		height: auto;
+		width: auto\9; /* ie8 */
+	}
+	.ie8 img {
+		width: auto;
+		height: auto;
+	}
+
+	// Media
+	.hentry{
+		iframe,
+		video,
+		object{
+			max-width: 100%;
+		}
+	}
+
+}
+
+/*
+ * RESPONSIVE: TABLET
+ ****************************************/
+@media screen and ( max-width:@resPortraitTablet ){
+
+	.site-wrap{
+		-webkit-backface-visibility: hidden; // fixes flicker
+	}
+
+}
+
+/*
+ * RESPONSIVE: PHONE
+ ****************************************/
+@media screen and ( max-width : @resPhoneLandscape ) {
+	
+	.responsive{
+
+	}
+
+}
+
+
+

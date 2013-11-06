@@ -1,0 +1,41 @@
+.popthumbs-wrap{
+	text-align: center;
+	.popthumb{
+		width: 100%; 
+		max-width: 200px; 
+		display: inline-block; 
+		position: relative;
+		.expander{
+			position: absolute; 
+			
+			border: 2px solid #fff; 
+			background: rgba(0,0,0,.3);
+			box-shadow: 0 1px 2px rgba(0,0,0,.3);
+			.border-radius(100px);
+			font-size: 20px;
+			padding: 10px;
+			text-align: center;
+			top: -17px; 
+			right: -17px;
+			height: 17px;
+			width: 17px;
+			color: #fff; 
+			line-height: 17px;
+		}
+		background: #fff; 
+		padding: 4px; 
+		.border-radius(5px);
+		box-shadow: 0 1px 3px rgba(0,0,0,.3);
+		margin-bottom: 8px;
+		&:hover{
+			opacity: .8;
+		}
+		
+	}
+	.popthumb-text{
+		padding: 8px 0;
+		.popthumb-desc{
+			opacity: .75;
+		}
+	}
+}

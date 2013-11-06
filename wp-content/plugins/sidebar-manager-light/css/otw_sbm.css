@@ -1,0 +1,7 @@
+div.otw-sidebar-horizontal{
+	width: 100%;
+	float: left;
+}
+div.otw-sidebar-horizontal div.widget{
+	float: left;
+}

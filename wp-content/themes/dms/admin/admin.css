@@ -1,0 +1,15 @@
+#toplevel_page_PageLines-Admin .wp-menu-image{
+	background: transparent url('../images/favicon-pagelines.png') no-repeat 50% 50%;
+	background-size: 20px 20px;
+}
+
+.CodeMirror{
+	border: 1px solid #ccc;
+}
+
+.saving-confirm{
+	
+	display: none;
+	margin: 0 15px; 
+	color: #000;
+}

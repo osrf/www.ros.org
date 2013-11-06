@@ -1,0 +1,3710 @@
+#
+# Translators:
+# csfalcao <csfalcao@gmail.com>, 2013
+# Dionizio Bonfim Bach <translations@djio.com.br>, 2013
+# finnes <samuelmanzini@gmail.com>, 2013
+# sgarbe <sgarbe84@gmail.com>, 2013
+# sgarbe <sgarbe84@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: PageLines DMS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-24 16:39-0300\n"
+"PO-Revision-Date: 2013-10-24 18:22-0300\n"
+"Last-Translator: DJIO | Dionizio Bonfim Bach <wordpress@djio.com.br>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/"
+"pagelines-dms/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ pagelines
+#: comments.php:23
+msgid "Comments are closed."
+msgstr "Fechado para comentários."
+
+# @ pagelines
+#: comments.php:38
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+"Esse post é protegido por senha. Informe a senha para ver os comentários."
+
+# @ pagelines
+#: comments.php:44
+#, php-format
+msgid "One Response to %2$s"
+msgid_plural "%1$s Responses to %2$s"
+msgstr[0] "Uma Resposta para %2$s"
+msgstr[1] "%1$s Respostas para %2$s"
+
+# @ pagelines
+#: comments.php:52
+msgid "<span class='meta-nav'>&larr;</span> Older Comments"
+msgstr "<span class='meta-nav'>&larr;</span> Comentários Anteriores"
+
+# @ pagelines
+#: comments.php:53
+msgid "Newer Comments <span class='meta-nav'>&rarr;</span>"
+msgstr "Comentários Posteriores <span class='meta-nav'>&rarr;</span>"
+
+# @ pagelines
+#: admin/admin.actions.php:18
+msgid "DMS Tools"
+msgstr "Ferramentas DMS"
+
+# @ pagelines
+#: admin/admin.actions.php:34
+msgid "PageLines DMS"
+msgstr "PageLines DMS"
+
+# @ pagelines
+#: admin/admin.actions.php:102
+#, php-format
+msgid ""
+"<div class='config-error'><h2>PHP Version Problem</h2>Looks like you are "
+"using PHP version: <strong>%s</strong>. To run this framework you will need "
+"PHP <strong>5.0</strong> or better...<br/><br/> Don't worry though! Just "
+"check with your host about a quick upgrade.</div>"
+msgstr ""
+"<div class='config-error'><h2>Problema de Versão do PHP</h2>Parece que você "
+"está usando o PHP versão: <strong>%s</strong>. Para executar este framework "
+"você precisa do PHP <strong>5.0</strong> ou melhor... <br/><br/> Mas não se "
+"preocupe! Basta verificar com seu provedor de hospedagem sobre uma rápida "
+"atualização.</div>"
+
+# @ pagelines
+#: admin/admin.editor.php:18
+msgid "PageLines DMS Settings"
+msgstr "Configurações do PageLines DMS"
+
+# @ pagelines
+#: admin/admin.editor.php:22
+msgid "Editing Your Site With DMS"
+msgstr "Editando Seu Site Com DMS"
+
+# @ pagelines
+#: admin/admin.editor.php:26
+msgid "Welcome to DMS!"
+msgstr "Bem-vindo ao DMS!"
+
+# @ pagelines
+#: admin/admin.editor.php:31
+msgid "DMS Fallbacks"
+msgstr "Alternativas Padrões do DMS "
+
+# @ pagelines
+#: admin/admin.editor.php:32
+msgid ""
+"Below are secondary fallbacks to the DMS code editors. You may need these if "
+"you create errors or issues on the front end."
+msgstr ""
+"Abaixo estão as alternativas secundárias para os editores de código DMS. "
+"Você pode precisar delas se criar erros ou problemas na parte frontal do seu "
+"site."
+
+# @ pagelines
+#: admin/admin.editor.php:36
+msgid "DMS LESS Fallback"
+msgstr "LESS Alternativo do DMS"
+
+# @ pagelines
+#: admin/admin.editor.php:40
+msgid "DMS Header Scripts Fallback"
+msgstr "Scripts de Cabeçalho DMS Alternativos"
+
+# @ pagelines
+#: admin/admin.editor.php:54
+msgid ""
+"Editing with DMS is done completely on the front end of your site. This "
+"allows you to customize in a way that feels more direct and intuitive than "
+"when using the admin."
+msgstr ""
+"Edição com DMS é feita completamente na parte frontal do seu site. Isso "
+"permite que você personalizar de formamais direta e intuitiva do que usando "
+"o admin."
+
+# @ pagelines
+#: admin/admin.editor.php:55
+msgid "Just visit the front end of your site (as an admin) and get started!"
+msgstr ""
+"Basta visitar a parte frontal do seu site (como administrador) e começar!"
+
+# @ pagelines
+#: admin/admin.editor.php:57
+msgid "Edit Site Using DMS"
+msgstr "Editar Site Usando DMS"
+
+# @ pagelines
+#: admin/admin.editor.php:69
+msgid "Save LESS"
+msgstr "Salvar LESS"
+
+# @ pagelines
+#: admin/admin.editor.php:81
+msgid "Save Scripts"
+msgstr "Salvar Scripts"
+
+# @ pagelines
+#: editor/editor.account.php:199
+msgid "DMS"
+msgstr "DMS"
+
+# @ pagelines
+#: editor/editor.account.php:207
+msgid "Your Account"
+msgstr "Sua Conta"
+
+# @ pagelines
+#: editor/editor.account.php:213
+msgid "Getting Started"
+msgstr "Começando"
+
+# @ pagelines
+#: editor/editor.account.php:218
+msgid "Get Karma"
+msgstr "Receba Karma"
+
+# @ pagelines
+#: editor/editor.account.php:224
+msgid "Support"
+msgstr "Suporte"
+
+# @ pagelines
+#: editor/editor.account.php:446
+msgid "Get PRO stuff free with Karma."
+msgstr "Receba coisas PRO grátis com Karma."
+
+# @ pagelines
+#: editor/editor.account.php:448
+msgid ""
+"For every friend you invite who joins and installs PageLines, we'll give you "
+"and your friend 50 karma points! Karma points can be redeemed as cash with "
+"PageLines."
+msgstr ""
+"Para cada amigo que se juntar e instalar o PageLines, nós daremos a você a "
+"ao seu amigo 50 pontos de Karma! Ponto de Karma podem ser recebidos como "
+"dinheiro no PageLines."
+
+# @ pagelines
+#: editor/editor.account.php:452
+msgid "Invite Friends by Email"
+msgstr "Convide Amigos por Email"
+
+# @ pagelines
+#: editor/editor.account.php:455
+msgid "Add emails (Comma separated)"
+msgstr "Adicione Email (Separados por Vírgula)"
+
+# @ pagelines
+#: editor/editor.account.php:457
+msgid "Invite"
+msgstr "Convidar"
+
+# @ pagelines
+#: editor/editor.account.php:460 editor/editor.account.php:472
+msgid " Add/Update Account Info"
+msgstr " Adicionar/Atualizar Informações da Conta"
+
+# @ pagelines
+#: editor/editor.account.php:462
+msgid "Name and invite link needed."
+msgstr "Nome e link de convite são necessários."
+
+# @ pagelines
+#: editor/editor.account.php:467
+msgid "Your Invite Link"
+msgstr "Seu Link de Convite"
+
+# @ pagelines
+#: editor/editor.account.php:488
+msgid " Your Karma"
+msgstr " Seu Karma"
+
+# @ pagelines
+#: editor/editor.account.php:494
+msgid " Current"
+msgstr " Atual"
+
+# @ pagelines
+#: editor/editor.account.php:501
+msgid " Lifetime"
+msgstr " Durante a Vida"
+
+# @ pagelines
+#: editor/editor.account.php:510 editor/editor.account.php:677
+msgid "Get karma"
+msgstr "Receber Karma"
+
+# @ pagelines
+#: editor/editor.account.php:512 editor/editor.account.php:679
+msgid "Use karma"
+msgstr "Usar Karma"
+
+# @ pagelines
+#: editor/editor.account.php:514 editor/editor.account.php:681
+msgid "Learn more about karma"
+msgstr "Saiba mais sobre Karma"
+
+# @ pagelines
+#: editor/editor.account.php:566 editor/editor.interface.php:331
+msgid "Saving"
+msgstr "Salvando"
+
+# @ pagelines
+#: editor/editor.account.php:571
+msgid "Site Not Activated"
+msgstr "Site Não Ativado"
+
+# @ pagelines
+#: editor/editor.account.php:580
+msgid "Pro Activated!"
+msgstr "Pro Ativado!"
+
+# @ pagelines
+#: editor/editor.account.php:584
+msgid "Update Info"
+msgstr "Atualizar Informações"
+
+# @ pagelines
+#: editor/editor.account.php:586
+msgid "Deactivate"
+msgstr "Desativar"
+
+# @ pagelines
+#: editor/editor.account.php:596
+msgid "PageLines Account"
+msgstr "Conta PageLines"
+
+# @ pagelines
+#: editor/editor.account.php:604
+msgid "Pro Activation Key"
+msgstr "Chave de Ativação Pro"
+
+# @ pagelines
+#: editor/editor.account.php:605
+msgid "optional"
+msgstr "opcional"
+
+# @ pagelines
+#: editor/editor.account.php:607
+msgid "Enter Pro Key"
+msgstr "Informe a Chave Pro"
+
+# @ pagelines
+#: editor/editor.account.php:613
+msgid "Update"
+msgstr "Atualizar"
+
+# @ pagelines
+#: editor/editor.account.php:622
+msgid "PageLines Account Info"
+msgstr "Informações da Conta PageLines"
+
+# @ pagelines
+#: editor/editor.account.php:629
+msgid "PageLines account not added or incorrect."
+msgstr "A conta PageLines não foi adicionada ou está incorreta."
+
+# @ pagelines
+#: editor/editor.account.php:630
+msgid "Add account to configure PageLines APIs, karma system and store access."
+msgstr ""
+"Adicione uma conta para configurar a API, sistema de Karma e acesso à loja "
+"do PageLines."
+
+# @ pagelines
+#: editor/editor.account.php:636
+msgid "Profile"
+msgstr "Perfil"
+
+# @ pagelines
+#: editor/editor.account.php:646
+msgid "My Account"
+msgstr "Minha Conta"
+
+# @ pagelines
+#: editor/editor.account.php:648
+msgid "Edit Profile"
+msgstr "Editar Perfil"
+
+# @ pagelines
+#: editor/editor.account.php:655
+msgid "Karma"
+msgstr "Karma"
+
+# @ pagelines
+#: editor/editor.account.php:661
+msgid "Current"
+msgstr "Atual"
+
+# @ pagelines
+#: editor/editor.account.php:668
+msgid "Lifetime"
+msgstr "Durante a Vida"
+
+# @ pagelines
+#: editor/editor.account.php:705
+msgid "Congratulations!"
+msgstr "Parabéns!"
+
+# @ pagelines
+#: editor/editor.account.php:712
+msgid "Setup PageLines Account"
+msgstr "Configurar Conta PageLines"
+
+# @ pagelines
+#: editor/editor.account.php:715
+msgid "Getting Started Video"
+msgstr "Vídeo de Introdução"
+
+# @ pagelines
+#: editor/editor.account.php:726
+msgid "The PageLines Experience"
+msgstr "A Experiência Pagelines"
+
+# @ pagelines
+#: editor/editor.account.php:729
+msgid "We want you to have a most amazing time as a PageLines customer."
+msgstr ""
+"Nós queremos que você tenha um tempo maravilhoso como cliente PageLines."
+
+# @ pagelines
+#: editor/editor.account.php:731
+msgid "That's why we have a ton of people standing by to make you happy."
+msgstr ""
+"É por isso que temos um monte de gente só esperando pra te fazer feliz."
+
+# @ pagelines
+#: editor/editor.account.php:735
+msgid "PageLines Forum"
+msgstr "Fórum PageLines"
+
+# @ pagelines
+#: editor/editor.account.php:737
+msgid "DMS Documentation"
+msgstr "Documentação do DMS"
+
+# @ pagelines
+#: editor/editor.actions.php:332
+msgid "Unsupported file type!"
+msgstr "Tipo de arquivo não suportado!"
+
+# @ pagelines
+#: editor/editor.actions.php:335
+#, php-format
+msgid "Upload Error: %s"
+msgstr "Erro de Upload: %s"
+
+# @ pagelines
+#: editor/editor.actions.php:485
+msgid "Select This Image For Option"
+msgstr "Selecione Esta Imagem Para a Opção"
+
+# @ pagelines
+#: editor/editor.actions.php:507
+msgid "Media Library"
+msgstr "Biblioteca de Mídia"
+
+# @ pagelines
+#: editor/editor.color.php:201
+msgid "Site Base Colors"
+msgstr "Cores Base do Site"
+
+# @ default
+#: editor/editor.color.php:202
+msgid ""
+"The \"base\" color are a few standard colors used throughout DMS that "
+"plugins may use to calculate contrast or other colors to make sure "
+"everything looks great."
+msgstr ""
+"As cores \"base\" são algumas cores padrão usadas em todo o DMS que os "
+"plugins podem usar para calcular o contraste ou outras cores para certificar-"
+"se de que tudo parece bacana."
+
+# @ pagelines
+#: editor/editor.color.php:207
+msgid "Background Base Color"
+msgstr "Cor Base do Fundo"
+
+# @ pagelines
+#: editor/editor.color.php:214
+msgid "Text Base Color"
+msgstr "Cor Base do Texto"
+
+# @ pagelines
+#: editor/editor.color.php:222
+msgid "Link Base Color"
+msgstr "Cor Base dos Links"
+
+# @ pagelines
+#: editor/editor.color.php:232 sections/pl_area/section.php:127
+msgid "Background Image"
+msgstr "Imagem de Fundo"
+
+# @ pagelines
+#: editor/editor.color.php:241
+msgid "Page Background Image"
+msgstr "Imagem de Fundo da Página"
+
+# @ pagelines
+#: editor/editor.color.php:253
+msgid "Background Image Settings"
+msgstr "Configurações de Imagem de Fundo"
+
+# @ pagelines
+#: editor/editor.color.php:259
+msgid "Fit image to page?"
+msgstr "Ajustar imagem à página?"
+
+# @ pagelines
+#: editor/editor.color.php:267
+msgid "Background Repeat"
+msgstr "Repetir o Fundo"
+
+# @ pagelines
+#: editor/editor.color.php:281
+msgid "Vertical Background Position in Percent"
+msgstr "Posição Vertical do Fundo em Porcento"
+
+# @ pagelines
+#: editor/editor.color.php:292
+msgid "Horizontal Background Position in Percent"
+msgstr "Posição Horizontal do Fundo em Porcento"
+
+# @ pagelines
+#: editor/editor.color.php:303
+msgid "Set Background Attachment"
+msgstr "Definir Anexo do Fundo"
+
+# @ pagelines
+#: editor/editor.color.php:306
+msgid "Scroll"
+msgstr "Rolar"
+
+# @ pagelines
+#: editor/editor.color.php:307
+msgid "Fixed"
+msgstr "Fixo"
+
+# @ pagelines
+#: editor/editor.importexport.php:175
+msgid "Export DMS Config"
+msgstr "Exportar Configurações do DMS"
+
+# @ pagelines
+#: editor/editor.importexport.php:181
+msgid "Import DMS Config"
+msgstr "Importar Configurações do DMS"
+
+# @ pagelines
+#: editor/editor.interface.php:136
+msgid "Deactivate Editor (View Live)"
+msgstr "Desativar Editor (Ver Ao Vivo)"
+
+# @ pagelines
+#: editor/editor.interface.php:149
+msgid "Preview (alt+a)"
+msgstr "Prévia (alt+a)"
+
+# @ pagelines
+#: editor/editor.interface.php:307
+msgid "Undo All Unpublished Changes"
+msgstr "Desfazer Todas as Modificações Não Publicadas"
+
+# @ pagelines
+#: editor/editor.interface.php:309
+msgid "Undo Unpublished Global Changes"
+msgstr "Desfazer as Modificações Globais Não Publicadas"
+
+# @ pagelines
+#: editor/editor.interface.php:312
+msgid "Undo Unpublished Post Type Changes"
+msgstr "Desfazer as Modificações Não Publicadas de Tipo de Post"
+
+# @ pagelines
+#: editor/editor.interface.php:314
+msgid "Undo Unpublished Local Changes"
+msgstr "Desfazer as Modificações Não Publicadas Locais"
+
+# @ pagelines
+#: editor/editor.interface.php:316
+msgid "No Unpublished Changes"
+msgstr "Nõ Há Modificações Não Publicadas"
+
+# @ pagelines
+#: editor/editor.interface.php:323
+msgid "Refresh needed to view changes."
+msgstr "É necessário recarregar para ver as mudanças."
+
+# @ pagelines
+#: editor/editor.interface.php:325
+msgid "Publish Live"
+msgstr "Publicar Ao Vivo"
+
+# @ pagelines
+#: editor/editor.interface.php:326
+msgid "Publish"
+msgstr "Publicar"
+
+# @ pagelines
+#: editor/editor.interface.php:334
+msgid "Width"
+msgstr "Largura"
+
+# @ pagelines
+#: editor/editor.layout.php:43
+msgid "Select Layout Mode"
+msgstr "Selecione o Modo de Layout"
+
+# @ pagelines
+#: editor/editor.layout.php:44
+msgid "Layout Mode"
+msgstr "Modo de Layout"
+
+# @ pagelines
+#: editor/editor.layout.php:50
+msgid ""
+"Select pixel width mode and your site maximum width will be controlled by "
+"pixels.<br/><br/> If you select \"percent\" width the width of your content "
+"will be a percentage of window size."
+msgstr ""
+"Selecione o modo de largura em pixels e sua largura máxima do site será "
+"controlada em pixels.<br/><br/> Se você selecionar a largura \"percentual\" "
+"a largura do seu conteúdo terá uma porcentagem do tamanho da janela."
+
+# @ pagelines
+#: editor/editor.layout.php:55
+msgid "Select Layout Display"
+msgstr "Selecione a Exibição do Layout"
+
+# @ pagelines
+#: editor/editor.layout.php:56
+msgid "Display Mode"
+msgstr "Modo de Exibição"
+
+# @ pagelines
+#: editor/editor.layout.php:62
+msgid ""
+"\"Full\" display mode allows areas to be the full width of the window, with "
+"content width sections.<br/><br/> \"Boxed\" mode contains everything in a "
+"central content box. Boxed mode is ideal for use with background images."
+msgstr ""
+"Modo de exibição \"Completo\" permite que as áreas sejam de largura total da "
+"janela, com seções de conteúdo largura. <br/> <br/> O modo \"Caixa\" contém "
+"tudo em uma caixa de conteúdo central. O modo caixa é ideal para uso com "
+"imagens de fundo."
+
+# @ pagelines
+#: editor/editor.layout.php:75
+msgid "Global Navigation Setup"
+msgstr "Configuração de Navegação Global"
+
+# @ pagelines
+#: editor/editor.layout.php:80
+msgid "Select Primary Navigation Menu"
+msgstr "Selecione o Menu Primário de Navegação"
+
+# @ pagelines
+#: editor/editor.layout.php:82
+msgid ""
+"This will be used in mobile menus and optionally other places throughout "
+"your site."
+msgstr ""
+"Isto será usado em menus de dispositivos móveis e, opcionalmente, em outros "
+"lugares por todo o site."
+
+# @ pagelines
+#: editor/editor.layout.php:87
+msgid "Select Secondary Navigation Menu"
+msgstr "Selecione o Menu Secundário de Navegação"
+
+# @ pagelines
+#: editor/editor.layout.php:89
+msgid ""
+"This will be shown subtly in areas throughout the site and in your mobile "
+"menu."
+msgstr ""
+"Será mostrado discretamente em áreas por todo o site e no menu do site móvel."
+
+# @ pagelines
+#: editor/editor.loader.php:99
+msgid "Loading DMS Editor"
+msgstr "Carregando o Editor DMS"
+
+# @ pagelines
+#: editor/editor.regions.php:20
+msgid "Global Scope Region"
+msgstr "Região de Escopo Global"
+
+# @ pagelines
+#: editor/editor.regions.php:24
+msgid "Local Scope Region"
+msgstr "Região de Escopo Local"
+
+# @ pagelines
+#: editor/editor.settings.config.php:95
+msgid "Site Homepage"
+msgstr "Página Inicial do Site"
+
+# @ pagelines
+#: editor/editor.settings.config.php:103
+msgid "Manage Permalinks"
+msgstr "Gerenciar Links Permanentes"
+
+# @ pagelines
+#: editor/editor.settings.config.php:113
+msgid "Manage Menus"
+msgstr "Gerenciar Menus"
+
+# @ pagelines
+#: editor/editor.settings.config.php:123
+msgid "Manage Widgetized Areas"
+msgstr "Gerenciar Áreas de Widgets"
+
+# @ pagelines
+#: editor/editor.settings.config.php:133
+msgid "Site Settings"
+msgstr "Configurações do Site"
+
+# @ pagelines
+#: editor/editor.settings.config.php:142
+msgid "Manage Extensions"
+msgstr "Gerenciar Extensões"
+
+# @ pagelines
+#: editor/editor.settings.config.php:155
+msgid "Debug Enabled"
+msgstr "Debug Ativo"
+
+# @ pagelines
+#: editor/editor.settings.config.php:173
+msgid "Favicon Image"
+msgstr "Imagem Favicon"
+
+# @ pagelines
+#: editor/editor.settings.config.php:174
+msgid ""
+"Enter the full URL location of your custom <strong>favicon</strong> which is "
+"visible in browser favorites and tabs.<br/> <strong>Must be .png or .ico "
+"file - 32px by 32px</strong>."
+msgstr ""
+"Informe a URL completa do seu <strong>favicon</strong> personalizado, que "
+"será visível nos favoritos e abas do  navegador.<br/><strong>Deve ser um "
+"arquivo .png ou. ico - 32px por 32px</strong>."
+
+# @ pagelines
+#: editor/editor.settings.config.php:186
+msgid "Login Page Image"
+msgstr "Imagem da Página de Login"
+
+# @ pagelines
+#: editor/editor.settings.config.php:188
+msgid ""
+"This image will be used on the login page to your admin. Use an image that "
+"is approximately <strong>80px</strong> in height."
+msgstr ""
+"Esta imagem será usada na página de login para o painel. Use uma imagem que "
+"tenha aproximadamente <strong>80px</strong> de altura."
+
+# @ pagelines
+#: editor/editor.settings.config.php:197
+msgid "Mobile Touch Image"
+msgstr "Imagem do Mobile Touch"
+
+# @ pagelines
+#: editor/editor.settings.config.php:199
+msgid ""
+"Enter the full URL location of your Apple Touch Icon which is visible when "
+"your users set your site as a <strong>webclip</strong> in Apple Iphone and "
+"Touch Products. It is an image approximately 144px by 144px in either .jpg, ."
+"gif or .png format."
+msgstr ""
+"Informe a URL completa do seu ícone para Apple Touch que será visível quando "
+"o usuário definir seu site como um <strong>webclip</strong> no iPhone e "
+"Produtos Touch da Apple. É uma imagem de aproximadamente 144px por 144px no "
+"formato .jpg, .gif ou .png."
+
+# @ pagelines
+#: editor/editor.settings.config.php:217
+msgid "Your Twitter Username"
+msgstr "Seu Usuário do Twitter"
+
+# @ pagelines
+#: editor/editor.settings.config.php:218
+msgid "Twitter Integration"
+msgstr "Integração com Twitter"
+
+# @ pagelines
+#: editor/editor.settings.config.php:219
+msgid ""
+"This places your Twitter feed on the site. Leave blank if you want to hide "
+"or not use."
+msgstr ""
+"Isto coloca um feed do Twitter no seu site. Deixe em branco se quiser "
+"esconder ou não usar."
+
+# @ pagelines
+#: editor/editor.settings.config.php:231
+msgid "Your Facebook Page Name"
+msgstr "Nome de Sua Página no Facebook"
+
+# @ pagelines
+#: editor/editor.settings.config.php:232
+msgid "Facebook Page"
+msgstr "Página do Facebook"
+
+# @ pagelines
+#: editor/editor.settings.config.php:233
+msgid ""
+"Enter the name component of your Facebook page URL. (For example, what comes "
+"after the facebook url: www.facebook.com/[name])"
+msgstr ""
+"Informe o nome de usuário na URL de sua página do Facebook. (Por exemplo, o "
+"que vem após a url do facebook: www.facebook.com/[nome])"
+
+# @ pagelines
+#: editor/editor.settings.config.php:238
+msgid "Your Facebook App ID"
+msgstr "Seu ID de Aplicativo Facebook"
+
+# @ pagelines
+#: editor/editor.settings.config.php:239
+msgid "Facebook App ID"
+msgstr "ID do Aplicativo Facebook"
+
+# @ pagelines
+#: editor/editor.settings.config.php:240
+msgid "Add your Facebook Application ID here."
+msgstr "Informe seu ID de Aplicativo Facebook aqui."
+
+# @ pagelines
+#: editor/editor.settings.config.php:249
+msgid "Your Website Hashtag"
+msgstr "Seu Hashtag do Website"
+
+# @ pagelines
+#: editor/editor.settings.config.php:250
+msgid "Website Hashtag"
+msgstr "Hashtag do Website"
+
+# @ pagelines
+#: editor/editor.settings.config.php:251
+msgid ""
+"This hashtag will be used in social media (e.g. Twitter) and elsewhere to "
+"create feeds."
+msgstr ""
+"Este hashtag será usado nas redes sociais (ex: Twitter) e outros lugares "
+"para criar feeds."
+
+# @ pagelines
+#: editor/editor.settings.config.php:262
+msgid "Enable Google+"
+msgstr "Habilitar Google+"
+
+# @ pagelines
+#: editor/editor.settings.config.php:268
+msgid "Enable Facebook"
+msgstr "Habilitar Facebook"
+
+# @ pagelines
+#: editor/editor.settings.config.php:274
+msgid "Enable Twitter"
+msgstr "Habilitar Twitter"
+
+# @ pagelines
+#: editor/editor.settings.config.php:280
+msgid "Enable LinkedIn"
+msgstr "Habilitar LinkedIn"
+
+# @ pagelines
+#: editor/editor.settings.config.php:285
+msgid "Enable Pinterest"
+msgstr "Habilitar Pinterest"
+
+# @ pagelines
+#: editor/editor.settings.config.php:290
+msgid "Enable Buffer"
+msgstr "Habilitar Buffer"
+
+# @ pagelines
+#: editor/editor.settings.config.php:295
+msgid "Enable Stumbleupon"
+msgstr "Habilitar Stumbleupon"
+
+# @ pagelines
+#: editor/editor.settings.config.php:315
+msgid "Enable debug?"
+msgstr "Ativar Debug?"
+
+# @ pagelines
+#: editor/editor.settings.config.php:316
+msgid "PageLines debug"
+msgstr "Debug do PageLines"
+
+# @ pagelines
+#: editor/editor.settings.config.php:317
+#, php-format
+msgid "This information can be useful in the forums if you have a problem. %s"
+msgstr "Esta informação pode ser útil em fóruns se você tiver um problema. %s"
+
+# @ pagelines
+#: editor/editor.settings.config.php:325
+msgid "Disable Error Notices?"
+msgstr "Desabilitar Notificações de Erro?"
+
+# @ pagelines
+#: editor/editor.settings.config.php:326
+msgid "Less Notices"
+msgstr "Menos Notícias"
+
+# @ pagelines
+#: editor/editor.settings.config.php:327
+msgid "Disable any error notices sent to wp-admin by the less system"
+msgstr ""
+"Desative quaisquer avisos de erro enviados para o wp-admin pelo sistema LESS"
+
+# @ pagelines
+#: editor/editor.settings.config.php:334
+msgid "Enable Code Prettify?"
+msgstr "Ativar Code Prettify?"
+
+# @ pagelines
+#: editor/editor.settings.config.php:335
+msgid "Google Prettify Code"
+msgstr "Prettify Code via Google"
+
+# @ pagelines
+#: editor/editor.settings.config.php:336
+msgid ""
+"Add a class of 'prettyprint' to code or pre tags, or optionally use the "
+"[pl_codebox] shortcode. Wrap the codebox shortcode using [pl_raw] if "
+"Wordpress inserts line breaks."
+msgstr ""
+"Adicione uma classe 'prettyprint' ao código ou pré tags, ou opcionalmente "
+"use o shortcode [pl_codebox]. Evolva o  shortcode do codebox usando [pl_raw] "
+"se o Wordpress inserir quebras de linha."
+
+# @ pagelines
+#: editor/editor.settings.config.php:342
+msgid "Enter Partner Link"
+msgstr "Informar Link do Parceiro"
+
+# @ pagelines
+#: editor/editor.settings.config.php:343
+msgid "PageLines Affiliate/Partner Link"
+msgstr "Link do Parceiro/Afiliado PageLines"
+
+# @ pagelines
+#: editor/editor.settings.config.php:344
+msgid ""
+"If you are a <a target='_blank' href='http://www.pagelines.com'>PageLines "
+"Partner</a> enter your link here and the footer link will become a partner "
+"or affiliate link."
+msgstr ""
+"Se você é um <a target='_blank' href='http://www.pagelines.com'>Parceiro do "
+"PageLines</a> informe seu link aqui e o link do rodapé irá se tornar um link "
+"de parceiro ou afiliado."
+
+# @ pagelines
+#: editor/editor.settings.config.php:350
+msgid "Install Class"
+msgstr "Instalar Classe"
+
+# @ pagelines
+#: editor/editor.settings.config.php:351
+msgid "Current Install Class"
+msgstr "Classe Atual Instalada"
+
+# @ pagelines
+#: editor/editor.settings.config.php:352
+msgid ""
+"Use this option to add a class to the &gt;body&lt; element of the website. "
+"This can be useful when using the same child theme on several installations "
+"or sub domains and can be used to control CSS customizations."
+msgstr ""
+"Use esta opção para adicionar uma classe ao elemento &gt;body&lt; do "
+"website. Isso pode ser útil quando estiver usando o mesmo tema-filho em "
+"várias instalações ou sub-domínios, e pode ser usado para controlar "
+"personalizações via CSS."
+
+# @ pagelines
+#: editor/editor.settings.config.php:367
+msgid "<i class=\"icon-undo\"></i> Reset Global Settings"
+msgstr "<i class=\"icon-undo\"></i> Redefinir Configurações Globais"
+
+# @ pagelines
+#: editor/editor.settings.config.php:368
+msgid "Reset Global Site Settings"
+msgstr "Redefinir Configurações Globais do Site"
+
+# @ pagelines
+#: editor/editor.settings.config.php:369
+msgid ""
+"Use this button to reset all global settings to their default state. <br/"
+"><strong>Note:</strong> Once you've completed this action, you may want to "
+"publish these changes to your live site."
+msgstr ""
+"Use este botão para redefinir todas as configurações globais para seus "
+"valores padrão.<br/> <strong>Nota:</strong> Depois de ter concluído esta "
+"ação, você pode querer publicar essas alterações no seu site ao vivo."
+
+# @ pagelines
+#: editor/editor.settings.config.php:375
+msgid "<i class=\"icon-undo\"></i> Reset Current Page Settings"
+msgstr "<i class=\"icon-undo\"></i> Redefinir Configurações da Página Atual"
+
+# @ pagelines
+#: editor/editor.settings.config.php:376
+msgid "Reset Current Page Settings"
+msgstr "Redefinir Configurações da Página Atual"
+
+# @ pagelines
+#: editor/editor.settings.config.php:377
+msgid ""
+"Use this button to reset all settings on the current page back to their "
+"default state. <br/><strong>Note:</strong> Once you've completed this "
+"action, you may want to publish these changes to your live site."
+msgstr ""
+"Use este botão para redefinir todas as configurações da página atual para "
+"seus valores padrão.<br/><strong>Nota:</strong> Depois de ter concluído esta "
+"ação, você pode querer publicar essas alterações no seu site ao vivo."
+
+# @ pagelines
+#: editor/editor.settings.config.php:384
+msgid "<i class=\"icon-trash\"></i> Flush Caches"
+msgstr "<i class=\"icon-trash\"></i> Limpar Caches"
+
+# @ pagelines
+#: editor/editor.settings.config.php:385
+msgid "Clear all CSS/LESS cached data."
+msgstr "Limpar todos os dados de CSS/LESS em cache."
+
+# @ pagelines
+#: editor/editor.settings.config.php:386
+msgid ""
+"Use this button to purge the stored LESS/CSS data. This will also clear "
+"cached pages if wp-super-cache or w3-total-cache are detected."
+msgstr ""
+"Use este botão para eliminar os dados de LESS/CSS armazenados. Isto também "
+"irá limpar as páginas armazenadas em cache se o wp-super-cache ou w3-total-"
+"cache for detectado."
+
+# @ pagelines
+#: editor/editor.settings.config.php:402
+msgid "Standard Options"
+msgstr "Opções Padrão"
+
+# @ pagelines
+#: editor/editor.settings.config.php:408
+msgid "Styling Classes"
+msgstr "Classes de Estilo"
+
+# @ pagelines
+#: editor/editor.settings.config.php:409
+msgid "Separate with a space \" \""
+msgstr "Separado com espaço \" \""
+
+# @ pagelines
+#: editor/editor.templates.php:202
+msgid "Templates"
+msgstr "Modelos"
+
+# @ pagelines
+#: editor/editor.templates.php:207
+msgid "Page Templates"
+msgstr "Modelos de Página"
+
+# @ pagelines
+#: editor/editor.templates.php:209
+msgid "Your Templates"
+msgstr "Seus Modelos"
+
+# @ pagelines
+#: editor/editor.templates.php:215 editor/editor.templates.php:333
+msgid "Save New Template"
+msgstr "Salvar Novo Modelo"
+
+# @ pagelines
+#: editor/editor.templates.php:249
+msgid "Load Template"
+msgstr "Carregar Modelo"
+
+# @ pagelines
+#: editor/editor.templates.php:252
+msgid "Active Template"
+msgstr "Modelo Ativo"
+
+# @ pagelines
+#: editor/editor.templates.php:257
+msgid "Actions"
+msgstr "Ações"
+
+# @ pagelines
+#: editor/editor.templates.php:262
+msgid "Update Template with Current Configuration"
+msgstr "Atualizar Modelos com a Configuração Atual"
+
+# @ pagelines
+#: editor/editor.templates.php:267
+msgid "Set as Page Global Default"
+msgstr "Definir Como Padrão Global de Página"
+
+# @ pagelines
+#: editor/editor.templates.php:272
+msgid "Delete This Template"
+msgstr "Excluir Este Modelo"
+
+# @ pagelines
+#: editor/editor.templates.php:320
+msgid ""
+"Fill out this form and the current template will be saved for use throughout "
+"your site."
+msgstr ""
+"Preencha este formulário e o modelo atual será salvo para uso em todo o site."
+
+# @ pagelines
+#: editor/editor.templates.php:322
+msgid ""
+"<strong>Note:</strong> Both the current page's local settings and section "
+"configurations will be saved."
+msgstr ""
+"<strong>Nota:</strong> Ambas as configurações locais da página atual e "
+"configurações de seção serão salvas."
+
+# @ pagelines
+#: editor/editor.templates.php:325
+msgid "Template Name (required)"
+msgstr "Nome do Modelo (obrigatório)"
+
+# @ pagelines
+#: editor/editor.templates.php:329
+msgid "Template Description"
+msgstr "Descrição do Modelo"
+
+# @ pagelines
+#: editor/editor.templates.php:355
+msgid "No Name"
+msgstr "Sem Nome"
+
+# @ pagelines
+#: editor/editor.templates.php:509
+msgid "Default"
+msgstr "Padrão"
+
+# @ pagelines
+#: editor/editor.templates.php:510
+msgid "Standard page configuration. (Content and Primary Sidebar.)"
+msgstr "Configuração de página padrão. (Conteúdo e Sidebar Primário)."
+
+# @ pagelines
+#: editor/editor.templates.php:517
+msgid "Feature Template"
+msgstr "Destacar Modelo"
+
+# @ pagelines
+#: editor/editor.templates.php:518
+msgid ""
+"A page template designed to quickly and concisely show off key features or "
+"points. (RevSlider, iBoxes, Flipper)"
+msgstr ""
+"Um modelo de página projetado para exibir rapidamente e de forma concisa as "
+"principais características ou pontos. (RevSlider, iBoxes, Flipper)"
+
+# @ pagelines
+#: editor/editor.templates.php:539
+msgid "Landing Page"
+msgstr "Página de Chegada"
+
+# @ pagelines
+#: editor/editor.templates.php:540
+msgid "A simple page design with highlight section and postloop (content)."
+msgstr ""
+"Uma página de  design simples com seção de destaque e posts (conteúdo)."
+
+# @ pagelines
+#: editor/editor.templates.php:566
+msgid "DMS Page Setup"
+msgstr "Configuração de Página DMS"
+
+# @ pagelines
+#: editor/editor.templates.php:618
+msgid "Load PageLines Template"
+msgstr "Carregar Modelo PageLines"
+
+# @ pagelines
+#: editor/editor.templates.php:631
+msgid "(no parent)"
+msgstr "(sem pai)"
+
+# @ pagelines
+#: editor/editor.templates.php:639
+msgid "Parent Page"
+msgstr "Página Mãe:"
+
+# @ pagelines
+#: editor/editor.templates.php:644
+msgid "Page Order"
+msgstr "Ordem da Página"
+
+# @ pagelines
+#: editor/editor.typography.php:71
+msgid "Primary Text"
+msgstr "Texto Primário"
+
+# @ pagelines
+#: editor/editor.typography.php:72
+msgid ""
+"The base font size is a reference that will be scaled for text used "
+"throughout the site. "
+msgstr ""
+"O tamanho da fonte base é uma referência que será dimensionada para o texto "
+"usado em todo o site. "
+
+# @ pagelines
+#: editor/editor.typography.php:87 editor/editor.typography.php:128
+msgid "Base Font Size"
+msgstr "Tamanho-base da Fonte"
+
+# @ pagelines
+#: editor/editor.typography.php:102
+msgid "*These weights don't alwaye have an effect."
+msgstr "*Estes valores nem sempre têm um efeito."
+
+# @ pagelines
+#: editor/editor.typography.php:111
+msgid "Text Headers <small>(h1-h6)</small>"
+msgstr "Cabeçalhos de Texto <small>(h1-h6)</small>"
+
+# @ pagelines
+#: editor/editor.typography.php:112
+msgid "Configure the typography for the text headers across your site."
+msgstr "Configure a tipografia para o texto do cabeçalho do seu site."
+
+# @ pagelines
+#: editor/editor.typography.php:150
+msgid "Extra Fonts"
+msgstr "Fontes Extras"
+
+# @ pagelines
+#: editor/editor.typography.php:151
+msgid ""
+"<p>Add additional <a href=\"http://www.google.com/fonts\" target=\"_blank"
+"\">Google fonts</a> to your sites using this option.</p><p>For example, to "
+"add \"Yellowtail\" and \"Lato Bold\" you would enter: <strong>Yellowtail|"
+"Lato:700</strong>.</p><p> You can then reference these fonts in custom CSS.</"
+"p>"
+msgstr ""
+"<p>Adicione <a href=\"http://www.google.com/fonts\" target=\"_blank\">fontes "
+"do Google</a>  adicionais para seus sites usando esta opção.</p><p>Por "
+"exemplo, para adicionar \"Yellowtail\" e \"Lato Bold\" digite: "
+"<strong>Yellowtail|Lato:700</strong>.</p><p>Você pode então fazer referência "
+"a estas fontes no CSS personalizado.</p>"
+
+# @ pagelines
+#: editor/panel.code.php:37
+msgid "Custom"
+msgstr "Personalizado"
+
+# @ pagelines
+#: editor/panel.code.php:42
+msgid "Custom Design"
+msgstr "Desjgn Personalizado"
+
+# @ pagelines
+#: editor/panel.code.php:45 editor/panel.code.php:70 editor/panel.code.php:74
+msgid "Custom LESS/CSS"
+msgstr "LESS/CSS Personalizado"
+
+# @ pagelines
+#: editor/panel.code.php:50 editor/panel.code.php:87
+msgid "Custom Scripts"
+msgstr "Scripts Personalizados"
+
+# @ pagelines
+#: editor/panel.code.php:75
+msgid "Tip"
+msgstr "Dica"
+
+# @ pagelines
+#: editor/panel.code.php:75
+msgid "Hit [Cmd&#8984;+Return] or [Ctrl+Return] to Preview Live"
+msgstr "Tecle [Cmd&#8984;+Return] ou [Ctrl+Return] para Prévia Ao Vivo"
+
+# @ pagelines
+#: editor/panel.code.php:91
+msgid "Custom Javascript or Header HTML"
+msgstr "Javascript ou HTML do Cabeçalho Personalizado"
+
+# @ pagelines
+#: editor/panel.extend.php:21
+msgid "Store"
+msgstr "Loja"
+
+# @ pagelines
+#: editor/panel.extend.php:25
+msgid "Extend PageLines"
+msgstr "Estenda o PageLines"
+
+# @ pagelines
+#: editor/panel.extend.php:27
+msgid "PageLines Store"
+msgstr "Loja PageLines"
+
+# @ pagelines
+#: editor/panel.extend.php:41
+msgid "Featured"
+msgstr "Em Destaque"
+
+# @ pagelines
+#: editor/panel.extend.php:48
+msgid "Sections"
+msgstr "Seções"
+
+# @ pagelines
+#: editor/panel.extend.php:54
+msgid "Plugins"
+msgstr "Plugins"
+
+# @ pagelines
+#: editor/panel.extend.php:60
+msgid "Themes"
+msgstr "Temas"
+
+# @ pagelines
+#: editor/panel.extend.php:66
+msgid "Free"
+msgstr "Grátis"
+
+# @ pagelines
+#: editor/panel.extend.php:72
+msgid "Premium"
+msgstr "Premium"
+
+# @ pagelines
+#: editor/panel.extend.php:84 includes/lib.elements.php:93
+msgid "Search"
+msgstr "Pesquisar"
+
+# @ pagelines
+#: editor/panel.extend.php:99
+msgid "Upload a .zip extension into your PageLines install using this tool."
+msgstr ""
+"Faça Upload de um arquivo .zip na instalação do seu PageLines usando esta "
+"ferramenta."
+
+# @ pagelines
+#: editor/panel.extend.php:101
+msgid "Extension File (zip file - required)"
+msgstr "Arquivo de Extensão (arquivo .zip - requerido)"
+
+# @ pagelines
+#: editor/panel.extend.php:104
+msgid "Upload Extension"
+msgstr "Enviar Extensão"
+
+# @ pagelines
+#: editor/panel.extend.php:116
+msgid "Search the PageLines store for extensions."
+msgstr "Pesquise por extensões na loja PageLines."
+
+# @ pagelines
+#: editor/panel.extend.php:121
+msgid "Search Store"
+msgstr "Pesquisar na Loja"
+
+# @ pagelines
+#: editor/panel.extend.php:143
+msgid " found for "
+msgstr " encontrado para "
+
+# @ pagelines
+#: editor/panel.extend.php:151
+msgid "Demo "
+msgstr "Demo "
+
+# @ pagelines
+#: editor/panel.extend.php:157
+msgid "Overview "
+msgstr "Visão Geral "
+
+# @ pagelines
+#: editor/panel.extend.php:192 editor/panel.extend.php:195
+msgid "Free!"
+msgstr "Grátis!"
+
+# @ pagelines
+#: editor/panel.extend.php:197
+msgid "<i class=\"icon-sun\"></i> Karma"
+msgstr "<i class=\"icon-sun\"></i> Karma"
+
+# @ pagelines
+#: editor/panel.sections.php:21
+msgid "Add To Page"
+msgstr "Adicionar À Página"
+
+# @ pagelines
+#: editor/panel.sections.php:25
+msgid "<i class='icon-random'></i> Drag to Add"
+msgstr "<i class='icon-random'></i> Arraste para Adicionar"
+
+# @ pagelines
+#: editor/panel.sections.php:27
+msgid "Your Sections"
+msgstr "Suas Seções"
+
+# @ pagelines
+#: editor/panel.sections.php:29
+msgid "Drag on to page to add"
+msgstr "Arraste na página para adicionar"
+
+# @ pagelines
+#: editor/panel.sections.php:30
+msgid "Reload Sections"
+msgstr "Recarregar Seções"
+
+# @ pagelines
+#: editor/panel.sections.php:36
+msgid "Get More Sections"
+msgstr "Obtenha Mais Seções"
+
+# @ pagelines
+#: editor/panel.sections.php:40
+msgid "<i class='icon-filter'></i> Filters"
+msgstr "<i class='icon-filter'></i> Filtros"
+
+# @ pagelines
+#: editor/panel.sections.php:42
+msgid "Components"
+msgstr "Componentes"
+
+# @ pagelines
+#: editor/panel.sections.php:48
+msgid "Layouts"
+msgstr "Layouts"
+
+# @ pagelines
+#: editor/panel.sections.php:54
+msgid "Full Width"
+msgstr "Largura Total"
+
+# @ pagelines
+#: editor/panel.sections.php:60
+msgid "Post Layouts"
+msgstr "Layouts de Post"
+
+# @ pagelines
+#: editor/panel.sections.php:66
+msgid "Galleries"
+msgstr "Galerias"
+
+# @ pagelines
+#: editor/panel.sections.php:72
+msgid "Navigation"
+msgstr "Navegação"
+
+# @ pagelines
+#: editor/panel.sections.php:78
+msgid "Sliders"
+msgstr "Sliders"
+
+# @ pagelines
+#: editor/panel.sections.php:84
+msgid "Social"
+msgstr "Social"
+
+# @ pagelines
+#: editor/panel.sections.php:90
+msgid "Widgetized"
+msgstr "Widgetizado"
+
+# @ pagelines
+#: editor/panel.sections.php:96
+msgid "Miscellaneous"
+msgstr "Miscelânea"
+
+# @ pagelines
+#: editor/panel.settings.php:27
+msgid "Settings"
+msgstr "Configurações"
+
+# @ pagelines
+#: editor/panel.settings.php:34 editor/panel.settings.php:73
+#: editor/panel.settings.php:81
+msgid "Section Options"
+msgstr "Opções de Seção"
+
+# @ pagelines
+#: editor/panel.settings.php:51
+msgid "Global Settings"
+msgstr "Configurações Gerais"
+
+# @ pagelines
+#: editor/panel.themes.php:23
+msgid "Theme"
+msgstr "Tema"
+
+# @ pagelines
+#: editor/panel.themes.php:39
+msgid "Your Themes"
+msgstr "Seus Temas"
+
+# @ pagelines
+#: editor/panel.themes.php:46
+msgid "Import Config"
+msgstr "Importar Configurações"
+
+# @ pagelines
+#: editor/panel.themes.php:53
+msgid "Get More Themes"
+msgstr "Obter Mais Temas"
+
+# @ pagelines
+#: editor/panel.themes.php:74
+msgid "Theme Options"
+msgstr "Opções do Tema"
+
+# @ pagelines
+#: editor/panel.themes.php:173 editor/panel.themes.php:193
+msgid "Theme does not exist or is not allowed"
+msgstr " Tema não existe ou não é permitido"
+
+# @ pagelines
+#: editor/panel.themes.php:235
+msgid " this is the end of the world.... >> "
+msgstr "  este é o fim do mundo…. >> "
+
+# @ pagelines
+#: includes/class.objects.php:109
+msgid "Edit"
+msgstr "Editar"
+
+# @ pagelines
+#: includes/class.register.php:358
+msgid "<h2>Unable to fetch from API</h2>"
+msgstr "<h2>Não é possível receber dados da API</h2>"
+
+# @ pagelines
+#: includes/class.shortcodes.php:317
+msgid "<span class='editpage sc'>Edit</span>"
+msgstr "<span class='editpage sc'>Editar</span>"
+
+# @ pagelines
+#: includes/class.shortcodes.php:367
+msgid "Tagged With: "
+msgstr "Com a(s) Tag(s): "
+
+# @ pagelines
+#: includes/class.shortcodes.php:391
+msgid "Type: "
+msgstr "Tipo: "
+
+# @ pagelines
+#: includes/class.shortcodes.php:422
+msgid "Add Comment"
+msgstr "Adicionar Comentário"
+
+# @ pagelines
+#: includes/class.shortcodes.php:423
+msgid "<span class='num'>1</span> Comment"
+msgstr "<span class='num'>1</span> Comentário"
+
+# @ pagelines
+#: includes/class.shortcodes.php:424
+msgid "<span class='num'>%</span> Comments"
+msgstr "<span class='num'>%</span> Comentários"
+
+# @ pagelines
+#: includes/class.shortcodes.php:501
+#, php-format
+msgid "Visit %s&#8217;s website"
+msgstr "Visitar o site de %s"
+
+# @ pagelines
+#: includes/class.shortcodes.php:1342
+msgid "Close"
+msgstr "Fechar"
+
+# @ pagelines
+#: includes/deprecated.php:268
+#, php-format
+msgid ""
+"%1$s is <strong>deprecated</strong> since version %2$s of PageLines DMS! Use "
+"%3$s instead."
+msgstr ""
+"%1$s é <strong>obsoleto</strong> desde a versão %2$s do PageLines DMS! Invés "
+"disso, use %3$s."
+
+# @ pagelines
+#: includes/deprecated.php:270
+#, php-format
+msgid ""
+"%1$s is <strong>deprecated</strong> since version %2$s of PageLines DMS with "
+"no alternative available."
+msgstr ""
+"%1$s é <strong>obsoleto</strong> desde a versão %2$s do PageLines DMS sem "
+"alternativa disponível."
+
+# @ pagelines
+#: includes/deprecated.php:1339
+msgid "No Image"
+msgstr "Sem Imagem"
+
+# @ pagelines
+#: includes/deprecated.php:1546 includes/deprecated.php:1547
+msgid "Add New "
+msgstr "Adicionar Novo "
+
+# @ pagelines
+#: includes/deprecated.php:1548 includes/deprecated.php:1549
+msgid "Edit "
+msgstr "Editar "
+
+# @ pagelines
+#: includes/deprecated.php:1550 includes/deprecated.php:1551
+msgid "View "
+msgstr "Ver "
+
+# @ pagelines
+#: includes/less.legacy.php:460 includes/less.legacy.php:755
+#, php-format
+msgid ""
+"%s/* CSS was compiled at %s and took %s seconds using %sMB of unicorn dust%s."
+"*/"
+msgstr ""
+"%s/* CSS foi compilado em %s e levou %s segundos usando %sMB de pózinho de "
+"unicórnio%s.*/"
+
+# @ pagelines
+#: includes/less.legacy.php:529
+msgid "LESS Compile error!"
+msgstr "Erro de Compilação do LESS!"
+
+# @ pagelines
+#: includes/less.legacy.php:536
+#, php-format
+msgid "Error in %s Less code: %s"
+msgstr "Erro no Código Less %s: %s"
+
+# @ pagelines
+#: includes/lib.editor.php:72
+msgid "(Pro Edition Only)"
+msgstr "(Apenas na Edição Pro)"
+
+# @ pagelines
+#: includes/lib.elements.php:39
+msgid "Add Widgets &rarr;"
+msgstr "Adicionar Widgets &rarr;"
+
+# @ pagelines
+#: includes/lib.elements.php:126
+msgid "&larr; Previous Entries"
+msgstr "&larr; Itens Anteriores"
+
+# @ pagelines
+#: includes/lib.elements.php:129
+msgid "Next Entries &rarr;"
+msgstr "Próximos Itens &rarr;"
+
+# @ pagelines
+#: includes/lib.elements.php:166
+#, php-format
+msgid ""
+"<ul class='inline-list'>Please select a nav menu for this area in the <a "
+"href='%s'>WordPress menu admin</a>.</ul>"
+msgstr ""
+"<ul class='inline-list'>Por favor selecione uma menu de navegação para esta "
+"área no <a href='%s'>painel de menus do WordPress</a>.</ul>"
+
+# @ pagelines
+#: includes/lib.elements.php:272
+msgid "edit"
+msgstr "editar"
+
+# @ pagelines
+#: includes/lib.head.php:65
+msgid "Google Profile URL"
+msgstr "URL do Perfil do Google"
+
+# @ pagelines
+#: includes/lib.head.php:299
+#, php-format
+msgid "Page %s"
+msgstr "Página %s"
+
+# @ pagelines
+#: includes/lib.head.php:321
+msgid "|"
+msgstr "|"
+
+# @ pagelines
+#: includes/lib.head.php:333
+#, php-format
+msgid "Search Results: %s"
+msgstr "Resultado da Pesquisa: %s"
+
+# @ pagelines
+#: includes/lib.head.php:337
+#, php-format
+msgid "Page: %s"
+msgstr "Página: %s"
+
+# @ pagelines
+#: includes/lib.utils.php:140
+#, php-format
+msgid "Configure %s <i class=\"icon-arrow-right\"></i>"
+msgstr "Configurar %s <i class=\"icon-arrow-right\"></i>"
+
+# @ pagelines
+#: includes/lib.utils.php:144
+msgid "Configure this section"
+msgstr "Configurar esta seção"
+
+# @ pagelines
+#: includes/library.pagelines.php:14
+msgid "Dashboard"
+msgstr "Painel"
+
+# @ pagelines
+#: sections/columnizer/section.php:52
+msgid "Columnizer Configuration"
+msgstr "Configuração do Colunizador"
+
+# @ pagelines
+#: sections/columnizer/section.php:59
+msgid "Select Widgetized Area"
+msgstr "Selecione uma Área de Widgets"
+
+# @ pagelines
+#: sections/columnizer/section.php:60
+msgid "Select widgetized area"
+msgstr "Selecione uma área de widgets"
+
+# @ pagelines
+#: sections/columnizer/section.php:61
+msgid "Select the widgetized area you would like to use with this instance."
+msgstr ""
+"Selecione uma área de widgets que você gostaria de usar com esta instância."
+
+# @ pagelines
+#: sections/columnizer/section.php:69
+msgid "Number of Grid Columns for Each Widget (12 Col Grid)"
+msgstr "Número de Colunas da Grade para Cada Widget (Grade de 12 Colunas)"
+
+# @ pagelines
+#: sections/columnizer/section.php:79
+msgid "Widgetized Areas Help"
+msgstr "Ajuda das Áreas de Widgets"
+
+# @ pagelines
+#: sections/columnizer/section.php:80
+msgid "Edit Widgetized Areas"
+msgstr "Editar Área de Widget"
+
+# @ pagelines
+#: sections/columnizer/section.php:81
+msgid ""
+"This section uses widgetized areas that are created and edited in inside "
+"your admin."
+msgstr ""
+"Esta seção usa áreas de widget que são criadas e editadas dentro do seu "
+"admin,"
+
+# @ pagelines
+#: sections/columnizer/section.php:88 sections/columnizer/section.php:89
+msgid "Column Site Description"
+msgstr "Descrição da Coluna do Site"
+
+# @ pagelines
+#: sections/columnizer/section.php:90
+msgid ""
+"If you use the default display of the columnizer, this field is used as a "
+"description of your company. You may want to add your address or links."
+msgstr ""
+"Se você usa a visualização padrão do colunizador, este campo é usado como "
+"descrição da sua empresa. Você pode querer adicionar seu endereço ou links."
+
+# @ pagelines
+#: sections/columnizer/section.php:100
+msgid "Get A Sidebars Plugin"
+msgstr "Obtenha Um Plugin de Sidebar"
+
+# @ pagelines
+#: sections/columnizer/section.php:147
+msgid "Stay in Touch!"
+msgstr "Mantenha Contato!"
+
+# @ pagelines
+#: sections/columnizer/section.php:173
+msgid "The Latest"
+msgstr "Últimas"
+
+# @ pagelines
+#: sections/columnizer/section.php:197 sections/rapidtabs/section.php:56
+#: sections/rapidtabs/section.php:138
+msgid "Tags"
+msgstr "Tags"
+
+# @ pagelines
+#: sections/columnizer/section.php:208 sections/sb_primary/section.php:42
+msgid "Categories"
+msgstr "Categorias"
+
+# @ pagelines
+#: sections/columnizer/section.php:222
+msgid "More Info"
+msgstr "Mais Info"
+
+# @ pagelines
+#: sections/flipper/section.php:47
+msgid "Flipper Setup"
+msgstr "Configuração do Flipper"
+
+# @ pagelines
+#: sections/flipper/section.php:55
+msgid "Which post type should Flipper use?"
+msgstr "Qual tipo de post o Flipper deve usar?"
+
+# @ pagelines
+#: sections/flipper/section.php:56
+msgid ""
+"<strong>Note</strong><br/> Post types for this section must have \"featured "
+"images\" enabled and be public.<br/><strong>Tip</strong><br/> Use a plugin "
+"to create custom post types for use with Flipper."
+msgstr ""
+"<strong>Nota</strong><br/> Tipos de post para seta seção devem ter \"imagens "
+"destacadas\" habilitadas e ser públicos.<br/><strong>Dica</strong><br/> Use "
+"um plugin para criar tipos de post para usar com o Flipper."
+
+# @ pagelines
+#: sections/flipper/section.php:69
+msgid "Max Number of Posts Shown"
+msgstr "Número Máximo de Posts Mostrados"
+
+# @ pagelines
+#: sections/flipper/section.php:70
+msgid ""
+"This controls the maximum number of posts shown. A smaller amount may be "
+"shown based on layout width."
+msgstr ""
+"Isto controla o número máximo de posts exibidos. Um valor menor pode ser "
+"mostrado dependendo da largura do layout."
+
+# @ pagelines
+#: sections/flipper/section.php:77
+msgid "Select Image Size"
+msgstr "Selcione o Tamanho da Imagem"
+
+# @ pagelines
+#: sections/flipper/section.php:84
+msgid "Flipper Title"
+msgstr "Título do Flipper"
+
+# @ pagelines
+#: sections/flipper/section.php:86
+msgid "Options to control the text and link in the Flipper title."
+msgstr "Opções para controlar o texto e link no título do Flipper."
+
+# @ pagelines
+#: sections/flipper/section.php:91
+msgid "Flipper Title Text"
+msgstr "Texto do Título do Flipper"
+
+# @ pagelines
+#: sections/flipper/section.php:96
+msgid "Hide Title Link?"
+msgstr "Esconder Link do Título?"
+
+# @ pagelines
+#: sections/flipper/section.php:108
+msgid "Flipper Meta"
+msgstr "Metadados do Flipper"
+
+# @ pagelines
+#: sections/flipper/section.php:109
+msgid ""
+"Use shortcodes to control the dynamic meta info. Example shortcodes you can "
+"use are: <ul><li><strong>[post_categories]</strong> - List of categories</"
+"li><li><strong>[post_edit]</strong> - Link for admins to edit the post</"
+"li><li><strong>[post_tags]</strong> - List of post tags</li><li><strong>"
+"[post_comments]</strong> - Link to post comments</li><li><strong>"
+"[post_author_posts_link]</strong> - Author and link to archive</"
+"li><li><strong>[post_author_link]</strong> - Link to author URL</"
+"li><li><strong>[post_author]</strong> - Post author with no link</"
+"li><li><strong>[post_time]</strong> - Time of post</li><li><strong>"
+"[post_date]</strong> - Date of post</li><li><strong>[post_type]</strong> - "
+"Type of post</li></ul>"
+msgstr ""
+"Use shortcodes para controlar as metainformações dinâmicas. Exemplos de "
+"shortcodes que você pode usar: <ul><li><strong>[post_categories]</strong> - "
+"Lista de categorias</li> <li><strong>[post_edit]</strong> - Link para "
+"administradores editem o post</li> <li><strong>[post_tags]</strong> - Lista "
+"de tags post</li> <li><strong>[post_comments]</strong> - Link para postar "
+"comentários</li> <li><strong>[post_author_posts_link]</strong> - Autor e "
+"link para arquivo</li> <li><strong>[post_author_link]</strong> - Link para a "
+"URL do autor</li> <li><strong>[post_author]</strong> - Autor sem link Post</"
+"li> <li><strong>[post_time]</strong> - Hora de post</li> <li><strong>"
+"[post_date]</strong> - Data do post</li> <li><strong>[post_type]</strong> - "
+"Tipo de post</li></ul>"
+
+# @ pagelines
+#: sections/flipper/section.php:117
+msgid "Total Posts Loaded"
+msgstr "Total de Posts Carregados"
+
+# @ pagelines
+#: sections/flipper/section.php:126
+msgid "Meta Key"
+msgstr "Chave Meta"
+
+# @ pagelines
+#: sections/flipper/section.php:127
+msgid ""
+"Select only posts which have a certain meta key and corresponding meta "
+"value. Useful for featured posts, or similar."
+msgstr ""
+"Selecione somente posts que tenham uma certa chave meta e valor meta "
+"correspondente. Útil para posts em destaque ou similares."
+
+# @ pagelines
+#: sections/flipper/section.php:133
+msgid "Meta Key Value"
+msgstr "Valor da Chave Meta"
+
+# @ pagelines
+#: sections/flipper/section.php:148
+msgid "Only applies for standard blog posts."
+msgstr "Somente aplicar para posts padrão do blog. "
+
+# @ pagelines
+#: sections/flipper/section.php:157
+msgid "Additional Post Selection"
+msgstr "Seleção Adicional do Post"
+
+# @ pagelines
+#: sections/flipper/section.php:219
+msgid " / View All"
+msgstr " / Ver tudo"
+
+# @ pagelines
+#: sections/flipper/section.php:224
+msgid " / View Blog"
+msgstr " / Ver Blog"
+
+# @ pagelines
+#: sections/flipper/section.php:266 sections/postloop/class.posts.php:505
+msgid "View"
+msgstr "Ver"
+
+# @ pagelines
+#: sections/hero/section.php:27
+msgid "Hero Settings"
+msgstr "Configurações Hero"
+
+# @ pagelines
+#: sections/hero/section.php:34
+msgid "Heading"
+msgstr "Cabeçalho"
+
+# @ pagelines
+#: sections/hero/section.php:39
+msgid "Subtext"
+msgstr "Subtexto"
+
+# @ pagelines
+#: sections/hero/section.php:44
+msgid "Hero Image"
+msgstr "Imagem do Hero"
+
+# @ pagelines
+#: sections/hero/section.php:50
+msgid "Upload Custom Image"
+msgstr "Enviar Imagem Personalizada"
+
+# @ pagelines
+#: sections/hero/section.php:55
+msgid "Reverse the Hero unit (image on left)"
+msgstr "Inverte a unidade do Hero (imagem à esquerda)"
+
+# @ pagelines
+#: sections/hero/section.php:59
+msgid "Content Widths"
+msgstr "Larguras do Conteúdo"
+
+# @ pagelines
+#: sections/hero/section.php:65
+msgid "Text Area Width"
+msgstr "Largura da Área de Texto"
+
+# @ pagelines
+#: sections/hero/section.php:81
+msgid "Image Area Width"
+msgstr "Largura da Área de Imagem"
+
+# @ pagelines
+#: sections/hero/section.php:99
+msgid "Hero Action Button"
+msgstr "Botão de Ação do Hero"
+
+# @ pagelines
+#: sections/hero/section.php:107
+msgid "Button link destination (URL - Required)"
+msgstr "Destino do link do botão (URL - Obrigatório)"
+
+# @ pagelines
+#: sections/hero/section.php:112
+msgid "Hero Button Text"
+msgstr "Texto do Botão Hero"
+
+# @ pagelines
+#: sections/hero/section.php:118 sections/icallout/section.php:57
+msgid "Open link in new window"
+msgstr "Abrir link numa nova janela"
+
+# @ pagelines
+#: sections/hero/section.php:121 sections/masthead/section.php:118
+msgid "Select Button Color"
+msgstr "Selecione a Cor do Botão"
+
+# @ pagelines
+#: sections/hero/section.php:127 sections/navbar/section.php:65
+#: sections/navbar/section.php:370 sections/navbar/section.php:382
+msgid "Blue"
+msgstr "Azul"
+
+# @ pagelines
+#: sections/hero/section.php:128 sections/navbar/section.php:67
+#: sections/navbar/section.php:372 sections/navbar/section.php:384
+msgid "Orange"
+msgstr "Laranja"
+
+# @ pagelines
+#: sections/hero/section.php:129 sections/navbar/section.php:68
+#: sections/navbar/section.php:373 sections/navbar/section.php:385
+msgid "Red"
+msgstr "Vermelho"
+
+# @ pagelines
+#: sections/hero/section.php:130
+msgid "Green"
+msgstr "Verde"
+
+# @ pagelines
+#: sections/hero/section.php:131
+msgid "Light Blue"
+msgstr "Azul Claro"
+
+# @ pagelines
+#: sections/hero/section.php:132
+msgid "Grey"
+msgstr "Cinza"
+
+# @ pagelines
+#: sections/hero/section.php:166
+msgid "The Hero!"
+msgstr "O Hero!"
+
+# @ pagelines
+#: sections/hero/section.php:167
+msgid "Now just set up your Hero section options"
+msgstr "Agora basta definir as opções de sua seção Hero"
+
+# @ pagelines
+#: sections/highlight/section.php:29
+msgid "Select Format"
+msgstr "Selecione o Formato"
+
+# @ pagelines
+#: sections/highlight/section.php:31
+msgid "Highlight Format"
+msgstr "Formato do Highlight"
+
+# @ pagelines
+#: sections/highlight/section.php:33 sections/highlight/section.php:123
+msgid "Image on top of text"
+msgstr "Imagem acima do texto"
+
+# @ pagelines
+#: sections/highlight/section.php:34 sections/highlight/section.php:124
+msgid "Image on bottom of text"
+msgstr "Imagem abaixo do texto"
+
+# @ pagelines
+#: sections/highlight/section.php:35 sections/highlight/section.php:125
+msgid "No text, just the image"
+msgstr "Sem texto, somente a imagem"
+
+# @ pagelines
+#: sections/highlight/section.php:41
+msgid "Highlight Text"
+msgstr "Texto do Highlight"
+
+# @ pagelines
+#: sections/highlight/section.php:48 sections/highlight/section.php:97
+#: sections/highlight/section.php:104
+msgid "Highlight Header Text (Optional)"
+msgstr "Texto do Cabeçalho do Highlight (Opcional)"
+
+# @ pagelines
+#: sections/highlight/section.php:54 sections/highlight/section.php:110
+msgid "Highlight Subheader Text (Optional)"
+msgstr "Texto do Subcabeçalho do Highlight (Opcional)"
+
+# @ pagelines
+#: sections/highlight/section.php:62
+msgid "Highlight Image and Format"
+msgstr "Imagem e Formado do Highlight"
+
+# @ pagelines
+#: sections/highlight/section.php:68 sections/highlight/section.php:116
+msgid "Upload Splash Image"
+msgstr "Enviar a Imagem Splash"
+
+# @ pagelines
+#: sections/highlight/section.php:73 sections/highlight/section.php:130
+msgid "Add frame to image?"
+msgstr "Adicionar moldura à imagem?"
+
+# @ pagelines
+#: sections/highlight/section.php:98
+msgid "Add the main header text for the highlight section."
+msgstr "Adicionar o texto do cabeçalho principal à seção Highlight."
+
+# @ pagelines
+#: sections/highlight/section.php:121
+msgid "Highlight Image Style"
+msgstr "Estilo da Imagem do Highlight"
+
+# @ pagelines
+#: sections/highlight/section.php:167
+msgid "Here's to the crazy ones..."
+msgstr "Esta é para os loucos..."
+
+# @ pagelines
+#: sections/highlight/section.php:168
+msgid "This is your Highlight section. Set up the options to configure."
+msgstr "Esta é sua seção Highlight. Defina as opções para configurar."
+
+# @ pagelines
+#: sections/ibox/section.php:23
+msgid "iBox Configuration"
+msgstr "Configuração iBox"
+
+# @ pagelines
+#: sections/ibox/section.php:33
+msgid "Number of iBoxes to Configure"
+msgstr "Número de iBoxes para Configurar"
+
+# @ pagelines
+#: sections/ibox/section.php:41
+msgid "Number of Columns for Each Box (12 Col Grid)"
+msgstr "Número de Colunas para Cada Caixa (Grade de 12 Colunas)"
+
+# @ pagelines
+#: sections/ibox/section.php:47
+msgid "Icon Font"
+msgstr "Fonte do Ícone"
+
+# @ pagelines
+#: sections/ibox/section.php:48
+msgid "Images"
+msgstr "Imagens"
+
+# @ pagelines
+#: sections/ibox/section.php:49
+msgid "Text Only, No Media"
+msgstr "Somente Texto, Sem Mídia"
+
+# @ pagelines
+#: sections/ibox/section.php:52
+msgid "Select iBox Media Type"
+msgstr "Selecione o Tipo de Mídia do iBox"
+
+# @ pagelines
+#: sections/ibox/section.php:58
+msgid "Media on Top"
+msgstr "Mídia no Topo"
+
+# @ pagelines
+#: sections/ibox/section.php:59
+msgid "Media at Left"
+msgstr "Mídia à Esquerda"
+
+# @ pagelines
+#: sections/ibox/section.php:62
+msgid "Select the iBox Media Location"
+msgstr "Selecione a Posição da Mídia no iBox"
+
+# @ pagelines
+#: sections/ibox/section.php:72
+msgid "iBoxes Setup"
+msgstr "Configuração de iBoxes"
+
+# @ pagelines
+#: sections/ibox/section.php:73
+msgid "iBox"
+msgstr "iBox"
+
+# @ pagelines
+#: sections/ibox/section.php:77
+msgid "iBox Title"
+msgstr "Título do iBox"
+
+# @ pagelines
+#: sections/ibox/section.php:82
+msgid "iBox Text"
+msgstr "Texto do iBox"
+
+# @ pagelines
+#: sections/ibox/section.php:87
+msgid "iBox Link (Optional)"
+msgstr "Link do iBox (Opcional)"
+
+# @ pagelines
+#: sections/ibox/section.php:92
+msgid "iBox Class (Optional)"
+msgstr "Classe do iBox (Opcional)"
+
+# @ pagelines
+#: sections/ibox/section.php:97
+msgid "iBox Icon"
+msgstr "Ícone do iBox"
+
+# @ pagelines
+#: sections/ibox/section.php:102
+msgid "iBox Image"
+msgstr "Imagem do iBox"
+
+# @ pagelines
+#: sections/ibox/section.php:162 sections/ibox/section.php:276
+msgid "More"
+msgstr "Mais"
+
+# @ pagelines
+#: sections/ibox/section.php:271
+msgid "iBox "
+msgstr "iBox "
+
+# @ pagelines
+#: sections/icallout/section.php:24
+msgid "Callout Format"
+msgstr "Formato do Callout"
+
+# @ pagelines
+#: sections/icallout/section.php:26
+msgid "Text on top of button"
+msgstr "Texto acima do botão"
+
+# @ pagelines
+#: sections/icallout/section.php:27
+msgid "Text/Button Inline"
+msgstr "Texto/Botão lado-a-lado"
+
+# @ pagelines
+#: sections/icallout/section.php:32 sections/icallout/section.php:38
+msgid "Callout Text"
+msgstr "Texto do Callout"
+
+# @ pagelines
+#: sections/icallout/section.php:51
+msgid "URL"
+msgstr "URL"
+
+# @ pagelines
+#: sections/icallout/section.php:62
+msgid "Text on Button"
+msgstr "Texto no Botão"
+
+# @ pagelines
+#: sections/icallout/section.php:67
+msgid "Button Color"
+msgstr "Cor do Botão"
+
+# @ pagelines
+#: sections/icallout/section.php:89
+msgid "Call to action!"
+msgstr "Chamada para ação!"
+
+# @ pagelines
+#: sections/masthead/section.php:47 sections/masthead/section.php:246
+msgid "Masthead Splash Options"
+msgstr "Opções Principais do Splash"
+
+# @ pagelines
+#: sections/masthead/section.php:53
+msgid "Upload custom image"
+msgstr "Enviar imagem personalizada"
+
+# @ pagelines
+#: sections/masthead/section.php:58
+msgid "Masthead Video (optional, to be used instead of image)"
+msgstr "Vídeo Masthead (opcional, a ser usado no lugar de uma imagem)"
+
+# @ pagelines
+#: sections/masthead/section.php:63
+msgid "Maximum width of splash in px (default is full width)"
+msgstr "Largura máxima do splash em px (padrão é largura total)"
+
+# @ pagelines
+#: sections/masthead/section.php:66
+msgid ""
+"Upload an image to serve as a splash image, or use an embed code for full "
+"width video."
+msgstr ""
+"Faça upload de uma imagem para servir de imagem de splash, ou use um código "
+"de incorporação para vídeo de largura total."
+
+# @ pagelines
+#: sections/masthead/section.php:71
+msgid "Masthead Text"
+msgstr "Texto do Masthead"
+
+# @ pagelines
+#: sections/masthead/section.php:72
+msgid " Text"
+msgstr " Texto"
+
+# @ pagelines
+#: sections/masthead/section.php:77 sections/mediabox/section.php:30
+#: sections/popthumbs/section.php:69 sections/propricing/section.php:53
+msgid "Title"
+msgstr "Título"
+
+# @ pagelines
+#: sections/masthead/section.php:82
+msgid "Tagline"
+msgstr "Slogan"
+
+# @ pagelines
+#: sections/masthead/section.php:94
+msgid "Masthead Action Button "
+msgstr "Botão de Ação do Masthead"
+
+# @ pagelines
+#: sections/masthead/section.php:99
+msgid "Enter the link destination (URL - Required)"
+msgstr "Informe o destino do link (URL - obrigatório)"
+
+# @ pagelines
+#: sections/masthead/section.php:105
+msgid "Masthead Button Text"
+msgstr "Texto do Botão do Masthead"
+
+# @ pagelines
+#: sections/masthead/section.php:112
+msgid "Open link in new window."
+msgstr "Abrir link numa nova janela."
+
+# @ pagelines
+#: sections/masthead/section.php:130
+msgid "Masthead Menu"
+msgstr "Menu do Masthead"
+
+# @ pagelines
+#: sections/masthead/section.php:131
+msgid "Select Masthead Menu"
+msgstr "Selecione o Menu do Masthead "
+
+# @ pagelines
+#: sections/masthead/section.php:136
+msgid "Masthead Meta"
+msgstr "Metadados do Masthead"
+
+# @ pagelines
+#: sections/masthead/section.php:137
+msgid "Enter Masthead Meta Text"
+msgstr "Informe o Texto do Metadado do Masthead"
+
+# @ pagelines
+#: sections/masthead/section.php:194
+msgid "Start Here"
+msgstr "Comece Aqui"
+
+# @ pagelines
+#: sections/masthead/section.php:247
+msgid ""
+"Enter the options for the masthead splash image. If no options are "
+"specified, no image will be shown."
+msgstr ""
+"Informe as opções para a imagem de abertura do Masthead. Se nenhuma opção "
+"for especificada, a imagem não será exibida."
+
+# @ pagelines
+#: sections/masthead/section.php:279
+msgid "Masthead Action Button 1"
+msgstr "Botão de Ação do Mastro 1"
+
+# @ pagelines
+#: sections/masthead/section.php:280 sections/masthead/section.php:315
+msgid ""
+"Enter the options for the masthead button. If no options are specified, no "
+"button will be shown."
+msgstr ""
+"Digite as opções para o botão do Masthead. Se nenhuma opção for "
+"especificada, o botão não será mostrado."
+
+# @ pagelines
+#: sections/masthead/section.php:314
+msgid "Masthead Action Button 2"
+msgstr "Botão de Ação do Mastro 2"
+
+# @ pagelines
+#: sections/masthead/section.php:348
+msgid "Choose a Wordpress menu to display (optional)"
+msgstr "Escolha um menu do WordPress para exibir (opcional)"
+
+# @ pagelines
+#: sections/masthead/section.php:354
+msgid "Enter text to be shown on Masthead (optional)"
+msgstr "Escreva o texto para ser exibido no Masthead (opcional)"
+
+# @ pagelines
+#: sections/mediabox/section.php:18
+msgid "MediaBox Media"
+msgstr "Mídia do MediaBox"
+
+# @ pagelines
+#: sections/mediabox/section.php:25
+msgid "MediaBox Image"
+msgstr "Imagem do MediaBox"
+
+# @ pagelines
+#: sections/mediabox/section.php:35
+msgid "Text and Embed HTML"
+msgstr "Texto e HTML Incorporado"
+
+# @ pagelines
+#: sections/mediabox/section.php:36
+msgid ""
+"Enter rich media \"embed\" HTML in this field to add videos, etc.. instead "
+"of an image."
+msgstr ""
+"Informe o código HTML de \"embed\" da mídia para adicionar vídeos, etc… ao "
+"invés de uma imagem."
+
+# @ pagelines
+#: sections/mediabox/section.php:50
+msgid "Text/Media Alignment"
+msgstr "Alinhamento de Texto/Mídia"
+
+# @ pagelines
+#: sections/mediabox/section.php:52
+msgid "Align Center (Default)"
+msgstr "Alinhar ao Centro (Padrão)"
+
+# @ pagelines
+#: sections/mediabox/section.php:53
+msgid "Align Left"
+msgstr "Alinhar à Esquerda"
+
+# @ pagelines
+#: sections/mediabox/section.php:54
+msgid "Align Right"
+msgstr "Alinhar à Direita"
+
+# @ pagelines
+#: sections/mediabox/section.php:61
+msgid "MediaBox Min Height (px)"
+msgstr "Altura Mínima do MediaBox (px)"
+
+# @ pagelines
+#: sections/mediabox/section.php:62
+msgid ""
+"Required for \"cover\" mode. Otherwise the mediabox will be drawn at the "
+"height of the media."
+msgstr ""
+"Obrigatório para modo de \"capa\". De outra forma o MediaBox será desenhado "
+"na altura da mídia."
+
+# @ pagelines
+#: sections/mediabox/section.php:67
+msgid "Disable Media Vertical Centering?"
+msgstr "Desabilitar Centralização Vertical da Mídia?"
+
+# @ pagelines
+#: sections/mediabox/section.php:72 sections/textbox/section.php:70
+msgid "Viewport Animation"
+msgstr "Animação de Viewport"
+
+# @ pagelines
+#: sections/mediabox/section.php:73 sections/textbox/section.php:71
+msgid "Optionally animate the appearance of this section on view."
+msgstr "Opcionalmente anima a aparição desta secão na visualização."
+
+# @ pagelines
+#: sections/mediabox/section.php:86
+msgid "MediaBox Background Image"
+msgstr "Imagem de Fundo do MediaBox"
+
+# @ pagelines
+#: sections/navbar/section.php:61 sections/navbar/section.php:379
+msgid "Standard NavBar - Select Theme"
+msgstr "Navegação Padrão - Selecione o Tema"
+
+# @ pagelines
+#: sections/navbar/section.php:63
+msgid "Base Color"
+msgstr "Cor Base"
+
+# @ pagelines
+#: sections/navbar/section.php:64 sections/navbar/section.php:369
+#: sections/navbar/section.php:381
+msgid "Black (Default)"
+msgstr "Preto (Padrão)"
+
+# @ pagelines
+#: sections/navbar/section.php:66 sections/navbar/section.php:371
+#: sections/navbar/section.php:383
+msgid "Light Grey"
+msgstr "Cinza Claro"
+
+# @ pagelines
+#: sections/navbar/section.php:72
+msgid "NavBar Theme"
+msgstr "Tema da NavBar"
+
+# @ pagelines
+#: sections/navbar/section.php:73 sections/navbar/section.php:391
+msgid ""
+"The NavBar comes with several color options. Select one to automatically "
+"configure."
+msgstr ""
+"A NavBar vem com várias opções de cor. Selecione uma para configurar "
+"automaticamente."
+
+# @ pagelines
+#: sections/navbar/section.php:79
+msgid "NavBar Menu"
+msgstr "Menu da NavBar"
+
+# @ pagelines
+#: sections/navbar/section.php:80 sections/navbar/section.php:412
+msgid "The NavBar uses WordPress menus. Select one for use."
+msgstr "A NavBar usa menus do WordPress. Selecione um para usar."
+
+# @ pagelines
+#: sections/navbar/section.php:85 sections/simple_nav/section.php:34
+#: sections/simple_nav/section.php:40
+msgid "Select Menu"
+msgstr "Menu de Seleção"
+
+# @ pagelines
+#: sections/navbar/section.php:94
+msgid "NavBar Configuration Options"
+msgstr "Opções de Configuração da NavBar"
+
+# @ pagelines
+#: sections/navbar/section.php:99 sections/navbar/section.php:100
+#: sections/navbar/section.php:445 sections/navbar/section.php:446
+msgid "NavBar Title"
+msgstr "Título da NavBar"
+
+# @ pagelines
+#: sections/navbar/section.php:101 sections/navbar/section.php:448
+msgid ""
+"Add text to the NavBar to serve as a title, but only displayed on small "
+"screens."
+msgstr ""
+"Adicione texto a NÀvBar para servir como um título, mas apenas exibido em "
+"telas pequenas."
+
+# @ pagelines
+#: sections/navbar/section.php:106 sections/navbar/section.php:422
+msgid "Activate dropdowns on hover."
+msgstr "Ativar suspensão quando passar o mouse."
+
+# @ pagelines
+#: sections/navbar/section.php:113
+msgid "Align Menu Right? (Defaults Left)"
+msgstr "Alinhar Menu a Direita? (Padrão a Esquerda)"
+
+# @ pagelines
+#: sections/navbar/section.php:118
+msgid "Hide Search?"
+msgstr "Ocultar Busca?"
+
+# @ pagelines
+#: sections/navbar/section.php:152 sections/navbar/section.php:153
+#: sections/navbar/section.php:344 sections/navbar/section.php:345
+msgid "Enable Fixed Navigation Bar"
+msgstr "Habilitar Barra de Navegação Fixa"
+
+# @ pagelines
+#: sections/navbar/section.php:154 sections/navbar/section.php:347
+msgid ""
+"Use this feature to add the NavBar section as a fixed navigation bar on the "
+"top of your site."
+msgstr ""
+"Use esse recurso para adicionar a seção NavBar como uma barra de navegação "
+"fixa no topo do seu site."
+
+# @ pagelines
+#: sections/navbar/section.php:162 sections/navbar/section.php:163
+msgid "NavBar Logo"
+msgstr "Logo da NavBar"
+
+# @ pagelines
+#: sections/navbar/section.php:164 sections/navbar/section.php:356
+msgid ""
+"Use this feature to add the NavBar section as a fixed navigation bar on the "
+"top of your site.<br/><br/><strong>Notes:</strong> <br/>1. Only visible in "
+"Fixed Mode.<br/>2. Image Height is constricted to a maximum 29px."
+msgstr ""
+"Use esse recurso para adicionar a seção NavBar como uma barra de navegação "
+"fixa no topo do seu site.<br/><br/><strong>Notas:</strong> <br/>1. Visível "
+"somente no Modo Fixo.<br/>2. Altura da Imagem está limitada em 29px."
+
+# @ pagelines
+#: sections/navbar/section.php:293
+msgid "MENU"
+msgstr "MENU"
+
+# @ pagelines
+#: sections/navbar/section.php:346 sections/navbar/section.php:355
+msgid "Applies a fixed navigation bar to the top of your site"
+msgstr "Aplica uma barra de navegação fixa no topo do seu site"
+
+# @ pagelines
+#: sections/navbar/section.php:353
+msgid "Fixed NavBar Logo"
+msgstr "Logo da NavBar Fixa"
+
+# @ pagelines
+#: sections/navbar/section.php:354
+msgid "Fixed NavBar - NavBar Logo"
+msgstr "NavBar Fixa - Logo da NavBar"
+
+# @ pagelines
+#: sections/navbar/section.php:367
+msgid "Fixed NavBar - Select Theme"
+msgstr "NavBar Fixa - Escolha o Tema"
+
+# @ pagelines
+#: sections/navbar/section.php:389
+msgid "NavBar and Fixed NavBar Theme"
+msgstr "NavBar e Tema da NavBar Fixa"
+
+# @ pagelines
+#: sections/navbar/section.php:390
+msgid "Select the color and theme of the NavBar"
+msgstr "Escolha uma cor e tema da NavBar"
+
+# @ pagelines
+#: sections/navbar/section.php:402
+msgid "Fixed NavBar - Select Menu"
+msgstr "NavBar Fixa - Escolha o Menu"
+
+# @ pagelines
+#: sections/navbar/section.php:407
+msgid "Standard NavBar - Select Menu"
+msgstr "NavBar Padrão - Escolha o Menu"
+
+# @ pagelines
+#: sections/navbar/section.php:410
+msgid "NavBar and Fixed NavBar Menu"
+msgstr "NavBar e Menu da NavBar Fixa"
+
+# @ pagelines
+#: sections/navbar/section.php:411
+msgid "Select the WordPress Menu for the NavBar(s)"
+msgstr "Escolha um Menu do WordPress para as NavBars"
+
+# @ pagelines
+#: sections/navbar/section.php:426
+msgid "Fixed NavBar - Align Menu Right? (Defaults Left)"
+msgstr "NavBar Fixa - Alinhar Menu à Direita? (Padrão à Esquerda)"
+
+# @ pagelines
+#: sections/navbar/section.php:429
+msgid "Fixed NavBar - Hide Searchform?"
+msgstr "NavBar Fixa - Esconder Pesquisa?"
+
+# @ pagelines
+#: sections/navbar/section.php:432
+msgid "Standard NavBar - Align Menu Right? (Defaults Left)"
+msgstr "NavBar Padrão - Alinhar Menu à Direita? (Padrão à Esquerda)"
+
+# @ pagelines
+#: sections/navbar/section.php:435
+msgid "Standard NavBar - Hide Searchform?"
+msgstr "NavBar Padrão - Esconder Pesquisa?"
+
+# @ pagelines
+#: sections/navbar/section.php:438
+msgid "Configure Options for NavBars"
+msgstr "Configure as Opções das NavBars"
+
+# @ pagelines
+#: sections/navbar/section.php:439
+msgid "NavBar and Fixed NavBar Configuration Options"
+msgstr "Opções de Configuração da NavBar e NavBar Fixa"
+
+# @ pagelines
+#: sections/navbar/section.php:440
+msgid "Control various appearance options for the NavBars"
+msgstr "Controla várias opções de aparência das NavBars"
+
+# @ pagelines
+#: sections/navbar/section.php:447
+msgid "Applies text to NavBar on small screens. Not available on Fixed NavBar"
+msgstr ""
+"Aplica texto à NavBar em telas pequenas. Não está disponível na NavBar Fixa"
+
+# @ pagelines
+#: sections/noposts/section.php:22
+msgid ""
+"Direct Previewing <em>of</em> &quot;Special Post Types&quot; Not "
+"Available... Yet"
+msgstr ""
+"Visualização Direta <em>de</em> &quot;Tipos de Post Especiais&quot; Não está "
+"disponível... Ainda"
+
+# @ pagelines
+#: sections/noposts/section.php:23
+msgid ""
+"Sorry, direct previewing of special post types such as <strong>features</"
+"strong> or <strong>boxes</strong> is unavailable. This WordPress "
+"functionality is new and rapidly developing, so it should be available soon."
+msgstr ""
+"Desculpe, a visualização direta dos tipos de post especiais como "
+"<strong>destaques</strong> ou <strong>caixas</strong> ainda não está "
+"disponível. Essa funcionalidade do WordPress é nova e se desenvolvendo "
+"rapidamente, portanto deve estar disponível em breve."
+
+# @ pagelines
+#: sections/noposts/section.php:25
+msgid ""
+"To preview a &quot;custom post type&quot; just view a page with that &quot;"
+"section&quot; on it."
+msgstr ""
+"Para visualizar um &quot;tipo de post personalizado&quot; basta mostrar uma "
+"página com essa &quot;seção&quot; nela."
+
+# @ pagelines
+#: sections/noposts/section.php:30
+msgid "404!"
+msgstr "404!"
+
+# @ pagelines
+#: sections/noposts/section.php:31
+msgid "Sorry, This Page Does not exist."
+msgstr "Desculpe, Esta Página Não Existe."
+
+# @ pagelines
+#: sections/noposts/section.php:31
+msgid "Go"
+msgstr "Ir"
+
+# @ pagelines
+#: sections/noposts/section.php:31
+msgid "home"
+msgstr "inicial"
+
+# @ pagelines
+#: sections/noposts/section.php:31
+msgid "or try a search?"
+msgstr "ou tente uma pesquisa?"
+
+# @ pagelines
+#: sections/pl_area/section.php:27
+msgid "Section Area Layout"
+msgstr "Layout da Seção Área"
+
+# @ pagelines
+#: sections/pl_area/section.php:32
+msgid "Default Area Padding (px)"
+msgstr "Padding Padrão da Área (px)"
+
+# @ pagelines
+#: sections/pl_area/section.php:36
+msgid ""
+"If sections are added to full width areas, the area will be givin this "
+"default padding."
+msgstr ""
+"Se as seções forem adicionadas em áreas de largura total, a área receberá o "
+"padding padrão."
+
+# @ pagelines
+#: sections/pl_area/section.php:53
+msgid "Set Area Padding"
+msgstr "Definir Padding da Área"
+
+# @ pagelines
+#: sections/pl_area/section.php:61
+msgid "Area Padding (px)"
+msgstr "Padding da Área (px)"
+
+# @ pagelines
+#: sections/pl_area/section.php:69
+msgid "Area Padding Bottom (if different)"
+msgstr "Padding Inferior da Área (se diferente)"
+
+# @ pagelines
+#: sections/pl_area/section.php:81
+msgid "Area Styling"
+msgstr "Estilo da Área"
+
+# @ pagelines
+#: sections/pl_area/section.php:103
+msgid "Area Theme"
+msgstr "Tema da Área"
+
+# @ pagelines
+#: sections/pl_area/section.php:109
+msgid "Area Minimum Height (px)"
+msgstr "Altura Mínima da Área (px)"
+
+# @ pagelines
+#: sections/pl_area/section.php:120
+msgid "Area Background"
+msgstr "Plano de Fundo da Área"
+
+# @ pagelines
+#: sections/pl_area/section.php:132
+msgid "Repeat Background Image"
+msgstr "Repetir Imagem de Fundo"
+
+# @ pagelines
+#: sections/pl_area/section.php:137
+msgid "Enable Background Parallax"
+msgstr "Habilitar Parallax no Fundo"
+
+# @ pagelines
+#: sections/popthumbs/section.php:42
+msgid "PopThumb Configuration"
+msgstr "Configuração do PopThumb"
+
+# @ pagelines
+#: sections/popthumbs/section.php:51
+msgid "Number of Columns for Each Thumb (12 Col Grid)"
+msgstr "Número de Colunas para Cada Miniatura (Grade de 12 Colunas)"
+
+# @ pagelines
+#: sections/popthumbs/section.php:62
+msgid "PopThumbs Setup"
+msgstr "Configuração da PopThumbs"
+
+# @ pagelines
+#: sections/popthumbs/section.php:63 sections/popthumbs/section.php:80
+msgid "Thumb"
+msgstr "Miniatura"
+
+# @ pagelines
+#: sections/popthumbs/section.php:74
+msgid "Text"
+msgstr "Texto"
+
+# @ pagelines
+#: sections/popthumbs/section.php:85
+msgid "Image"
+msgstr "Imagem"
+
+# @ pagelines
+#: sections/postauthor/section.php:35
+msgid "Author Setup"
+msgstr "Configuração do Autor"
+
+# @ pagelines
+#: sections/postauthor/section.php:37
+msgid ""
+"This section uses the author's profile information. Set that in your admin."
+msgstr ""
+"Esta seção usa as informações do perfil do autor. Defina-as em seu painel."
+
+# @ pagelines
+#: sections/postauthor/section.php:68
+msgid "Author"
+msgstr "Autor"
+
+# @ pagelines
+#: sections/postauthor/section.php:77
+msgid "Visit Authors Website &rarr;"
+msgstr "Visite o Website do Autor &rarr;"
+
+# @ pagelines
+#: sections/postauthor/section.php:80
+msgid "Authors Google Profile &rarr;"
+msgstr "Perfil do Google do Autor &rarr;"
+
+# @ pagelines
+#: sections/postloop/class.posts.php:37 sections/postloop/section.php:186
+msgid "Read More &raquo;"
+msgstr "Leia Mais &raquo;"
+
+# @ pagelines
+#: sections/postloop/class.posts.php:240
+msgid "<div class='pagination'><span class='desc'>pages:</span><ul>"
+msgstr "<div class='pagination'><span class='desc'>paginas:</span><ul>"
+
+# @ pagelines
+#: sections/postloop/class.posts.php:253
+msgid "<span class='note'>Tagged with &rarr;</span> "
+msgstr "<span class='note'>Com a(s) Tag(s) &rarr;</span> "
+
+# @ pagelines
+#: sections/postloop/class.posts.php:405
+msgid "Link To"
+msgstr "Link Para"
+
+# @ pagelines
+#: sections/postloop/class.posts.php:430 sections/postloop/class.posts.php:435
+msgid "On"
+msgstr "Em"
+
+# @ pagelines
+#: sections/postloop/class.posts.php:430 sections/postloop/class.posts.php:435
+msgid "By"
+msgstr "Por"
+
+# @ pagelines
+#: sections/postloop/class.posts.php:435
+msgid "In"
+msgstr "Em"
+
+# @ pagelines
+#: sections/postloop/class.posts.php:696
+#, php-format
+msgid "No results for &quot;%s&quot;"
+msgstr "Nenhum resultado para &quot;%s&quot;"
+
+# @ pagelines
+#: sections/postloop/class.posts.php:696
+msgid "Nothing Found"
+msgstr "Nada Encontrado"
+
+# @ pagelines
+#: sections/postloop/class.posts.php:698
+msgid "Try another search?"
+msgstr "Tentar uma nova pesquisa?"
+
+# @ pagelines
+#: sections/postloop/class.posts.php:698
+msgid "Sorry, what you are looking for isn't here."
+msgstr "Desculpe, o que você procura não está aqui."
+
+# @ pagelines
+#: sections/postloop/section.php:28
+msgid "Edit Post Content"
+msgstr "Editar Conteúdo do Post"
+
+# @ pagelines
+#: sections/postloop/section.php:29
+msgid "<i class=\"icon-edit\"></i> Edit Post Info"
+msgstr "<i class=\"icon-edit\"></i> Editar Informações do Post"
+
+# @ pagelines
+#: sections/postloop/section.php:30
+msgid ""
+"This section uses WordPress posts. Edit post information using WordPress "
+"admin."
+msgstr ""
+"Esta seção usa os posts do WordPress. Edite as informações do post usando o "
+"painel do WordPress."
+
+# @ pagelines
+#: sections/postloop/section.php:37
+msgid "Page Title"
+msgstr "Título da Página"
+
+# @ pagelines
+#: sections/postloop/section.php:43
+msgid "Layout <span class=\"spamp\">&amp;</span> Config"
+msgstr "Layout <span class=\"spamp\">&amp;</span> Configuração"
+
+# @ pagelines
+#: sections/postloop/section.php:52
+msgid "Magazine Layout Mode"
+msgstr "Modo de Layout de Revista"
+
+# @ pagelines
+#: sections/postloop/section.php:53
+msgid "List Layout Mode"
+msgstr "Modo de Layout em Lista"
+
+# @ pagelines
+#: sections/postloop/section.php:55 sections/postloop/section.php:56
+msgid "Posts Layout Mode"
+msgstr "Modo de Layout de Posts"
+
+# @ pagelines
+#: sections/postloop/section.php:57
+msgid ""
+"Choose between two magazine or blog layout mode. <br/><br/> <strong>Magazine "
+"Layout Mode</strong><br/> Magazine layout mode makes use of post "
+"<strong>clips</strong>. These are summarized excerpts shown at half the "
+"width of the main content column.<br/>  <strong>Note:</strong> There is an "
+"option for showing <strong>full-width</strong> posts on your main "
+"<strong>posts</strong> page.<br/><br/><strong>List Layout Mode</strong><br/> "
+"This is your classical post list layout. Posts span the entire width of the "
+"main content column."
+msgstr ""
+"Escolha entre dois modo de layout: revista ou blog. <br/><br/> <strong>Modo "
+"de Layout de Revista</strong> <br/> O modo de layout de revista faz uso de "
+"post <strong>clipes</strong>. Estes são trechos resumidos mostrados na "
+"metade da largura da coluna co conteúdo principal. <br/> <strong>Nota:</"
+"strong> Há uma opção para mostrar posts com <strong>largura total</strong> "
+"em sua página principal de <strong>posts</strong>. <br/> <br/><strong>Modo "
+"de Layout do Blog</strong> <br/> Este é o layout do blog clássico. Os posts "
+"ocupam toda a largura da coluna de conteúdo principal."
+
+# @ pagelines
+#: sections/postloop/section.php:66
+msgid "Number of Full Width Posts? (Mag. Mode)"
+msgstr "Número de Posts de Largura Total? (Modo Revista)"
+
+# @ pagelines
+#: sections/postloop/section.php:67
+msgid "Full Width Posts (Magazine Layout Mode Only)"
+msgstr "Posts de Largura Total (Somente no Modo de Layout de Revista)"
+
+# @ pagelines
+#: sections/postloop/section.php:68
+msgid ""
+"Select the number of posts you would like shown at the full width of the "
+"main content column in magazine layout mode (the rest will be half-width "
+"post <strong>clips</strong>)."
+msgstr ""
+"Selecione o número de posts que você gostaria que fossem mostrados na coluna "
+"principal de largura total no modo de layout de revista (o restante será em "
+"metade da largura do <strong>clipes</strong>)."
+
+# @ pagelines
+#: sections/postloop/section.php:75
+msgid "Show Full Post Content"
+msgstr "Mostrar Conteúdo Completo do Post"
+
+# @ pagelines
+#: sections/postloop/section.php:76
+msgid "Optionally show full post content on special post listing pages."
+msgstr ""
+"Opcionalmente mostra o conteúdo completo do post em páginas especiais de "
+"listagem de posts."
+
+# @ pagelines
+#: sections/postloop/section.php:84
+msgid "Meta Config"
+msgstr "Configuração de Metadados"
+
+# @ pagelines
+#: sections/postloop/section.php:87
+msgid ""
+"Use shortcodes to control the dynamic information in your metabar. Example "
+"shortcodes you can use are: <ul><li><strong>[post_categories]</strong> - "
+"List of categories</li><li><strong>[post_edit]</strong> - Link for admins to "
+"edit the post</li><li><strong>[post_tags]</strong> - List of post tags</"
+"li><li><strong>[post_comments]</strong> - Link to post comments</"
+"li><li><strong>[post_author_posts_link]</strong> - Author and link to "
+"archive</li><li><strong>[post_author_link]</strong> - Link to author URL</"
+"li><li><strong>[post_author]</strong> - Post author with no link</"
+"li><li><strong>[post_time]</strong> - Time of post</li><li><strong>"
+"[post_date]</strong> - Date of post</li><li><strong>[post_type]</strong> - "
+"Type of post</li></ul>"
+msgstr ""
+"Use shortcodes para controlar as informações dinâmicas em seu metabar. "
+"Alguns exemplos de shortcodes que você pode usar: <ul><li><strong>"
+"[post_categories]</strong> - Lista de categorias</li> <li><strong>[post_edit]"
+"</strong> - Link para administradores editem o post</li> <li><strong>"
+"[post_tags]</strong> - lista de tags post</li> <li><strong>[post_comments]</"
+"strong> - Link para postar comentários</li> <li><strong>"
+"[post_author_posts_link]</strong> - Autor e link para o arquivo</li> "
+"<li><strong>[post_author_link]</strong> - Link para a URL do autor</li> "
+"<li><strong>[post_author]</strong> - autor com nenhum link Post</li> "
+"<li><strong>[post_time]</strong> - Hora de post</li> <li><strong>[post_date]"
+"</strong> - Data do post</li> <li><strong>[post_type]</strong> - Tipo de "
+"post</li></ul>"
+
+# @ pagelines
+#: sections/postloop/section.php:92
+msgid "Select Meta Mode"
+msgstr "Escolha o Modo de Metadados"
+
+# @ pagelines
+#: sections/postloop/section.php:93
+msgid "Meta Mode"
+msgstr "Modo de Metadados"
+
+# @ pagelines
+#: sections/postloop/section.php:98
+msgid ""
+"Instead of the standard metabar (beneath post title), you can use author "
+"meta mode. This mode displays the author avatar and publish date on left."
+msgstr ""
+"Ao invés da barra padrão de metadados (abaixo do título do post), você pode "
+"usar o modo de metadados do autor. Este modo mostra o avatar do autor e data "
+"de publicação à esquerda do post."
+
+# @ pagelines
+#: sections/postloop/section.php:105
+msgid "Configure Full Width Post Metabar"
+msgstr "Configurar Metabar no Post de Largura Total"
+
+# @ pagelines
+#: sections/postloop/section.php:106
+msgid "Post Meta Information"
+msgstr "Meta-informações do Post"
+
+# @ pagelines
+#: sections/postloop/section.php:114 sections/postloop/section.php:115
+msgid "Configure Clip Metabar"
+msgstr "Configurar o Metabar do Clipe"
+
+# @ pagelines
+#: sections/postloop/section.php:122
+msgid "Thumbs"
+msgstr "Miniaturas"
+
+# @ pagelines
+#: sections/postloop/section.php:133 sections/postloop/section.php:149
+msgid "Left Justified"
+msgstr "Justificado à Esquerda"
+
+# @ pagelines
+#: sections/postloop/section.php:134 sections/postloop/section.php:150
+msgid "On Top"
+msgstr "No Topo"
+
+# @ pagelines
+#: sections/postloop/section.php:135 sections/postloop/section.php:151
+msgid "Left, In Excerpt"
+msgstr "À Esquerda, No Resumo"
+
+# @ pagelines
+#: sections/postloop/section.php:136 sections/postloop/section.php:152
+msgid "Right, In Excerpt"
+msgstr "À Direita, No Resumo"
+
+# @ pagelines
+#: sections/postloop/section.php:138
+msgid "Full Width Thumbs Layout"
+msgstr "Layout de Miniaturas de Largura Total"
+
+# @ pagelines
+#: sections/postloop/section.php:139
+msgid ""
+"Use this option to configure how thumbs will be shown in full-width posts on "
+"your blog page."
+msgstr ""
+"Use esta opção para configurar como as miniaturas serão mostrados em posts "
+"de largura total na sua página do blog."
+
+# @ pagelines
+#: sections/postloop/section.php:154
+msgid "Clip Thumbs Layout"
+msgstr "Layout de Miniaturas Cortadas"
+
+# @ pagelines
+#: sections/postloop/section.php:155
+msgid ""
+"Use this option to configure how thumbs will be shown in clips. These are "
+"the smaller <strong>magazine</strong> style excerpts on your blog page."
+msgstr ""
+"Use esta opção para configurar como as miniaturas aparecerão em clipes. "
+"Estes são os menores resumos de estilo de <strong>revista</strong> em sua "
+"página de blog."
+
+# @ pagelines
+#: sections/postloop/section.php:161
+msgid "Hide thumbs?"
+msgstr "Esconder miniaturas?"
+
+# @ pagelines
+#: sections/postloop/section.php:162
+msgid "Post Thumbnails"
+msgstr "Miniaturas do Post"
+
+# @ pagelines
+#: sections/postloop/section.php:163
+msgid "Use this option to hide or show thumbs for posts on pages."
+msgstr ""
+"Use esta opção para esconder ou mostrar miniaturas para posts e páginas."
+
+# @ pagelines
+#: sections/postloop/section.php:172
+msgid "Excerpts"
+msgstr "Resumos"
+
+# @ pagelines
+#: sections/postloop/section.php:179
+msgid "Hide excerpts?"
+msgstr "Esconder resumos?"
+
+# @ pagelines
+#: sections/postloop/section.php:180
+msgid "Hide Post Excerpt"
+msgstr "Esconder Resumo do Post"
+
+# @ pagelines
+#: sections/postloop/section.php:181
+msgid ""
+"Excerpts are short pieces of content that are shown to give users a preview "
+"of a post. Hide them using this option."
+msgstr ""
+"Resumos são partes pequenas do conteúdo que são eximidas para dar ao usuário "
+"uma prévia do post. Esconda-os usando esta opção."
+
+# @ pagelines
+#: sections/postloop/section.php:188
+msgid "Continue Reading Link Text"
+msgstr "Texto do Link Continuar Lendo"
+
+# @ pagelines
+#: sections/postloop/section.php:189
+msgid "Excerpts <strong>Continue Reading</strong> Text"
+msgstr "Texto <strong>Continuar Lendo</strong> dos Resumos"
+
+# @ pagelines
+#: sections/postloop/section.php:190
+msgid ""
+"This text will be used as the link to your full article when viewing "
+"articles on your posts page (when excerpts are turned on)."
+msgstr ""
+"Este texto será usado como o link para o artigo completo ao exibir artigos "
+"na sua página de posts (quando resumos estiverem ativos)."
+
+# @ pagelines
+#: sections/postloop/section.php:197
+msgid "Number of words."
+msgstr "Número de palavras."
+
+# @ pagelines
+#: sections/postloop/section.php:198
+msgid "Excerpt Length"
+msgstr "Tamanho do Resumo"
+
+# @ pagelines
+#: sections/postloop/section.php:199
+msgid "Excerpts are set to 55 words by default."
+msgstr "Resumos são definidos para 55 palavras por padrão."
+
+# @ pagelines
+#: sections/postloop/section.php:206
+msgid "Allowed Tags"
+msgstr "Tags Permitidas"
+
+# @ pagelines
+#: sections/postloop/section.php:207
+msgid "Allow Tags in Excerpt"
+msgstr "Tags Permitidas no Resumo"
+
+# @ pagelines
+#: sections/postloop/section.php:208
+msgid ""
+"By default WordPress strips all HTML tags from excerpts. You can use this "
+"option to allow certain tags. Simply enter the allowed tags in this field. "
+"<br/>An example of allowed tags could be: <strong>&lt;p&gt;&lt;br&gt;&lt;"
+"a&gt;</strong>. <br/><br/> <strong>Note:</strong> Enter a period <strong>.</"
+"strong> to disallow all tags."
+msgstr ""
+"Por padrão o WordPress tiras todas as tags HTML de resumos. Você pode usar "
+"esta opção para permitir que determinadas tags. Basta digitar as tags "
+"permitidas neste campo. <br/> Exemplo de tags permitidas: <strong>&lt;p&gt;"
+"&lt;br&gt;&lt;a&gt;</strong>. <br/> <br/> <strong>Nota:</strong> Digite um "
+"ponto <strong>.</strong> para não permitir todas as tags."
+
+# @ pagelines
+#: sections/postsinfo/section.php:29
+msgid "Search results for"
+msgstr "Resultados da busca por"
+
+# @ pagelines
+#: sections/postsinfo/section.php:31
+msgid "Currently viewing the category:"
+msgstr "Atualmente vendo a categoria"
+
+# @ pagelines
+#: sections/postsinfo/section.php:33
+msgid "Currently viewing the tag:"
+msgstr "Atualmente vendo a tag:"
+
+# @ pagelines
+#: sections/postsinfo/section.php:40
+msgid "Posts by:"
+msgstr "Posts de:"
+
+# @ pagelines
+#: sections/postsinfo/section.php:42
+msgid "From the daily archives:"
+msgstr "Do arquivo diário:"
+
+# @ pagelines
+#: sections/postsinfo/section.php:44
+msgid "From the monthly archives:"
+msgstr "Do arquivo mensal:"
+
+# @ pagelines
+#: sections/postsinfo/section.php:46
+msgid "From the yearly archives:"
+msgstr "Do arquivo anual:"
+
+# @ pagelines
+#: sections/postsinfo/section.php:57
+msgid "Viewing archives for "
+msgstr "Vendo de arquivos de "
+
+# @ pagelines
+#: sections/propricing/section.php:28
+msgid "ProPricing Configuration"
+msgstr "Configuração do ProPricing"
+
+# @ pagelines
+#: sections/propricing/section.php:38
+msgid "Number of Columns for Each Plan (12 Col Grid)"
+msgstr "Número de Colunas para Cada Plano (Grade de 12 Colunas)"
+
+# @ pagelines
+#: sections/propricing/section.php:48
+msgid "Pricing Setup"
+msgstr "Configuração de Preço"
+
+# @ pagelines
+#: sections/propricing/section.php:49
+msgid "Column"
+msgstr "Coluna"
+
+# @ pagelines
+#: sections/propricing/section.php:58
+msgid "Price"
+msgstr "Preço"
+
+# @ pagelines
+#: sections/propricing/section.php:63
+msgid "Before Price Text"
+msgstr "Texto Antes do Preço"
+
+# @ pagelines
+#: sections/propricing/section.php:65
+msgid "Typically you will add the monetary unit here. E.g. \"$\""
+msgstr "Tipicamente você adicionará sua unidade monetária aqui. Ex: \"R$\""
+
+# @ pagelines
+#: sections/propricing/section.php:69
+msgid "After Price Text"
+msgstr "Texto Após o Preço"
+
+# @ pagelines
+#: sections/propricing/section.php:71
+msgid "Typically you will add the recurring amount here. E.g. \"/ MO\""
+msgstr "Tipicamente você adicionará o valor recorrente aqui. Ex: \"/Mês\""
+
+# @ pagelines
+#: sections/propricing/section.php:75
+msgid "Sub Text"
+msgstr "Subtexto"
+
+# @ pagelines
+#: sections/propricing/section.php:80
+msgid "Link URL"
+msgstr "URL do Link"
+
+# @ pagelines
+#: sections/propricing/section.php:85
+msgid "Link Text"
+msgstr "Texto do Link"
+
+# @ pagelines
+#: sections/propricing/section.php:90
+msgid "Button Theme"
+msgstr "Tema do Botão"
+
+# @ pagelines
+#: sections/propricing/section.php:95
+msgid "Attributes"
+msgstr "Atributos"
+
+# @ pagelines
+#: sections/propricing/section.php:97
+msgid "Add each attribute on a new line. Add a \"*\" in front to add emphasis."
+msgstr ""
+"Adicionar cada atributo em uma nova linha. Adicione um \"*\" na frente para "
+"dar ênfase."
+
+# @ pagelines
+#: sections/quickslider/section.php:157 sections/revslider/section.php:22
+msgid "Slider Configuration"
+msgstr "Configuração do Slider"
+
+# @ pagelines
+#: sections/quickslider/section.php:164
+msgid "Select Transition Type"
+msgstr "Escolha o Tipo de Transição"
+
+# @ pagelines
+#: sections/quickslider/section.php:166
+msgid "Use Fading Transition"
+msgstr "Usar Transição Esvanecer"
+
+# @ pagelines
+#: sections/quickslider/section.php:167
+msgid "Use Slide/Horizontal Transition"
+msgstr "Usar Transição de Deslizar/Horizontal"
+
+# @ pagelines
+#: sections/quickslider/section.php:174
+msgid "Use Both Arrow and Slide Control Navigation"
+msgstr "Usar Ambas as Navegações por Seta e Controle de Slide"
+
+# @ pagelines
+#: sections/quickslider/section.php:175
+msgid "No Navigation"
+msgstr "Sem Navegação"
+
+# @ pagelines
+#: sections/quickslider/section.php:176
+msgid "Slide Controls Only"
+msgstr "Somente Controle de Slide"
+
+# @ pagelines
+#: sections/quickslider/section.php:177
+msgid "Arrow Navigation Only"
+msgstr "Somente Navegação por Seta"
+
+# @ pagelines
+#: sections/quickslider/section.php:179
+msgid "Slider Navigation Mode"
+msgstr "Modo de Navegação do Slider"
+
+# @ pagelines
+#: sections/quickslider/section.php:185
+msgid "Animate Slideshow Automatically?"
+msgstr "Animar Apresentação de Slides Automaticamente?"
+
+# @ pagelines
+#: sections/quickslider/section.php:197 sections/revslider/section.php:39
+msgid "Slides Setup"
+msgstr "Configuração dos Slides"
+
+# @ pagelines
+#: sections/quickslider/section.php:198 sections/revslider/section.php:40
+msgid "Slide"
+msgstr "Slide"
+
+# @ pagelines
+#: sections/quickslider/section.php:202 sections/revslider/section.php:44
+msgid "Slide Background Image"
+msgstr "Imagem de Fundo do Slide"
+
+# @ pagelines
+#: sections/quickslider/section.php:205 sections/revslider/section.php:47
+msgid "For high resolution, 2000px wide x 800px tall images. (2MB Limit)"
+msgstr ""
+"Para imagens de alta resolução: 2000px de largura por 800px de altura. "
+"(Limite de 2MB)"
+
+# @ pagelines
+#: sections/quickslider/section.php:211 sections/revslider/section.php:53
+msgid "Slide Text"
+msgstr "Texto do Slide"
+
+# @ pagelines
+#: sections/quickslider/section.php:216 sections/revslider/section.php:58
+msgid "Slide Link URL"
+msgstr "URL do Link do Slide"
+
+# @ pagelines
+#: sections/quickslider/section.php:221 sections/revslider/section.php:63
+msgid "Slide Text Location"
+msgstr "Localização do Texto do Slide"
+
+# @ pagelines
+#: sections/rapidtabs/section.php:53
+msgid "Popular"
+msgstr "Populares"
+
+# @ pagelines
+#: sections/rapidtabs/section.php:54
+msgid "Recent"
+msgstr "Recentes"
+
+# @ pagelines
+#: sections/rapidtabs/section.php:55 sections/rapidtabs/section.php:105
+msgid "Comments"
+msgstr "Comentários"
+
+# @ pagelines
+#: sections/rapidtabs/section.php:61
+msgid "Popular Posts"
+msgstr "Posts Populares"
+
+# @ pagelines
+#: sections/rapidtabs/section.php:83
+msgid "Recent Posts"
+msgstr "Posts Recentes"
+
+# @ pagelines
+#: sections/revslider/section.php:29
+msgid "Time Per Slide (in Milliseconds)"
+msgstr "Duração do Slide (em Milisegundos)"
+
+# @ pagelines
+#: sections/revslider/section.php:73
+msgid "Slide Transition"
+msgstr "Transição do Slide"
+
+# @ pagelines
+#: sections/revslider/section.php:79
+msgid "Slide Extra Elements"
+msgstr "Elementos Extras do Slide"
+
+# @ pagelines
+#: sections/revslider/section.php:81
+msgid ""
+"Add extra Revolution Slider markup here. Rev slider is based on Revolution "
+"Slider, a jQuery plugin. It supports a wide array of functionality including "
+"video embeds and additional transitions if you can handle HTML. Check out "
+"the <a href=\"http://www.orbis-ingenieria.com/code/documentation/"
+"documentation.html\" target=\"_blank\">docs here</a>."
+msgstr ""
+"Adicione marcação extra do Revolution Slider aqui. O Rev Slider baseia-se no "
+"Revolution Slider, um plugin do jQuery. Ele suporta uma ampla gama de "
+"funcionalidade como vídeo embutido e transições adicionais se você consegue "
+"lidar com HTML. Confira os <a href=\"http://www.orbis-ingenieria.com/code/"
+"documentation/documentation.html\" target=\"_blank\"> docs aqui</a>."
+
+# @ pagelines
+#: sections/revslider/section.php:284
+msgid "Read More"
+msgstr "Leia Mais"
+
+# @ pagelines
+#: sections/sb_primary/section.php:51
+msgid "Archives"
+msgstr "Arquivos"
+
+# @ pagelines
+#: sections/sb_primary/section.php:60
+msgid "Calendar"
+msgstr "Agenda"
+
+# @ pagelines
+#: sections/sb_primary/section.php:69
+msgid "Meta"
+msgstr "Meta"
+
+# @ pagelines
+#: sections/sb_primary/section.php:74
+msgid "Entries (RSS)"
+msgstr "Entradas (RSS)"
+
+# @ pagelines
+#: sections/sharebar/section.php:30
+msgid ""
+"You have no shares setup, please look at Global Options > Social & Local; or "
+"deactivate the Sharebar from the Blog Post Template."
+msgstr ""
+"Você não tem nenhuma configuração de compartilhamento, por favor, olhe as "
+"opções globais > Social & Local; ou desative o Sharebar a partir do Modelo "
+"de Post do Blog."
+
+# @ pagelines
+#: sections/sharebar/section.php:30
+msgid "Social Settings"
+msgstr "Configurações Sociais"
+
+# @ pagelines
+#: sections/sharebar/section.php:34
+msgid "Share &rarr;"
+msgstr "Compartilhar &rarr;"
+
+# @ pagelines
+#: sections/simple_nav/section.php:25
+msgid "Simple Nav Section"
+msgstr "Secão SimpleNav"
+
+# @ pagelines
+#: sections/simple_nav/section.php:35
+msgid "The SimpleNav uses WordPress menus. Select one for use."
+msgstr "A SimpleNav usa os menus do WordPress. Selecione um apara usar."
+
+# @ pagelines
+#: sections/simple_nav/section.php:50
+msgid "Select Alignment"
+msgstr "Selecione o Alinhamento"
+
+# @ pagelines
+#: sections/starbars/section.php:29
+msgid "StarBar Configuration"
+msgstr "Configuração do StarBar"
+
+# @ pagelines
+# @ starbar
+#: sections/starbars/section.php:38 sections/starbars/section.php:211
+msgid "Number of StarBars to Configure"
+msgstr "Número de StarBar para Configurar"
+
+# @ pagelines
+# @ starbar
+#: sections/starbars/section.php:44 sections/starbars/section.php:216
+msgid "Starbar Total Count (Number)"
+msgstr "Contagem Total de StarBar (Número)"
+
+# @ pagelines
+#: sections/starbars/section.php:45
+msgid ""
+"This number will be used to calculate the percent of the bar filled. The "
+"StarBar values will be shown as a percentage of this value. Default is 100."
+msgstr ""
+"Este número será usado para calcular a porcentagem da barra preenchida. Os "
+"valore da StarBar serão mostrados como um percentual deste valor. O padrão é "
+"100."
+
+# @ pagelines
+# @ starbar
+#: sections/starbars/section.php:52 sections/starbars/section.php:221
+msgid "Starbar Modifier (Text Added to Stats)"
+msgstr "Modificador da StarBar (Texto Adicionado às Estatísticas)"
+
+# @ pagelines
+#: sections/starbars/section.php:53
+msgid "This will be added to the stat number."
+msgstr "Isto será adicionado ao número das estatísticas"
+
+# @ pagelines
+#: sections/starbars/section.php:63 sections/starbars/section.php:230
+msgid "Starbar Format"
+msgstr "Formato da StarBar"
+
+# @ pagelines
+# @ starbar
+#: sections/starbars/section.php:69 sections/starbars/section.php:235
+msgid "StarBar Title (Optional)"
+msgstr "Título da StarBar (Opcional)"
+
+# @ pagelines
+#: sections/starbars/section.php:82
+msgid "Descriptor"
+msgstr "Descritor"
+
+# @ pagelines
+#: sections/starbars/section.php:86
+msgid "Value"
+msgstr "Valor"
+
+# @ pagelines
+#: sections/starbars/section.php:88
+msgid "Shown as a percentage of the StarBar total in the config."
+msgstr "Mostrado como um percentual o total da StarBar na configuração."
+
+# @ pagelines
+#: sections/starbars/section.php:95
+msgid "<i class=\"icon-star\"></i> StarBar #"
+msgstr "<i class=\"icon-star\"></i> StarBar #"
+
+# @ starbar
+#: sections/starbars/section.php:252
+#, php-format
+msgid "Starbar #%s Description"
+msgstr "Descrição da StarBar #%s"
+
+# @ starbar
+#: sections/starbars/section.php:256
+#, php-format
+msgid "Starbar #%s Value"
+msgstr "Valor da StarBar #%s"
+
+# @ starbar
+#: sections/starbars/section.php:262
+msgid "StarBar Values"
+msgstr "Valores de StarBar"
+
+# @ starbar
+#: sections/starbars/section.php:269
+msgid "Starbar"
+msgstr "StarBar"
+
+# @ pagelines
+#: sections/textbox/section.php:23
+msgid "Title (Optional)"
+msgstr "Título (Opcional)"
+
+# @ pagelines
+#: sections/textbox/section.php:28
+msgid "Text Content"
+msgstr "Conteúdo de Texto"
+
+# @ pagelines
+#: sections/textbox/section.php:42
+msgid "Padding <small>(CSS Shorthand)</small>"
+msgstr "Padding <small>(Atalho CSS)</small>"
+
+# @ pagelines
+#: sections/textbox/section.php:43
+msgid ""
+"This option uses CSS padding shorthand. For example, use \"15px 30px\" for "
+"15px padding top/bottom, and 30 left/right."
+msgstr ""
+"Essa opção usa atalhos de CSS para padding. Por exemplo, use \"15px 30px\" "
+"para padding de 15px superior/inferior e 30px à esquerda/direita."
+
+# @ pagelines
+#: sections/textbox/section.php:52
+msgid "Textbox Font Size"
+msgstr "Tamanho da Fonte da caixa de texto"
+
+# @ pagelines
+#: sections/watermark/section.php:22
+msgid "Website Watermark"
+msgstr "Marca d'água do Website"
+
+# @ pagelines
+#: sections/watermark/section.php:23
+msgid ""
+"The website watermark is a small version of your logo for your footer. "
+"Recommended width/height is 90px."
+msgstr ""
+"A marca d'água do site é uma versão pequena de seu logotipo para seu rodapé. "
+"A largura/altura recomendada é 90px."
+
+# @ pagelines
+#: sections/watermark/section.php:29
+msgid "Watermark Image"
+msgstr "Imagem de Marca d'Água"
+
+# @ pagelines
+#: sections/watermark/section.php:36
+msgid "Watermark Link (Blank for None)"
+msgstr "Link da Marca d'Água (Em Branco Para Nada)"
+
+# @ pagelines
+#: sections/watermark/section.php:42
+msgid "Watermark Link alt text"
+msgstr "Texto Alternativo Para Link da Marca d'Água"
+
+# @ pagelines
+#: sections/watermark/section.php:43
+msgid "Build a website with PageLines"
+msgstr "Construa um website com PageLines"
+
+# @ pagelines
+#: sections/watermark/section.php:48
+msgid "Hide Watermark"
+msgstr "Ocultar Marca d'Água"
+
+# @ pagelines
+#: sections/watermark/section.php:55
+msgid "Setting Up Social Shares"
+msgstr "Configurando o Compartilhamento Social"
+
+# @ pagelines
+#: sections/watermark/section.php:56
+msgid ""
+"To set up social, you need to set your global social user names under "
+"\"options\" > \"social &amp; local\"<br/><br/> After you have done that, "
+"these values will fill automatically."
+msgstr ""
+"Para configurar o Social, é necessário definir globalmente seus nomes de "
+"usuário sociais em \"opções\" > \"social &amp; local\"<br/><br/> Depois de "
+"ter feito isso, esses valores serão preenchidos automaticamente."
+
+# @ pagelines
+#: sections/watermark/section.php:83
+msgid "was created with"
+msgstr "foi criado com"

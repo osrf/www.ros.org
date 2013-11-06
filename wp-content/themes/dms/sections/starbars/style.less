@@ -1,0 +1,75 @@
+/***************** Bar graph ******************/
+
+
+.starbars-wrap{
+	padding: 1em;
+}
+.starbars{
+	text-align: left;
+	margin: 0;
+
+	li {
+		list-style: none!important;
+		&:last-child span {
+			margin-bottom: 0px;
+		}
+		.bar-wrap {
+			margin-bottom:13px;
+			.border-radius(300px);
+			background-color: @baseContrast;
+		    box-shadow:  inset 0 1px 2px rgba(0, 0, 0, 0.12);
+		    position: relative;
+
+		}
+		span {
+			height: 15px;
+			width: 0px;
+			display: block;
+			background-color: @linkColor;
+			.border-radius(300px);
+			overflow: visible!important;
+			position: relative;
+			strong {
+				opacity: 0;
+				color: #fff;
+				&:after{
+					right: 13px;
+				}
+			}
+		}
+		strong {
+			position: absolute;
+			right: -0px;
+			top: -25px;
+			opacity: .2;
+			padding: 4px 7px!important;
+			background-color: #333;
+			color: rgba(255,255,255,.8);
+			line-height: 12px!important;
+			font-size: 11px!important;
+			display: block;
+			font-family: @defaultFont;
+			.border-radius(2px);
+			&:after {
+				border-color: #333 transparent;
+			    border-style: solid;
+			    border-width: 5px 5px 0;
+			    bottom: -5px;
+			    content: "";
+			    display: block;
+			    right: 5px;
+			    position: absolute;
+			    width: 0;
+			}
+			&.full:after {
+				left: 15px;
+			}
+		}
+		p {
+			font-size: @fontSizeSmall;
+			margin: 0;
+			padding-bottom: 2px;
+		}
+	}
+}
+

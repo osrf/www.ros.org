@@ -1,0 +1,394 @@
+
+/* PAGELINES STYLES */
+ .revslider-container{
+	width:100% !important;
+	position:relative;
+	padding:0;
+	max-height:480px !important;
+	overflow:hidden;
+ 	.tp-thumbs {
+		padding:3px;
+	}
+
+	.text-center{
+		text-align: center;
+
+	}
+	/* Text Sizing*/
+	.slider-content{
+		font-family: @plHeaderFont;
+		text-shadow: 0 -1px 0 rgba(0,0,0,.7);
+		font-size: 34px;
+		line-height: 57px;
+		&.left-side,
+		&.right-side{
+			max-width: 400px;
+			text-align: left;
+		}
+		&.centered{
+			text-align: center;
+		}
+
+		h2{
+			font-size: inherit;
+			line-height: inherit;
+			.slider-text {
+				padding: 4px 0px;
+				background: rgba(0, 0, 0, 0.5);
+				box-shadow: 10px 0 0 rgba(0, 0, 0, 0.5), -10px 0 0 rgba(0, 0, 0, 0.5);
+				color: #fff;
+
+				margin-bottom: 1px;
+				background-position: right -53px;
+				.transition(all 0.3s linear);
+				margin-bottom: 15px;
+			}
+		}
+		a.slider-btn {
+			font-size: 13px;
+			line-height: 1.3em;
+			color: #eee;
+			background: rgba(0, 0, 0, 0.5);
+			left: -10px;
+			top: 10px;
+			position: relative;
+			padding: 10px 18px;
+			.transition(all 0.3s linear);
+			&:hover{
+				color:#fff;
+				background: @linkColor;
+			}
+		}
+		&.slider-black-text{
+			.slider-text{
+				background: rgba(255, 255, 255, 0.7);
+				box-shadow: 10px 0 0 rgba(255, 255, 255, 0.7), -10px 0 0 rgba(255, 255, 255, 0.7);
+				text-shadow: 0 1px 0 #fff;
+				color:#000;
+			}
+			a.slider-btn{
+				background: #fff;
+				color: #000;
+					text-shadow: 0 1px 0 #fff;
+				opacity: .6;
+				&:hover{
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+
+
+
+}
+
+
+/* SLIDER STYLES */
+
+.header-shadow{
+	background:  url("@{plRoot}/sections/revslider/images/header-shadow.png") no-repeat center top;
+	background-size: 100% auto;
+	width: 100%;
+	height: 30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 27;
+}
+
+.tp-hide-revslider,
+.tp-caption.tp-hidden-caption{
+	visibility:hidden !important;
+	display:none !important;
+}
+
+.tp-caption {
+	z-index:1;
+	&.boxshadow{
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+	}
+	&.noshadow {
+		text-shadow: none;
+	}
+	a {
+		.transition(all 0.2s ease-out);
+	}
+}
+
+.tp_inner_padding{
+	.box-sizing( border-box );
+	max-height:none !important;
+}
+
+
+/****************************************************************
+
+	-	SET THE ANIMATION EVEN MORE SMOOTHER ON ANDROID   -
+
+******************************************************************/
+.tp-simpleresponsive{
+	.slotholder *,
+	.tp-simpleresponsive img{
+		-webkit-transform: translateZ(0);
+		-webkit-backface-visibility: hidden;
+		-webkit-perspective: 1000;
+	}
+	caption,
+	.tp-caption {
+		opacity: 0;
+		position:absolute;
+		visibility: hidden;
+
+	}
+}
+
+
+/******************************
+	-	IE8 HACKS	-
+*******************************/
+.noFilterClass {
+	filter:none !important;
+}
+
+
+/******************************
+	-	SHADOWS		-
+******************************/
+.tp-bannershadow  {
+	position:absolute;
+
+	margin-left:auto;
+	margin-right:auto;
+	.user-select(none);
+
+}
+
+
+
+/********************************
+	-	FULLSCREEN VIDEO	-
+*********************************/
+.caption,
+.tp-caption{
+	&.fullscreenvideo {
+		left:0px;
+		top:0px;
+		position:absolute;
+		width:100%;
+		height:100%;
+		iframe	{ width:100% !important; height:100% !important;}
+	}
+}
+
+/************************
+	-	NAVIGATION	-
+*************************/
+
+
+.tpclear{clear:both;}
+
+.tp-bullets	{
+	z-index:1000;
+	position:absolute;
+	opacity: 1;
+	.transition(all 0.2s ease-out);
+	margin-bottom: 0px;
+	&.hidebullets	{
+		margin-bottom: -10px;
+		opacity: 0;
+	}
+	&.simplebullets.round .bullet{
+		cursor: pointer;
+		position: relative;
+		background: rgba(0,0,0,.6);
+		width: 8px;
+		height: 8px;
+		margin-right: 0px;
+		float: left;
+		margin-top: 0px;
+		margin-left: 5px;
+		.border-radius(8px);
+		border: 2px solid #fff;
+		opacity: .7;
+		.trans
+		&.last{
+			margin-right:3px;
+		}
+		&.selected,
+		&:hover{
+			opacity: 1;
+		}
+	}
+}
+
+/*************************************
+	-	TP ARROWS 	-
+**************************************/
+.tparrows{
+	opacity: 1;
+	.transition(opacity 0.2s ease-out);
+	&.hidearrows{
+		opacity: 0;
+	}
+}
+.tp-leftarrow,
+.tp-rightarrow{
+	cursor:pointer;
+	position:relative;
+	z-index:100;
+	width:40px;
+	height:40px;
+	&:hover{
+		background-position:bottom left;
+		opacity: .7;
+	}
+	&.default{
+
+	}
+}
+.tp-leftarrow{
+	background:url("@{plRoot}/sections/revslider/assets/large_left.png") no-repeat top left;
+
+}
+.tp-rightarrow{
+	background:url("@{plRoot}/sections/revslider/assets/large_right.png") no-repeat top left;
+}
+
+
+/****************************************************************************************************
+	-	TP THUMBS 	-
+*****************************************************************************************************
+
+ - tp-thumbs & tp-mask Width is the width of the basic Thumb Container (500px basic settings)
+
+ - .bullet width & height is the dimension of a simple Thumbnail (basic 100px x 50px)
+
+ *****************************************************************************************************/
+
+
+.tp-bullets.tp-thumbs{
+	z-index:1000;
+	position:absolute;
+	padding:3px;
+	background-color:#fff;
+	width:500px;
+	height:50px; 			/* THE DIMENSIONS OF THE THUMB CONTAINER */
+	margin-top:-50px;
+	.tp-mask{
+		width:500px;
+		height:50px;  			/* THE DIMENSIONS OF THE THUMB CONTAINER */
+		overflow:hidden;
+		position:relative;
+		.tp-thumbcontainer	{	width:5000px; position:absolute;}
+	}
+	.bullet{
+		width:100px;
+		height:50px;
+		cursor:pointer;
+		overflow:hidden;
+		background:none;
+		margin:0;
+		float:left;
+		opacity: 0.5;
+		.transition(all 0.2s ease-out);
+		&:hover,
+		&.selected{
+			opacity: 1;
+		}
+	}
+	img{
+		max-width:100%;
+	}
+}
+
+
+
+
+
+/************************************
+		-	TP BANNER TIMER		-
+*************************************/
+.tp-bannertimer	{
+	width:100%;
+	height:10px;
+	background:url("@{plRoot}/sections/revslider/assets/timer.png");
+	position:absolute;
+	z-index:200;
+	&.tp-bottom{
+		bottom:0px !important;
+		height:5px;
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.responsive .tp-bullets.tp-thumbs{
+		width:300px !important;
+		height:30px !important;
+		.tp-mask{
+			width:300px !important; height:30px !important;
+		}
+		.bullet{
+			width:60px !important;height:30px !important;
+		}
+	}
+
+}
+
+   @media only screen and (min-width: 0px) and (max-width: 479px) {
+			.responsive .tp-bullets	{	display:none}
+			.responsive .tparrows	{	display:none;}
+}
+
+/*********************************************
+	-	BASIC SETTINGS FOR THE BANNER	-
+***********************************************/
+
+.tp-simpleresponsive img {
+	.user-select(none);
+}
+
+
+
+.tp-simpleresponsive {
+	a{	text-decoration:none;}
+	ul {
+		list-style:none;
+		padding:0;
+		margin:0;
+	}
+	 > ul >li{
+		list-stye:none;
+		position:absolute;
+		visibility:hidden;
+	}
+
+}
+
+/*  CAPTION SLIDELINK   **/
+.caption.slidelink a div,
+.tp-caption.slidelink a div {
+	width:10000px;
+	height:10000px;
+	background:url("@{plRoot}/sections/revslider/assets/coloredbg.png") repeat;
+}
+
+.tp-loader 	{
+	background:url("@{plRoot}/sections/revslider/assets/loader.gif") no-repeat 10px 10px;
+	background-color:#fff;
+	margin:-22px -22px;
+	top:50%;
+	left:50%;
+	z-index:10000;
+	position:absolute;
+	width:44px;
+	height:44px;
+	.border-radius(3px);
+}
+
+
+.tp-transparentimg {	content:"url(@{plRoot}/sections/revslider/assets/transparent.png)"}
+.tp-3d				{	-webkit-transform-style: preserve-3d;
+						 -webkit-transform-origin: 50% 50%;
+					}
+

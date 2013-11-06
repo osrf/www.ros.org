@@ -1,0 +1,29 @@
+// WELLS
+// -----
+
+.well {
+	min-height: 20px;
+	padding: 19px;
+	margin: @baseLineHeight 0;
+	#gradient > .vertical(darken(@pl-base,5%), darken(@pl-base,3%));
+	border: 1px solid rgba(0,0,0,.1);
+	.box-sizing(border-box);
+	.border-radius(1px);
+	> .btn{
+		margin-right: 10px;
+	}
+	blockquote {
+		border-color: darken(@dark-base,8);
+		border-color: rgba(0,0,0,.15);
+	}
+}
+
+// Sizes
+.well-large {
+  padding: 24px;
+  .border-radius(4px);
+}
+.well-small {
+  padding: 9px;
+  .border-radius(2px);
+}
