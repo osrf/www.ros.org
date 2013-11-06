@@ -1,0 +1,230 @@
+/* @ WP125 Advertising Widget */
+#page .widget_wp125{
+	padding: 0;
+	&.widget{
+		border:none;
+		padding:0;
+		margin:0 0 1em 0;
+		.wtitle{
+			display: none;
+		}
+		.winner {
+			padding:0;
+			line-height: 1px;
+		}
+	}
+	.winner  {
+		width:100%;
+	}
+	.wp125ad{
+		padding: 0;
+		width: auto;
+		float: left;
+		max-width: 50%;
+		a{
+			margin: 6px;
+			padding: 5px;
+			margin: 2px 5px 5px 5px;
+			display: inline-block;
+			border: 1px solid transparent;
+			background: @light-base;
+			border: 1px solid lighten(@light-base, 4);
+			box-shadow: 0 1px 2px rgba(0,0,0, .4);
+			img{
+				width: 125px;
+				height: auto;
+				display: block;
+				box-shadow: 0 1px 2px lighten(@light-base, 8);
+			}
+
+			&:hover{
+				background: lighten(@light-base, 4);
+			}
+		}
+	}
+
+}
+
+
+
+
+.widget ul.twitter .twitter-item{
+	font-weight: normal;
+	font-style: italic;
+	margin-bottom: .4em;
+	font-size: .9em;
+}
+
+
+
+
+
+
+/* @ Typekit */
+	.typekit-badge{ display: none !important; }
+
+/* FlickrRSS Widget */
+.widget_flickrRSS{
+	&.widget{
+		ul{
+			margin: 7px 0px 0px 0px;
+			li{display:inline-block;padding:0;margin:0;border-bottom:none;}
+		}
+	}
+	a{
+		display: inline-block;
+		margin: 8px 12px 2px 5px;
+		img{
+			display: block;
+			font-size: 10px;
+			border-width: 0px 1px 1px 0px;
+			border-style:solid;
+			padding: 3px;
+		}
+	}
+}
+
+.widget_flickrRSS a img,
+.srp-widget-thmblink{
+	background: @light-base;
+	border: 1px solid lighten(@light-base, 4);
+	box-shadow: 0 1px 2px rgba(0,0,0, .4);
+}
+
+.widget_flickrRSS a img:hover{
+	background: lighten(@light-base, 4);
+}
+
+/* @ Special Posts  */
+
+.widget {
+	div.srp-widget-singlepost{
+		border-bottom: 1px solid @dark-base;
+		font-size: .85em;
+		margin: 0;
+		padding: 1.2em 0;
+	}
+	.srp-widget-title-link{
+		font-size: .9em;
+		line-height: 1.2em;
+	}
+	.srp-widget-date{
+		color: fadeout(@pl-text, 40%);
+	}
+	div.srp-thumbnail-box{
+		padding-right: 15px;
+	}
+}
+
+.srp-widget-excerpt{
+	line-height: 1.5em;
+}
+.srp-widget-thmblink{
+	display: block;
+	padding: 3px;
+	text-decoration: none;
+	border: none;
+	text-shadow: none;
+	width: 50px;
+	img{display: block;}
+}
+
+/* @Disqus */
+#site #dsq-content{
+	text-shadow: none;
+	a{
+		text-shadow: none;
+	}
+	.dsq-request-user-info td a{
+
+		font-weight: normal;
+		font-size: 1.2em;
+		color: @pl-text;
+	}
+	.dsq-brlink {display: none;}
+	.dsq-request-user-info td small a {font-style:italic;}
+	h3 {
+		line-height:1.5em;
+		margin-bottom:1em;
+		border-color: @dark-base;
+	}
+}
+
+
+
+// CFORMS
+.cform {
+
+	input {
+		padding: 5px;
+		font-size: 1.1em;
+	}
+
+	fieldset{
+		border:none;
+	}
+
+	input[type="text"].cf_error:focus {
+		border-color: rgba(82, 168, 236, 0.8);
+	}
+
+	label {
+		display:block;
+		margin:0;
+		text-align:left;
+	}
+
+	legend{display: none;}
+
+	.contentcontainer  .cform {
+		margin:5px 50px;
+		padding:0px 0;
+	}
+	ol, li {list-style-type: none; margin:0;padding:0;}
+	li {margin-bottom: .7em;}
+	.single {width: 97%;}
+	.area {width: 97%;}
+	.emailreqtxt,.reqtxt{font-style: italic;}
+	.cf_hidden {display: none;}
+
+	.success {
+		padding: 15px;
+		margin-bottom: .5em;
+		font-size:1.4em;
+		background-color: @dark-base;
+	}
+
+}
+/* Mailing List Form */
+.mailinglist .cform {
+	ol{width:262px; float: left;}
+	.single{width:97%}
+	.sendbutton{margin:21px 0 0 10px;padding: 3px 0 2px 0;}
+	.linklove a{display: none;}
+}
+
+
+/* Contact Forms 7 */
+
+#page {
+	div.wpcf7-mail-sent-ok{
+		border: 1px solid @successBorder;
+		background: @successBackground;
+	}
+	span.wpcf7-not-valid-tip{
+		border:1px solid @warningBorder;
+		background: @warningBackground;
+	}
+	div.wpcf7-validation-errors{
+		border: 1px solid @errorBorder;
+		background: @errorBackground;
+	}
+	div.wpcf7-mail-sent-ok,
+	span.wpcf7-not-valid-tip,
+	div.wpcf7-validation-errors{
+		text-shadow: 0 1px 0 rgba(255,255,255,.8);
+		text-align: center;
+		.box-shadow (inset 1px 1px 2px rgba(255,255,255,.5));
+	}
+}
+

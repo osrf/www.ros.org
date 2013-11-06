@@ -1,0 +1,136 @@
+@CHARSET "ISO-8859-1";
+
+/* GENERAL STYLES */
+	
+.bootstrap-wpadmin {
+}
+.bootstrap-wpadmin h2 {
+	line-height: 35px;
+	margin: 0;
+}
+.bootstrap-wpadmin h3 {
+	font-size: 16px;
+	line-height: 10px;
+}
+.bootstrap-wpadmin .row {
+	margin-left: 0;
+}
+#icontrolwp-icon {
+	 background: url("../images/icontrolwp_32x32.png") no-repeat 0px 3px transparent;
+}
+/* Form elements */
+.bootstrap-wpadmin form fieldset {
+}
+.bootstrap-wpadmin .label {
+	vertical-align: baseline !important;
+}
+.shortcode-usage {
+	border-bottom: 1px solid #bbbbbb;
+	margin-bottom: 10px;
+}
+p.code-description {
+	font-style: italic;
+}
+.postbox-container {
+	margin-right: 10px;
+}
+.postbox-container .meta-box-sortables {
+	min-height: 100px;
+}
+.postbox#common-widget {
+	height: 150px;
+}
+/* Worpit promo */
+#worpit_button {
+	background: url("../images/bright_squares.png") #EFEFEF;
+}
+#worpit_button {
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	height: 190px;
+}
+#worpit_button:hover {
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+	border: 1px solid transparent;
+}
+.row#developer_channel_promo #developer_channel_description .well {
+	height: 275px;
+}
+.row#developer_channel_promo #developer_channel_form {
+	border: 1px solid #EEE;
+	border-radius: 6px;
+	height: 315px; /* 275px + 20px-padding-x2 */
+}
+.row#developer_channel_promo #developer_channel_form h3 {
+	padding: 10px 20px;
+}
+
+/** LESS PAGE **/
+.enabled_section {
+	opacity: 1.0;
+}
+.disabled_section {
+	opacity: 0.5;
+}
+/* BOOSTRAP SETTINGS PAGE STYLES */
+.wrap .icon32 {
+	width: 32px;
+}
+.submit span {
+	font-size: smaller;
+	font-style: italic;
+}
+.option_section {
+	border: 1px solid #f2f2f2;
+	border-radius: 8px 8px 8px 8px;
+	margin-bottom: 8px;
+	padding: 8px 10px;
+}
+.option_section label {
+	background-color: transparent;
+}
+.selected_item label {
+	font-weight: bold;
+}
+.nonselected_item {
+	background-color: transparent;
+}
+.nonselected_item label {
+	font-weight: normal;
+}
+.option_section:hover {
+	background-color: #ffffff;
+	border: 1px dashed #BBBBBB;
+	cursor: pointer;
+}
+
+.option_section.active {
+	background-color: #f6f6f6;
+	border-color: #dddddd;
+}
+table.tbl_tbs_options {
+	width: 100%;
+	border: 1px solid transparent;
+}
+table.tbl_tbs_options tr td {
+	width: 49%;
+	border: 1px solid transparent;
+}
+
+select#hlt_bootstrap_option {
+	padding: 5px;
+	border-radius:6px 6px 6px 6px;
+	line-height: auto;
+	height: 30px;
+	width: 200px;
+}
+
+table#tbl_tbs_options_javascript td {
+	vertical-align: top;
+	width: 50%;
+}
+
+/** OPTIONS PAGES **/
+.bootstrap-wpadmin .row.row_number_1 {
+	padding-top: 18px;
+}

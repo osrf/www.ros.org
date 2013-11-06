@@ -1,0 +1,128 @@
+// Variables.less
+// Variables to customize structural elements in PageLines
+// -----------------------------------------------------
+
+// Responsive
+// -------------------------
+
+// Reference ---------------
+// PORTRAIT TABLET TO DEFAULT 			-- @media (min-width: 768px) and (max-width: 979px) { }
+// LARGE DESKTOP & UP 					-- @media (min-width: 1200px) { }
+// PHONE TO NETBOOK & PORTRAIT TABLET 	-- @media (max-width: 767px) { }
+// UP TO LANDSCAPE PHONE 				-- @media (max-width: 480px) { }
+@resLargeDesktop:	1200px;
+@resDesktop:		979px;
+@resPortraitTablet:	767px;
+@resPhoneLandscape:	480px;
+
+
+// Scaffolding
+// -------------------------
+@bodyBackground:        @pl-background;
+
+// Typography
+// -------------------------
+@baseFontSize:          @plFontSize;
+@baseLineHeight:        @plFontSize * 1.55;
+@propLineHeight: 		1.55em;
+
+@baseHeaderSize: 		@plHeaderSize;
+
+@defaultFont:        	"Helvetica Neue", "Helvetica", Arial, serif;
+@codeFont:        		Menlo, Monaco, "Courier New", monospace;
+
+@baseFontFamily:        @plBaseFont;
+@baseFontWeight:        @plBaseWeight;
+
+// DEPRECATED //
+@altFontFamily:         @baseFontFamily;
+@altFontWeight:    		@plBaseWeight;
+
+@headingsFontFamily:    @plHeaderFont; // empty to use BS default, @baseFontFamily
+@headingsFontWeight:    @plHeaderWeight;    // instead of browser default, bold
+
+@miniFontSize: 			11px;
+@smallerText: 			82%;
+
+// Component sizing
+// -------------------------
+// Based on 14px font-size and 20px line-height
+
+@fontSizeLarge:         @baseFontSize * 1.25; // ~18px
+@fontSizeSmall:         @baseFontSize * 0.85; // ~12px
+@fontSizeMini:          @baseFontSize * 0.75; // ~11px
+
+@paddingLarge:          11px 19px; // 44px
+@paddingSmall:          2px 10px;  // 26px
+@paddingMini:           0 6px;   // 22px
+
+@baseBorderRadius:      4px;
+@borderRadiusLarge:     6px;
+@borderRadiusSmall:     3px;
+
+// Buttons
+// -------------------------
+@buttonFontSize:        14px;
+@buttonFontFamily:      @defaultFont;
+
+@headingsColor:         inherit; // empty to use BS default, @textColor
+
+@h1Size:          		@baseHeaderSize * 2.8;
+@h2Size:          		@baseHeaderSize * 2.4;
+@h3Size:          		@baseHeaderSize * 1.8;
+@h4Size:          		@baseHeaderSize * 1.4;
+@h5Size:          		@baseHeaderSize * 1.1;
+@h6Size:          		@baseHeaderSize;
+
+
+// Horizontal forms & lists
+// -------------------------
+@horizontalComponentOffset:		180px;
+@inputHeight:       			@baseLineHeight * 1.5;
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Z-index master list
+// -------------------------
+@zindexDropdown:          	1000;
+@zindexNavbar: 				1001;
+@zindexEditor: 				1005;
+@zindexPopover:           	1010;
+@zindexTooltip:           	1020;
+
+@zindexFixedNavbar:       	1030;
+@zindexModalBackdrop:     	1040;
+@zindexModal:             	1050;
+
+// GRID
+// --------------------------------------------------
+
+@fluidGridColumnWidth:    6.382978723%;
+@fluidGridGutterWidth:    2.127659574%;
+
+// Default 940px grid
+// -------------------------
+@gridColumns:             12;
+@gridColumnWidth:         60px;
+@gridGutterWidth:         20px;
+@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+@gridRowSpace:            @baseLineHeight;
+
+
+// Tooltips and popovers
+// -------------------------
+@tooltipColor:            #fff;
+@tooltipBackground:       #000;
+@tooltipArrowWidth:       5px;
+@tooltipArrowColor:       @tooltipBackground;
+
+@popoverBackground:       #fff;
+@popoverArrowWidth:       10px;
+@popoverArrowColor:       #fff;
+@popoverTitleBackground:  darken(@popoverBackground, 3%);
+
+// Special enhancement for popovers
+@popoverArrowOuterWidth:  @popoverArrowWidth + 1;
+@popoverArrowOuterColor:  rgba(0,0,0,.25);

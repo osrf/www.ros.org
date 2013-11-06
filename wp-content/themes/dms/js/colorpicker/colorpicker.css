@@ -1,0 +1,457 @@
+
+input.color.alphaHex {
+	width: 5.25em;
+}
+.color.selected,
+.color.selected:focus {
+	border-color: rgba(0,0,0,.4);
+	box-shadow:inset 0 0 4px rgba(0,0,0,.4);
+
+}
+.color.error {
+	box-shadow: 0 0 3px 3px #d00;
+}
+.colorContainer {
+	display: inline-block;
+}
+.colorContainer > .color {
+	margin: 0;
+
+}
+
+body .input-prepend .trigger-color{
+	padding-left: 11px;
+	padding-right: 11px;
+	color:#777;
+}
+.colorContainer.color-null {
+	background: none;
+}
+.colorContainer.color-null .color {
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.3), 0 1px 1px rgba(255,255,255,0.7);
+	background-color: transparent !important;
+	background: -moz-linear-gradient(top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.35) 100%),
+		-moz-linear-gradient(left, rgba(255,0,0,0.25) 0%, rgba(255,255,0,0.25) 16.67%, rgba(0,255,0,0.25) 33.33%, rgba(0,255,255,0.25) 50%, rgba(0,0,255,0.25) 66.67%, rgba(255,0,255,0.25) 83.33%, rgba(255,0,0,0.25) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.5)), color-stop(50%,rgba(255,255,255,0)), color-stop(50%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.35))),
+		-webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,0,0,0.25)), color-stop(16.67%,rgba(255,255,0,0.25)), color-stop(33.33%,rgba(0,255,0,0.25)), color-stop(50%,rgba(0,255,255,0.25)), color-stop(66.67%,rgba(0,0,255,0.25)), color-stop(83.33%,rgba(255,0,255,0.25)), color-stop(100%,rgba(255,0,0,0.25)));
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 50%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.35) 100%),
+		-webkit-linear-gradient(left, rgba(255,0,0,0.25) 0%,rgba(255,255,0,0.25) 16.67%,rgba(0,255,0,0.25) 33.33%,rgba(0,255,255,0.25) 50%,rgba(0,0,255,0.25) 66.67%,rgba(255,0,255,0.25) 83.33%,rgba(255,0,0,0.25) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 50%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.35) 100%),
+		-o-linear-gradient(left, rgba(255,0,0,0.25) 0%,rgba(255,255,0,0.25) 16.67%,rgba(0,255,0,0.25) 33.33%,rgba(0,255,255,0.25) 50%,rgba(0,0,255,0.25) 66.67%,rgba(255,0,255,0.25) 83.33%,rgba(255,0,0,0.25) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 50%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.35) 100%),
+		-ms-linear-gradient(left, rgba(255,0,0,0.25) 0%,rgba(255,255,0,0.25) 16.67%,rgba(0,255,0,0.25) 33.33%,rgba(0,255,255,0.25) 50%,rgba(0,0,255,0.25) 66.67%,rgba(255,0,255,0.25) 83.33%,rgba(255,0,0,0.25) 100%);
+	background: linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 50%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.35) 100%),
+		linear-gradient(left, rgba(255,0,0,0.25) 0%,rgba(255,255,0,0.25) 16.67%,rgba(0,255,0,0.25) 33.33%,rgba(0,255,255,0.25) 50%,rgba(0,0,255,0.25) 66.67%,rgba(255,0,255,0.25) 83.33%,rgba(255,0,0,0.25) 100%);
+}
+.colorContainer.color-null .color.selected {
+	box-shadow: 0 0 1px rgba(0,0,0,0.8), inset 0 1px 1px rgba(255,255,255,0.8);
+}
+
+#css3colorpicker-div {
+	z-index: 10001;
+	display: block;
+	padding: 10px;
+	position: absolute;
+	box-shadow: 0 2px 7px rgba(0,0,0,0.55);
+	border-radius: 5px;
+	background: #fff;
+}
+#css3colorpicker-div-container {
+	width: 378px;
+	height: 256px;
+	position: relative;
+}
+#css3colorpicker-div.alphaOn #css3colorpicker-div-container {
+	height: 282px;
+}
+#css3colorpicker-div-swatchContainer {
+	width: 378px;
+	height: 0;
+	overflow: hidden;
+}
+#css3colorpicker-div.swatchesOn #css3colorpicker-div-swatchContainer {
+	height: 38px;
+}
+#css3colorpicker-div-swatches {
+	width: 378px;
+	height: 28px;
+	position: relative;
+	margin-top: 10px;
+	background: #bbb;
+	background: -moz-linear-gradient(top, #ddd 0%, #f0f0f0 50%, #ddd 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ddd), color-stop(50%,#f0f0f0), color-stop(100%,#ddd));
+	background: -webkit-linear-gradient(left, #ddd 0%,#f0f0f0 50%,#ddd 100%);
+	background: -o-linear-gradient(left, #ddd 0%,#f0f0f0 50%,#ddd 100%);
+	background: linear-gradient(left, #ddd 0%,#f0f0f0 50%,#ddd 100%);
+	box-shadow: inset 0 1px 5px rgba(0,0,0,0.35);
+	border-radius: 2px;
+}
+#css3colorpicker-div-swatches .swatch {
+	display: inline-block;
+	vertical-align: middle;
+	float: left;
+	width: 20px;
+	height: 20px;
+	margin: 4px 5px;
+	margin-right: 0;
+	border-radius: 2px;
+	position: relative;
+}
+#css3colorpicker-div.alphaOn #css3colorpicker-div-swatches .swatch {
+	background: url('transparent.png') repeat;
+}
+#css3colorpicker-div-swatches .swatch > div {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-radius: 2px;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.5),
+		inset 0 1px 3px rgba(0,0,0,0.35),
+		inset 0 -1px 1px 1px rgba(255,255,255,0.25);
+}
+#css3colorpicker-div-swatches .swatch:first-child {
+	margin-left: 4px;
+}
+#css3colorpicker-div-colorContainer {
+	width: 85px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	border-radius: 2px;
+	overflow: visible;
+	background: url('transparent.png') repeat;
+}
+#css3colorpicker-div.alphaOn #css3colorpicker-div-colorContainer {
+	background: url('transparent.png') repeat;
+}
+#css3colorpicker-div-color {
+	width: 50px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	border-radius: 2px 0 0 2px;
+	box-shadow: inset 0 1px 10px rgba(0,0,0,0.65), inset 0 -1px 1px 1px rgba(255,255,255,0.5);
+}
+#css3colorpicker-div-colorOld {
+	width: 35px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	border-radius: 0 2px 2px 0;
+	box-shadow: inset 0 1px 1px 1px rgba(255,255,255,0.25), 1px 1px 2px rgba(0,0,0,0.25);
+}
+#css3colorpicker-div-inputContainer {
+	width: 85px;
+	height: 198px;
+	padding: 1px 0;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 0;
+	overflow: hidden;
+	background: #bbb;
+	background: -moz-linear-gradient(top, #ddd 0%, #f0f0f0 50%, #ddd 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ddd), color-stop(50%,#f0f0f0), color-stop(100%,#ddd));
+	background: -webkit-linear-gradient(top, #ddd 0%,#f0f0f0 50%,#ddd 100%);
+	background: -o-linear-gradient(top, #ddd 0%,#f0f0f0 50%,#ddd 100%);
+	background: linear-gradient(top, #ddd 0%,#f0f0f0 50%,#ddd 100%);
+	box-shadow: inset 0 1px 5px rgba(0,0,0,0.35);
+	border-radius: 2px;
+}
+#css3colorpicker-div.alphaOn #css3colorpicker-div-inputContainer {
+	height: 226px;
+}
+#css3colorpicker-div-inputContainer li {
+	list-style: none;
+	display: block;
+	font-family: arial;
+	font-weight: normal;
+	font-size: 12px;
+	padding: 0 5px;
+	background: transparent;
+	position: relative;
+	height: 26px;
+	line-height: 23px;
+	margin: 2px 0 0;
+	cursor: default;
+	overflow: hidden;
+	text-shadow: 0 0 0 transparent, 0px 1px 0 rgba(255,255,255,0.75);
+}
+#css3colorpicker-div-inputContainer li.selected {
+	font-weight: bold;
+	background: rgba(255,255,255,0.5);
+	box-shadow: 0 1px 5px rgba(0,0,0,0.35);
+}
+#css3colorpicker-div #css3colorpicker-div-inputContainer li.alpha {
+	height: 0;
+	margin: 0;
+}
+#css3colorpicker-div.alphaOn #css3colorpicker-div-inputContainer li.alpha {
+	height: 26px;
+	margin: 2px 0 0;
+}
+#css3colorpicker-div-inputContainer input {
+	width: 45px;
+	height: 18px;
+	line-height: 18px;
+	margin: 2px 0;
+	border: 0 none;
+	padding: 2px;
+	font-size: 12px;
+	position: absolute;
+	right: 16px;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.7), inset 0 1px 5px rgba(0,0,0,0.75);
+	border-radius: 2px;
+}
+#css3colorpicker-div-inputContainer input#css3colorpicker-div-hex {
+	width: 56px;
+	right: 5px;
+}
+#css3colorpicker-div-inputContainer li span {
+	position: absolute;
+	right: 5px;
+	font-size: 10px;
+}
+#css3colorpicker-div-1d,
+#css3colorpicker-div-2d,
+#css3colorpicker-div-alpha {
+	position: absolute;
+	overflow: visible;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.75);
+}
+#css3colorpicker-div-1d,
+#css3colorpicker-div-2d {
+	height: 256px;
+	background: #fff;
+}
+#css3colorpicker-div-1d {
+	cursor: n-resize;
+	width: 20px;
+	top: 0;
+	left: 265px;
+}
+#css3colorpicker-div-2d {
+	cursor: crosshair;
+	width: 256px;
+	top: 0;
+	left: 0;
+}
+#css3colorpicker-div-alpha {
+	cursor: e-resize;
+	width: 256px;
+	height: 0;
+	bottom: 0;
+	overflow: hidden;
+}
+#css3colorpicker-div.alphaOn #css3colorpicker-div-alpha {
+	height: 20px;
+}
+#css3colorpicker-div-alpha:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: url('transparentGrad.png') left top repeat-y;
+}
+
+#css3colorpicker-div-1dControl,
+#css3colorpicker-div-2dControl,
+#css3colorpicker-div-alphaControl {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+#css3colorpicker-div-1dControl {
+	width: auto;
+	height: 1px;
+	right: 0;
+}
+#css3colorpicker-div-2dControl {
+	width: 11px;
+	height: 11px;
+	margin-left: -5px;
+	margin-top: -5px;
+	border-radius: 6px;
+}
+#css3colorpicker-div-alphaControl {
+	width: 1px;
+	height: auto;
+	bottom: 0;
+	display: none;
+}
+#css3colorpicker-div.alphaOn #css3colorpicker-div-alphaControl {
+	display: block;
+}
+
+#css3colorpicker-div-1dColor,
+#css3colorpicker-div-1dColor:after,
+#css3colorpicker-div-1dGradient,
+#css3colorpicker-div-2dColor,
+#css3colorpicker-div-2dColor:after,
+#css3colorpicker-div-2dGradient,
+#css3colorpicker-div-2dGradient:after {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+#css3colorpicker-div-1dColor:after,
+#css3colorpicker-div-2dColor:after,
+#css3colorpicker-div-2dGradient:after {
+	content: '';
+	display: block;
+}
+
+#css3colorpicker-div.animOn.visible,
+#css3colorpicker-div.animOn.visible #css3colorpicker-div-container,
+#css3colorpicker-div.animOn.visible #css3colorpicker-div-swatchContainer,
+#css3colorpicker-div.animOn.visible #css3colorpicker-div-inputContainer,
+#css3colorpicker-div.animOn.visible #css3colorpicker-div-inputContainer li,
+#css3colorpicker-div.animOn.visible #css3colorpicker-div-swatches .swatch,
+#css3colorpicker-div.animOn.visible #css3colorpicker-div-alpha {
+	transition: width .2s ease-in-out, height .2s ease-in-out, top .2s ease-in-out, left .2s ease-in-out, opacity .2s ease-in-out;
+	-moz-transition: width .2s ease-in-out, height .2s ease-in-out, top .2s ease-in-out, left .2s ease-in-out, opacity .2s ease-in-out;
+	-webkit-transition: width .2s ease-in-out, height .2s ease-in-out, top .2s ease-in-out, left .2s ease-in-out, opacity .2s ease-in-out;
+	-o-transition: width .2s ease-in-out, height .2s ease-in-out, top .2s ease-in-out, left .2s ease-in-out, opacity .2s ease-in-out;
+}
+
+
+/* Gradients */
+
+#css3colorpicker-div.mode-h #css3colorpicker-div-1dGradient {
+	background: #000;
+}
+#css3colorpicker-div.mode-h #css3colorpicker-div-1dColor {
+	background: -moz-linear-gradient(top, #ff0000 0%, #ff00ff 16.67%, #0000ff 33.33%, #00ffff 50%, #00ff00 66.67%, #ffff00 83.33%, #ff0000 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff0000), color-stop(16.67%,#ff00ff), color-stop(33.33%,#0000ff), color-stop(50%,#00ffff), color-stop(66.67%,#00ff00), color-stop(83.33%,#ffff00), color-stop(100%,#ff0000));
+	background: -webkit-linear-gradient(top, #ff0000 0%,#ff00ff 16.67%,#0000ff 33.33%,#00ffff 50%,#00ff00 66.67%,#ffff00 83.33%,#ff0000 100%);
+	background: -o-linear-gradient(top, #ff0000 0%,#ff00ff 16.67%,#0000ff 33.33%,#00ffff 50%,#00ff00 66.67%,#ffff00 83.33%,#ff0000 100%);
+	background: -ms-linear-gradient(top, #ff0000 0%,#ff00ff 16.67%,#0000ff 33.33%,#00ffff 50%,#00ff00 66.67%,#ffff00 83.33%,#ff0000 100%);
+	background: linear-gradient(top, #ff0000 0%,#ff00ff 16.67%,#0000ff 33.33%,#00ffff 50%,#00ff00 66.67%,#ffff00 83.33%,#ff0000 100%);
+}
+#css3colorpicker-div.mode-h #css3colorpicker-div-2dGradient:after,
+#css3colorpicker-div.mode-s #css3colorpicker-div-2dGradient,
+#css3colorpicker-div.mode-v #css3colorpicker-div-1dGradient {
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+	background: linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
+}
+#css3colorpicker-div.mode-v #css3colorpicker-div-2dColor:after,
+#css3colorpicker-div.mode-s #css3colorpicker-div-1dColor:after {
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background: linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+}
+#css3colorpicker-div.mode-h #css3colorpicker-div-2dGradient {
+	background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0)));
+	background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	background: -o-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	background: linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+#css3colorpicker-div.mode-s #css3colorpicker-div-2dColor,
+#css3colorpicker-div.mode-v #css3colorpicker-div-2dColor {
+	background: -moz-linear-gradient(left, #ff0000 0%, #ffff00 16.67%, #00ff00 33.33%, #00ffff 50%, #0000ff 66.67%, #ff00ff 83.33%, #ff0000 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ff0000), color-stop(16.67%,#ffff00), color-stop(33.33%,#00ff00), color-stop(50%,#00ffff), color-stop(66.67%,#0000ff), color-stop(83.33%,#ff00ff), color-stop(100%,#ff0000));
+	background: -webkit-linear-gradient(left, #ff0000 0%,#ffff00 16.67%,#00ff00 33.33%,#00ffff 50%,#0000ff 66.67%,#ff00ff 83.33%,#ff0000 100%);
+	background: -o-linear-gradient(left, #ff0000 0%,#ffff00 16.67%,#00ff00 33.33%,#00ffff 50%,#0000ff 66.67%,#ff00ff 83.33%,#ff0000 100%);
+	background: -ms-linear-gradient(left, #ff0000 0%,#ffff00 16.67%,#00ff00 33.33%,#00ffff 50%,#0000ff 66.67%,#ff00ff 83.33%,#ff0000 100%);
+	background: linear-gradient(left, #ff0000 0%,#ffff00 16.67%,#00ff00 33.33%,#00ffff 50%,#0000ff 66.67%,#ff00ff 83.33%,#ff0000 100%);
+}
+#css3colorpicker-div.mode-v #css3colorpicker-div-2dGradient,
+#css3colorpicker-div.mode-s #css3colorpicker-div-1dGradient {
+	background: #000;
+}
+
+
+/* Control Themes */
+
+#css3colorpicker-div.controls-inset #css3colorpicker-div-1d,
+#css3colorpicker-div.controls-raised #css3colorpicker-div-1d,
+#css3colorpicker-div.controls-inset #css3colorpicker-div-2d,
+#css3colorpicker-div.controls-inset #css3colorpicker-div-alpha,
+#css3colorpicker-div.controls-raised #css3colorpicker-div-alpha {
+	overflow: hidden;
+}
+#css3colorpicker-div.controls-raised #css3colorpicker-div-2d,
+#css3colorpicker-div.controls-simple #css3colorpicker-div-1d,
+#css3colorpicker-div.controls-simple #css3colorpicker-div-2d,
+#css3colorpicker-div.controls-simple #css3colorpicker-div-alpha {
+	overflow: visible;
+}
+
+
+#css3colorpicker-div.controls-simple #css3colorpicker-div-1dControl,
+#css3colorpicker-div.controls-simple #css3colorpicker-div-alphaControl {
+	border: 1px solid #000;
+	box-shadow: 0 0 3px 1px rgba(255,255,255,0.65);
+}
+#css3colorpicker-div.controls-simple #css3colorpicker-div-1dControl {
+	margin-top: -1px;
+}
+#css3colorpicker-div.controls-simple #css3colorpicker-div-alphaControl {
+	margin-left: -1px;
+}
+#css3colorpicker-div.controls-simple.controls-invert #css3colorpicker-div-1dControl,
+#css3colorpicker-div.controls-simple.controls-invert #css3colorpicker-div-alphaControl {
+	border: 1px solid #fff;
+	box-shadow: 0 0 3px 1px rgba(0,0,0,0.65);
+}
+#css3colorpicker-div.controls-simple #css3colorpicker-div-2dControl {
+	border: 1px solid #000;
+	width: 9px;
+	height: 9px;
+	box-shadow: 0 0 3px 1px rgba(255,255,255,0.65);
+}
+#css3colorpicker-div.controls-simple.controls-invert #css3colorpicker-div-2dControl {
+	width: 9px;
+	height: 9px;
+	border: 1px solid #fff;
+	box-shadow: 0 0 3px 1px rgba(0,0,0,0.65);
+}
+
+
+#css3colorpicker-div.controls-inset.controls-invert #css3colorpicker-div-1dControl,
+#css3colorpicker-div.controls-raised #css3colorpicker-div-1dControl {
+	box-shadow: 0 -1px 1px rgba(255,255,255,0.65), 0 1px 1px rgba(0,0,0,0.65);
+}
+#css3colorpicker-div.controls-inset.controls-invert #css3colorpicker-div-alphaControl,
+#css3colorpicker-div.controls-raised #css3colorpicker-div-alphaControl {
+	box-shadow: -1px 0 1px rgba(255,255,255,0.65), 1px 0 1px rgba(0,0,0,0.65);
+}
+#css3colorpicker-div.controls-inset #css3colorpicker-div-1dControl,
+#css3colorpicker-div.controls-raised.controls-invert #css3colorpicker-div-1dControl {
+	box-shadow: 0 -1px 1px rgba(0,0,0,0.65), 0 1px 1px rgba(255,255,255,0.65);
+}
+#css3colorpicker-div.controls-inset #css3colorpicker-div-alphaControl,
+#css3colorpicker-div.controls-raised.controls-invert #css3colorpicker-div-alphaControl {
+	box-shadow: -1px 0 1px rgba(0,0,0,0.65), 1px 0 1px rgba(255,255,255,0.65);
+}
+#css3colorpicker-div.controls-inset.controls-invert #css3colorpicker-div-2dControl,
+#css3colorpicker-div.controls-raised #css3colorpicker-div-2dControl {
+	box-shadow: inset 0 1px 1px rgba(255,255,255,0.65), 0 1px 3px rgba(0,0,0,0.65);
+}
+#css3colorpicker-div.controls-inset #css3colorpicker-div-2dControl,
+#css3colorpicker-div.controls-raised.controls-invert #css3colorpicker-div-2dControl {
+	box-shadow: inset 0 1px 3px rgba(0,0,0,0.65), 0 1px 1px rgba(255,255,255,0.65);
+}

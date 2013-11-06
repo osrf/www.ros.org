@@ -1,0 +1,167 @@
+/*
+ * jQuery FlexSlider v1.8
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
+
+/* PL STYLES */
+
+.flexwrap, .fslider{
+	position: relative;
+}
+
+
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;}
+
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	.slides > li {
+		display: none;
+		-webkit-backface-visibility: hidden;/* Hide the slides before the JS is loaded. Avoids image jumping */
+	}
+	.slides img {width: 100%; display: block;}
+}
+
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+html[xmlns] .slides {display: block;}
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+
+/* FlexSlider Default Theme
+*********************************/
+.fslider{
+	background: rgba(255,255,255,.4);
+	box-shadow: 0 1px 4px rgba(0,0,0,.4);
+	-webkit-border-radius: 5px; -moz-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px;
+	padding: 5px;
+}
+.flexslider {
+	position: relative;
+	zoom: 1;
+	.slides {
+		zoom: 1;
+		> li {position: relative;}
+	}
+}
+
+/* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
+.flex-container {zoom: 1; position: relative;}
+
+.flex-caption {
+	background:none;
+	zoom: 1;
+	text-align: left;
+	max-width: 42%;
+	padding: 13px 2%;
+	margin: 0;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.4);
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.6);
+	box-shadow: 1px 1px 0 rgba(255,255,255, .1), -1px -1px 0 rgba(255,255,255, .1);
+	font-size: 15px;
+	line-height: 1.5em;
+}
+
+/* Direction Nav */
+.flex-direction-nav {
+	height: 0;
+	li a{
+		text-indent:-99999px; //IE8
+		margin-top: -42px; /* 16 (half height of control nav) + 26 (half of height) */
+		width: 52px;
+		height: 52px;
+		display: block;
+		position: absolute;
+		top: 50%;
+		cursor: pointer;
+		color: transparent;
+		background-color: rgba(50,50,50,.5);
+		.border-radius(25px);
+		background-image:url(@{plSectionsRoot}/quickslider/images/bg_direction_nav.png);
+		&:hover{
+			background-color: rgba(50,50,50,.4);
+
+		}
+		&:active{
+			background-color: rgba(50,50,50,.8);
+		}
+		&.next {background-position: -52px 0; right: 15px;}
+		&.prev {left: 15px;}
+		&.disabled {
+			opacity: .3;
+			filter:alpha(opacity=30);
+			cursor: default;
+		}
+	}
+}
+.no-control-nav .flex-direction-nav li a{
+	margin-top: -26px;
+}
+
+.section-quickslider{
+	.content-pad{
+		padding-bottom: 0;
+
+	}
+	.wrap-no-control-nav{
+		padding-bottom: 10px;
+	}
+}
+
+/* Control Nav */
+.flex-control-nav {
+	width: 100%;
+	padding-top: 15px;
+	text-align: center;
+	li {
+		margin: 0 0 0 5px;
+		display: inline-block;
+		zoom: 1;
+		*display: inline;
+		&:first-child {margin: 0;}
+		a {
+			width: 13px;
+			height: 13px;
+			display: block;
+			cursor: pointer;
+			background:@baseContrastSlight;
+
+
+			.border-radius(6px);
+			cursor: pointer;
+			text-indent: -999em;
+			&.active {
+				background:@baseContrastMore;
+				cursor: default;
+			}
+		}
+
+	}
+}
+

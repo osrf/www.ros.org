@@ -1,0 +1,59 @@
+/*
+Theme Name: DMS
+
+Description: A responsive drag-and-drop design management system for pro websites based on HTML5 and CSS3. PageLines will help you do amazing things faster & easier than ever before. Designed by <a href="http://pagelines.com/">PageLines</a> in California. Twitter @pagelines
+
+Version: 1.1.1
+
+Author: PageLines
+
+Author URI: http://www.pagelines.com/
+
+Theme URI: http://www.pagelines.com/DMS
+
+Tags: rtl-language-support, editor-style, theme-options, one-column, two-columns, three-columns, left-sidebar, right-sidebar, flexible-width, custom-menu, fixed-width, threaded-comments, custom-background,  custom-header, custom-colors, custom-menu, photoblogging, translation-ready, white, silver, light, blue, green, yellow
+
+License: GPL
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+
+#  IMPORTANT NOTE ON CUSTOMIZATION
+*
+*  Don't add customizations to this file!
+	- Customization CSS in PageLines
+	- Customize PageLines by adding CSS in the settings, child themes, or plugins
+	- Don't add it here; as it will either get overwritten by updates, and will prevent you from updating at all!
+
+********************************************************************************************************************************
+*
+*  Copyright 2008-2013 PageLines, Inc.  http://www.pagelines.com/
+*
+*  This program is free software; you can redistribute it and/or modify it under
+*  the terms of the GNU General Public License version 2, as published by the
+*  Free Software Foundation.
+*
+*  You may NOT assume that you can use any other version of the GPL.
+*
+*  This program is distributed in the hope that it will be useful, but WITHOUT
+*  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+*  FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details
+*
+*  You should have received a copy of the GNU General Public License along with
+*  this program; if not, write to:
+*
+*      Free Software Foundation, Inc.
+*      51 Franklin St, Fifth Floor
+*      Boston, MA  02110-1301  USA
+*
+*  The license for this software can also likely be found here:
+*  http://www.gnu.org/licenses/gpl-2.0.html
+*
+********************************************************************************************************************************/
+
+
+/******************************************
+*     Required classes for .org repo.     *
+*                                         *
+* .wp-caption .wp-caption-text            *
+* .sticky .gallery-caption .bypostauthor  *
+* .alignright .alignleft .aligncenter     *
+******************************************/

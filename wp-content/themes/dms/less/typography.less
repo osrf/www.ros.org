@@ -1,0 +1,469 @@
+// Typography.less
+// Headings, body text, lists, code, and more for a versatile and durable typography system
+// ----------------------------------------------------------------------------------------
+
+
+// BODY TEXT
+// ---------
+body{
+	font-size: @baseFontSize;
+	font-family: @baseFontFamily;
+	font-weight: @baseFontWeight;
+	line-height: @propLineHeight;
+	color: @textColor;
+	
+}
+
+// PARAGRAPH
+// ---------
+p {
+	margin: @propLineHeight 0;
+
+	small {
+		color: @textColorAlt;
+		font-size: @baseFontSize - 2;
+		line-height: @baseLineHeight / 2;
+	}
+
+	// SPECIAL FIXES
+
+	// fix for minimum paragraph widths
+	&:before{
+		content: "";
+		width: 8em;
+		display: block;
+		overflow: hidden;
+	}
+	hyphenate: auto;
+	hyphenate-before: 2;
+	hyphenate-after: 3;
+	hyphenate-lines: 3;
+	orphans: 4;
+}
+
+// Links
+// ---------
+a{
+	color: @linkColor;
+	.transition(color .2s linear);
+	&:hover{
+		color: @linkColorHover;
+		text-decoration: none;
+	}
+}
+
+
+
+
+// SPECIAL MARKUP
+// --------------
+dt {
+	font-weight:bold;
+}
+dd {
+	font-style: italic;
+}
+sup {
+	font-size:.7em;
+	vertical-align: top;
+	vertical-align:super;
+}
+sub {
+	font-size:.7em;
+	vertical-align: bottom;
+}
+
+big {
+	font-size: 1.3em;
+}
+
+abbr,
+acronym{
+	border-bottom: .1em dotted;
+	cursor: help;
+}
+
+q:before,
+q:after{
+	content: "'";
+}
+
+// CODE / PRE
+// ----------
+code,
+pre {
+	padding: 0 3px 2px;
+	font-family: @codeFont;
+	font-size: 12px;
+	background-color: @dark-base;
+	border: 1px solid darken(@dark-base, 8);
+}
+code {
+	padding: 2px 4px;
+}
+pre {
+	display: block;
+	padding: 8.5px;
+	margin: 1em;
+	font-size: 12.025px;
+	line-height: 18px;
+	white-space: pre;
+	white-space: pre-wrap;
+	word-break: break-all;
+	word-wrap: break-word;
+	code {
+		padding: 0;
+		color: inherit;
+		background-color: transparent;
+		border: 0;
+	}
+	&.pre-scrollable {
+		max-height: 340px;
+		overflow-y: scroll;
+	}
+}
+
+// HEADINGS
+// --------
+
+h1, h2, h3, h4, h5, h6 {
+	margin: .4em 0;
+	text-rendering: optimizelegibility; // Fix the character spacing for headings
+	font-family: @headingsFontFamily;
+	font-weight: @headingsFontWeight;
+	line-height: 130%;
+	small {
+	  	font-weight: normal;
+		font-size: @h6Size;
+	}
+	> a{
+		color: inherit;
+		&:hover{
+			color: @linkColor;
+		}
+	}
+}
+.subhead{
+	color: @textColorAlt;
+	font-size: @smallerText;
+}
+
+
+// HEADINGS SIZING
+// ---------------
+h1,
+.fpost .entry-title{
+    font-size: @h1Size;
+    line-height: 110%;
+
+}
+h2 {
+  font-size: @h2Size;
+}
+h3 {
+  font-size: @h3Size;
+}
+
+h4 {
+  font-size: @h4Size;
+}
+h5 {
+  font-size: @h5Size;
+}
+h6 {
+  font-size: @h6Size;
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2em;
+  + p {margin-top:.4em;}
+	
+}
+
+
+/* @ Header Special Cases */
+h1 + img,
+h2 + img{
+	margin-top:1em;
+}
+
+// Page header
+.page-header {
+	padding-bottom: @baseLineHeight - 1;
+	margin: @baseLineHeight*3 0 @baseLineHeight;
+	border-bottom: 1px solid @hrBorder;
+	h1{
+		line-height: 1;
+		margin: 0;
+	}
+}
+.page-header-minor {
+	margin: @baseLineHeight 0;
+	padding: @baseLineHeight/2 0 ;
+	border-bottom: 1px solid @hrBorder;
+}
+
+
+
+
+// LISTS
+// -----
+
+
+
+// HENTRY = Standard Long Form Text Formatting
+// -------------------------------------------------
+.hentry{	
+	ul, 
+	ol{
+		padding: 0;
+		margin: 1.3em 0 1.3em 1.3em;
+		font-size: 90%;
+		line-height: 1.3em;
+	}
+	ol{
+		list-style:decimal
+		ol{
+			list-style:lower-roman
+			ol{
+				list-style:lower-alpha
+			}
+		}
+	}
+	ul {
+	  list-style: disc;
+	}
+	ol {
+	  list-style: decimal;
+	}
+
+	ul ul,
+	ul ol,
+	ol ol,
+	ol ul {
+	  margin-bottom: 0;
+	}
+	
+	h1, h2, h3, h4, h5, h6{
+		margin: 1em 0;
+	}
+
+}
+
+// Unordered and Ordered lists
+
+ol,
+ul{
+	list-style-type:none
+}
+
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+// Description Lists
+dl {
+  margin-bottom: @baseLineHeight;
+}
+dt,
+dd {
+  line-height: @baseLineHeight;
+}
+dt {
+  font-weight: bold;
+  line-height: @baseLineHeight - 1; // fix jank Helvetica Neue font bug
+}
+dd {
+  margin-left: @baseLineHeight / 2;
+}
+
+// Horizontal layout (like forms)
+.dl-horizontal {
+  dt {
+    float: left;
+    clear: left;
+    width: 120px;
+    text-align: right;
+  }
+  dd {
+    margin-left: 130px;
+  }
+}
+
+// Links
+a {
+	text-decoration:none;
+	&:focus{
+		outline:1px dotted invert;
+	}
+	&:active, &:focus{
+		outline: none !important;
+	}
+}
+
+
+input.searchfield:active {
+   	outline: none !important;
+}
+
+
+// Horizontal rules
+hr {
+	clear:both;
+	height:0;
+	margin: @baseLineHeight 0;
+	border: 0;
+	border-top: 1px solid @hrBorder;
+	border-bottom: 1px solid @white;
+	&.soften {
+		height: 1px;
+		background-image: -webkit-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
+		background-image: -moz-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
+		background-image: -ms-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
+		background-image: -o-linear-gradient(left, transparent, rgba(0, 0, 0, .1), transparent);
+		border: 0;
+	}
+}
+
+
+// Emphasis
+strong {
+  font-weight: @baseFontWeight + 200;
+}
+em {
+  font-style: italic;
+}
+.muted {
+  color: @grayLight;
+}
+
+// Special Ampersand
+.spamp{
+	font-family: 'Baskerville', Palatino, georgia;
+	font-style: italic;
+	font-weight: normal;
+}
+
+// Serif Style
+.serifize{
+	font-family: georgia, times, serif;
+	font-style: italic;
+	font-weight: normal;
+}
+
+// Abbreviations and acronyms
+abbr[title] {
+  border-bottom: 1px dotted #ddd;
+  cursor: help;
+}
+abbr.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+// Blockquotes
+blockquote {
+	padding: 0 0 0 15px;
+	margin: 0 0 @baseLineHeight;
+	border-left: 5px solid @textColorSubtle;
+	p {
+		margin-bottom: 0;
+		font-style: italic;
+		&:first-child{
+			margin-top: 0;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	small, 
+	cite{
+		display: block;
+		font-size: 80%;
+		line-height: 1.5em;
+		padding-left: 10px;
+		color: @textColorAlt;
+		&:before {
+			content: '\2014 \00A0';
+		}
+	}
+	
+	&.side-right{
+		float: right;
+		max-width: 250px;
+		margin: 0 0 1em 1em;
+	}
+	&.side-left{
+		float: left;
+		max-width: 250px;
+		margin: 0 1em 1em -1em;
+	}
+	
+  // Float right with text-align: right
+  &.pull-right {
+    float: right;
+    padding-left: 0;
+    padding-right: 15px;
+    border-left: 0;
+    border-right: 5px solid @textColorSubtle;
+    p,
+    small {
+      text-align: right;
+    }
+  }
+}
+
+// Quotes
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+// Addresses
+address {
+  display: block;
+  margin-bottom: @baseLineHeight;
+  line-height: @baseLineHeight;
+  font-style: normal;
+}
+
+// Misc
+small {
+  font-size: 100%;
+}
+cite {
+  font-style: normal;
+}
+
+::selection {
+	background: @linkColor; /* Safari */
+	}
+::-moz-selection {
+	background: @linkColor; /* Firefox */
+}
+
+// -----------
+// Image Styles
+// styled images added from Bootstrap
+// PageLines 2.3
+// BA
+// -----------
+
+.muted {
+  color: @grayLight;
+}
+.text-warning {
+  color: @warningText;
+}
+.text-error {
+  color: @errorText;
+}
+.text-info {
+  color: @infoText;
+}
+.text-success {
+  color: @successText;
+}

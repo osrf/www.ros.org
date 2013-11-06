@@ -1,0 +1,54 @@
+********************************************************
+
+  DMS Release Notes:
+
+********************************************************
+
+Version 1.1.1
+	
+	33 commits to github including a lot of translation fixes.
+	https://github.com/pagelines/DMS/compare/a7e601390d9d6c893c4201e7c116d3968dc18b05...83b4d4dbdbd1fd9178b29f7ef37e45bcc15cbc5d
+
+
+Version 1.1
+
+	This release has 227 commits with 387 file changes.
+	To help optimize your sites we have reduced the amount of code in this release by a massive 18427 lines!
+	A full changelog can be viewed on Github
+	https://github.com/pagelines/DMS/compare/1.0.4...a7e601390d9d6c893c4201e7c116d3968dc18b05
+	
+	
+
+Version 1.0.4
+
+	- CORE - Full changelogs: https://github.com/pagelines/DMS/compare/1.0.3...1.0.4
+
+Version 1.0.3
+
+	- CORE - https://github.com/pagelines/DMS/compare/1.0.2...1.0.3
+	- CORE - Refresh store meta data when core updates page is loaded.
+	- BUG - Fixed excerpt length and allowed tags settings not applying on posts.
+	- BUG - Fixed the load order for sections folders. This was preventing other section classes overriding core sections.
+	
+Version 1.0.2
+	- CORE - Fixed 3 Github issues. https://github.com/pagelines/DMS/compare/9b1a5e2394...3736e00
+	- CORE - Various fixes for themecheck.
+
+Version 1.0.1
+	
+	- CORE - Remove debugging symbol.
+
+Version 1.0
+
+	- CORE - Fixed 13 Github issues and included 8 pull requests. https://github.com/pagelines/DMS/compare/43495ef685...7580ca6cc9
+	- CORE - New updates system included to 3rd party themes/plugins.
+	
+
+Version 0.9.7
+
+	- CORE - New accounts and karma system
+	- CORE - Stability enhancements
+
+Version 0.9.6
+
+	- CORE - Hello DMS!

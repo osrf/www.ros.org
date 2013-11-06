@@ -1,0 +1,472 @@
+/*
+	PAGELINES CSS OBJECTS
+  	CSS Objects for repeated use as utilities in other objects.
+	Must be generalized and have wide usage capability.
+*/
+
+/*
+ * @ Clearing Floats
+ **********************************************************************/
+.fix{
+	.clearfix();
+}
+
+/*
+ * @ Animation Stuff
+ **********************************************************************/
+
+
+.pl-animation{
+	-webkit-backface-visibility: hidden; // fixes flicker
+}
+
+.pl-pro-version{
+	.pla-scale, 
+	.pla-fade, 
+	.pla-from-left, 
+	.pla-from-right, 
+	.pla-from-top, 
+	.pla-from-bottom{
+		opacity: 0;
+		.transition(all 1s ease-in-out);
+		&.animation-loaded{
+			opacity: 1;
+			.translate3d(0,0,0);
+			.scale(1);
+		}
+	} 
+	.pla-scale{
+		opacity: .3;
+		.scale(.3);
+	}
+	.pla-from-left{
+		.translate3d(-100px, 0, 0);
+
+	}
+	.pla-from-right{
+		.translate3d(100px, 0, 0);
+	}
+	.pla-from-bottom{
+		.translate3d(0, 100px, 0);
+	}
+	.pla-from-top{
+		.translate3d(0, -100px, 0);
+	}
+
+	.pl-appear{
+		opacity: .1;
+		.scale(.5);
+
+		&.animation-loaded{
+			opacity: 1;
+			.transition(all .5s ease-in-out);
+			.scale(1);
+		}
+	}
+}
+
+
+.no-anim{
+	opacity: 1;
+	.scale(1);
+}
+
+/*pop up animation*/
+@-webkit-keyframes pl_appear {
+  0%   { -webkit-transform:scale(0.5); opacity: 0.1;  }
+  100% { -webkit-transform:scale(1); opacity: 1; }
+}
+@-moz-keyframes pl_appear {
+  0%   { -moz-transform:scale(0.5); opacity: 0.1;  }
+  100% { -moz-transform:scale(1);opacity: 1;  }
+}
+@-o-keyframes pl_appear {
+  0%   { -o-transform:scale(0.5); opacity: 0.1;  }
+  100% { -o-transform:scale(1);  opacity: 1; }
+}
+@keyframes pl_appear {
+  0%   { transform:scale(0.5); opacity: 0.1;  }
+  100% { transform:scale(1); opacity: 1;  }
+}
+
+
+
+
+
+/*
+ * @ Lists
+ **********************************************************************/
+
+/* @ Inline List - Horizontal non-floated navigation/menu  */
+ul.inline-list {
+	list-style-type: none;
+	li {
+		display: inline ;
+		padding: 0px 3px;
+	}
+}
+
+/* @ Tabbed List - Horizontal floated list, tab and navigation effects */
+ul.tabbed-list {
+	list-style-type: none;
+	margin:0;
+	width: 100%; /* clear IE 7 */
+	.box-sizing(border-box);
+	> li, 
+	> lh{
+		margin: 0;
+		padding: 0;
+		float: left;
+		a{
+			display: block;
+		}
+	}
+}
+/*
+ * @ Media / Image Format
+ **********************************************************************/
+
+.media{
+	overflow:hidden;
+	overflow: visible;
+	zoom: 1;
+	> .bd{
+		display:table-cell;
+		vertical-align: top;
+		width: 10000px;
+		*display:block;
+		*width:auto;
+		zoom:1;
+	}
+	.bd > :first-child{margin-top:0;}
+	.bd > :last-child{margin-bottom:0;}
+	> .img{
+		max-width: 25%;
+		float:left;
+		margin-right: 15px;
+		text-align: center;
+		&.rtimg{
+			float:right;
+			margin-left: 15px;
+		}
+	
+		> img{
+			display: inline-block;
+			vertical-align: bottom;
+			max-width: 100%;
+			height: auto;
+			width: auto\9;
+
+		}
+		.thumbnail{
+			.box-sizing(border-box); 
+			max-width: 100%;
+			display: inline-block;
+			padding: 3px;
+			border: 1px solid @baseContrast;
+			.border-radius(4px);
+			.box-shadow(0 1px 3px rgba(0,0,0,.055));
+			.transition(all .2s ease-in-out);
+
+			&[href]:hover{
+					border-color: @linkColor;
+					.box-shadow(0 1px 4px rgba(0,105,214,.25));
+			}
+		}
+	}
+
+}
+
+.media-list{
+	margin-bottom: 0;
+	> li{
+		line-height: 1.3em;
+		margin-bottom: .8em;
+		.title, 
+		.excerpt{
+			display: block;
+		}
+		.excerpt{
+			font-size: @smallerText;
+			
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	.img .the-media{
+		display: block;
+		width: 50px; 
+		height: 50px; 
+		.border-radius(200px);
+		.background-size(cover);
+	}
+	
+	
+}
+
+
+.pl-focus{
+	.transition(box-shadow .5s);
+	box-shadow: 0 0 14px @linkColor;
+	&.stop-focus{
+		box-shadow: none;
+	}
+}
+/*
+ *  @ Vignettes
+ ***********************************/
+	.pl-vignette {
+	  	position: relative;
+		display: block;
+		&:after{
+			box-shadow: inset 0 0 8px rgba(0,0,0,.2);
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			content: "";
+		}
+		.pl-vignette-allow-click{
+			position: relative;
+			z-index: 100;
+		}
+	}
+
+/*
+ *  @ Supplemental Percentage based GRID
+ *******************************************/
+
+	.pprow {
+		width: 100%;
+		margin: 0 auto;
+	}
+	.pp2,
+	.pp3,
+	.pp4,
+	.pp5,
+	.pp6 {
+		margin: 0;
+		padding:0;
+		margin-right: 4%;
+		float: left;
+		border: none;
+		.transition(all .2s linear);
+	}
+	.pp3{
+		margin-right: 3%;
+	}
+	.pp4,
+	.pp5,
+	.pp6{
+		margin-right: 2%;
+	}
+
+	.pp1 { width: 100%; float: left;}
+	.pp2 { width: 48%; }
+	.pp3 { width: 31.333333333%; }
+	.pp4 { width: 23.5%; }
+	.pp5 { width: 18.4%; }
+	.pp6 { width: 15%; }
+	.pplast { margin-right: 0; }
+
+
+	.ppfull{
+		.pp2, .pp3, .pp4, .pp5, .pp6{
+			margin-right: 0;
+		}
+		.pp2 { width: 50%; }
+		.pp3 { width: 33.3333333%; }
+		.pp4 { width: 25%; }
+		.pp5 { width: 20%; }
+		.pp6 { width: 16.66666667%; }
+	}
+
+	@media screen and (max-width:650px) {
+		.responsive #site{
+			.pp2, .pp3, .ppfree{
+				width: 100%;
+				margin-right: 0;
+			}
+
+			.pprand{
+				width: 100% !important;
+				float: none;
+				.pprand-pad{
+					padding: 15px !important;
+				}
+			}
+		}
+
+	}
+	@media screen and (max-width:700px) {
+		.responsive #site{
+			.pp4, .pp5, .pp6{
+				width: 100%;
+				margin-right: 0;
+			}
+		}
+	}
+
+
+
+/*
+ * @ Banners and Booming Text
+ * TODO refactor to boomboard
+ **********************************************************************/
+.boomboard{
+	text-align: center;
+	padding: 70px;
+	min-height: 350px;
+	h2.hugetext {
+		font-size: 8em;
+		line-height: 1.2em;
+	}
+}
+.billboard {
+	padding: 60px 15px;
+	margin: 0 0 2.5em 0;
+}
+
+	.banner_pad{
+		padding: 2em;
+		text-align: center;
+	}
+		.banner_title.wicon{
+			display: inline;
+			padding: 0 23px;
+			background-position: 0 4px;
+			background-repeat: no-repeat;
+		}
+
+	.setup-section{
+		padding: 8px 0 10px;
+		background: @baseContrastSlight;
+		text-align: center;
+		line-height: 1.5em;
+	}
+
+/*
+ * @ Printing Debug Information
+ **********************************************************************/
+.plprint{
+	font-family: @defaultFont;
+	font-size: 10px;
+	line-height: 1.3em;
+	font-weight: bold;
+	padding: 15px;
+	border: 1px solid #ddd;
+	#gradient > .vertical(rgba(182, 242, 253, .06), rgba(125, 233, 253, .06));
+	color:#000;
+	width: 90%;
+	margin: 0px auto 30px;
+}
+
+
+/*
+ * @ Grid Formatting and Elements
+ **********************************************************************/
+.grid-element, 
+.media_overview{ 
+	margin-bottom: 12px;
+}
+
+	.grid-img-frame{
+		max-width: 100%;
+	}
+	.grid-img-pad{
+		width: 100%;
+		float:left;
+	}
+.vignette{position: relative;}
+
+	.grid-title{
+		margin: 0 0 .7em;
+	}
+	.grid-title-pad{
+		position: relative;
+		padding: 7px 0;
+	}
+		.gtitle{
+			float:left;
+		}
+		.title-link{
+			position: absolute;
+			bottom: 7px;
+			right:4px;
+			font-size: 11px;
+			font-family: 'calibri','lucida grande', helvetica, arial;
+			font-weight: bold;
+			color:#888;
+			padding: 3px 7px 4px;
+			line-height: 1em;
+		}
+
+/*
+ * @ Hovercards
+ **********************************************************************/
+.hovercard {
+	position: absolute;
+	bottom: 20px;
+	background: rgba(0,0,0, .6);
+	text-shadow: none;
+	color:#fff;
+	line-height: 1.6em;
+	padding: 5px 8px;
+	display: none;
+	text-align: left;
+	font-size: 1.4em;
+	bottom: 15px;
+}
+
+/*
+ * @ Supersized Backgrounds
+ **********************************************************************/
+#supersized-loader { .hidden }
+
+#supersized {
+	position:fixed;
+	left:0;
+	top:0;
+	overflow:hidden;
+	z-index:-999;
+	height:100%;
+	width:100%;
+	background-size: cover;
+	img{
+		height:auto;
+		width:auto;
+		position:relative;
+		outline:none;
+		border:none;
+		-ms-interpolation-mode:bicubic;
+		image-rendering: optimizeQuality;
+	}
+}
+
+// Floating and Alignments
+// -------------------------
+
+.hidden {display: none;}
+.aligncenter,.alignnone {display: block;margin-left: auto;margin-right: auto;}
+.center {text-align: center;}
+.alignleft {float: left;margin:0 1.5em 1.5em 0;}
+.left {	float: left; }
+
+.alignright {float: right;margin:0 0 .4em 1.4em;}
+.right { float: right; }
+.textleft {text-align: left;}
+.textright {text-align:right;}
+.textjustify {text-align:justify;}
+.textcenter {text-align: center;}
+
+.clear {clear:both;}
+.block{display:block;}
+img.center, img[align="center"] {display: block;margin-left: auto;margin-right: auto;}
+img.left, img[align="left"] { float:left;margin: 2px 10px 5px 0px;}
+img.right, img[align="right"] {	float:right;margin: 2px 0px 5px 10px;}
+
+
+
