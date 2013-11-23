@@ -1,0 +1,20 @@
+# This file contains the hero text.  It's written here because there's a bug
+# in the Quickslider widget that causes some of the hero text to go missing
+# in many editing situations.  As a workaround, if you edit any of the hero
+# text, do it here first, then copy in *all* the hero text blocks.
+
+1: What is ROS?
+The Robot Operating System (ROS) is a set of software libraries and tools that help you build robot applications.  From drivers to state-of-the-art algorithms, and with powerful developer tools, ROS has what you need for your next robotics project.  And it's all open source.
+
+2: ROS in Research
+"...Even at that early stage of development, it was impressive to see the extent of the capabilities offered by ROS, as well as the level of their integration. The low-level tasks, from sensor access, to diagnostics reporting, to power management, were transparently handled by ROS. And so were higher-level tasks, from a variety of arm controllers,over 1-D and 3-D perception, to autonomous navigation..." -- Pieter Abbeel, UC Berkeley
+
+3: ROS in Products
+"When we set out five years ago to reinvent the manufacturing industry, we knew that smart, flexible automation was the key. We built our Baxter robot to work not just for people, but with people, removing the cumbersome safety cages and expert-only programming interfaces that had come before. And when we built Baxter, we built it on ROS..." -- Scott Eckert, Rethink Robotics
+
+4: ROS in Education
+waiting on this
+
+5: ROS for Fun
+"Back in 2009, I was in the middle of programming my own general framework for robotics using Windows and C# when I came across a video of the Willow Garage PR2 plugging itself into a regular wall socket to recharge. Without another thought, I deleted every line of code I had written over the past two years, installed Linux over Windows and jumped on the ROS train..." -- Patrick Goebel, Pi Robot
+
