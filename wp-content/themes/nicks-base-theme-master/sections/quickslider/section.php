@@ -113,7 +113,7 @@ jQuery(window).load(function() {
 						//BPG
 						$title = ($the_title) ? sprintf('<span class="flex-caption-title">%s</span><br>', $the_title) : '';
 						//BPG
-						$text = ($the_text) ? sprintf('<p class="flex-caption" style="%s; box-shadow:none">%s<span class="flex-caption-body">%s</span><br><a class="btn primary btn-small btn-read-more" href="%s" target="_blank">Read More</a></p>', $caption_style, $title, $the_text, $the_link) : '';
+						$text = ($the_text) ? sprintf('<p class="flex-caption" style="%s; box-shadow:none">%s<span class="flex-caption-body">%s</span><br><a class="btn primary btn-small btn-read-more" href="%s">Read More</a></p>', $caption_style, $title, $the_text, $the_link) : '';
 
 						$img = sprintf('<img src="%s" alt="" />', $the_image );
 
