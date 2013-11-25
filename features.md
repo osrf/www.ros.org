@@ -45,7 +45,7 @@ The ROS middleware also provides a way for disparate tasks to share configuratio
 
 The ROS middleware and core facilities were developed originally in 2008, and have been used in a variety of applications, domains, and robots since.
 
-TODO: Insert code quality metrics
+<p style="color: red; font-size: 50px;">TODO: Insert code quality metrics</p>
 
 ### Development Tools
 
@@ -99,7 +99,11 @@ Whether you are an engineer looking to do some rapid research and development, a
 
 ## Tools
 
-Robot systems are often complex and sophisticated systems, but that doesn't mean that they have to be complicated or intractable. ROS provides amazing tools to help you manage the complexity, understand what is going on with your robot, and introspect your robot at any point and any time.
+Robot systems are often complex and sophisticated systems, but that doesn't mean that they have to be complicated or intractable. ROS provides amazing tools to help you manage the complexity by making it easier to understand what is going on with your robot and introspect any part of it even while it is running.
+
+### Command-Line Tools
+
+Spend all of your time remotely logged into a robot? ROS can be used 100% without a GUI, all core functionality and introspection can be accomplished using one of the over 45 ros command line tools. There are commands for running nodes and launching groups of nodes, introspecting the running nodes, introspecting the topics, services, and actions, introspecting package layout and defined ROS messages, recording and playing back data, and a host of other things. If you prefer using graphical tools, Rviz and rQt are also available to provide similar and extended functionality as graphical tools.
 
 ### Rviz
 
@@ -113,44 +117,54 @@ Probably the most well know tool in ROS, [rviz](http://wiki.ros.org/rviz) provid
 
 <img src="{{ site.baseurl }}/img/rqt.png" style="float: right; width: 400px; padding-right: 10px; padding-bottom: 10px;" alt="rqt" />
 
-ROS provides a Qt based framework for developing dashboards for you robot called [rqt](http://wiki.ros.org/rqt). You can do this by organizing existing [rqt](http://wiki.ros.org/rqt) plugins as well as your own Qt/ROS plugins into tabs and split screen layouts.
+ROS provides a Qt based framework for developing dashboards for you robot called [rqt](http://wiki.ros.org/rqt). You can do this by organizing built-in [rqt](http://wiki.ros.org/rqt) plugins as well as your own Qt/ROS plugins into tabs and split screen layouts.
 
-TODO: Talk about each of the tools
+#### ROS Graph Viewer
 
-rqt_graph
+Get an at a glance look at your robot's running ROS nodes and how they are connected. rqt_graph provides introspection and visualization of a live running ROS computational graph, allowing you to easily debug and understand your running system and how it is wired.
 
-rqt_deps
+<img src="{{ site.baseurl }}/img/rqt_graph.png" style="float: left; width: 400px; padding-right: 10px; padding-bottom: 10px;" alt="rqt" />
 
-rqt_plot
+#### Live Plotting Tool
 
-rqt topic introspection
+Monitor output of encoders, voltages, or anything which can be represented as a float or integer over time using the built-in rqt_plot tool. rqt_plot leverages multiple plotting backend's (matplotlib, Qwt, pyqtgraph) so that you can choose which one best fits your needs.
 
-etc...
+<p style="color: red; font-size: 50px;">TODO: Image for rqt_plot</p>
 
-more
+#### Topic Tools
+
+rqt comes with two topic related plugins, one lets you monitor and introspect any number of topics being published to on the system from one place. Another built-in tool allows you to publish content to any topic using simple Python snippets, allowing you to experiment with you system easily.
+
+<p style="color: red; font-size: 50px;">TODO: Image for topic plugins</p>
+
+#### Bag Tools
+
+ROS provides logging and playback of data using rosbag's, and rqt provides a plugin which can record data to bags, play back selected topics and time frames of the bag, create new bags from a subset of another bag, and introspect the contents of a bag file, visualizing things like images and plotting of floats and integers over time.
+
+<p style="color: red; font-size: 50px;">TODO: Image for rqt_bag</p>
 
 # Integration with Other Libraries
 
-TODO
+Need to simulate your robot using OpenCV to detect and pickup an object using MoveIt!? ROS has got you covered, by providing interoperability with these libraries and a middleware capable of abstracting the location of data sources.
 
 ## Gazebo
 
-TODO
+Gazebo is a 3D indoor and outdoor multi-robot simulator, complete with dynamic and kinematic physics, and a pluggable physics engine. The Gazebo ROS plugin is capable of providing ROS interfaces for many existing robots and sensors which are nearly identical to the real device's ROS interfaces. These consistent interfaces allow you to write ROS nodes which work agnostic of whether the rest of the system is a simulated system, a recorded playback of a system, or the actual live system. This allows you to develop on simulated or recorded data and deploy to the real thing, with little to no changes in your code.
 
 ## OpenCV
 
-TODO
+OpenCV is the premier computer vision library, which is used in academia and products all over the world. OpenCV provides many common computer vision algorithms and utilities that you can build on to provide perception to your robot. ROS provides tight integration with OpenCV allowing users to easily convert between OpenCV images and ROS images for sending between processes. ROS also builds on OpenCV to provide systems like the (Image Pipeline)[http://wiki.ros.org/image_pipeline], which can be used for calibration, monocular processing, stereo processing, and depth processing. If your robot has cameras connected through USB, Firewire, or Ethernet, ROS and OpenCV are going to make your life easier.
 
 ## PCL
 
-TODO
+PCL, the Point Cloud Library, is a relatively new perception library focused on the manipulation and processing of three dimensional data and depth images. PCL provides a host of functionality for working with point clouds like filtering, feature detection, registration, kd-tree's and octree's, segmentation, sample_consensus, and more. If you are working with a three dimensional sensor like the Microsoft Kinect, or a scanning LiDAR then PCL and ROS will help you to collect, transform, process, and visualize that complex 3D data.
 
 ## MoveIt!
 
-TODO
+MoveIt! provides a framework for using and developing state of the art planning algorithms. Whether you are looking to leverage existing planning algorithms for motion planning of robotic arms or develop your own motion planning algorithm and comparing it against the existing system, MoveIt! will ease integration and provide powerful tools for debugging and interaction. MoveIt! is a first class citizen in ROS, as it uses much of ROS's abstract power to remain portable on top of various hardware and ROS's tools like Rviz for improving visibility and user experience. MoveIt! has a Rviz plugin, a rQt plugin, and integrates with the ROS Control framework which is used to implement control algorithms.
 
 # Community Packages
 
-TODO
+Arguably one of the biggest strengths of ROS is the large and active community of users and collaborators. On top of the middleware, robot specific tools, and third party library integration, the ROS community has built many useful libraries and tools in many different robotics domains.
 
 
