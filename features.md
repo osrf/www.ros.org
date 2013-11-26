@@ -5,7 +5,7 @@ layout: default
 
 # {{ page.title }}
 
-ROS is a large ecosystem of packages which provide different types of functionality and capabilities at all different quality and maturity levels. To better understand whether or not ROS will be useful to you, this page covers much of the core value which ROS provides.
+ROS IS a large ecosystem of packages which provide different types of functionality and capabilities at all different quality and maturity levels. To better understand whether or not ROS will be useful to you, this page covers much of the core value which ROS provides.
 
 ROS stands for the Robot Operating System, but in reality ROS is a meta operating system of sorts. ROS builds on one of several existing operating systems, like Ubuntu Linux, and provides operating system like facilities to roboticists. For example, ROS provides a way to interact with other parts of the robot system, tools for developing parts of the system, and infrastructure for releasing, testing, deploying, and documenting open source parts of the system.
 
