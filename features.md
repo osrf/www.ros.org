@@ -27,7 +27,7 @@ The ROS middleware provides these facilities:
 
 ### Message Passing
 
-Robots tend to perform many separate tasks in parallel, e.g. reading data from a sensor, transforming data from sensors, interpreting data from sensors, making decisions based on data analysis, and executing actions. These tasks are often implemented as many independent processes on a computer, so there arises a need for a mechanism over which these disparate processes can communicate. Therefore, it isn't surprising that with ROS, the majority of communication between processes takes place using the [anonymous publish/subscribe](http://wiki.ros.org/Topics) mechanism over named topics. The structure of the data being passed is defined in the [message IDL](http://wiki.ros.org/Messages).
+A communication system is often one of the first needs to arise when implementing a new robot application. ROS's built-in and well-tested messaging system saves you time by managing the details of communication between distributed nodes via the [anonymous publish/subscribe](http://wiki.ros.org/Topics) mechanism. Another added benefit of using a message passing system is that it forces you to implement clear interfaces between the nodes in your system, thereby improving encapsulation and promoting code reuse. The structure of these message interfaces is defined in the [message IDL](http://wiki.ros.org/Messages).
 
 ### Recording and Playback of Messages
 
@@ -93,23 +93,23 @@ ROS provides a standard way to produce, collect, and aggregate diagnostics about
 
 ### Pose Estimation, Localization, and Navigation
 
-ROS also provides some "batteries included" functionality that help you get started on your robotics project. There exist ROS packages for solving basic robotics tasks like [pose estimation](http://wiki.ros.org/robot_pose_ekf), [localization](http://wiki.ros.org/amcl), [SLAM](http://wiki.ros.org/gmapping), or even mobile [navigation](http://wiki.ros.org/navigation).
+ROS also provides some "batteries included" functionality that helps you get started on your robotics project. There exist ROS packages for solving basic robotics tasks like [pose estimation](http://wiki.ros.org/robot_pose_ekf), [localization](http://wiki.ros.org/amcl), [SLAM](http://wiki.ros.org/gmapping), or even mobile [navigation](http://wiki.ros.org/navigation).
 
-Whether you are an engineer looking to do some rapid research and development, a robotics researcher wanting to get your research sooner than later, or a hobbyist looking to learn more about robotics, these out of the box capabilities should help you do more with less effort.
+Whether you are an engineer looking to do some rapid research and development, a robotics researcher wanting to get your research done in a timely fashion, or a hobbyist looking to learn more about robotics, these out-of-the-box capabilities should help you do more, with less effort.
 
 ## Tools
 
-Robot systems are often complex and sophisticated systems, but that doesn't mean that they have to be complicated or intractable. ROS provides amazing tools to help you manage the complexity by making it easier to understand what is going on with your robot and introspect any part of it even while it is running.
+Robot systems are often complex and sophisticated, but that doesn't mean that they have to be complicated or intractable. ROS provides amazing tools to help you manage this complexity by making it easier to understand the state of your robot.
 
 ### Command-Line Tools
 
-Spend all of your time remotely logged into a robot? ROS can be used 100% without a GUI, all core functionality and introspection can be accomplished using one of the over 45 ros command line tools. There are commands for running nodes and launching groups of nodes, introspecting the running nodes, introspecting the topics, services, and actions, introspecting package layout and defined ROS messages, recording and playing back data, and a host of other things. If you prefer using graphical tools, Rviz and rQt are also available to provide similar and extended functionality as graphical tools.
+Spend all of your time remotely logged into a robot? ROS can be used 100% without a GUI. All core functionality and introspection tools are accessible via one of the over 45 ROS command line tools. There are commands for launching groups of nodes, introspecting topics, services, and actions, recording and playing back data, and a host of other options. If you prefer using graphical tools, Rviz and rQt provide similar (and extended) functionality.
 
 ### Rviz
 
 <img src="{{ site.baseurl }}/img/rviz.png" style="float: left; width: 400px; padding-right: 10px; padding-bottom: 10px;" alt="rviz" />
 
-Probably the most well know tool in ROS, [rviz](http://wiki.ros.org/rviz) provides general purpose three dimensional visualization of standard sensor data types as well as robots described with the [urdf](http://wiki.ros.org/urdf) format.
+Perhaps the most well-known tool in ROS, [rviz](http://wiki.ros.org/rviz) provides general purpose three dimensional visualization of standard sensor data types as well as [urdf](http://wiki.ros.org/urdf)-described robots.
 
 [rviz](http://wiki.ros.org/rviz) can visualize many of the common message types provided in ROS, such as laser scans, three dimensional point clouds, and camera images. It also uses the information from the [tf](http://wiki.ros.org/tf) geometry library in order to show all of the sensor data in a common coordinate frame, along side a three dimensional rendering of your robot, as long as you described it in a [urdf](http://wiki.ros.org/urdf) file. Having all of your data visualized in the same coordinate frame not only looks amazing, but also allows you to quickly see what your robot sees, and possibly identify places where your sensors are misaligned or your robot description is inaccurate.
 
