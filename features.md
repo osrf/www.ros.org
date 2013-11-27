@@ -31,7 +31,7 @@ A communication system is often one of the first needs to arise when implementin
 
 ### Recording and Playback of Messages
 
-Since the [publish/subscribe system](http://wiki.ros.org/Topics) is anonymous and asynchronous, the data can easily be captured and replayed without any changes to the code of participating processes. For example, if you have Task A that reads data from a sensor, and you wish to develop Task B that does some processing with Task A, ROS makes it easy to capture the data published from Task A to a file, and then republish that data in the file off-line at a later time. The interfaces between tasks makes it such that Task B can be agnostic to the source of the data (Task A). This is a powerful design pattern that can significantly reduce your development effort and promote flexibility and modularity in your own system.
+(Steffi: awkward) Since the [publish/subscribe system](http://wiki.ros.org/Topics) is anonymous and asynchronous, the data can easily be captured and replayed without any changes to the code of participating processes. For example, if you have Task A that reads data from a sensor, and you wish to develop Task B that does some processing with Task A, ROS makes it easy to capture the data published from Task A to a file, and then republish that data in the file off-line at a later time. The interfaces between tasks makes it such that Task B can be agnostic to the source of the data (Task A). This is a powerful design pattern that can significantly reduce your development effort and promote flexibility and modularity in your own system.
 
 ### Remote Procedure Calls
 
@@ -49,7 +49,7 @@ The ROS middleware and core facilities were originally developed in 2008, and ha
 
 ### Development Tools
 
-Alongside the middleware are development tools that support the software development process by providing introspection into the middleware, debugging tools, build system tools, and other tools which have arisen out of community conventions. The anonymous and asynchronous publish/subscribe mechanism allows you to spontaneously introspect data moving around the system, which makes it much easier to debug and comprehend issues when they occur. The developer tools make this even easier by providing simple, easy to use command line tools for introspection.
+(Steffi: awkward) Alongside the middleware are development tools that support the software development process by providing introspection into the middleware, debugging tools, build system tools, and other tools which have arisen out of community conventions. The anonymous and asynchronous publish/subscribe mechanism allows you to spontaneously introspect data moving around the system, which makes it much easier to debug and comprehend issues when they occur. The developer tools make this even easier by providing simple, easy to use command line tools for introspection.
 
 ## Robot-Specific Features
 
@@ -67,15 +67,15 @@ In addition to the core middleware components, ROS provides common robot-specifi
 
 ### Standardized Robot Messages
 
-While the middleware provides a message IDL so that you can easily create your own message definitions, there exists a set of community-selected messages which cover about eighty percent of message definitions for robotics. These messages cover geometries like pose and orientation, kinematics and dynamics like twists and wrenches, and sensors like lasers and cameras. By using these messages, you can focus on your robot and not on standardizing messages. These standardized messages also increase interoperability with existing tools and capabilities in the ROS ecosystem.
+(Steffi: ??) While the middleware provides a message IDL so that you can easily create your own message definitions, there exists a set of community-selected messages which cover about eighty percent of message definitions for robotics. These messages cover geometries like pose and orientation, kinematics and dynamics like twists and wrenches, and sensors like lasers and cameras. By using these messages, you can focus on your robot and not on standardizing messages. These standardized messages also increase interoperability with existing tools and capabilities in the ROS ecosystem.
 
 ### Robot Geometry Library
 
 <img src="{{ site.baseurl }}/img/tf.png" style="float: right; width: 400px;" alt="tf - Transforms Library" />
 
-One of the problems that comes up almost immediately in most robotics projects, is the need to manage the robot's static and dynamic geometry. Whether you need to transform a laser scan from the sensor's frame of reference to a global frame of reference, or you need to get the location of the robot's end effector in the robot's local frame, the [tf](http://wiki.ros.org/tf) library can help you do that.
+(Steffi: a bit technical) One of the problems that comes up almost immediately in most robotics projects, is the need to manage the robot's static and dynamic geometry. Whether you need to transform a laser scan from the sensor's frame of reference to a global frame of reference, or you need to get the location of the robot's end effector in the robot's local frame, the [tf](http://wiki.ros.org/tf) library can help you do that.
 
-[tf](http://wiki.ros.org/tf) has been used to manage robots with more than one hundred degrees of freedom while remaining responsive at hundreds of Hz of updates. [tf](http://wiki.ros.org/tf) allows you to define many static transforms, like a sensor statically mounted to a mobile base, and dynamic transforms, like each joint in a robotic arm. Once defined, you can update the dynamic joints and query for transform information given the current or any recent state. [tf](http://wiki.ros.org/tf) also handles the fact that the producers and consumers of this information are often distributed across processes or even computers.
+(Steffi: awkward) [tf](http://wiki.ros.org/tf) has been used to manage robots with more than one hundred degrees of freedom while remaining responsive at hundreds of Hz of updates. [tf](http://wiki.ros.org/tf) allows you to define many static transforms, like a sensor statically mounted to a mobile base, and dynamic transforms, like each joint in a robotic arm. Once defined, you can update the dynamic joints and query for transform information given the current or any recent state. [tf](http://wiki.ros.org/tf) also handles the fact that the producers and consumers of this information are often distributed across processes or even computers.
 
 ### Robot Description
 
@@ -99,69 +99,69 @@ Whether you are an engineer looking to do some rapid research and development, a
 
 ## Tools
 
-Robot systems are often complex and sophisticated, but that doesn't mean that they have to be complicated or intractable. ROS provides amazing tools to help you manage this complexity by making it easier to understand the state of your robot.
+Robot systems are often complex and sophisticated, but that doesn't mean that they have to be complicated or intractable. ROS provides great tools to help you manage this complexity by making it easier to understand the state of your robot.
 
 ### Command-Line Tools
 
-Spend all of your time remotely logged into a robot? ROS can be used 100% without a GUI. All core functionality and introspection tools are accessible via one of the over 45 ROS command line tools. There are commands for launching groups of nodes, introspecting topics, services, and actions, recording and playing back data, and a host of other options. If you prefer using graphical tools, Rviz and rQt provide similar (and extended) functionality.
+[Steffi: are those commas used appropriately?] Spend all of your time remotely logged into a robot? ROS can be used 100% without a GUI. All core functionality and introspection tools are accessible via one of over 45 ROS command line tools. There are commands for launching groups of nodes, introspecting topics, services, and actions, recording and playing back data, and a host of other options. If you prefer using graphical tools, Rviz and rQt provide similar (and extended) functionality.
 
 ### Rviz
 
 <img src="{{ site.baseurl }}/img/rviz.png" style="float: left; width: 400px; padding-right: 10px; padding-bottom: 10px;" alt="rviz" />
 
-Perhaps the most well-known tool in ROS, [rviz](http://wiki.ros.org/rviz) provides general purpose three dimensional visualization of standard sensor data types as well as [urdf](http://wiki.ros.org/urdf)-described robots.
+Perhaps the most well-known tool in ROS, [rviz](http://wiki.ros.org/rviz) provides general purpose, three-dimensional visualization of standard sensor data types and [urdf](http://wiki.ros.org/urdf)-described robots.
 
-[rviz](http://wiki.ros.org/rviz) can visualize many of the common message types provided in ROS, such as laser scans, three dimensional point clouds, and camera images. It also uses the information from the [tf](http://wiki.ros.org/tf) geometry library in order to show all of the sensor data in a common coordinate frame, along side a three dimensional rendering of your robot, as long as you described it in a [urdf](http://wiki.ros.org/urdf) file. Having all of your data visualized in the same coordinate frame not only looks amazing, but also allows you to quickly see what your robot sees, and possibly identify places where your sensors are misaligned or your robot description is inaccurate.
+[rviz](http://wiki.ros.org/rviz) can visualize many of the common message types provided in ROS, such as laser scans, three-dimensional point clouds, and camera images. It also uses information from the [tf](http://wiki.ros.org/tf) geometry library to show all of the sensor data in a common coordinate frame, alongside a three-dimensional rendering of your robot. Visualizing all of your data in the same location not only looks impressive, but also allows you to quickly see what your robot sees, and possibly identify sensor misalignments or robot description inaccuracies. 
 
 ### rQt
 
 <img src="{{ site.baseurl }}/img/rqt.png" style="float: right; width: 400px; padding-right: 10px; padding-bottom: 10px;" alt="rqt" />
 
-ROS provides a Qt based framework for developing dashboards for you robot called [rqt](http://wiki.ros.org/rqt). You can do this by organizing built-in [rqt](http://wiki.ros.org/rqt) plugins as well as your own Qt/ROS plugins into tabs and split screen layouts.
+ROS provides [rqt](http://wiki.ros.org/rqt), a Qt-based framework for developing dashboards for you robot. You can create custom dashboards by organizing built-in [rqt](http://wiki.ros.org/rqt) plugins as well as your own Qt/ROS plugins into tabs and split-screen layouts.
 
 #### ROS Graph Viewer
 
-Get an at a glance look at your robot's running ROS nodes and how they are connected. rqt_graph provides introspection and visualization of a live running ROS computational graph, allowing you to easily debug and understand your running system and how it is wired.
+rqt_graph provides introspection and visualization of a live ROS computational graph, allowing you to easily debug and understand your running system and how it is wired. With the ROS Graph Viewer, you can get an at-a-glance view of your robot's running ROS nodes and how they are connected.
 
 <img src="{{ site.baseurl }}/img/rqt_graph.png" style="float: left; width: 400px; padding-right: 10px; padding-bottom: 10px;" alt="rqt" />
 
 #### Live Plotting Tool
 
-Monitor output of encoders, voltages, or anything which can be represented as a float or integer over time using the built-in rqt_plot tool. rqt_plot leverages multiple plotting backend's (matplotlib, Qwt, pyqtgraph) so that you can choose which one best fits your needs.
+With the built-in rqt_plot tool, you can monitor output of encoders, voltages, or anything that can be represented as a float or integer over time. rqt_plot leverages multiple plotting backends (matplotlib, Qwt, pyqtgraph) so that you can choose which one best fits your needs.
 
 <p style="color: red; font-size: 50px;">TODO: Image for rqt_plot</p>
 
 #### Topic Tools
 
-rqt comes with two topic related plugins, one lets you monitor and introspect any number of topics being published to on the system from one place. Another built-in tool allows you to publish content to any topic using simple Python snippets, allowing you to experiment with you system easily.
+[Steffi: awkward] rqt comes with two topic related plugins. One lets you monitor and introspect any number of topics being published to on the system from one place. The other built-in tool allows you to publish content to any topic using simple Python snippets, allowing you to easily experiment with your system.
 
 <p style="color: red; font-size: 50px;">TODO: Image for topic plugins</p>
 
 #### Bag Tools
 
-ROS provides logging and playback of data using rosbag's, and rqt provides a plugin which can record data to bags, play back selected topics and time frames of the bag, create new bags from a subset of another bag, and introspect the contents of a bag file, visualizing things like images and plotting of floats and integers over time.
+[Steffi: AHHHHH] ROS provides data logging and playback using rosbags, and rqt provides a plugin that can record data to bags, play back selected topics and time frames of the bag, create new bags from a subset of another bag, and introspect the contents of a bag file, visualizing things like images and plotting of floats and integers over time.
 
 <p style="color: red; font-size: 50px;">TODO: Image for rqt_bag</p>
 
 # Integration with Other Libraries
 
-Need to simulate your robot using OpenCV to detect and pickup an object using MoveIt!? ROS has got you covered, by providing interoperability with these libraries and a middleware capable of abstracting the location of data sources.
+[Steffi: second sentence?] Need to use OpenCV and MoveIt! to detect and pickup an object? ROS has got you covered, by providing interoperability with these libraries and a middleware capable of abstracting the location of data sources.
 
 ## Gazebo
 
-Gazebo is a 3D indoor and outdoor multi-robot simulator, complete with dynamic and kinematic physics, and a pluggable physics engine. The Gazebo ROS plugin is capable of providing ROS interfaces for many existing robots and sensors which are nearly identical to the real device's ROS interfaces. These consistent interfaces allow you to write ROS nodes which work agnostic of whether the rest of the system is a simulated system, a recorded playback of a system, or the actual live system. This allows you to develop on simulated or recorded data and deploy to the real thing, with little to no changes in your code.
+Gazebo is a 3D indoor and outdoor multi-robot simulator, complete with dynamic and kinematic physics, and a pluggable physics engine. The Gazebo ROS plugin provides ROS interfaces for many existing robots and sensors. These consistent interfaces allow you to write ROS nodes that work regardless of whether the rest of the system is simulated, a recorded playback, or the actual live system. This allows you to develop on simulated or recorded data and deploy to the real system with little to no changes in your code.
 
 ## OpenCV
 
-OpenCV is the premier computer vision library, which is used in academia and products all over the world. OpenCV provides many common computer vision algorithms and utilities that you can build on to provide perception to your robot. ROS provides tight integration with OpenCV allowing users to easily convert between OpenCV images and ROS images for sending between processes. ROS also builds on OpenCV to provide systems like the (Image Pipeline)[http://wiki.ros.org/image_pipeline], which can be used for calibration, monocular processing, stereo processing, and depth processing. If your robot has cameras connected through USB, Firewire, or Ethernet, ROS and OpenCV are going to make your life easier.
+[Steffi: awkward "ROS provides..."] OpenCV is the premier computer vision library, and is used in academia and products all over the world. OpenCV provides many common computer vision algorithms and utilities that you can build upon, or use as-is. ROS provides tight integration with OpenCV, allowing users to easily convert between OpenCV images and ROS images for sending between processes. ROS also builds on OpenCV to provide systems like the (Image Pipeline)[http://wiki.ros.org/image_pipeline], which can be used for calibration, monocular processing, stereo processing, and depth processing. If your robot has cameras connected through USB, Firewire, or Ethernet, ROS and OpenCV are going to make your life easier.
 
 ## PCL
 
-PCL, the Point Cloud Library, is a relatively new perception library focused on the manipulation and processing of three dimensional data and depth images. PCL provides a host of functionality for working with point clouds like filtering, feature detection, registration, kd-tree's and octree's, segmentation, sample_consensus, and more. If you are working with a three dimensional sensor like the Microsoft Kinect, or a scanning LiDAR then PCL and ROS will help you to collect, transform, process, and visualize that complex 3D data.
+PCL, the Point Cloud Library, is a relatively new perception library focused on the manipulation and processing of three-dimensional data and depth images. PCL provides a host of functionality for working with point clouds like filtering, feature detection, registration, kd-trees and octrees, segmentation, sample_consensus, and more. If you are working with a three-dimensional sensor like the Microsoft Kinect, or a scanning LiDAR, then PCL and ROS will help you collect, transform, process, and visualize that complex 3D data.
 
 ## MoveIt!
 
-MoveIt! provides a framework for using and developing state of the art planning algorithms. Whether you are looking to leverage existing planning algorithms for motion planning of robotic arms or develop your own motion planning algorithm and comparing it against the existing system, MoveIt! will ease integration and provide powerful tools for debugging and interaction. MoveIt! is a first class citizen in ROS, as it uses much of ROS's abstract power to remain portable on top of various hardware and ROS's tools like Rviz for improving visibility and user experience. MoveIt! has a Rviz plugin, a rQt plugin, and integrates with the ROS Control framework which is used to implement control algorithms.
+[Steffi: a little too verbose; not sure what to cut/change] MoveIt! provides a framework for using and developing state of the art planning algorithms. Whether you are looking to leverage existing planning algorithms for motion planning of robotic arms or develop your own motion planning algorithm and comparing it against the existing system, MoveIt! will ease integration and provide powerful tools for debugging and interaction. MoveIt! is a first class citizen in ROS, as it uses much of ROS's abstract power to remain portable on top of various hardware and ROS's tools like Rviz for improving visibility and user experience. MoveIt! has an Rviz plugin, an rQt plugin, and integrates with the ROS Control framework which is used to implement control algorithms.
 
 # Community Packages
 
