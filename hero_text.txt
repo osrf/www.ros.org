@@ -13,7 +13,7 @@ The Robot Operating System (ROS) is a set of software libraries and tools that h
 "When we set out five years ago to reinvent the manufacturing industry, we knew that smart, flexible automation was the key. We built our Baxter robot to work not just for people, but with people, removing the cumbersome safety cages and expert-only programming interfaces that had come before. And when we built Baxter, we built it on ROS..." -- Scott Eckert, Rethink Robotics
 
 4: ROS in Education
-waiting on this
+ROS has been used by students of all ages, from kids interacting with robots in museum exhibits to graduate students learning about the latest solutions to common robotics problems.  Because it supports such a wide variety of robots, including low-cost platforms like the TurtleBot and LEGO Mindstorms, ROS is especially well-suited to classroom use.
 
 5: ROS for Fun
 "Back in 2009, I was in the middle of programming my own general framework for robotics using Windows and C# when I came across a video of the Willow Garage PR2 plugging itself into a regular wall socket to recharge. Without another thought, I deleted every line of code I had written over the past two years, installed Linux over Windows and jumped on the ROS train..." -- Patrick Goebel, Pi Robot
