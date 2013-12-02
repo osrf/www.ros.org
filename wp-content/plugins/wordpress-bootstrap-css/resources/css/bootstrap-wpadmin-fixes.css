@@ -1,9 +1,0 @@
-
-.bootstrap-wpadmin input[type="text"],
-.bootstrap-wpadmin input[type="submit"],
-.bootstrap-wpadmin input[type="password"],
-.bootstrap-wpadmin textarea {
-	-moz-box-sizing: content-box;
-	-webkit-box-sizing: content-box;
-	box-sizing: content-box;
-}
