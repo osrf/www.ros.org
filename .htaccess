@@ -10,7 +10,8 @@ RewriteRule ^doc/(.*)       http://docs.ros.org/$1 [L,R]
 RewriteRule ^images/(.*)    http://wiki.ros.org/custom/images/$1 [L,R]
 
 RewriteCond %{HTTP_HOST}    ^ros\.org$ [NC]
-RewriteRule ^/(.*)          http://www.ros.org/$1 [L,R]
+RewriteCond %{HTTP_HOST}    !^$
+RewriteRule ^/?(.*)          http://www.ros.org/$1 [L,R,NE]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
