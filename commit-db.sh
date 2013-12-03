@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -e
 dir=`mktemp -d`
 git clone -b wordpressdb git@github.com:osrf/www.ros.org.git $dir/www.ros.org
 cd $dir/www.ros.org
