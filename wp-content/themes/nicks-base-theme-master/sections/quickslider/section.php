@@ -48,7 +48,8 @@ jQuery(window).load(function() {
 		slideDirection: '<?php echo $transfer;?>',
 		slideshow: <?php echo $slideshow;?>,
 		directionNav: <?php echo $direction_nav;?>,
-		controlNav: <?php echo $control_nav;?>
+		controlNav: <?php echo $control_nav;?>,
+		slideshowSpeed: 12000
 	});
 });
 </script>
