@@ -132,7 +132,7 @@ CREATE TABLE `wp_options` (
   `autoload` varchar(20) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=34646 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=34666 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -362,8 +362,8 @@ INSERT INTO `wp_options` VALUES (34516,'_transient_timeout_pagelines_theme_updat
 INSERT INTO `wp_options` VALUES (34521,'_transient_pagelines_theme_update','a:6:{s:11:\"new_version\";s:5:\"1.1.8\";s:3:\"url\";s:24:\"http://www.pagelines.com\";s:7:\"package\";s:95:\"http://www.pagelines.com/api/dms-updates/index.php?download=e691aaee4a7ab851e9194176dc267e39567\";s:5:\"extra\";s:300:\"<br />You can see the full release log by clicking <a href=\"https://github.com/pagelines/DMS/commit/468cbb286bf220455e220796a61c04c95547e3f7\">here</a><br /><br />	- CORE - Added an alternative CSS URL method (under advanced options) Will help on hosts with uber aggressive cache systems like WPEngine\";s:13:\"changelog_url\";s:80:\"https://github.com/pagelines/DMS/commit/468cbb286bf220455e220796a61c04c95547e3f7\";s:3:\"ssl\";b:1;}','no');
 INSERT INTO `wp_options` VALUES (34616,'_site_transient_update_themes','O:8:\"stdClass\":4:{s:12:\"last_checked\";i:1396423052;s:7:\"checked\";a:2:{s:3:\"dms\";s:5:\"1.1.1\";s:23:\"nicks-base-theme-master\";s:3:\"1.2\";}s:8:\"response\";a:1:{s:3:\"dms\";a:6:{s:11:\"new_version\";s:5:\"1.1.8\";s:3:\"url\";s:24:\"http://www.pagelines.com\";s:7:\"package\";s:95:\"http://www.pagelines.com/api/dms-updates/index.php?download=e691aaee4a7ab851e9194176dc267e39567\";s:5:\"extra\";s:300:\"<br />You can see the full release log by clicking <a href=\"https://github.com/pagelines/DMS/commit/468cbb286bf220455e220796a61c04c95547e3f7\">here</a><br /><br />	- CORE - Added an alternative CSS URL method (under advanced options) Will help on hosts with uber aggressive cache systems like WPEngine\";s:13:\"changelog_url\";s:80:\"https://github.com/pagelines/DMS/commit/468cbb286bf220455e220796a61c04c95547e3f7\";s:3:\"ssl\";b:1;}}s:12:\"translations\";a:0:{}}','yes');
 INSERT INTO `wp_options` VALUES (34621,'_site_transient_update_plugins','O:8:\"stdClass\":3:{s:12:\"last_checked\";i:1396422015;s:8:\"response\";a:1:{s:37:\"disable-comments/disable-comments.php\";O:8:\"stdClass\":6:{s:2:\"id\";s:5:\"22847\";s:4:\"slug\";s:16:\"disable-comments\";s:6:\"plugin\";s:37:\"disable-comments/disable-comments.php\";s:11:\"new_version\";s:5:\"1.0.4\";s:3:\"url\";s:47:\"https://wordpress.org/plugins/disable-comments/\";s:7:\"package\";s:59:\"https://downloads.wordpress.org/plugin/disable-comments.zip\";}}s:12:\"translations\";a:0:{}}','yes');
-INSERT INTO `wp_options` VALUES (34636,'_site_transient_timeout_theme_roots','1396426246','yes');
-INSERT INTO `wp_options` VALUES (34641,'_site_transient_theme_roots','a:2:{s:3:\"dms\";s:7:\"/themes\";s:23:\"nicks-base-theme-master\";s:7:\"/themes\";}','yes');
+INSERT INTO `wp_options` VALUES (34656,'_site_transient_timeout_theme_roots','1396430246','yes');
+INSERT INTO `wp_options` VALUES (34661,'_site_transient_theme_roots','a:2:{s:3:\"dms\";s:7:\"/themes\";s:23:\"nicks-base-theme-master\";s:7:\"/themes\";}','yes');
 /*!40000 ALTER TABLE `wp_options` ENABLE KEYS */;
 UNLOCK TABLES;
 
