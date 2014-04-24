@@ -132,7 +132,7 @@ CREATE TABLE `wp_options` (
   `autoload` varchar(20) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=39911 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=39931 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -373,8 +373,8 @@ INSERT INTO `wp_options` VALUES (39716,'_transient_timeout_pagelines_theme_updat
 INSERT INTO `wp_options` VALUES (39721,'_transient_pagelines_theme_update','a:6:{s:11:\"new_version\";s:5:\"1.1.8\";s:3:\"url\";s:24:\"http://www.pagelines.com\";s:7:\"package\";s:95:\"http://www.pagelines.com/api/dms-updates/index.php?download=e691aaee4a7ab851e9194176dc267e39567\";s:5:\"extra\";s:300:\"<br />You can see the full release log by clicking <a href=\"https://github.com/pagelines/DMS/commit/468cbb286bf220455e220796a61c04c95547e3f7\">here</a><br /><br />	- CORE - Added an alternative CSS URL method (under advanced options) Will help on hosts with uber aggressive cache systems like WPEngine\";s:13:\"changelog_url\";s:80:\"https://github.com/pagelines/DMS/commit/468cbb286bf220455e220796a61c04c95547e3f7\";s:3:\"ssl\";b:1;}','no');
 INSERT INTO `wp_options` VALUES (39726,'_site_transient_update_themes','O:8:\"stdClass\":4:{s:12:\"last_checked\";i:1398322806;s:7:\"checked\";a:2:{s:3:\"dms\";s:5:\"1.1.1\";s:23:\"nicks-base-theme-master\";s:3:\"1.2\";}s:8:\"response\";a:1:{s:3:\"dms\";a:6:{s:11:\"new_version\";s:5:\"1.1.8\";s:3:\"url\";s:24:\"http://www.pagelines.com\";s:7:\"package\";s:95:\"http://www.pagelines.com/api/dms-updates/index.php?download=e691aaee4a7ab851e9194176dc267e39567\";s:5:\"extra\";s:300:\"<br />You can see the full release log by clicking <a href=\"https://github.com/pagelines/DMS/commit/468cbb286bf220455e220796a61c04c95547e3f7\">here</a><br /><br />	- CORE - Added an alternative CSS URL method (under advanced options) Will help on hosts with uber aggressive cache systems like WPEngine\";s:13:\"changelog_url\";s:80:\"https://github.com/pagelines/DMS/commit/468cbb286bf220455e220796a61c04c95547e3f7\";s:3:\"ssl\";b:1;}}s:12:\"translations\";a:0:{}}','yes');
 INSERT INTO `wp_options` VALUES (39731,'_site_transient_update_plugins','O:8:\"stdClass\":4:{s:12:\"last_checked\";i:1398349804;s:7:\"checked\";a:4:{s:23:\"canonical/canonical.php\";s:5:\"2.0.1\";s:37:\"disable-comments/disable-comments.php\";s:5:\"1.0.1\";s:33:\"dms-plugin-pro/dms-plugin-pro.php\";s:5:\"1.0.0\";s:45:\"sidebar-manager-light/otw_sidebar_manager.php\";s:3:\"1.7\";}s:8:\"response\";a:1:{s:37:\"disable-comments/disable-comments.php\";O:8:\"stdClass\":6:{s:2:\"id\";s:5:\"22847\";s:4:\"slug\";s:16:\"disable-comments\";s:6:\"plugin\";s:37:\"disable-comments/disable-comments.php\";s:11:\"new_version\";s:3:\"1.1\";s:3:\"url\";s:47:\"https://wordpress.org/plugins/disable-comments/\";s:7:\"package\";s:59:\"https://downloads.wordpress.org/plugin/disable-comments.zip\";}}s:12:\"translations\";a:0:{}}','yes');
-INSERT INTO `wp_options` VALUES (39901,'_site_transient_timeout_theme_roots','1398356819','yes');
-INSERT INTO `wp_options` VALUES (39906,'_site_transient_theme_roots','a:2:{s:3:\"dms\";s:7:\"/themes\";s:23:\"nicks-base-theme-master\";s:7:\"/themes\";}','yes');
+INSERT INTO `wp_options` VALUES (39921,'_site_transient_timeout_theme_roots','1398360619','yes');
+INSERT INTO `wp_options` VALUES (39926,'_site_transient_theme_roots','a:2:{s:3:\"dms\";s:7:\"/themes\";s:23:\"nicks-base-theme-master\";s:7:\"/themes\";}','yes');
 /*!40000 ALTER TABLE `wp_options` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -950,7 +950,7 @@ INSERT INTO `wp_postmeta` VALUES (942,262,'_edit_lock','1384990755:1');
 INSERT INTO `wp_postmeta` VALUES (950,266,'_wp_attached_file','2013/11/education3.png');
 INSERT INTO `wp_postmeta` VALUES (951,266,'_wp_attachment_metadata','a:4:{s:5:\"width\";i:1305;s:6:\"height\";i:407;s:4:\"file\";s:22:\"2013/11/education3.png\";s:10:\"image_meta\";a:10:{s:8:\"aperture\";i:0;s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";i:0;s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";i:0;s:3:\"iso\";i:0;s:13:\"shutter_speed\";i:0;s:5:\"title\";s:0:\"\";}}');
 INSERT INTO `wp_postmeta` VALUES (952,268,'_edit_last','1');
-INSERT INTO `wp_postmeta` VALUES (953,268,'_edit_lock','1398355219:1');
+INSERT INTO `wp_postmeta` VALUES (953,268,'_edit_lock','1398358819:1');
 INSERT INTO `wp_postmeta` VALUES (954,268,'_canonical','');
 INSERT INTO `wp_postmeta` VALUES (955,270,'_wp_attached_file','2013/11/learning_ros_book.jpg');
 INSERT INTO `wp_postmeta` VALUES (956,270,'_wp_attachment_metadata','a:4:{s:5:\"width\";i:500;s:6:\"height\";i:617;s:4:\"file\";s:29:\"2013/11/learning_ros_book.jpg\";s:10:\"image_meta\";a:10:{s:8:\"aperture\";i:0;s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";i:0;s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";i:0;s:3:\"iso\";i:0;s:13:\"shutter_speed\";i:0;s:5:\"title\";s:0:\"\";}}');
