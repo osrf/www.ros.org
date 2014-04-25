@@ -950,7 +950,7 @@ INSERT INTO `wp_postmeta` VALUES (942,262,'_edit_lock','1384990755:1');
 INSERT INTO `wp_postmeta` VALUES (950,266,'_wp_attached_file','2013/11/education3.png');
 INSERT INTO `wp_postmeta` VALUES (951,266,'_wp_attachment_metadata','a:4:{s:5:\"width\";i:1305;s:6:\"height\";i:407;s:4:\"file\";s:22:\"2013/11/education3.png\";s:10:\"image_meta\";a:10:{s:8:\"aperture\";i:0;s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";i:0;s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";i:0;s:3:\"iso\";i:0;s:13:\"shutter_speed\";i:0;s:5:\"title\";s:0:\"\";}}');
 INSERT INTO `wp_postmeta` VALUES (952,268,'_edit_last','1');
-INSERT INTO `wp_postmeta` VALUES (953,268,'_edit_lock','1398455937:1');
+INSERT INTO `wp_postmeta` VALUES (953,268,'_edit_lock','1398456936:1');
 INSERT INTO `wp_postmeta` VALUES (954,268,'_canonical','');
 INSERT INTO `wp_postmeta` VALUES (955,270,'_wp_attached_file','2013/11/learning_ros_book.jpg');
 INSERT INTO `wp_postmeta` VALUES (956,270,'_wp_attachment_metadata','a:4:{s:5:\"width\";i:500;s:6:\"height\";i:617;s:4:\"file\";s:29:\"2013/11/learning_ros_book.jpg\";s:10:\"image_meta\";a:10:{s:8:\"aperture\";i:0;s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";i:0;s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";i:0;s:3:\"iso\";i:0;s:13:\"shutter_speed\";i:0;s:5:\"title\";s:0:\"\";}}');
