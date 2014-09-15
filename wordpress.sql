@@ -2,7 +2,7 @@
 --
 -- Host: mysql1-vip.osuosl.org    Database: ros_org_wp
 -- ------------------------------------------------------
--- Server version	5.5.28-29.1-log
+-- Server version	5.5.39-36.0-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -132,7 +132,7 @@ CREATE TABLE `wp_options` (
   `autoload` varchar(20) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=63551 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=63547 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -407,7 +407,7 @@ CREATE TABLE `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`)
-) ENGINE=InnoDB AUTO_INCREMENT=1826 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1822 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1147,7 +1147,7 @@ CREATE TABLE `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB AUTO_INCREMENT=851 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=847 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1576,7 +1576,7 @@ CREATE TABLE `wp_usermeta` (
   PRIMARY KEY (`umeta_id`),
   KEY `user_id` (`user_id`),
   KEY `meta_key` (`meta_key`)
-) ENGINE=InnoDB AUTO_INCREMENT=136 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=132 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
