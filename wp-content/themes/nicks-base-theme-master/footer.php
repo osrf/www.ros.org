@@ -61,5 +61,17 @@ endif;
   })();
 
 </script>
+<script type="application/ld+json">
+{
+   "@context": "http://schema.org",
+   "@type": "WebSite",
+   "url": "http://www.ros.org/",
+   "potentialAction": {
+     "@type": "SearchAction",
+     "target": "http://www.ros.org/search/index.html?cx=018259903093183594226%3Atxvzw9fat6w&cof=FORID%3A11%3BNB%3A1&filter=0&num=10&ie=UTF-8&input={search_term}&q={search_term}&sa=Submit",
+     "query-input": "required name=search_term"
+   }
+}
+</script>
 </body>
 </html>
