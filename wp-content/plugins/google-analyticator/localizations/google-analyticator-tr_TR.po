@@ -1,0 +1,562 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: google-analyticator\n"
+"POT-Creation-Date: 2014-02-10 09:39+0800\n"
+"PO-Revision-Date: 2014-02-10 09:40+0800\n"
+"Last-Translator: Cansın Çağan Acarer <cansin.acarer@35pixel.com>\n"
+"Language-Team: 35pixel Digital Media <info@35pixel.com>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: google-analyticator.php:151
+msgid "Google Analyticator Settings"
+msgstr "Google Analyticator Ayarları"
+
+#: google-analyticator.php:252
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: google-analyticator.php:253
+msgid "Reset"
+msgstr "Sıfırla"
+
+#: google-analyticator.php:445
+msgid "Google Analyticator settings saved."
+msgstr "Google Analyticator ayarları kaydedildi."
+
+#: google-analyticator.php:460
+msgid "Google Analytics integration is currently <strong>DISABLED</strong>."
+msgstr "Google Analytics entegrasyonu şu anda <strong>DEVRE DIŞI</strong>"
+
+#: google-analyticator.php:465
+msgid ""
+"Google Analytics integration is currently enabled, but you did not enter a "
+"UID. Tracking will not occur."
+msgstr ""
+"Google Analytics entegrasyonu etkin, ama UID' nizi girmediniz. "
+"Ziyaretçileriniz takip edilmeyecek."
+
+#: google-analyticator.php:478
+msgid "Basic Settings"
+msgstr "Temel Ayarlar"
+
+#: google-analyticator.php:484
+msgid "Google Analytics logging is"
+msgstr "Google Analytics kod entegrasyonu"
+
+#: google-analyticator.php:494 google-analyticator.php:757
+#: google-analyticator.php:781 google-analyticator.php:805
+#: google-analyticator.php:935
+msgid "Enabled"
+msgstr "Etkin"
+
+#: google-analyticator.php:499 google-analyticator.php:762
+#: google-analyticator.php:786 google-analyticator.php:810
+#: google-analyticator.php:940
+msgid "Disabled"
+msgstr "Devre dışı"
+
+#: google-analyticator.php:508
+msgid "Analytics Account"
+msgstr "Analytics Hesabı"
+
+#: google-analyticator.php:546
+msgid "Hide Google Analytics UID after saving"
+msgstr "Kaydettikten sonra Google Analytics UID seçimini gizle"
+
+#: google-analyticator.php:556
+msgid "Tracking Code"
+msgstr "İzleme Kodu"
+
+#: google-analyticator.php:565
+msgid "Traditional (ga.js)"
+msgstr "Normal (ga.js)"
+
+#: google-analyticator.php:570
+msgid "Universal (analytics.js)"
+msgstr "Universal (analytics.js)"
+
+#: google-analyticator.php:575
+msgid ""
+"If you are using Universal Analytics make sure you have changed your account "
+"to a Universal Analytics property in Google Analytics. Read more about "
+"Universal Analytics <a href=\"https://support.google.com/analytics/"
+"answer/2817075?hl=en\" target=\"_blank\">here</a>."
+msgstr ""
+"Universal Analytics' in takip kodunu kullanıyorsanız Google Analytics "
+"hesabınızı Universal Analytics mülküne dönüştürdüğünüze emin olun. <a href="
+"\"https://support.google.com/analytics/answer/2817075?hl=en\" target=\"_blank"
+"\">ayrıntılı bilgi</a>."
+
+#: google-analyticator.php:582
+msgid "Tracking Settings"
+msgstr "İzleme ayarları"
+
+#: google-analyticator.php:587
+msgid "Track all logged in WordPress users"
+msgstr "Giriş yapmış WordPress kullanıcılarını da izle"
+
+#: google-analyticator.php:596 google-analyticator.php:626
+#: google-analyticator.php:704 google-analyticator.php:729
+#: google-analyticator.php:959
+msgid "Yes"
+msgstr "Evet"
+
+#: google-analyticator.php:601 google-analyticator.php:621
+#: google-analyticator.php:698 google-analyticator.php:734
+#: google-analyticator.php:964
+msgid "No"
+msgstr "Hayır"
+
+#: google-analyticator.php:607
+msgid ""
+"Selecting \"no\" to this option will prevent logged in WordPress users from "
+"showing up on your Google Analytics reports. This setting will prevent "
+"yourself or other users from showing up in your Analytics reports. Use the "
+"next setting to determine what user groups to exclude."
+msgstr ""
+"\"Hayır\" seçeneği Wordpress kullanıcılarının Google Analytics sonuçlarında "
+"çıkmasını önler. Sonuçlarda çıkmasını istemediğiniz kullanıcı gruplarını "
+"seçmek için bir sonraki ayarı kullanın."
+
+#: google-analyticator.php:612
+msgid "Anonymize IP Addresses"
+msgstr "IP Adreslerini Gizle"
+
+#: google-analyticator.php:632
+msgid ""
+"By selecting \"Yes\", This tells Google Analytics to anonymize the "
+"information sent by the tracker objects by removing the last octet of the IP "
+"address prior to its storage. Note that this will slightly reduce the "
+"accuracy of geographic reporting."
+msgstr ""
+"\"Evet\" seçeneğini seçmeniz izleme kodunun ziyaretçi IP adreslerini Google "
+"Analytics' e göndermesini engeller. Ancak bu, coğrafi raporlama verilerini "
+"aksatabilir."
+
+#: google-analyticator.php:637
+msgid "User roles to not track"
+msgstr "İzlenmeyecek kullanıcı rolleri"
+
+#: google-analyticator.php:657
+msgid ""
+"Specifies the user roles to not include in your WordPress Analytics report. "
+"If a user is logged into WordPress with one of these roles, they will not "
+"show up in your Analytics report."
+msgstr ""
+"Google Analytics sonuçlarına dahil olmamasını istediğiniz kullanıcı "
+"rollerini belirler. Burada seçilmiş rollerdeki kullanıcıların ziyareti "
+"Google Analytics sonuçlarında görünmez."
+
+#: google-analyticator.php:662
+msgid "Method to prevent tracking"
+msgstr "İzlemeyi engelleme yöntemi"
+
+#: google-analyticator.php:671
+msgid "Remove"
+msgstr "Kaldır"
+
+#: google-analyticator.php:676
+msgid "Use 'admin' variable"
+msgstr "'admin' değişkenini kullan"
+
+#: google-analyticator.php:680
+msgid "Dimension Index"
+msgstr "Boyut Endeksi"
+
+#: google-analyticator.php:684
+msgid ""
+"Selecting the \"Remove\" option will physically remove the tracking code "
+"from logged in users. Selecting the \"Use 'admin' variable\" option will "
+"assign a variable called 'admin' to logged in users. This option will allow "
+"Google Analytics' site overlay feature to work, but you will have to "
+"manually configure Google Analytics to exclude tracking from pageviews with "
+"the 'admin' variable."
+msgstr ""
+"\"Kaldır\" seçeneği yöneticiler için izleme kodunu siteden kaldıracaktır. "
+"\"Yönetici değişkenini kullan\" seçeneği ise giriş yapmış kullanıcıların "
+"ziyaretleri için admin isimli bir değişken atayacaktır. Bu seçenek Google "
+"Analytics' in \"Site Overlay\" seçeneğini devreye sokar, ancak Google "
+"Analytics' in yöneticileri hariç tutması için manuel olarak ayar yapmanız "
+"gerekir."
+
+#: google-analyticator.php:689
+msgid "Enable Remarketing, Demographics and Interests reports"
+msgstr ""
+"Yeniden Pazarlama, Demografikler ve İlgi Alanları raporlarını etkinleştir"
+
+#: google-analyticator.php:711
+msgid ""
+"In order to use remarketing, <a href=\"https://support.google.com/analytics/"
+"answer/2611270\" target=\"_blank\">please make sure you complete this "
+"checklist from Google</a>"
+msgstr ""
+"Yeniden pazarlamayı kullanmak için, <a href=\"https://support.google.com/"
+"analytics/answer/2611270/?hl=tr\" target=\"_blank\">Yeniden Pazarlama "
+"Listesi Gereksinimleri</a>' ni tamamladığınızdan emin olun."
+
+#: google-analyticator.php:714
+msgid ""
+"To use remarketing, <a href=\"https://support.google.com/analytics/"
+"answer/2884495\" target=\"_blank\">Edit permission</a> is required"
+msgstr ""
+"Yeniden pazarlamayı kullanmak için, <a href=\"https://support.google.com/"
+"analytics/answer/2884495\" target=\"_blank\">İzinlerin düzenlenmesi</a> "
+"gereklidir."
+
+#: google-analyticator.php:716
+msgid ""
+"Universal Analytics (analytics.js) does not currently support this feature"
+msgstr "Universal Analytics (analytics.js) şu anda bu özelliği desteklemiyor"
+
+#: google-analyticator.php:716
+msgid "learn more"
+msgstr "daha fazla bilgi"
+
+#: google-analyticator.php:720
+msgid "Track WordPress Login Page"
+msgstr "WordPress giriş sayfasını izle"
+
+#: google-analyticator.php:740
+msgid "This will track all access to wp-login.php"
+msgstr "Bu seçenek wp-login.php sayfasının izlenmesini sağlar."
+
+#: google-analyticator.php:744
+msgid "Link Tracking Settings"
+msgstr "Bağlantı İzleme Ayarları"
+
+#: google-analyticator.php:748
+msgid "Outbound link tracking"
+msgstr "Giden bağlantıları izleme"
+
+#: google-analyticator.php:767
+msgid ""
+"Disabling this option will turn off the tracking of outbound links. It's "
+"recommended not to disable this option unless you're a privacy advocate (now "
+"why would you be using Google Analytics in the first place?) or it's causing "
+"some kind of weird issue."
+msgstr ""
+"Bu seçeneği devre dışı bırakmak giden bağlantıların izlenmesini engeller. "
+"Sitenizi özellikle gizlemek istemiyorsanız veya garip soruna neden olmuyorsa "
+"bu seçeneği etkin bırakılması tavsiye ederiz. (Yoksa neden Google Analytics "
+"kullanasınız ki?)"
+
+#: google-analyticator.php:772
+msgid "Event tracking"
+msgstr "Etkinlik izleme"
+
+#: google-analyticator.php:791
+msgid ""
+"Enabling this option will treat outbound links and downloads as events "
+"instead of pageviews. Since the introduction of <a href=\"https://developers."
+"google.com/analytics/devguides/collection/gajs/eventTrackerGuide\">event "
+"tracking in Analytics</a>, this is the recommended way to track these types "
+"of actions. Only disable this option if you must use the old pageview "
+"tracking method."
+msgstr ""
+"Bu seçeneği etkinleştirmeniz giden bağlantıların ve indirmelerin etkinlik "
+"olarak görülmesini sağlar. <a href=\"https://developers.google.com/analytics/"
+"devguides/collection/gajs/eventTrackerGuide?hl=tr\" target=\"_blank\">Google "
+"Analytics' te Etkinlik takibi</a> tanıtıldığından beri bu tür etkinliklerin "
+"izlenmesi tavsiye edilir."
+
+#: google-analyticator.php:796
+msgid "Enhanced Link Attribution"
+msgstr "Gelişmiş Link Özellikleri"
+
+#: google-analyticator.php:815
+msgid ""
+"You can tag your pages to implement an enhanced link-tracking functionality "
+"by enabling this option. <a href=\"https://support.google.com/analytics/"
+"answer/2558867?hl=en\" target=\"_blank\">learn more</a>"
+msgstr ""
+"Bu seçeneği etkinleştirdiğinizde gelişmiş link takip işlevini eklemek için "
+"sayfalarınızı etiketleyebilirsiniz. <a href=\"https://support.google.com/"
+"analytics/answer/2558867?hl=en\" target=\"_blank\">ayrıntılı bilgi</a>"
+
+#: google-analyticator.php:820
+msgid "Download extensions to track"
+msgstr "Takip edilecek indirme uzantıları"
+
+#: google-analyticator.php:830
+msgid ""
+"Enter any extensions of files you would like to be tracked as a download. "
+"For example to track all MP3s and PDFs enter <strong>mp3,pdf</strong>. "
+"<em>Outbound link tracking must be enabled for downloads to be tracked.</em>"
+msgstr ""
+"İndirme olarak izlenmesini istediğiniz dosya uzantılarını girin. Örneğin "
+"bütün MP3 ve PDF' leri izlemek için <strong>mp3,pdf</strong> yazın. "
+"<em>İndirmelerin takip edilebilmesi için \"Giden bağlantıları izleme\" "
+"etkinleştirilmelidir.</em>"
+
+#: google-analyticator.php:835
+msgid "Prefix external links with"
+msgstr "Giden bağlantılar için önek"
+
+#: google-analyticator.php:845
+msgid ""
+"Enter a name for the section tracked external links will appear under. This "
+"option has no effect if event tracking is enabled."
+msgstr ""
+"İzlenen giden bağlantıların görüneceği bölümün adını girin. Etkinlik izleme "
+"etkin ise bu seçeneğin bir etkisi yoktur."
+
+#: google-analyticator.php:850
+msgid "Prefix download links with"
+msgstr "İndirme linkleri için önek"
+
+#: google-analyticator.php:860
+msgid ""
+"Enter a name for the section tracked download links will appear under. This "
+"option has no effect if event tracking is enabled."
+msgstr ""
+"İzlenen indirme linklerinin görüneceği bölümün adını girin. Etkinlik izleme "
+"etkin ise bu seçeneğin bir etkisi yoktur."
+
+#: google-analyticator.php:865
+msgid "Google Adsense ID"
+msgstr "Google Adsense ID' niz"
+
+#: google-analyticator.php:875
+msgid ""
+"Enter your Google Adsense ID assigned by Google Analytics in this box. This "
+"enables Analytics tracking of Adsense information if your Adsense and "
+"Analytics accounts are linked."
+msgstr ""
+"Google Analytics tarafından verilmiş Google Adsense ID' nizi bu kutuya "
+"girin. Adsense ve Analytics hesaplarınız bağlantılıysa bu seçenek Adsense "
+"bilgilerinizi  Analytics üzerinden izlenebilmesini sağlar."
+
+#: google-analyticator.php:879
+msgid "Additional Tracking Code"
+msgstr "Ek İzleme Kodu"
+
+#: google-analyticator.php:883 google-analyticator.php:901
+msgid "Additional tracking code"
+msgstr "Ek İzleme Kodu"
+
+#: google-analyticator.php:886
+msgid "before tracker initialization"
+msgstr "İzleme kodunun önüne ekle"
+
+#: google-analyticator.php:896
+msgid ""
+"Enter any additional lines of tracking code that you would like to include "
+"in the Google Analytics tracking script. The code in this section will be "
+"displayed <strong>before</strong> the Google Analytics tracker is "
+"initialized."
+msgstr ""
+"Google Analytics izleme kodundan önce eklemek istediğiniz kodları girin. "
+"Buradaki kodlar Google Analytics izleme kodunuzdan <strong>önce</strong> "
+"eklenecektir."
+
+#: google-analyticator.php:904
+msgid "after tracker initialization"
+msgstr "İzleme kodunun sonrasına ekle"
+
+#: google-analyticator.php:914
+msgid ""
+"Enter any additional lines of tracking code that you would like to include "
+"in the Google Analytics tracking script. The code in this section will be "
+"displayed <strong>after</strong> the Google Analytics tracker is initialized."
+msgstr ""
+"Google Analytics izleme kodundan sonra eklemek istediğiniz kodları girin. "
+"Buradaki kodlar Google Analytics izleme kodunuzdan <strong>sonra</strong> "
+"eklenecektir."
+
+#: google-analyticator.php:918
+msgid "Admin Dashboard Widgets"
+msgstr "Yönetici Başlangıç Paneli Bileşeni"
+
+#: google-analyticator.php:921
+msgid ""
+"You have not authenticated with Google - you cannot use dashboard widgets! "
+"Reset the plugin to authenticate.."
+msgstr ""
+"Plugini Google ile yetkilendirmediğiniz için Başlangıç Ekranı widgetlarını "
+"kullanamazsınız. Plugini yetkilendirmek için önce sıfırlamanız gerekiyor."
+
+#: google-analyticator.php:927
+msgid "Include widgets"
+msgstr "Widgetları etkinleştir"
+
+#: google-analyticator.php:945
+msgid ""
+"Disabling this option will completely remove the Dashboard Summary widget "
+"and the theme Stats widget. Use this option if you would prefer to not see "
+"the widgets."
+msgstr ""
+"Bu seçeneği devre dışı bırakmak giriş ekranındaki istatistik kutucuklarını "
+"devre dışı bırakır. Bu kutucukları görmek istemiyorsanız kullanın."
+
+#: google-analyticator.php:950
+msgid "Display Ad"
+msgstr "Reklamı göster"
+
+#: google-analyticator.php:969
+msgid "You can disable the ad on the admin dashboard."
+msgstr "Giriş ekranındaki reklamı gizleyebilirsiniz."
+
+#: google-analyticator.php:974
+msgid "User roles that can see the dashboard widget"
+msgstr "Giriş ekranındaki araçları görebilecek kullanıcı seviyelerini seçin."
+
+#: google-analyticator.php:994
+msgid ""
+"Specifies the user roles that can see the dashboard widget. If a user is not "
+"in one of these role groups, they will not see the dashboard widget."
+msgstr ""
+"Giriş ekranındaki araçları görebilecek kullanıcı seviyelerini seçer. Seçili "
+"gruplarda olmayan kullanıcılar araçları görmez."
+
+#: google-analyticator.php:999
+msgid "Save Changes"
+msgstr "Değişiklikleri Kaydet"
+
+#: google-analyticator.php:1002
+msgid "Deauthorize &amp; Reset Google Analyticator."
+msgstr ""
+"Google Analyticator eklentisinin yetkisini iptal et ve eklentiyi sıfırla."
+
+#: google-analyticator.php:1208
+msgid ""
+"Tracking code is hidden, since the settings specify not to track admins. "
+"Tracking is occurring for non-admins."
+msgstr ""
+"Yöneticiler için istatistik takibi engellendiğinden izleme kodu gizlendi. "
+"Yönetici olmayan kullanıcılar için izleme etkin."
+
+#: google-analytics-stats-widget.php:12
+msgid "Displays Stat Info From Google Analytics"
+msgstr "Google Analytics istatistik bilgilerini gösterir"
+
+#: google-analytics-stats-widget.php:14
+msgid "Google Analytics Stats"
+msgstr "Google Analytics İstatistikleri"
+
+#: google-analytics-stats-widget.php:106
+msgid "Title"
+msgstr "Başlık"
+
+#: google-analytics-stats-widget.php:108
+msgid "Days of data to get"
+msgstr "Veri alınacak günler"
+
+#: google-analytics-stats-widget.php:110
+msgid "Page background"
+msgstr "Sayfa arkaplanı"
+
+#: google-analytics-stats-widget.php:112
+msgid "Widget background"
+msgstr "Widget arkaplanı"
+
+#: google-analytics-stats-widget.php:114
+msgid "Inner background"
+msgstr "İç arkaplan"
+
+#: google-analytics-stats-widget.php:116
+msgid "Font color"
+msgstr "Yazı tipi rengi"
+
+#: google-analytics-stats-widget.php:118
+msgid "Line 1 text"
+msgstr "Birinci satır metni"
+
+#: google-analytics-stats-widget.php:120
+msgid "Line 2 text"
+msgstr "İkinci satır metni"
+
+#: google-analytics-summary-widget.php:45
+msgid "Google Analytics Summary"
+msgstr "Google Analytics Özeti"
+
+#: google-analytics-summary-widget.php:110
+msgid "View Full Stat Report"
+msgstr "Bütün istatistikleri göster"
+
+#: google-analytics-summary-widget.php:198
+#: google-analytics-summary-widget.php:447
+#: google-analytics-summary-widget.php:575
+#: google-analytics-summary-widget.php:600
+msgid "Visits"
+msgstr "Ziyaret"
+
+#: google-analytics-summary-widget.php:224
+msgid "Past 30 days"
+msgstr "Son 30 gün"
+
+#: google-analytics-summary-widget.php:225
+msgid "Past 60 days"
+msgstr "Son 60 gün"
+
+#: google-analytics-summary-widget.php:226
+msgid "Yesterday"
+msgstr "Dün"
+
+#: google-analytics-summary-widget.php:256
+msgid ""
+"No Analytics account selected. Double check you are authenticated with "
+"Google on Google Analyticator's settings page and make sure an account is "
+"selected."
+msgstr "Analytics hesabı seçilmedi. Google Analyticator"
+
+#: google-analytics-summary-widget.php:269
+msgid "Site Usage"
+msgstr "Site Kullanımı"
+
+#: google-analytics-summary-widget.php:275
+msgid "Top Pages"
+msgstr "En popüler sayfalar"
+
+#: google-analytics-summary-widget.php:284
+msgid "Top Referrers"
+msgstr "Yönlendirme trafiği"
+
+#: google-analytics-summary-widget.php:293
+msgid "Top Searches"
+msgstr "Arama kelimeleri"
+
+#: google-analytics-summary-widget.php:429
+#, php-format
+msgid "The most visits on a single day was %d. Yesterday there were %d visits."
+msgstr "Bir günde en fazla %d ziyaretçi geldi. Dün %d ziyaretçi vardı."
+
+#: google-analytics-summary-widget.php:453
+msgid "Bounce Rate"
+msgstr "Hemen Çıkma Oranı"
+
+#: google-analytics-summary-widget.php:457
+msgid "Pageviews"
+msgstr "Sayfa Görüntüleme Sayısı"
+
+#: google-analytics-summary-widget.php:463
+msgid "Avg. Time on Site"
+msgstr "Ort. Ziyaret Süresi"
+
+#: google-analytics-summary-widget.php:471
+msgid "Pages/Visit"
+msgstr "Sayfa/Ziyaret"
+
+#: google-analytics-summary-widget.php:476
+msgid "% New Visits"
+msgstr "Yeni ziyaretçilerin yüzdesi"
+
+#: google-analytics-summary-widget.php:495
+#: google-analytics-summary-widget.php:568
+#: google-analytics-summary-widget.php:594
+msgid "There is no data for view."
+msgstr "Gösterilecek veri yok."
+
+#: google-analytics-summary-widget.php:541
+msgid "Views"
+msgstr "Görüntüleme"
+
+#~ msgid "Enable remarketing"
+#~ msgstr "Yeniden pazarlamayı etkinleştir"

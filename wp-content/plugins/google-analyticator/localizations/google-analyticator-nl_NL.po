@@ -1,0 +1,646 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: google_analyticator_dutch\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-22 10:06+0800\n"
+"PO-Revision-Date: 2014-04-22 10:07+0800\n"
+"Last-Translator: Martin Teley <martin.teley@gmail.com>\n"
+"Language-Team: Martin Teley <martin.teley@gmail.com>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-KeywordsList: __;gettext;gettext_noop;e_;_e;_n:1,2;_n_noop:1,2;"
+"_nx:1,2;_nx_noop:1,2\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPath-1: ..\n"
+"X-Poedit-SearchPath-2: .\n"
+
+#: ../google-analyticator.php:151
+msgid "Google Analyticator Settings"
+msgstr "Google Analyticator Instellingen"
+
+#: ../google-analyticator.php:252
+msgid "Settings"
+msgstr "Instellingen"
+
+#: ../google-analyticator.php:253
+msgid "Reset"
+msgstr "Reset"
+
+#: ../google-analyticator.php:445
+msgid "Google Analyticator settings saved."
+msgstr "Google Analyticator instellingen opgeslagen."
+
+#: ../google-analyticator.php:460
+msgid "Google Analytics integration is currently <strong>DISABLED</strong>."
+msgstr ""
+"Google Analytics integratie is momenteel <strong>UITGESCHAKELD</strong>."
+
+#: ../google-analyticator.php:465
+msgid ""
+"Google Analytics integration is currently enabled, but you did not enter a "
+"UID. Tracking will not occur."
+msgstr ""
+"Google Analytics integratie is momenteel ingeschakeld, maar u heeft geen UID "
+"opgegeven. De statistieken worden dus niet bijgehouden."
+
+#: ../google-analyticator.php:478
+msgid "Basic Settings"
+msgstr "Basis Instellingen"
+
+#: ../google-analyticator.php:484
+msgid "Google Analytics logging is"
+msgstr "Google Analytics logging is"
+
+#: ../google-analyticator.php:494 ../google-analyticator.php:756
+#: ../google-analyticator.php:780 ../google-analyticator.php:804
+#: ../google-analyticator.php:934
+msgid "Enabled"
+msgstr "Ingeschakeld"
+
+#: ../google-analyticator.php:499 ../google-analyticator.php:761
+#: ../google-analyticator.php:785 ../google-analyticator.php:809
+#: ../google-analyticator.php:939
+msgid "Disabled"
+msgstr "Uitgeschakeld"
+
+#: ../google-analyticator.php:508
+msgid "Analytics Account"
+msgstr "Analytics Account"
+
+#: ../google-analyticator.php:546
+msgid "Hide Google Analytics UID after saving"
+msgstr "Hide Google Analytics UID after saving"
+
+#: ../google-analyticator.php:556
+msgid "Tracking Code"
+msgstr "Tracking-ID"
+
+#: ../google-analyticator.php:565
+msgid "Traditional (ga.js)"
+msgstr "Traditioneel (ga.js)"
+
+#: ../google-analyticator.php:570
+msgid "Universal (analytics.js)"
+msgstr "Universeel (analytics.js)"
+
+#: ../google-analyticator.php:575
+msgid ""
+"If you are using Universal Analytics make sure you have changed your account "
+"to a Universal Analytics property in Google Analytics. Read more about "
+"Universal Analytics <a href=\"https://support.google.com/analytics/"
+"answer/2817075?hl=en\" target=\"_blank\">here</a>."
+msgstr ""
+"Wanneer u de Universal Analytics gebruikt moet u uw Google Analytics account "
+"ook upgraden naar Universal Analytics. Klik <a href=\"https://support.google."
+"com/analytics/answer/2817075?hl=nl\" target=\"_blank\">hier</a> voor meer "
+"informatie."
+
+#: ../google-analyticator.php:582
+msgid "Tracking Settings"
+msgstr "Tracking Opties"
+
+#: ../google-analyticator.php:587
+msgid "Track all logged in WordPress users"
+msgstr "Alle ingelogde gebruikers tracks"
+
+#: ../google-analyticator.php:596 ../google-analyticator.php:626
+#: ../google-analyticator.php:704 ../google-analyticator.php:728
+#: ../google-analyticator.php:958
+msgid "Yes"
+msgstr "Ja"
+
+#: ../google-analyticator.php:601 ../google-analyticator.php:621
+#: ../google-analyticator.php:698 ../google-analyticator.php:733
+#: ../google-analyticator.php:963
+msgid "No"
+msgstr "Nee"
+
+#: ../google-analyticator.php:607
+msgid ""
+"Selecting \"no\" to this option will prevent logged in WordPress users from "
+"showing up on your Google Analytics reports. This setting will prevent "
+"yourself or other users from showing up in your Analytics reports. Use the "
+"next setting to determine what user groups to exclude."
+msgstr ""
+"Wanneer u \"nee\" selecteer bij deze optie, zullen alle ingelogde gebruikers "
+"niet opgenomen worden in de Google Analytics reportages. Deze instelling "
+"voorkomt dat uzelf of andere gebruikers in de Analytics reportages "
+"voorkomen. U kunt de onderstaande optie gebruiken om te bepalen welke "
+"gebruikersgroepen genegeerd moeten worden."
+
+#: ../google-analyticator.php:612
+msgid "Anonymize IP Addresses"
+msgstr "Anonimiseer IP Adressen"
+
+#: ../google-analyticator.php:632
+msgid ""
+"By selecting \"Yes\", This tells Google Analytics to anonymize the "
+"information sent by the tracker objects by removing the last octet of the IP "
+"address prior to its storage. Note that this will slightly reduce the "
+"accuracy of geographic reporting."
+msgstr ""
+"Wanneer u \"ja\" selecteert, zal Google Analytics de informatie van de "
+"bezoeker anonimiseren door het laatste octet van zijn/haar IP adress te "
+"verwijderen voordat dit opgeslagen wordt. Let er wel op dat dit de "
+"nauwkeurigheid van geografische rapporten reduceert."
+
+#: ../google-analyticator.php:637
+msgid "User roles to not track"
+msgstr "Gebruikersrollen die niet getracht moeten worden"
+
+#: ../google-analyticator.php:657
+msgid ""
+"Specifies the user roles to not include in your WordPress Analytics report. "
+"If a user is logged into WordPress with one of these roles, they will not "
+"show up in your Analytics report."
+msgstr ""
+"Specificeert de gebruikersrollen die niet opgenomen worden in uw WordPress "
+"Analytics rapport. Wanneer een gebruiker met een van deze rollen ingelogd "
+"is, zullen ze genegeerd worden in het Analytics rapport."
+
+#: ../google-analyticator.php:662
+msgid "Method to prevent tracking"
+msgstr "Methode om tracking te verhinderen"
+
+#: ../google-analyticator.php:671
+msgid "Remove"
+msgstr "Verwijderen"
+
+#: ../google-analyticator.php:676
+msgid "Use 'admin' variable"
+msgstr "Gebruik 'admin' toevoeging"
+
+#: ../google-analyticator.php:680
+msgid "Dimension Index"
+msgstr "Dimension Index"
+
+#: ../google-analyticator.php:684
+msgid ""
+"Selecting the \"Remove\" option will physically remove the tracking code "
+"from logged in users. Selecting the \"Use 'admin' variable\" option will "
+"assign a variable called 'admin' to logged in users. This option will allow "
+"Google Analytics' site overlay feature to work, but you will have to "
+"manually configure Google Analytics to exclude tracking from pageviews with "
+"the 'admin' variable."
+msgstr ""
+"Wanneer u de optie \"verwijderen\" selecteert zullen alle gegevens van "
+"ingelogde gebruikers fysiek verwijderd worden. Wanneer u de optie \"gebruik "
+"'admin' toevoeging\" selecteert zal er een variabele 'admin' aan alle data "
+"van ingelogde gebruikers gehangen worden. Met deze optie zal de site overlay "
+"optie van Google Analytics werken, maar moet u Google Analytics handmatig "
+"configureren om de gegevens van ingelogde gebruikers te negeren."
+
+#: ../google-analyticator.php:689
+msgid "Enable Remarketing, Demographics and Interests reports"
+msgstr "Remarketing, Demografie en Interesses rapporten laten zien"
+
+#: ../google-analyticator.php:711
+msgid ""
+"In order to use remarketing, <a href=\"https://support.google.com/analytics/"
+"answer/2611270\" target=\"_blank\">please make sure you complete this "
+"checklist from Google</a>"
+msgstr ""
+"Om remarketing te gebruiken, <a href=\"https://support.google.com/analytics/"
+"answer/2611270\" target=\"_blank\">gebruik a.u.b. deze checklist van Google</"
+"a>."
+
+#: ../google-analyticator.php:714
+msgid ""
+"To use remarketing, <a href=\"https://support.google.com/analytics/"
+"answer/2884495\" target=\"_blank\">Edit permission</a> is required"
+msgstr ""
+"Bij het gebruik van remarketing, <a href=\"https://support.google.com/"
+"analytics/answer/2611270\" target=\"_blank\">toestemming om te wijzigen</a> "
+"is vereist."
+
+#: ../google-analyticator.php:719
+msgid "Track WordPress Login Page"
+msgstr "Track Wordpress Login Pagina"
+
+#: ../google-analyticator.php:739
+msgid "This will track all access to wp-login.php"
+msgstr "Dit zal alle toegang tot wp-login.php tracks"
+
+#: ../google-analyticator.php:743
+msgid "Link Tracking Settings"
+msgstr "Ustawienia śledzenia odnośników"
+
+#: ../google-analyticator.php:747
+msgid "Outbound link tracking"
+msgstr "Tracken van uitgaande links"
+
+#: ../google-analyticator.php:766
+msgid ""
+"Disabling this option will turn off the tracking of outbound links. It's "
+"recommended not to disable this option unless you're a privacy advocate (now "
+"why would you be using Google Analytics in the first place?) or it's causing "
+"some kind of weird issue."
+msgstr ""
+"Het uitzetten van deze optie stopt het tracks van uitgaande links. Het is "
+"aangeraden deze optie niet uit te zetten mits u geen privacy-activist bent "
+"(maar waarom gebruikt u dan Google Analytics?) of het bepaalde vreemde "
+"problemen veroorzaakt."
+
+#: ../google-analyticator.php:771
+msgid "Event tracking"
+msgstr "Actie tracking"
+
+#: ../google-analyticator.php:790
+msgid ""
+"Enabling this option will treat outbound links and downloads as events "
+"instead of pageviews. Since the introduction of <a href=\"https://developers."
+"google.com/analytics/devguides/collection/gajs/eventTrackerGuide\">event "
+"tracking in Analytics</a>, this is the recommended way to track these types "
+"of actions. Only disable this option if you must use the old pageview "
+"tracking method."
+msgstr ""
+"Het inschakelen van deze optie zal uitgaande links en downloads als acties "
+"zien in plaats van paginaweergaven. Sinds de introductie van <a href="
+"\"https://developers.google.com/analytics/devguides/collection/gajs/"
+"eventTrackerGuide\">actie tracking in Analytics</a>, is dit de aanbevolen "
+"manier om deze acties te tracks. Deze optie alleen uitschakelen wanneer u de "
+"oude manier van paginaweergaven tracking gebruikt."
+
+#: ../google-analyticator.php:795
+msgid "Enhanced Link Attribution"
+msgstr "Enhanced Link Attribution"
+
+#: ../google-analyticator.php:814
+msgid ""
+"You can tag your pages to implement an enhanced link-tracking functionality "
+"by enabling this option. <a href=\"https://support.google.com/analytics/"
+"answer/2558867?hl=en\" target=\"_blank\">learn more</a>"
+msgstr ""
+"U kunt een geavanceerde link-tracking functionaliteit aan uw pagina's hangen "
+"door deze optie in te schakelen. <a href=\"https://support.google.com/"
+"analytics/answer/2558867?hl=nl\" target=\"_blank\">meer informatie</a>"
+
+#: ../google-analyticator.php:819
+msgid "Download extensions to track"
+msgstr "Download extensies om te tracken"
+
+#: ../google-analyticator.php:829
+msgid ""
+"Enter any extensions of files you would like to be tracked as a download. "
+"For example to track all MP3s and PDFs enter <strong>mp3,pdf</strong>. "
+"<em>Outbound link tracking must be enabled for downloads to be tracked.</em>"
+msgstr ""
+"Vul alle extensies in van bestandstypen die u graag wilt tracks als "
+"download. Bijvoorbeeld om MP3 en PDF bestanden te tracks vult u in: "
+"<strong>mp3,pdf</strong>. <em>Tracking van uitgaande links moet ingeschakeld "
+"zijn om deze optie te gebruiken.</em>"
+
+#: ../google-analyticator.php:834
+msgid "Prefix external links with"
+msgstr "Prefix externe links met"
+
+#: ../google-analyticator.php:844
+msgid ""
+"Enter a name for the section tracked external links will appear under. This "
+"option has no effect if event tracking is enabled."
+msgstr ""
+"Voeg een naam in voor de sectie waaronder getrachte externe links getoond "
+"worden. Deze optie heeft geen effect wanneer het tracks van acties is "
+"ingeschakeld."
+
+#: ../google-analyticator.php:849
+msgid "Prefix download links with"
+msgstr "Prefix download links met"
+
+#: ../google-analyticator.php:859
+msgid ""
+"Enter a name for the section tracked download links will appear under. This "
+"option has no effect if event tracking is enabled."
+msgstr ""
+"Voeg een naam in voor de sectie waaronder getrachte downlaod links getoond "
+"worden. Deze optie heeft geen effect wanneer het tracks van acties "
+"ingeschakeld is."
+
+#: ../google-analyticator.php:864
+msgid "Google Adsense ID"
+msgstr "Google Adsense ID"
+
+#: ../google-analyticator.php:874
+msgid ""
+"Enter your Google Adsense ID assigned by Google Analytics in this box. This "
+"enables Analytics tracking of Adsense information if your Adsense and "
+"Analytics accounts are linked."
+msgstr ""
+"Vul uw Google Adsense ID wat u van Google Analytics gekregen heeft in in dit "
+"veld. Dit staat Analytics het tracks van Adsense informatie toe wanneer uw "
+"Adsense en Analytics accounts verbonden zijn."
+
+#: ../google-analyticator.php:878
+#, fuzzy
+msgid "Additional Tracking Code"
+msgstr "Additionele tracking code"
+
+#: ../google-analyticator.php:882 ../google-analyticator.php:900
+msgid "Additional tracking code"
+msgstr "Additionele tracking code"
+
+#: ../google-analyticator.php:885
+msgid "before tracker initialization"
+msgstr "voor de tracker initialisatie"
+
+#: ../google-analyticator.php:895
+msgid ""
+"Enter any additional lines of tracking code that you would like to include "
+"in the Google Analytics tracking script. The code in this section will be "
+"displayed <strong>before</strong> the Google Analytics tracker is "
+"initialized."
+msgstr ""
+"Voeg hier additionele tracking code in die u graag wilt in wilt voegen in "
+"het Google Analytics trekking script. De code in dit vak zal weergegeven "
+"worden <strong>voor</strong> de Google Analytics tracker geinitialiseerd "
+"wordt."
+
+#: ../google-analyticator.php:903
+msgid "after tracker initialization"
+msgstr "na de tracker initialisatie"
+
+#: ../google-analyticator.php:913
+msgid ""
+"Enter any additional lines of tracking code that you would like to include "
+"in the Google Analytics tracking script. The code in this section will be "
+"displayed <strong>after</strong> the Google Analytics tracker is initialized."
+msgstr ""
+"Voeg hier additionele tracking code in die u graag wilt in wilt voegen in "
+"het Google Analytics trekking script. De code in dit vak zal weergegeven "
+"worden <strong>na</strong> de Google Analytics tracker geinitialiseerd wordt."
+
+#: ../google-analyticator.php:917
+msgid "Admin Dashboard Widgets"
+msgstr "Ustawienia widgetów w kokpicie"
+
+#: ../google-analyticator.php:920
+msgid ""
+"You have not authenticated with Google - you cannot use dashboard widgets! "
+"Reset the plugin to authenticate.."
+msgstr ""
+"De authenticatie met Google is niet gevonden - u kunt de dashboard widgets "
+"niet gebruiken! Reset deze plugin om de authenticatie opnieuw te doen."
+
+#: ../google-analyticator.php:926
+msgid "Include widgets"
+msgstr "Widgets laten zien"
+
+#: ../google-analyticator.php:944
+msgid ""
+"Disabling this option will completely remove the Dashboard Summary widget "
+"and the theme Stats widget. Use this option if you would prefer to not see "
+"the widgets."
+msgstr ""
+"Het uitzetten van deze optie zal zowel de informatie op het Dashboard als de "
+"statistieken widget verwijderen. Gebruik deze optie als u in geen geval deze "
+"informatie wilt weergeven."
+
+#: ../google-analyticator.php:949
+msgid "Display Ad"
+msgstr "Ad weergeven"
+
+#: ../google-analyticator.php:968
+msgid "You can disable the ad on the admin dashboard."
+msgstr "U kunt de reclame op het admin dashboard uitschakelen."
+
+#: ../google-analyticator.php:973
+msgid "User roles that can see the dashboard widget"
+msgstr "Gebruikersrollen die de dashboard widget kunnen zien."
+
+#: ../google-analyticator.php:993
+msgid ""
+"Specifies the user roles that can see the dashboard widget. If a user is not "
+"in one of these role groups, they will not see the dashboard widget."
+msgstr ""
+"Specificeert de gebruikersrollen die de dashboard widget kunnen zien. "
+"Wanneer een gebruiker niet in een van deze gebruikersgroepen zit, zal hij/"
+"zij de dashboard widget niet kunnen zien."
+
+#: ../google-analyticator.php:998
+msgid "Save Changes"
+msgstr "Wijzigingen opslaan"
+
+#: ../google-analyticator.php:1001
+msgid "Deauthorize &amp; Reset Google Analyticator."
+msgstr "Machtiging intrekken &amp; Google Analyticator resetten."
+
+#: ../google-analyticator.php:1211
+msgid ""
+"Tracking code is hidden, since the settings specify not to track admins. "
+"Tracking is occurring for non-admins."
+msgstr ""
+"Trakcing code is verborgen, omdat de instellingen zeggen dat admins niet "
+"getracht moeten worden. Alleen niet-admins worden getracht."
+
+#: ../google-analytics-stats-widget.php:12
+msgid "Displays Stat Info From Google Analytics"
+msgstr "Laat statistieken van Google Analytics zien"
+
+#: ../google-analytics-stats-widget.php:14
+msgid "Google Analytics Stats"
+msgstr "Google Analytics Statistieken"
+
+#: ../google-analytics-stats-widget.php:106
+msgid "Title"
+msgstr "Titel"
+
+#: ../google-analytics-stats-widget.php:108
+msgid "Days of data to get"
+msgstr "Aantal dagen data"
+
+#: ../google-analytics-stats-widget.php:110
+msgid "Page background"
+msgstr "Pagina achtergrond"
+
+#: ../google-analytics-stats-widget.php:112
+msgid "Widget background"
+msgstr "Widget achtergrond"
+
+#: ../google-analytics-stats-widget.php:114
+msgid "Inner background"
+msgstr "Interne achtergrond"
+
+#: ../google-analytics-stats-widget.php:116
+msgid "Font color"
+msgstr "Kleur letters"
+
+#: ../google-analytics-stats-widget.php:118
+msgid "Line 1 text"
+msgstr "Tekst eerste rij"
+
+#: ../google-analytics-stats-widget.php:120
+msgid "Line 2 text"
+msgstr "Tekst tweede rij"
+
+#: ../google-analytics-summary-widget.php:45
+msgid "Google Analytics Summary"
+msgstr "Google Analytics Overzicht"
+
+#: ../google-analytics-summary-widget.php:110
+msgid "View Full Stat Report"
+msgstr "Laat volledig rapport zien"
+
+#: ../google-analytics-summary-widget.php:198
+#: ../google-analytics-summary-widget.php:447
+#: ../google-analytics-summary-widget.php:575
+#: ../google-analytics-summary-widget.php:600
+msgid "Visits"
+msgstr "Bezoeken"
+
+#: ../google-analytics-summary-widget.php:224
+msgid "Past 30 days"
+msgstr "Afgelopen 30 dagen"
+
+#: ../google-analytics-summary-widget.php:225
+msgid "Past 60 days"
+msgstr "Afgelopen 60 dagen"
+
+#: ../google-analytics-summary-widget.php:226
+msgid "Yesterday"
+msgstr "Gisteren"
+
+#: ../google-analytics-summary-widget.php:256
+msgid ""
+"No Analytics account selected. Double check you are authenticated with "
+"Google on Google Analyticator's settings page and make sure an account is "
+"selected."
+msgstr ""
+"Geen Analytics account geselecteerd. Controleer of u geauthenticeerd bent "
+"met Google op Google Analyticators instellingen pagina en controlleer of er "
+"een account geselecteerd is."
+
+#: ../google-analytics-summary-widget.php:269
+msgid "Site Usage"
+msgstr "Bezoekers Statistieken"
+
+#: ../google-analytics-summary-widget.php:275
+msgid "Top Pages"
+msgstr "Best Bezochte Pagina's"
+
+#: ../google-analytics-summary-widget.php:284
+msgid "Top Referrers"
+msgstr "Meest Verwijzende Website's"
+
+#: ../google-analytics-summary-widget.php:293
+msgid "Top Searches"
+msgstr "Meest Gebruikte Zoektermen"
+
+#: ../google-analytics-summary-widget.php:429
+#, php-format
+msgid "The most visits on a single day was %d. Yesterday there were %d visits."
+msgstr ""
+"Het hoogste aantal bezoekers op een enkele dag was %d. Gisteren waren er %d "
+"bezoekers."
+
+#: ../google-analytics-summary-widget.php:453
+msgid "Bounce Rate"
+msgstr "Bouncepercentage"
+
+#: ../google-analytics-summary-widget.php:457
+msgid "Pageviews"
+msgstr "Paginaweergaven"
+
+#: ../google-analytics-summary-widget.php:463
+msgid "Avg. Time on Site"
+msgstr "Gem. Tijd op Website"
+
+#: ../google-analytics-summary-widget.php:471
+msgid "Pages/Visit"
+msgstr "Pagina's per Bezoek"
+
+#: ../google-analytics-summary-widget.php:476
+msgid "% New Visits"
+msgstr "% Nieuwe Bezoekers"
+
+#: ../google-analytics-summary-widget.php:495
+#: ../google-analytics-summary-widget.php:568
+#: ../google-analytics-summary-widget.php:594
+msgid "There is no data for view."
+msgstr "Er is geen data om weer te geven."
+
+#: ../google-analytics-summary-widget.php:541
+msgid "Views"
+msgstr "Paginaweergaven"
+
+#~ msgid "Enable remarketing"
+#~ msgstr "Pozwól na remarketing"
+
+#~ msgid "Activate Google Analyticator"
+#~ msgstr "Aktywacja pluginu Google Analyticator"
+
+#~ msgid "Google Authentication Code"
+#~ msgstr "Autoryzacja pluginu na koncie Google"
+
+#~ msgid ""
+#~ "You need to sign in to Google and grant this plugin access to your Google "
+#~ "Analytics account"
+#~ msgstr ""
+#~ "Zaloguj się na koncie Google i potwierdź dostęp tego pluginu do statystyk "
+#~ "Google Analytics"
+
+#~ msgid "Click Here"
+#~ msgstr "Kliknij tutaj"
+
+#~ msgid "Or"
+#~ msgstr "Lub"
+
+#~ msgid "here"
+#~ msgstr "tutaj"
+
+#~ msgid "if you have popups blocked"
+#~ msgstr "jeśli masz zablokowane wyskakujące okienka."
+
+#~ msgid ""
+#~ "Enter your Google Authentication Code in this box. This code will be used "
+#~ "to get an Authentication Token so you can access your website stats."
+#~ msgstr ""
+#~ "Wpisz swój kod autoryzacyjny Google w pole poniżej. Pozwoli on na "
+#~ "pobranie statystyk Twojej witryny z Google Analytics."
+
+#~ msgid "Save &amp; Continue"
+#~ msgstr "Zapisz &amp; Kontynuuj"
+
+#~ msgid "I Don't Want To Authenticate Through Google"
+#~ msgstr "Nie chcę korzystać z autoryzacji przez Google"
+
+#~ msgid ""
+#~ "If you don't want to authenticate through Google and only use the "
+#~ "tracking capability of the plugin (<strong><u>not the dashboard "
+#~ "functionality</u></strong>), you can do this by clicking the button "
+#~ "below. "
+#~ msgstr ""
+#~ "Jeśli nie chcesz korzystać z autoryzacji przez Google i używać jedynie "
+#~ "możliwości śledzenia pluginu (<strong><u> bez widżetów w kokpicie</u></"
+#~ "strong>), możesz zrobić to klikając przycisk poniżej."
+
+#~ msgid ""
+#~ "You will be asked on the next page to manually enter your Google "
+#~ "Analytics UID."
+#~ msgstr "Zostaniesz zapytany o ręczne podanie swojego kodu Google Analytics."
+
+#~ msgid "Continue Without Authentication"
+#~ msgstr "Kontynuuj bez autoryzacji"
+
+#~ msgid "Name"
+#~ msgstr "Imię"
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Loading"
+#~ msgstr "Ładowanie"
+
+#~ msgid "Visits Over the Past 30 Days"
+#~ msgstr "Ilość odwiedzin w ciągu ostatnich 30 dni"
+
+#~ msgid "visit"
+#~ msgid_plural "visits"
+#~ msgstr[0] "odwiedzin"
+#~ msgstr[1] "odwiedziny"
+#~ msgstr[2] "odwiedzin"
