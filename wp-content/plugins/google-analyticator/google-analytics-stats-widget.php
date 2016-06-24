@@ -8,13 +8,17 @@
  **/
 class GoogleStatsWidget extends WP_Widget
 {
-	function GoogleStatsWidget() {
+	function GoogleStatsWidget($shortcode = FALSE) {
 		$widget_ops = array('classname' => 'widget_google_stats', 'description' => __("Displays Stat Info From Google Analytics", 'google-analyticator') );
 		$control_ops = array('width' => 400, 'height' => 400);
-		$this->WP_Widget('googlestats', __('Google Analytics Stats', 'google-analyticator'), $widget_ops, $control_ops);
+		//$this->WP_Widget('googlestats', __('Google Analytics Stats', 'google-analyticator'), $widget_ops, $control_ops);
+		parent::__construct('googlestats', __('Google Analytics Stats', 'google-analyticator'), $widget_ops, $control_ops);
+		if ($shortcode) {
+			$this->widget();
+		}
 	}
 	
-	function widget($args, $instance) {
+	function widget($args = array(), $instance = array()) {
 		extract($args);
 		$title = apply_filters('widget_title', empty($instance['title']) ? '' : $instance['title']);
 		$acnt = false;
@@ -27,7 +31,10 @@ class GoogleStatsWidget extends WP_Widget
 		$line2 = empty($instance['line2']) ? 'Visitors' : $instance['line2'];
 		
 		# Before the widget
-		echo $before_widget;
+		if (isset($before_widget)) {
+			echo $before_widget;
+		}
+		
 		
 		# The title
 		if ( $title )
@@ -41,7 +48,9 @@ class GoogleStatsWidget extends WP_Widget
 		$this->endWidget();
 		
 		# After the widget
-		echo $after_widget;
+		if (isset($after_widget)) {
+			echo $after_widget;
+		}
 	}
 	
 	function update($new_instance, $old_instance) {
@@ -143,7 +152,7 @@ class GoogleStatsWidget extends WP_Widget
 	 **/
 	function beginWidget($font_color = '000', $widget_background_color = 'FFF')
 	{
-		echo '<table style="width:auto!important;border-width:2px;border-color:#' . $font_color . ';border-style:solid;background:#' . $widget_background_color . ';"><tr>';
+		echo '<table style="width:auto!important;border-width:2px;border-color:#' . $font_color . ';border-style:solid;background:#' . $widget_background_color . ';margin-bottom:0;"><tr>';
 	}
 
 	/**
@@ -162,7 +171,7 @@ class GoogleStatsWidget extends WP_Widget
 	function widgetInfo($visitor_count, $line_one = 'Unique', $line_two = 'Visitors', $inner_background_color = 'FFF', $font_color = '000')
 	{
 
-		echo '<td style="width:auto!important;border-width:1px;border-color:#' . $font_color . ';border-style:solid;padding:0px 5px 0px 5px;text-align:right;background:#' . $inner_background_color . ';min-width:80px;*width:80px!important;"><div style="min-width:80px;">'. $visitor_count . '</div></td>';
+		echo '<td style="width:auto!important;border-width:1px;border-color:#' . $font_color . ';border-style:solid;padding:0px 5px 0px 5px;text-align:right;background:#' . $inner_background_color . ';min-width:80px;*width:80px!important;vertical-align:middle;"><div style="min-width:80px;">'. $visitor_count . '</div></td>';
 
 		echo '<td style="width:auto!important;padding:0px 5px 0px 5px;text-align:center;font-size:11px;">' . $line_one . '<br />' . $line_two . '</td>';
 
@@ -179,7 +188,9 @@ class GoogleStatsWidget extends WP_Widget
 		echo '</tr></table>';
 
 		// The following is used to displayed the "Powered By Google Anayltics" text.
-		echo '<div style="font-size:9px;color:#666666;margin-top:0px;font-family:Verdana;">Powered By <a href="http://google.com/analytics/" title="Google Analytics" style="text-decoration:none;"><img src="' . plugins_url('/google-analyticator/ga_logo.png') . '" alt="Google Analytics" style="border:0px;position:relative;top:4px;" /></a></div></div>';
+		if (get_option(key_ga_show_ad) == '1') {
+			echo '<div style="font-size:9px;color:#666666;margin-top:0px;font-family:Verdana;">Powered By <a href="https://wordpress.org/plugins/google-analyticator/" title="Google Analyticator for Wordpress" style="text-decoration:none;" target="_blank"><img src="' . plugins_url('/google-analyticator/ga_logo.png') . '" alt="Google Analytics" style="border:0px;position:relative;top:4px;" /></a></div></div>';
+		}
 	}
 
 	/**

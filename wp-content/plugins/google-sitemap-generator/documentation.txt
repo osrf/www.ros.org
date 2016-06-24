@@ -308,6 +308,8 @@ Release History:
                       Changed hook which is being used for sitemap pings
 2014-09-02     4.0.7.1Added icon for the new WP Add-Plugin page
                       Changed "Tested up to" to 4.0
+2014-11-15     4.0.8  Fixed bug with excluded categories, thanks to Claus Schöffel!
+
 
 
 

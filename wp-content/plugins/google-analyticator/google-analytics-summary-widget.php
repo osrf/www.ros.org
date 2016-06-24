@@ -13,7 +13,7 @@ class GoogleAnalyticsSummary
     /**
      * Start the process of including the widget
      **/
-    function GoogleAnalyticsSummary()
+    function GoogleAnalyticsSummary($shortcode = FALSE)
     {
         add_action('wp_dashboard_setup', array(
             $this,
@@ -27,7 +27,22 @@ class GoogleAnalyticsSummary
             $this,
             'addTopJs'
         ));
-        
+
+        if ($shortcode) {
+            // For shortcode
+            add_action('wp_footer', array(
+                $this,
+                'addJavascript'
+            ));
+
+            add_action('wp_footer', array(
+                $this,
+                'addTopJs'
+            ));
+
+            add_action( 'wp_ajax_nopriv_ga_stats_widget', array( $this, 'ajaxWidget' ) );
+        }
+
         $this->qa_selecteddate = isset( $_REQUEST['qa_selecteddate'] ) ? wp_filter_kses( $_REQUEST['qa_selecteddate'] ) : '31';
         $this->date_before    = date('Y-m-d', strtotime( '-'.$this->qa_selecteddate.' days', strtotime( current_time( 'mysql' ) ) ) );
         $this->date_yesterday = date('Y-m-d', strtotime( '-1 days', strtotime( current_time( 'mysql' ) ) ) );
@@ -65,152 +80,154 @@ class GoogleAnalyticsSummary
      **/
     function addTopJs()
     {
-?>
-		<script type="text/javascript">
-		
-			//Tooltip 
-			jQuery.fn.UseTooltip = function () {
-				var previousPoint = null;
-				
-				jQuery(this).bind("plothover", function (event, pos, item) {         
-					if (item) {
-						if (previousPoint != item.dataIndex) {
-							previousPoint = item.dataIndex;
-			
-							jQuery("#vumtooltip").remove();
-							
-							var x = item.datapoint[0];
-							var y = item.datapoint[1];      
-							showTooltip(item.pageX, item.pageY, "<b>"+d2[ x-  1] + "</b><br/>" + item.series.label + ": <strong>" + y + "</strong>");
-						}
-					}
-					else {
-						jQuery("#vumtooltip").remove();
-						previousPoint = null;
-					}
-				});
-			};
-			
-			function showTooltip(x, y, contents) {
-				jQuery('<div id="vumtooltip">' + contents + '</div>').css({
-					position: 'absolute',
-					display: 'none',
-					top: y + 5,
-					left: x + 20,
-					border: '1px solid #D0D0D0',
-					padding: '6px',     
-					size: '9',   
-					'background-color': '#fff',
-					opacity: 0.80
-				}).appendTo("body").fadeIn(200);
-			}
-			
-			jQuery(document).ready(function($){
-				// Add a link to see full stats on the Analytics website
-				jQuery('#google-analytics-summary h3.hndle span').append('<span class="postbox-title-action"><a href="http://google.com/analytics/" class="edit-box open-box"><?php _e('View Full Stat Report', 'google-analyticator');?></a></span>');
-				
-					// Onload call analytics
-					getAnalytics();
-					
-					//On date selection change
-					jQuery("#qa_selecteddate").change(function(){
-						getAnalytics();
-					});
-					
-				});
-						
-				function getAnalytics(){
-                                
-//                                        console.log( 'Start getAnalytics();' );
-					// Grab the widget data
-					jQuery.ajax({
-						type: 'post',
-						url: 'admin-ajax.php',
-						data: {
-							action: 'ga_stats_widget',
-							qa_selecteddate: jQuery("#qa_selecteddate :selected").val(),
-							_ajax_nonce: '<?php echo wp_create_nonce("google-analyticator-statsWidget_get");?>'
-						},
-						beforeSend: function() {
-							jQuery("#analyticsloading").html('<img src="<?php echo admin_url("images/wpspin_light.gif")?>" border="0" /> ').show();
-						},
-						success: function(html) {
-							
-							jQuery("#analyticsloading").hide();
-							// Hide the loading message
-							jQuery('#google-analytics-summary .inside small').remove();
-							
-//                                                        console.log(html);
-                                                        
-							// Place the widget data in the area
-							jQuery('#google-analytics-summary .inside .target').html(html);
-	
-							// Display the widget data
-							jQuery('#google-analytics-summary .inside .target').slideDown();
-					 
-							// Handle displaying the graph
-							var divElement = jQuery('div'); //log all div elements
-							var placeholder = jQuery(".flotcontainer");
-							
-							//disable graph if the selected is yesterday or today
-							placeholder.show();
-							if(jQuery("#qa_selecteddate :selected").val() == '0' || jQuery("#qa_selecteddate :selected").val() == '1') {
-								placeholder.hide();
-								return false;
-							}
-							
-							//graph options
-							var options = {
-									grid: {
-										show: true,
-										aboveData: true,
-										color: "#3f3f3f" ,
-										labelMargin: 5,
-										axisMargin: 0, 
-										borderWidth: 0,
-										borderColor:null,
-										minBorderMargin: 5 ,
-										clickable: true, 
-										hoverable: true,
-										autoHighlight: true,
-										mouseActiveRadius: 10
-									},
-									series: {
-										grow: {active:false},
-										lines: {
-											show: true,
-											fill: true,
-											lineWidth: 2,
-											steps: false
-											},
-										points: {show:true}
-									},
-									legend: { position: "se" },
-									yaxis: { min: 0 },
-									xaxis: {ticks : datelabel, tickDecimals : 0},
-									colors: ['#88bbc8', '#ed7a53', '#9FC569', '#bbdce3', '#9a3b1b', '#5a8022', '#2c7282'],
-									shadowSize:1,
-									tooltip: false, //activate tooltip
-								};   
-						
-								jQuery.plot(placeholder, [ 
-									{
-										label: "<?php _e('Visits', 'google-analyticator')?>", 
-										data: d1,
-										lines: {fillColor: "#f2f7f9"},
-										points: {fillColor: "#88bbc8"}
-									}
-					
-								], options);
-									jQuery(".flotcontainer").UseTooltip();
-										
-							}
-						});
-				}		
-			jQuery(window).resize(function() {
-				getAnalytics();
-			});
-		</script>
+        wp_enqueue_script( 'jquery' );
+        ?>
+            <style type="text/css">
+                #google-analytics-summary .legend table {width:auto;border:0;margin:0;}
+            </style>
+    		<script type="text/javascript">
+    			//Tooltip 
+    			jQuery.fn.UseTooltip = function () {
+    				var previousPoint = null;
+    				
+    				jQuery(this).bind("plothover", function (event, pos, item) {         
+    					if (item) {
+    						if (previousPoint != item.dataIndex) {
+    							previousPoint = item.dataIndex;
+    			
+    							jQuery("#vumtooltip").remove();
+    							
+    							var x = item.datapoint[0];
+    							var y = item.datapoint[1];      
+    							showTooltip(item.pageX, item.pageY, "<b>"+d2[ x-  1] + "</b><br/>" + item.series.label + ": <strong>" + y + "</strong>");
+    						}
+    					}
+    					else {
+    						jQuery("#vumtooltip").remove();
+    						previousPoint = null;
+    					}
+    				});
+    			};
+    			
+    			function showTooltip(x, y, contents) {
+    				jQuery('<div id="vumtooltip">' + contents + '</div>').css({
+    					position: 'absolute',
+    					display: 'none',
+    					top: y + 5,
+    					left: x + 20,
+    					border: '1px solid #D0D0D0',
+    					padding: '6px',     
+    					size: '9',   
+    					'background-color': '#fff',
+    					opacity: 0.80
+    				}).appendTo("body").fadeIn(200);
+    			}
+    			
+    			jQuery(document).ready(function($){
+    				// Add a link to see full stats on the Analytics website
+    				jQuery('#google-analytics-summary h3.hndle span').append('<span class="postbox-title-action"><a href="http://google.com/analytics/" class="edit-box open-box"><?php _e('View Full Stat Report', 'google-analyticator');?></a></span>');
+    				
+    					// Onload call analytics
+    					getAnalytics();
+    					
+    					//On date selection change
+    					jQuery("#qa_selecteddate").change(function(){
+    						getAnalytics();
+    					});
+    					
+    				});
+    						
+    				function getAnalytics(){
+                                    
+                        // console.log( 'Start getAnalytics();' );
+    					// Grab the widget data
+    					jQuery.ajax({
+    						type: 'post',
+    						url: '<?php echo admin_url( 'admin-ajax.php' ); ?>',
+    						data: {
+    							action: 'ga_stats_widget',
+    							qa_selecteddate: jQuery("#qa_selecteddate :selected").val(),
+    							_ajax_nonce: '<?php echo wp_create_nonce("google-analyticator-statsWidget_get");?>'
+    						},
+    						beforeSend: function() {
+    							jQuery("#analyticsloading").html('<img src="<?php echo admin_url("images/wpspin_light.gif")?>" border="0" /> ').show();
+    						},
+    						success: function(html) {
+    							jQuery("#analyticsloading").hide();
+    							// Hide the loading message
+    							jQuery('#google-analytics-summary .inside small').remove();
+    							
+    //                                                        console.log(html);
+                                                            
+    							// Place the widget data in the area
+    							jQuery('#google-analytics-summary .inside .target').html(html);
+    	
+    							// Display the widget data
+    							jQuery('#google-analytics-summary .inside .target').slideDown();
+    					 
+    							// Handle displaying the graph
+    							var divElement = jQuery('div'); //log all div elements
+    							var placeholder = jQuery(".flotcontainer");
+    							
+    							//disable graph if the selected is yesterday or today
+    							placeholder.show();
+    							if(jQuery("#qa_selecteddate :selected").val() == '0' || jQuery("#qa_selecteddate :selected").val() == '1') {
+    								placeholder.hide();
+    								return false;
+    							}
+    							
+    							//graph options
+    							var options = {
+    									grid: {
+    										show: true,
+    										aboveData: true,
+    										color: "#3f3f3f" ,
+    										labelMargin: 5,
+    										axisMargin: 0, 
+    										borderWidth: 0,
+    										borderColor:null,
+    										minBorderMargin: 5 ,
+    										clickable: true, 
+    										hoverable: true,
+    										autoHighlight: true,
+    										mouseActiveRadius: 10
+    									},
+    									series: {
+    										grow: {active:false},
+    										lines: {
+    											show: true,
+    											fill: true,
+    											lineWidth: 2,
+    											steps: false
+    											},
+    										points: {show:true}
+    									},
+    									legend: { position: "se" },
+    									yaxis: { min: 0 },
+    									xaxis: {ticks : datelabel, tickDecimals : 0},
+    									colors: ['#88bbc8', '#ed7a53', '#9FC569', '#bbdce3', '#9a3b1b', '#5a8022', '#2c7282'],
+    									shadowSize:1,
+    									tooltip: false, //activate tooltip
+    								};   
+    						
+    								jQuery.plot(placeholder, [ 
+    									{
+    										label: "<?php _e('Visits', 'google-analyticator')?>", 
+    										data: d1,
+    										lines: {fillColor: "#f2f7f9"},
+    										points: {fillColor: "#88bbc8"}
+    									}
+    					
+    								], options);
+    									jQuery(".flotcontainer").UseTooltip();
+    										
+    							}
+    						});
+    				}		
+    			jQuery(window).resize(function() {
+    				getAnalytics();
+    			});
+    		</script>
 		<?php
     }
     
@@ -315,9 +332,7 @@ class GoogleAnalyticsSummary
       
         if(  get_option( key_ga_show_ad ) ) {
         echo '<p style="text-align:center">
-                <a href="http://www.videousermanuals.com/rd/ga-dashboard/" target="_BLANK">
-                    Learn how to use Google Analytics <br />
-                    To remove the guess work from your business </a></p>';
+                [Use the <a target="_blank" href="https://wordpress.org/plugins/sumome">SumoMe plugin</a> to get more traffic]</p>';
         }
         
         die();
@@ -370,7 +385,6 @@ class GoogleAnalyticsSummary
     function getVisitsGraph()
     {
         # Get the metrics needed to build the visits graph;
-
         try {
             $stats = $this->api->getMetrics('ga:visits', $this->date_before, $this->date_yesterday, 'ga:date', 'ga:date');
         }
