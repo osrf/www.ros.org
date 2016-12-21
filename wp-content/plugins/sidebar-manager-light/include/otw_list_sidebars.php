@@ -7,7 +7,8 @@ global $_wp_column_headers;
 
 $_wp_column_headers['toplevel_page_otw-sbm'] = array(
 	'title' => __( 'Title' ),
-	'description' => __( 'Description' )
+	'description' => __( 'Description' ),
+	'status' => __( 'Status', 'otw_sbm' )
 
 );
 
@@ -35,10 +36,11 @@ if( is_array( $otw_sidebar_list ) && count( $otw_sidebar_list ) ){
 }
 
 ?>
-<div class="updated"><p>Check out the <a href="http://otwthemes.com/online-documentation-sidebar-manager-light/?utm_source=wp.org&utm_medium=admin&utm_content=docs&utm_campaign=sml">Online documentation</a> for this plugin<br /><br /> 
-Upgrade to the full version of <a href="http://otwthemes.com/product/sidebar-widget-manager-for-wordpress/?utm_source=wp.org&utm_medium=admin&utm_content=upgrade&utm_campaign=sml">Sidebar and Widget Manager</a> | <a href="http://otwthemes.com/demos/1ts/?item=Sidebar%20Widget%20Manager&utm_source=wp.org&utm_medium=admin&utm_content=upgrade&utm_campaign=sml">Demo site</a><br /><br />
-<a href="http://otwthemes.com/widgetizing-pages-in-wordpress-can-be-even-easier-and-faster?utm_source=wp.org&utm_medium=admin&utm_content=site&utm_campaign=sml">Create responsive layouts in minutes, drag & drop interface, feature rich.</a><br /><br />
-Follow on <a href="http://twitter.com/OTWthemes">Twitter</a> | <a href="http://www.facebook.com/pages/OTWthemes/250294028325665">Facebook</a> | <a href="http://www.youtube.com/OTWthemes">YouTube</a> | <a href="https://plus.google.com/117222060323479158835/about">Google+</a></p></div>
+<div class="updated">
+<p>Sidebar Manager Light: <a href="http://otwthemes.com/online-documentation-sidebar-manager-light/?utm_source=wp.org&utm_medium=admin&utm_content=docs&utm_campaign=sml" target="_blank"> Documentation page</a></p>
+<p>Upgrade to the <strong>Pro version of <a href="http://codecanyon.net/item/sidebar-widget-manager-for-wordpress/2287447?ref=OTWthemes&utm_source=wp.org&utm_medium=admin&utm_content=upgrade&utm_campaign=sml" target="_blank">Sidebar and Widget Manager</a></strong> | <a href="http://otwthemes.com/demos/1ts/?item=Sidebar%20Widget%20Manager&utm_source=wp.org&utm_medium=admin&utm_content=upgrade&utm_campaign=sml" target="_blank">Demo site</a></p> 
+<p>Get some more awesome <strong>FREE plugins</strong>: <a href="http://otwthemes.com/product/portfolio-manager-lite-wordpress-plugin/?utm_source=wp.org&utm_medium=admin&utm_content=otherfreep&utm_campaign=sml" target="_blank">Portfolio Manager</a>, <a href="http://otwthemes.com/product/blog-manager-light-wordpress-plugin?utm_source=wp.org&utm_medium=admin&utm_content=otherfreep&utm_campaign=sml" target="_blank">Blog Manager</a>, <a href="http://otwthemes.com/product/content-manager-light-wordpress-plugin/?utm_source=wp.org&utm_medium=admin&utm_content=otherfreep&utm_campaign=sml" target="_blank">Content Manager</a></p>
+</div>
 <?php if ( $message ) : ?>
 <div id="message" class="updated"><p><?php echo $message; ?></p></div>
 <?php endif; ?>
@@ -94,6 +96,19 @@ Follow on <a href="http://twitter.com/OTWthemes">Twitter</a> | <a href="http://w
 								break;
 							case 'description':
 									echo '<td>'.$sidebar_item['description'].'</td>';
+								break;
+							case 'status':
+									switch( $sidebar_item['status'] ){
+										case 'active':
+												echo '<td class="sidebar_active">'.__( 'Active', 'otw_sbm' ).'</td>';
+											break;
+										case 'inactive':
+												echo '<td class="sidebar_inactive">'.__( 'Inactive', 'otw_sbm' ).'</td>';
+											break;
+										default:
+												echo '<td>'.__( 'Unknown', 'otw_sbm' ).'</td>';
+											break;
+									}
 								break;
 							
 						}

@@ -9,7 +9,7 @@ Author: Mark Jaquith
 if(!class_exists('WP_Stack_Plugin')){class WP_Stack_Plugin{function hook($h){$p=10;$m=$this->sanitize_method($h);$b=func_get_args();unset($b[0]);foreach((array)$b as $a){if(is_int($a))$p=$a;else $m=$a;}return add_action($h,array($this,$m),$p,999);}private function sanitize_method($m){return str_replace(array('.','-'),array('_DOT_','_DASH_'),$m);}}}
 
 // The plugin
-class WP_Stack_CDN_Plugin extends WP_Stack_Plugin {
+class PL_WP_Stack_CDN_Plugin extends WP_Stack_Plugin {
 	public static $instance;
 	public $site_domain;
 	public $cdn_domain;
@@ -54,11 +54,11 @@ class WP_Stack_CDN_Plugin extends WP_Stack_Plugin {
 		$preg_path = preg_quote( $path, '#' );
 
 		// Targeted replace just on uploads URLs
-		return preg_replace( "#=([\"'])(https?://{$domain})?$preg_path/((?:(?!\\1]).)+)\.(" . implode( '|', $this->extensions ) . ")(\?((?:(?!\\1).)+))?\\1#", '=$1http://' . $this->cdn_domain . $path . '/$3.$4$5$1', $content );
+		return preg_replace( "#=([\"'])(https?://{$domain})?$preg_path/((?:(?!\\1]).)+)\.(" . implode( '|', $this->extensions ) . ")(\?((?:(?!\\1).)+))?\\1#", '=$1//' . $this->cdn_domain . $path . '/$3.$4$5$1', $content );
 	}
 
 	public function filter( $content ) {
-		return preg_replace( "#=([\"'])(https?://{$this->site_domain})?/([^/](?:(?!\\1).)+)\.(" . implode( '|', $this->extensions ) . ")(\?((?:(?!\\1).)+))?\\1#", '=$1http://' . $this->cdn_domain . '/$3.$4$5$1', $content );
+		return preg_replace( "#=([\"'])(https?://{$this->site_domain})?/([^/](?:(?!\\1).)+)\.(" . implode( '|', $this->extensions ) . ")(\?((?:(?!\\1).)+))?\\1#", '=$1//' . $this->cdn_domain . '/$3.$4$5$1', $content );
 	}
 
 	public function template_redirect() {
@@ -66,7 +66,9 @@ class WP_Stack_CDN_Plugin extends WP_Stack_Plugin {
 	}
 
 	public function ob( $contents ) {
-			if( defined( 'PL_WPORG' ) )
+		global $pldraft;
+
+			if( defined( 'PL_WPORG' ) || is_object( $pldraft ) && $pldraft->show_editor() )
 				return $contents;
 			else
 				return apply_filters( 'wp_stack_cdn_content', $contents, $this );

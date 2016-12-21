@@ -32,7 +32,7 @@ define("GA_API_Path", dirname(__FILE__) .'/');
 // hack around with the include paths a bit so the library 'just works'
 //set_include_path(dirname(__FILE__) . PATH_SEPARATOR . get_include_path());
 
-require_once "config.php";
+require_once (dirname(__FILE__) . "/config.php");
 // If a local configuration file is found, merge it's values with the default configuration
 if (file_exists(dirname(__FILE__)  . '/local_config.php')) {
   $defaultConfig = $apiConfig;

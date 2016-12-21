@@ -3,8 +3,8 @@ Contributors: OTWthemes
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CQH6CMTR42KS2
 Tags: replace sidebar, replace widget area, custom sidebar, custom widget area widgets, sidebar, widget area, custom layout, relevant content, dynamic sidebars
 Requires at least: 3.0
-Tested up to: 3.6
-Stable tag: 1.7
+Tested up to: 4.5
+Stable tag: 1.12
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,26 +12,27 @@ Create custom sidebars (widget areas) and replace any existing sidebar so you ca
 
 == Description ==
 
-Updating to version 1.3 or higher - See the Change log tab.
-
 You can now replace an existing sidebar (widget area) with a custom sidebar for one or group of pages. The content of the new sidebar will be displayed on the exact same spot as the one you select to replace only for those pages you selected.
 
 Once created all custom sidebars will be available in Appearance -> Widgets. You can drop any number of widgets in any of your custom sidebars. They work exacly the same way as the default once.
 
-Add as many sidebars (widget areas) as you need. Creating sidebars (widget areas) is unlimited. 
+> Upgrade to the Pro version of this plugin - the worlds most complete Sidebar and Widget management system for WordPress including regular updates and premium support:
+> [Sidebar and Widget Manager](http://codecanyon.net/item/sidebar-widget-manager-for-wordpress/2287447?ref=OTWthemes&utm_source=wp.org&utm_medium=page&utm_content=upgrade&utm_campaign=sml) | [Demo site](http://otwthemes.com/demos/1ts/?item=Sidebar%20Widget%20Manager&utm_source=wp.org&utm_medium=page&utm_content=upgrade&utm_campaign=sml) 
+
+> Get some more awesome **FREE plugins**: <a href="https://wordpress.org/plugins/portfolio-manager-lite/" target="_blank">Portfolio Manager</a>, <a href="https://wordpress.org/plugins/blog-manager-light/" target="_blank">Blog Manager</a>, <a href="https://wordpress.org/plugins/content-manager-light/" target="_blank">Content Manager</a>
+
+Add as many sidebars (widget areas) as you need. Creating sidebars(widget areas) is unlimited. 
 
 WMPL plugin support so you can display sidebars and widgets based on language.
 
 Sidebars can be displayed based on User role too.
 
-Upgrade to the full version of [Sidebar and Widget Manager](http://otwthemes.com/product/sidebar-widget-manager-for-wordpress/?utm_source=wp.org&utm_medium=page&utm_content=upgrade&utm_campaign=sml) |
-[Demo site](http://otwthemes.com/demos/1ts/?item=Sidebar%20Widget%20Manager&utm_source=wp.org&utm_medium=page&utm_content=upgrade&utm_campaign=sml) | [Create responsive layouts in minutes, drag & drop interface, feature rich](http://otwthemes.com/widgetizing-pages-in-wordpress-can-be-even-easier-and-faster?utm_source=wp.org&utm_medium=page&utm_content=site&utm_campaign=sml)
- 
+
 Examples:
 
 Lets say you would like to display a certain set of widgets on your blog page, different set of widgets on your portfolio, and different set on your contact page. All that on the spot where the primary sidebar of your theme is located. You can do that by creating 3 sidebars replacing the primary sidebar and set each custom sidebar to display on blog or portfolio or contacts.
 
-If you have an advanced theme that has some extra widget areas you can replace those as well. Practically any sidebar (widget area) can be replaced.
+If you have an advanced theme that has some extra widget areas you can replace those as well. Practically any sidebar(widget area) can be replaced.
 
 This is very easy and fun to do and requires no coding knowledge at all.
 
@@ -64,6 +65,23 @@ Please refer to [online documentation page](http://otwthemes.com/online-document
 == Changelog ==
 
 Updating to versiion 1.3 or higher requires deactivation of the old version first! More info [here](http://otwthemes.com/updating-widgetize-pages-light-to-1-5-version-sidebar-manager-light-to-1-3-widget-manager-light-to-1-3/?utm_source=wp.org&utm_medium=page&utm_content=site&utm_campaign=sml)  
+
+= 1.12 =
+
+* Updated: WordPress 4.5 compatibility
+* Updated: OTW core functions 
+
+= 1.11 =
+
+* Added: Sidebar status update
+
+= 1.9 =
+
+* Fixed: Visibility tabs posts pagination
+
+= 1.8 =
+
+* Updated: use wp build in function for plugin url
 
 = 1.7 =
 

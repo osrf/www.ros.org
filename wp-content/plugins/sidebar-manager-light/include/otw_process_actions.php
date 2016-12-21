@@ -88,7 +88,7 @@ if( isset( $_POST['otw_sml_action'] ) ){
 					$sidebar['title'] = (string) $_POST['sbm_title'];
 					$sidebar['description'] = (string) $_POST['sbm_description'];
 					$sidebar['replace'] = (string) $_POST['sbm_replace'];
-					$sidebar['status'] = 'active';
+					$sidebar['status'] = (string) $_POST['sbm_status'];
 					$sidebar['widget_alignment'] = 'vertical';
 					
 					//save selected items

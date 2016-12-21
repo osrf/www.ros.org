@@ -3,29 +3,41 @@
 class Browser_Pro_Specific_CSS {
 	
 	function __construct() {
+		global $wp_scripts, $dmspro_plugin_url;
+		// no dms? OH NOES!
+		if( ! function_exists( 'pl_detect_ie' ) )
+			return false;
 		
-		global $dmspro_plugin_url;
+		$this->urls = array( 
+			$dmspro_plugin_url . 'libs/js/html5.min.js',
+			$dmspro_plugin_url . 'libs/js/respond.min.js',
+			$dmspro_plugin_url . 'libs/js/selectivizr-min.js'				
+			);
+
+		
 		
 		$this->ie_ver = pl_detect_ie();
 		$this->useragent = ( isset($_SERVER['HTTP_USER_AGENT'] ) ) ? $_SERVER['HTTP_USER_AGENT'] : '';
-		add_filter( 'body_class', array( &$this, 'body_class' ) );
 		
-		add_action( 'the_html_tag', array( $this, 'add_ie_class' ) );
-		if( $this->ie_ver && $this->ie_ver < 9 ) {
-			wp_register_script( 'html5-js', $dmspro_plugin_url . 'libs/js/html5.min.js', 0, false);			
-			wp_register_script( 'respond-js', $dmspro_plugin_url . 'libs/js/respond.min.js', 0, false);			
-			wp_register_script('selectivizr-min', $dmspro_plugin_url . 'libs/js/selectivizr-min.js', 0, false);			
-			wp_enqueue_script( 'html5-js');
-			wp_enqueue_script('selectivizr-min');
-			wp_enqueue_script( 'respond-js');
-			add_action( 'wp_head', array( $this, 'fix_fonts' ), 25 );
+		$settings = wpsf_get_settings( '../settings/settings-general.php' );
+		
+		if( isset( $settings['settingsgeneral_browsercss_css-type'] ) && 'js' == $settings['settingsgeneral_browsercss_css-type'] ) {
+			wp_register_script( 'browser-detect', $dmspro_plugin_url . 'libs/js/browser.js', array( 'jquery' ) );		
+			wp_enqueue_script( 'browser-detect');
+			add_action( 'wp_head', array( $this, 'hack_scripts' ), 25 );			
+		} else {
+			add_filter( 'body_class', array( &$this, 'body_class' ) );
+			add_action( 'the_html_tag', array( $this, 'add_ie_class' ) );
+			add_action( 'wp_head', array( $this, 'hack_scripts' ), 25 );
 		}
 	}
 
-	function fix_fonts() {
-		echo '<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">';
+	function hack_scripts() {
+		foreach( $this->urls as $url ) {
+			printf( "\n<!--[if lte IE 9]>\n<script type='text/javascript' src='%s'></script>\n<![endif]-->\n", $url );
+		}
+		echo "\n<!--[if lte IE 9]>\n<link rel='stylesheet' href='//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css' />\n<![endif]-->\n";
 	}
-
 
 	/***************************************************************
 	* Function is_iphone
@@ -83,6 +95,11 @@ class Browser_Pro_Specific_CSS {
 	***************************************************************/
 
 	function is_opera_mobile() {
+		
+		return(preg_match('/opera\smobi/i',$this->useragent));
+	}
+	
+	function is_opera_mini() {
 		
 		return(preg_match('/opera\smini/i',$this->useragent));
 	}
@@ -193,7 +210,7 @@ class Browser_Pro_Specific_CSS {
 	***************************************************************/
 
 	function is_handheld() {
-		return($this->is_iphone() || $this->is_ipad() || $this->is_ipod() || $this->is_android() || $this->is_blackberry() || $this->is_opera_mobile() || $this->is_palm() || $this->is_symbian() || $this->is_windows_mobile() || $this->is_lg() || $this->is_motorola() || $this->is_nokia() || $this->is_samsung() || $this->is_samsung_galaxy_tab() || $this->is_sony_ericsson() || $this->is_nintendo());
+		return($this->is_iphone() || $this->is_ipad() || $this->is_ipod() || $this->is_android() || $this->is_blackberry() || $this->is_opera_mobile() || $this->is_opera_mini() || $this->is_palm() || $this->is_symbian() || $this->is_windows_mobile() || $this->is_lg() || $this->is_motorola() || $this->is_nokia() || $this->is_samsung() || $this->is_samsung_galaxy_tab() || $this->is_sony_ericsson() || $this->is_nintendo());
 	}
 
 	/***************************************************************
@@ -203,7 +220,7 @@ class Browser_Pro_Specific_CSS {
 
 	function is_mobile() {
 		if ($this->is_tablet()) { return false; }  // this catches the problem where an Android device may also be a tablet device
-		return($this->is_iphone() || $this->is_ipod() || $this->is_android() || $this->is_blackberry() || $this->is_opera_mobile() || $this->is_palm() || $this->is_symbian() || $this->is_windows_mobile() || $this->is_lg() || $this->is_motorola() || $this->is_nokia() || $this->is_samsung() || $this->is_sony_ericsson() || $this->is_nintendo());
+		return($this->is_iphone() || $this->is_ipod() || $this->is_android() || $this->is_blackberry() || $this->is_opera_mobile() || $this->is_opera_mini() || $this->is_palm() || $this->is_symbian() || $this->is_windows_mobile() || $this->is_lg() || $this->is_motorola() || $this->is_nokia() || $this->is_samsung() || $this->is_sony_ericsson() || $this->is_nintendo());
 	}
 
 	/***************************************************************
@@ -244,6 +261,7 @@ class Browser_Pro_Specific_CSS {
 		if ($this->is_android()) { $classes[] = 'android'; };
 		if ($this->is_blackberry()) { $classes[] = 'blackberry'; };
 		if ($this->is_opera_mobile()) { $classes[] = 'opera-mobile';}
+		if ($this->is_opera_mini()) { $classes[] = 'opera-mini';}
 		if ($this->is_palm()) { $classes[] = 'palm';}
 		if ($this->is_symbian()) { $classes[] = 'symbian';}
 		if ($this->is_windows_mobile()) { $classes[] = 'windows-mobile'; }

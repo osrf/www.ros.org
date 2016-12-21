@@ -682,8 +682,8 @@ if( !function_exists( 'otw_get_strict_filters' ) ){
 		$filters = array();
 		
 		//apply user roles
-		if ( function_exists('get_currentuserinfo') ){
-			get_currentuserinfo();
+		if ( function_exists('wp_get_current_user') ){
+			wp_get_current_user();
 		}
 		
 		if( isset( $current_user->ID ) && intval( $current_user->ID ) && isset( $current_user->roles ) && is_array( $current_user->roles ) && count( $current_user->roles ) ){
@@ -1063,6 +1063,7 @@ if (!function_exists( "otw_sml_get_filtered_items" )){
 					
 					$pager_data = otw_sml_get_pager_data( $all_items, $displayed_items, $current_page );
 					
+					$args['offset'] = $pager_data['first'];
 					$args['posts_per_page'] = ($displayed_items)?$displayed_items:-1;
 					
 					switch( $order )
