@@ -13,7 +13,7 @@ class GoogleAnalyticsSummary
     /**
      * Start the process of including the widget
      **/
-    function GoogleAnalyticsSummary($shortcode = FALSE)
+    function __construct($shortcode = FALSE)
     {
         add_action('wp_dashboard_setup', array(
             $this,

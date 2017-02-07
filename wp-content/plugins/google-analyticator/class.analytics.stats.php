@@ -19,12 +19,12 @@ class GoogleAnalyticsStats
 	 *
 	 * @param token - a one-time use token to be exchanged for a real token
 	 **/
-	function GoogleAnalyticsStats()
+	function __construct()
 	{
 
 			# Include SimplePie if it doesn't exist
 			if ( !class_exists('SimplePie') ) {
-				require_once (ABSPATH . WPINC . '/class-feed.php');
+				@require_once (ABSPATH . WPINC . '/class-feed.php');
 			}
 			
 			if ( !class_exists('Google_Client') ) {

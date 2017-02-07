@@ -2,8 +2,8 @@
 Contributors: noahkagan
 Tags: google analytics plugin, stats, statistics, google, analytics, dashboard, google analytics, tracking, widget, marketing,pageviews,visits, web stats, javascript
 Requires at least: 3.2
-Tested up to: 4.6
-Stable tag: 6.5.0.0
+Tested up to: 4.7
+Stable tag: 6.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -73,6 +73,13 @@ For any support issues, please use the official WordPress support forums.
 
 
 == Changelog ==
+
+= 6.5.2 =
+* Small fix to widget markup.
+
+= 6.5.1 =
+* Fix depricated classname constructors.
+* Fix issue with being unable to deactivate and reset from settings screen.
 
 = 6.5.0.0 =
 * Fix bug with options page not showing correctly in some cases.

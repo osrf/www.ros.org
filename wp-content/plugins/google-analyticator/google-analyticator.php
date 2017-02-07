@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: Google Analyticator
- * Version: 6.5.0.0
+ * Version: 6.5.2
  * Plugin URI: http://www.videousermanuals.com/google-analyticator/?utm_campaign=analyticator&utm_medium=plugin&utm_source=readme-txt
  * Description: Adds the necessary JavaScript code to enable <a href="http://www.google.com/analytics/">Google's Analytics</a>. After enabling this plugin you need to authenticate with Google, then select your domain and you're set.
  * Author: SumoMe
@@ -12,7 +12,7 @@
 //error_reporting(E_ALL);
 //ini_set('display_errors', '1');
 
-define('GOOGLE_ANALYTICATOR_VERSION', '6.5.0');
+define('GOOGLE_ANALYTICATOR_VERSION', '6.5.2');
 
 define('GOOGLE_ANALYTICATOR_CLIENTID', '1007949979410.apps.googleusercontent.com');
 define('GOOGLE_ANALYTICATOR_CLIENTSECRET', 'q06U41XDXtzaXD14E-KO1hti'); //don't worry - this don't need to be secret in our case
@@ -271,7 +271,7 @@ function ga_do_reset()
 {
 	global $wpdb;
 	// Check to make sure referer is same as host.
-	check_admin_referer( 'ga-reset' );
+	check_admin_referer('ga-reset');
 
     // Delete all GA options.
     delete_option(key_ga_status);
@@ -466,7 +466,7 @@ function ga_options_page() {
 		do_action("ga_experiment_setting_save");
 		
 		// Give an updated message
-		echo "<div class='updated fade'><p><strong>" . __('Google Analyticator settings saved.', 'google-analyticator') . "</strong></p></div>";
+		echo "<div class='updated settings-error notice is-dismissible'><p><strong>" . __('Google Analyticator settings saved.', 'google-analyticator') . "</strong></p><button type='button' class='notice-dismiss'><span class='screen-reader-text'>Dismiss this notice.</span></button></div>";
 	}
         // Are we using the auth system?
         $useAuth = ( get_option( 'ga_google_token' ) == '' ? false : true );
@@ -1020,9 +1020,10 @@ if(!$addons){?>
     <p class="submit">
       <input type="submit" class="button button-primary" name="info_update" value="<?php _e('Save Changes', 'google-analyticator'); ?>" />
     </p>
-    <a href="<?php echo ga_analyticator_setting_url(). '&pageaction=ga_clear_cache' ?>"><?php _e('Clear Analyticator Cache', 'google-analyticator'); ?></a> |  <a href="<?php echo admin_url('/options-general.php?page=ga_reset'); ?>">
+    <a href="<?php echo ga_analyticator_setting_url(). '&pageaction=ga_clear_cache' ?>"><?php _e('Clear Analyticator Cache', 'google-analyticator'); ?></a> |  <a href="<?php echo wp_nonce_url( admin_url('/options-general.php?page=ga_reset'), 'ga-reset'); ?>">
     <?php _e('Deauthorize &amp; Reset Google Analyticator.', 'google-analyticator'); ?></a>   
   </form>
+
 </div>
 </div>
 <!-- end wrap -->
