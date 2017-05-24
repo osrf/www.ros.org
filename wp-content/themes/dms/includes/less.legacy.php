@@ -472,7 +472,8 @@ class PageLinesRenderCSS {
 		$User = posix_getpwuid( posix_geteuid() );
 		$File = posix_getpwuid( fileowner( __FILE__ ) );
 		if( $User['name'] !== $File['name'] )
-			return false;
+			return pl_less_save_last_error( 'POSIX checks failed. user: ' . $User['name'] . ' file: ' . $File['name'], false );
+			#return false;
 
 		return true;
 	}
