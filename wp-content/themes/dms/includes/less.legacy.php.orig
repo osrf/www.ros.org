@@ -443,8 +443,8 @@ class PageLinesRenderCSS {
 			return;
 		}
 
-		/*if( false == $this->check_posix() )
-			return pl_less_save_last_error( 'POSIX checks failed.', false );*/
+		if( false == $this->check_posix() )
+			return pl_less_save_last_error( 'POSIX checks failed.', false );
 
 		$a = $this->get_compiled_core();
 		$b = $this->get_compiled_sections();
