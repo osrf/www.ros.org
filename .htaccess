@@ -4,19 +4,6 @@
 RewriteEngine On
 RewriteBase /
 RewriteRule ^index\.php$ - [L]
-
-RewriteRule ^wiki/(.*)$     http://wiki.ros.org/$1 [L,R]
-RewriteRule ^doc/(.*)       http://docs.ros.org/$1 [L,R]
-RewriteRule ^images/(.*)    http://wiki.ros.org/custom/images/$1 [L,R]
-
-RewriteRule ^debbuild/indigo.html http://repositories.ros.org/status_page/ros_indigo_default.html [L,R]
-RewriteRule ^debbuild/armhf/indigo.html http://repositories.ros.org/status_page/ros_indigo_arm.html [L,R]
-RewriteRule ^debbuild/jade.html http://repositories.ros.org/status_page/ros_jade_default.html [L,R]
-
-RewriteCond %{HTTP_HOST}    ^ros\.org$ [NC]
-RewriteCond %{HTTP_HOST}    !^$
-RewriteRule ^/?(.*)          http://www.ros.org/$1 [L,R,NE]
-
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
