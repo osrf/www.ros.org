@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 5.1.69, for redhat-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.1.73, for redhat-linux-gnu (x86_64)
 --
 -- Host: mysql1-vip.osuosl.org    Database: ros_org_wp
 -- ------------------------------------------------------
