@@ -4,7 +4,7 @@
   */
 function otw_sml_plugin_init(){
 	
-	global $wp_registered_sidebars, $otw_replaced_sidebars, $wp_sml_int_items, $otw_sml_plugin_url;
+	global $wp_registered_sidebars, $otw_replaced_sidebars, $wp_sml_int_items, $otw_sml_plugin_url, $otw_sml_factory_component, $otw_sml_factory_object, $otw_sml_plugin_id;
 	
 	$otw_registered_sidebars = get_option( 'otw_sidebars' );
 	$otw_widget_settings = get_option( 'otw_widget_settings' );
@@ -78,6 +78,14 @@ function otw_sml_plugin_init(){
 		}
 	}
 	
+	$otw_sml_factory_component = otw_load_component( 'otw_factory' );
+	$otw_sml_factory_object = otw_get_component( $otw_sml_factory_component );
+	$otw_sml_factory_object->add_plugin( $otw_sml_plugin_id, dirname( dirname( __FILE__ ) ).'/otw_sidebar_manager.php', array( 'menu_parent' => 'otw-sml', 'lc_name' => __( 'License Manager', 'otw_sml' ), 'menu_key' => 'otw-sml' ) );
+	
+	include_once( plugin_dir_path( __FILE__ ).'otw_labels/otw_sml_factory_object.labels.php' );
+	$otw_sml_factory_object->init();
+
+	
 	
 	if( is_admin() ){
 		require_once( plugin_dir_path( __FILE__ ).'/otw_process_actions.php' );
@@ -110,8 +118,8 @@ function otw_sml_sidebar_add_items(){
 	if( in_array( 'sitepress-multilingual-cms/sitepress.php', $active_plugins ) && function_exists( 'icl_get_languages' ) ){
 		$wp_sml_int_items['wpmllanguages'] = array();
 		$wp_sml_int_items['wpmllanguages'][0] = array();
-		$wp_sml_int_items['wpmllanguages'][1] = __( 'WPML plugin language', 'otw_sbm' );
-		$wp_sml_int_items['wpmllanguages'][2] = __( 'All WPML plugin languages', 'otw_sbm' );
+		$wp_sml_int_items['wpmllanguages'][1] = __( 'WPML plugin language', 'otw_sml' );
+		$wp_sml_int_items['wpmllanguages'][2] = __( 'All WPML plugin languages', 'otw_sml' );
 	}
 }
 

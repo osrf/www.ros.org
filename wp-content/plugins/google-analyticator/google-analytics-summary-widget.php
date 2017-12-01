@@ -451,7 +451,7 @@ class GoogleAnalyticsSummary
     function getSiteUsage()
     {
         # Get the metrics needed to build the usage table
-        $stats     = $this->api->getMetrics('ga:visits,ga:bounces,ga:entrances,ga:pageviews,ga:timeOnSite,ga:newVisits',  $this->date_before, $this->date_yesterday);
+        $stats = $this->api->getMetrics('ga:visits,ga:bounces,ga:entrances,ga:pageviews,ga:sessionDuration,ga:newVisits', $this->date_before, $this->date_yesterday);
 
         # Create the site usage table
         if (isset($stats->totalsForAllResults)) { ?>
@@ -472,7 +472,7 @@ class GoogleAnalyticsSummary
                         <?php if ($stats->totalsForAllResults['ga:visits'] <= 0) { ?>
                             <td><strong>00:00:00</strong></td>
                         <?php } else { ?>
-                            <td><strong><?php echo $this->sec2Time($stats->totalsForAllResults['ga:timeOnSite'] / $stats->totalsForAllResults['ga:visits']); ?></strong></td>
+                            <td><strong><?php echo $this->sec2Time($stats->totalsForAllResults['ga:sessionDuration'] / $stats->totalsForAllResults['ga:visits']); ?></strong></td>
                         <?php } ?>
                         <td><?php _e('Avg. Time on Site', 'google-analyticator'); ?></td>
                     </tr>

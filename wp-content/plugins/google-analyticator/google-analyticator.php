@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: Google Analyticator
- * Version: 6.5.2
+ * Version: 6.5.4
  * Plugin URI: http://www.videousermanuals.com/google-analyticator/?utm_campaign=analyticator&utm_medium=plugin&utm_source=readme-txt
  * Description: Adds the necessary JavaScript code to enable <a href="http://www.google.com/analytics/">Google's Analytics</a>. After enabling this plugin you need to authenticate with Google, then select your domain and you're set.
  * Author: SumoMe
@@ -12,7 +12,7 @@
 //error_reporting(E_ALL);
 //ini_set('display_errors', '1');
 
-define('GOOGLE_ANALYTICATOR_VERSION', '6.5.2');
+define('GOOGLE_ANALYTICATOR_VERSION', '6.5.4');
 
 define('GOOGLE_ANALYTICATOR_CLIENTID', '1007949979410.apps.googleusercontent.com');
 define('GOOGLE_ANALYTICATOR_CLIENTSECRET', 'q06U41XDXtzaXD14E-KO1hti'); //don't worry - this don't need to be secret in our case
@@ -1274,6 +1274,11 @@ function ga_outgoing_links()
  **/
 function ga_external_tracking_js()
 {
+	// Exit if this is a post preview
+	if (is_preview()) {
+		return;
+	}
+
 	$suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 	wp_enqueue_script('ga-external-tracking', plugins_url("/google-analyticator/external-tracking{$suffix}.js"), array('jquery'), GOOGLE_ANALYTICATOR_VERSION);
 }
@@ -1285,8 +1290,7 @@ function ga_current_user_is($roles)
 {
 	if ( !$roles ) return false;
 
-	global $current_user;
-	get_currentuserinfo();
+	$current_user = wp_get_current_user();
 	$user_id = intval( $current_user->ID );
 
 	if ( !$user_id ) {

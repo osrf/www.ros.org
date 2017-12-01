@@ -1,0 +1,175 @@
+.otw-factory-message{
+	border: 2px solid #0074a2 !important;
+	border-radius: 4px !important;
+	background-color: #f7f7f7 !important;
+	padding: 0 !important;
+}
+.otw-factory-error{
+	border: 2px solid #b23e3a !important;
+	border-radius: 4px !important;
+	background-color: #b23e3a !important;
+	padding: 0 !important;
+	color: #fff;
+}
+
+.otw-factory-success{
+	border: 2px solid green !important;
+	border-radius: 4px !important;
+	background-color: green !important;
+	padding: 0 !important;
+	color: #fff;
+}
+.otw-factory-warning{
+	border: 2px solid orange !important;
+	border-radius: 4px !important;
+	background-color: orange !important;
+	padding: 0 !important;
+	color: #fff;
+}
+.otw-factory-message-content{
+	margin: 10px 10px;
+	overflow: hidden;
+}
+.otw-factory-rcol{
+	padding-left: 110px;
+}
+.otw-factory-message-content .otw-factory-icon{
+	box-sizing: border-box;
+	font-size: 100px;
+	float: left;
+	display: block;
+	margin: 0 15px 0 5px;
+	min-height: 100px;
+}
+.otw-factory-message .otw-factory-message-content .otw-factory-icon{
+	color: #0085ba;
+}
+.otw-factory-error .otw-factory-message-content .otw-factory-icon{
+	color: #ffffff;
+}
+.otw-factory-success .otw-factory-message-content .otw-factory-icon{
+	color: #ffffff;
+}
+otw-factory-warning .otw-factory-message-content .otw-factory-icon{
+	color: #0085ba;
+}
+.otw-factory-success .otw-factory-message-content, .otw-factory-error .otw-factory-message-content{
+	font-size: 14px;
+	font-weight: bold;
+}
+.otw-factory-message-content .otw_factory_head{
+	font-size: 18px;
+	color: inherit;
+	font-weight: 500;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin: 0 0 10px 0;
+	line-height: 1.1;
+}
+
+.otw-factory-message-content .otw_factory_body{
+	margin: 0 0 10px 0;
+}
+.otw-factory-message-content .otw_factory_action{
+	margin: 5px 0 5px 0;
+}
+.otw-factory-message-content .otw_factory_action .otw_factory_button_action{
+	margin-right: 10px;
+	text-align: center;
+}
+.otw-factory-warning .otw_factory_action .otw_factory_button_action{
+	background-color: orange;
+	text-shadow: 0 -1px 1px #E89600, 1px 0 1px #E89600, 0 1px 1px #E89600, -1px 0 1px #E89600;
+	border-color: #E89600;
+	box-shadow: 0 1px 0 #E89600;
+}
+.otw-factory-message-content .otw_factory_action .otw_factory_button{
+	margin-right: 10px;
+}
+.otw-plugin-row-message{
+	margin: 0  0 10px 30px;
+}
+.otw-factory-metabox{
+	border: 1px solid #dddddd;
+	background-color: #ffffff;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px 2px #888888;
+	padding: 10px 20px;
+	margin-bottom: 20px;
+}
+.otw-factory-metabox .otw-factory-metabox-title h1{
+	font-size: 15px;
+	color: #23282d;
+	font-weight: bold;
+	text-shadow: 2px 2px #d4d4d4;
+	border-bottom: 1px solid #dddddd;
+	margin-bottom: 10px;
+}
+.otw-factory-metabox .otw-factory-metabox-content{
+	overflow: hidden;
+}
+.otw_factory-items{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	float: left;
+	width: 100%;
+}
+.otw_factory-items li{
+	float: left;
+	border: 1px solid #d4d4d4;
+	width: 300px;
+	margin: 10px;
+	padding-left: 10px;
+}
+.otw_factory-items li p{
+	text-align: left;
+	margin: 0;
+	padding: 5px;
+}
+.otw_factory-items li p.otw-factory-litem_title{
+	font-style: italic;
+	text-transform: lowercase;
+}
+.otw_factory-items li p.otw-factory-litem_value{
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 28px;
+}
+#otw_pc_code{
+	width: 60%;
+	min-width: 100px;
+}
+.otw_fc_lm_error_message{
+	border: 2px solid #b23e3a !important;
+	border-radius: 4px !important;
+	background-color: #b23e3a !important;
+	padding: 2px !important;
+	color: #fff;
+}
+.otw_fc_lm_success_message{
+	border: 2px solid green !important;
+	border-radius: 4px !important;
+	background-color: green !important;
+	padding: 2px !important;
+	color: #fff;
+}
+.otw-factory-keys{
+	margin: 0 10px;
+}
+.otw-factory-keys tr td{
+	border-bottom: 1px solid #d4d4d4;
+	padding-bottom: 10px;
+}
+.otw-factory-metabox-holder .postbox-container{
+	float: left;
+	width: 100%;
+}
+.otw-factory-metabox-holder .postbox-container .hndle{
+	cursor: unset;
+}
+.otw-factory-metabox-holder .postbox-container .main{
+	overflow: hidden;
+}
+.otw-factory-code-invalid{
+	color: red;
+}

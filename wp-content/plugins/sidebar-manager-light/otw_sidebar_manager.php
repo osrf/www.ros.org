@@ -4,14 +4,41 @@
 Plugin Name: Sidebar Manager Light
 Plugin URI: http://otwthemes.com/?utm_source=wp.org&utm_medium=admin&utm_content=site&utm_campaign=sml
 Description:  Create custom sidebars (widget areas) and replace any existing sidebar so you can display relevant content on different pages.
-Author: OTWthemes.com
-Version: 1.12
-Author URI: http://otwthemes.com/?utm_source=wp.org&utm_medium=admin&utm_content=site&utm_campaign=sml
+Author: OTWthemes
+Version: 1.14
+Author URI: https://codecanyon.net/user/otwthemes/portfolio?ref=OTWthemes
 */
 $wp_sml_int_items = array(
 	'page'              => array( array(), __( 'Pages' ), __( 'All pages' ) ),
-	'userroles'         => array( array(), __( 'User roles/Logged in as', 'otw_sbm' ), __( 'All roles', 'otw_sbm' ) )
+	'userroles'         => array( array(), __( 'User roles/Logged in as', 'otw_sml' ), __( 'All roles', 'otw_sml' ) )
 );
+
+/**
+ * Loaded plugin 
+ */
+function otw_sml_plugin_loaded(){
+	
+	global $otw_plugin_options, $otw_sml_plugin_url, $wp_sml_int_items, $otw_sml_factory_component, $otw_sml_factory_object, $otw_sml_plugin_id;
+	
+	//load text domain
+	load_plugin_textdomain('otw_sml',false,dirname(plugin_basename(__FILE__)) . '/languages/');
+	
+	$otw_sml_plugin_id = '093851eae230bf1ed146ac2856531b60';
+	
+	$otw_sml_factory_component = false;
+	$otw_sml_factory_object = false;
+	
+	//load core component functions
+	@include_once( 'include/otw_components/otw_functions/otw_functions.php' );
+	
+	if( !function_exists( 'otw_register_component' ) ){
+		wp_die( 'Please include otw components' );
+	}
+	
+	//register factory component
+	otw_register_component( 'otw_factory', dirname( __FILE__ ).'/include/otw_components/otw_factory/', $otw_sml_plugin_url.'include/otw_components/otw_factory/' );
+	
+}
 
 global $otw_plugin_options;
 
@@ -38,7 +65,12 @@ function otw_sml_sidebars_list(){
 function otw_sml_sidebars_manage(){;
 	require_once( 'include/otw_manage_sidebar.php' );
 }
-
+/** plugin options
+  *
+  */
+function otw_sml_sidebars_options(){
+	require_once( 'include/otw_sidebar_options.php' );
+}
 /** delete sidebar
   *
   */
@@ -46,18 +78,28 @@ function otw_sml_sidebars_action(){
 	require_once( 'include/otw_sidebar_action.php' );
 }
 
-
-/** plugin info
-  *
-  */
-function otw_sml_info(){
-	require_once( 'include/otw_sidebar_info.php' );
-}
-
 function otw_sml_items_by_type(){
 	require_once( 'include/otw_sbm_items_by_type.php' );
 	die;
 }
+/**
+ * factory messages
+ */
+function otw_sml_factory_message( $params ){
+	
+	global $otw_sml_plugin_id;
+	
+	if( isset( $params['plugin'] ) && $otw_sml_plugin_id == $params['plugin'] ){
+		
+		//filter out some messages if need it
+	}
+	if( isset( $params['message'] ) )
+	{
+		return $params['message'];
+	}
+	return $params;
+}
+
 /** admin menu actions
   * add the top level menu and register the submenus.
   */ 
@@ -68,7 +110,7 @@ function otw_sml_admin_actions(){
 	add_menu_page('Sidebar Manager', 'Sidebar Manager', 'manage_options', 'otw-sml', 'otw_sml_sidebars_list', $otw_sml_plugin_url . 'images/otw-sbm-icon.png' );
 	add_submenu_page( 'otw-sml', 'Sidebars', 'Sidebars', 'manage_options', 'otw-sml', 'otw_sml_sidebars_list' );
 	add_submenu_page( 'otw-sml', 'Add Sidebar', 'Add Sidebar', 'manage_options', 'otw-sml-add', 'otw_sml_sidebars_manage' );
-	add_submenu_page( 'otw-sml', 'Info', 'Info', 'manage_options', 'otw-sml-info', 'otw_sml_info' );
+	add_submenu_page( 'otw-sml', __( 'Plugin Options', 'otw_sml'), __('Plugin Options', 'otw_sml'), 'manage_options', 'otw-sml-options', 'otw_sml_sidebars_options' );
 	add_submenu_page( __FILE__, 'Manage widget', 'Manage widget', 'manage_options', 'otw-sml-action', 'otw_sml_sidebars_action' );
 }
 
@@ -98,14 +140,17 @@ function enqueue_sml_styles( $requested_page ){
 	global $otw_sml_plugin_url;
 	wp_enqueue_style( 'otw_sml_sidebar', $otw_sml_plugin_url .'css/otw_sbm_admin.css', array( 'thickbox' ), '1.1' );
 }
-
+/**
+ * Loaded plugin
+ */
+add_action( 'plugins_loaded', 'otw_sml_plugin_loaded' );
 /**
  * register admin menu 
  */
 add_action('admin_menu', 'otw_sml_admin_actions');
 add_action('admin_notices', 'otw_sml_admin_notice');
 add_filter('sidebars_widgets', 'otw_sidebars_widgets');
-
+add_filter('otwfcr_notice', 'otw_sml_factory_message' );
 /**
  * include plugin js and css.
  */

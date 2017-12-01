@@ -8,7 +8,7 @@ global $_wp_column_headers;
 $_wp_column_headers['toplevel_page_otw-sbm'] = array(
 	'title' => __( 'Title' ),
 	'description' => __( 'Description' ),
-	'status' => __( 'Status', 'otw_sbm' )
+	'status' => __( 'Status', 'otw_sml' )
 
 );
 
@@ -36,11 +36,6 @@ if( is_array( $otw_sidebar_list ) && count( $otw_sidebar_list ) ){
 }
 
 ?>
-<div class="updated">
-<p>Sidebar Manager Light: <a href="http://otwthemes.com/online-documentation-sidebar-manager-light/?utm_source=wp.org&utm_medium=admin&utm_content=docs&utm_campaign=sml" target="_blank"> Documentation page</a></p>
-<p>Upgrade to the <strong>Pro version of <a href="http://codecanyon.net/item/sidebar-widget-manager-for-wordpress/2287447?ref=OTWthemes&utm_source=wp.org&utm_medium=admin&utm_content=upgrade&utm_campaign=sml" target="_blank">Sidebar and Widget Manager</a></strong> | <a href="http://otwthemes.com/demos/1ts/?item=Sidebar%20Widget%20Manager&utm_source=wp.org&utm_medium=admin&utm_content=upgrade&utm_campaign=sml" target="_blank">Demo site</a></p> 
-<p>Get some more awesome <strong>FREE plugins</strong>: <a href="http://otwthemes.com/product/portfolio-manager-lite-wordpress-plugin/?utm_source=wp.org&utm_medium=admin&utm_content=otherfreep&utm_campaign=sml" target="_blank">Portfolio Manager</a>, <a href="http://otwthemes.com/product/blog-manager-light-wordpress-plugin?utm_source=wp.org&utm_medium=admin&utm_content=otherfreep&utm_campaign=sml" target="_blank">Blog Manager</a>, <a href="http://otwthemes.com/product/content-manager-light-wordpress-plugin/?utm_source=wp.org&utm_medium=admin&utm_content=otherfreep&utm_campaign=sml" target="_blank">Content Manager</a></p>
-</div>
 <?php if ( $message ) : ?>
 <div id="message" class="updated"><p><?php echo $message; ?></p></div>
 <?php endif; ?>
@@ -100,13 +95,13 @@ if( is_array( $otw_sidebar_list ) && count( $otw_sidebar_list ) ){
 							case 'status':
 									switch( $sidebar_item['status'] ){
 										case 'active':
-												echo '<td class="sidebar_active">'.__( 'Active', 'otw_sbm' ).'</td>';
+												echo '<td class="sidebar_active">'.__( 'Active', 'otw_sml' ).'</td>';
 											break;
 										case 'inactive':
-												echo '<td class="sidebar_inactive">'.__( 'Inactive', 'otw_sbm' ).'</td>';
+												echo '<td class="sidebar_inactive">'.__( 'Inactive', 'otw_sml' ).'</td>';
 											break;
 										default:
-												echo '<td>'.__( 'Unknown', 'otw_sbm' ).'</td>';
+												echo '<td>'.__( 'Unknown', 'otw_sml' ).'</td>';
 											break;
 									}
 								break;

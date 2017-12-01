@@ -141,6 +141,21 @@ if( isset( $_POST['otw_sml_action'] ) ){
 					wp_redirect( 'admin.php?page=otw-sml&message=1' );
 				}
 			break;
+		case 'manage_otw_options':
+				if( isset( $_POST['otw_sbm_promotions'] ) && !empty( $_POST['otw_sbm_promotions'] ) ){
+					
+					global $otw_sml_factory_object, $otw_sml_plugin_id;
+					
+					update_option( $otw_sml_plugin_id.'_dnms', $_POST['otw_sbm_promotions'] );
+					
+					if( is_object( $otw_sml_factory_object ) ){
+						$otw_sml_factory_object->retrive_plungins_data( true );
+					}
+				}
+
+				wp_redirect( admin_url( 'admin.php?page=otw-sml-options&message=1' ) );
+			break;
+
 	}
 }
 function get_next_otw_sml_sidebar_id(){

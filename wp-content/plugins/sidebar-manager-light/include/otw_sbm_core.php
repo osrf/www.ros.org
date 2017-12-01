@@ -569,7 +569,7 @@ if( !function_exists( 'otw_get_wp_items' ) ){
 						$item = new stdClass();
 						$item->ID = $u_role_code;
 						if( $u_role_code != 'notlogged' ){
-							$item->name = __( 'Logged in as ', 'otw_sbm' ).$u_role_name;
+							$item->name = __( 'Logged in as ', 'otw_sml' ).$u_role_name;
 						}else{
 							$item->name = $u_role_name;
 						}
@@ -918,12 +918,12 @@ if( !function_exists( 'otw_get_item_sort_options' ) ){
 		
 			case 'page':
 			case 'post':
-					$sort_options['a_z'] = __( 'Alphabetically: A-Z', 'otw_sbm' );
-					$sort_options['z_a'] = __( 'Alphabetically: Z-A', 'otw_sbm' );
-					$sort_options['date_latest'] = __( 'Latest created', 'otw_sbm' );
-					$sort_options['date_oldest'] = __( 'Oldest created', 'otw_sbm' );
-					$sort_options['modified_latest'] = __( 'Latest Modified', 'otw_sbm' );
-					$sort_options['modified_oldest'] = __( 'Oldest Modified', 'otw_sbm' );
+					$sort_options['a_z'] = __( 'Alphabetically: A-Z', 'otw_sml' );
+					$sort_options['z_a'] = __( 'Alphabetically: Z-A', 'otw_sml' );
+					$sort_options['date_latest'] = __( 'Latest created', 'otw_sml' );
+					$sort_options['date_oldest'] = __( 'Oldest created', 'otw_sml' );
+					$sort_options['modified_latest'] = __( 'Latest Modified', 'otw_sml' );
+					$sort_options['modified_oldest'] = __( 'Oldest Modified', 'otw_sml' );
 				break;
 			case 'templatehierarchy':
 			case 'pagetemplate':
@@ -933,22 +933,22 @@ if( !function_exists( 'otw_get_item_sort_options' ) ){
 			case 'wpmllanguages':
 			case 'bbp_page':
 			case 'buddypress_page':
-					$sort_options['a_z'] = __( 'Alphabetically: A-Z', 'otw_sbm' );
-					$sort_options['z_a'] = __( 'Alphabetically: Z-A', 'otw_sbm' );
+					$sort_options['a_z'] = __( 'Alphabetically: A-Z', 'otw_sml' );
+					$sort_options['z_a'] = __( 'Alphabetically: Z-A', 'otw_sml' );
 				break;
 			default:
 					if( preg_match( "/^cpt_(.*)$/", $item_type, $matches ) ){
-						$sort_options['a_z'] = __( 'Alphabetically: A-Z', 'otw_sbm' );
-						$sort_options['z_a'] = __( 'Alphabetically: Z-A', 'otw_sbm' );
-						$sort_options['date_latest'] = __( 'Latest created', 'otw_sbm' );
-						$sort_options['date_oldest'] = __( 'Oldest created', 'otw_sbm' );
-						$sort_options['modified_latest'] = __( 'Latest Modified', 'otw_sbm' );
-						$sort_options['modified_oldest'] = __( 'Oldest Modified', 'otw_sbm' );
+						$sort_options['a_z'] = __( 'Alphabetically: A-Z', 'otw_sml' );
+						$sort_options['z_a'] = __( 'Alphabetically: Z-A', 'otw_sml' );
+						$sort_options['date_latest'] = __( 'Latest created', 'otw_sml' );
+						$sort_options['date_oldest'] = __( 'Oldest created', 'otw_sml' );
+						$sort_options['modified_latest'] = __( 'Latest Modified', 'otw_sml' );
+						$sort_options['modified_oldest'] = __( 'Oldest Modified', 'otw_sml' );
 					}else{
-						$sort_options['a_z'] = __( 'Alphabetically: A-Z', 'otw_sbm' );
-						$sort_options['z_a'] = __( 'Alphabetically: Z-A', 'otw_sbm' );
-						$sort_options['date_latest'] = __( 'Latest created', 'otw_sbm' );
-						$sort_options['date_oldest'] = __( 'Oldest created', 'otw_sbm' );
+						$sort_options['a_z'] = __( 'Alphabetically: A-Z', 'otw_sml' );
+						$sort_options['z_a'] = __( 'Alphabetically: Z-A', 'otw_sml' );
+						$sort_options['date_latest'] = __( 'Latest created', 'otw_sml' );
+						$sort_options['date_oldest'] = __( 'Oldest created', 'otw_sml' );
 					}
 				break;
 		}
@@ -1375,7 +1375,7 @@ if (!function_exists( "otw_sml_get_filtered_items" )){
 						$item = new stdClass();
 						$item->ID = $u_role_code;
 						if( $u_role_code != 'notlogged' ){
-							$item->name = __( 'Logged in as ', 'otw_sbm' ).$u_role_name;
+							$item->name = __( 'Logged in as ', 'otw_sml' ).$u_role_name;
 						}else{
 							$item->name = $u_role_name;
 						}
@@ -1478,11 +1478,11 @@ if (!function_exists( "otw_sml_get_filtered_items" )){
 						
 						$bbp_pages = array();
 						
-						$bbp_pages[] = array( 'id' => 'forums', 'name' => __( 'Forums', 'otw_sbm' ) );
-						$bbp_pages[] = array( 'id' => 'noreplies', 'name' => __( 'Topics no reply', 'otw_sbm' ) );
-						$bbp_pages[] = array( 'id' => 'mostpopular', 'name' => __( 'Topics popular', 'otw_sbm' ) );
-						$bbp_pages[] = array( 'id' => 'search', 'name' => __( 'Search', 'otw_sbm' ) );
-						$bbp_pages[] = array( 'id' => 'singleuser', 'name' => __( 'User pages', 'otw_sbm' ) );
+						$bbp_pages[] = array( 'id' => 'forums', 'name' => __( 'Forums', 'otw_sml' ) );
+						$bbp_pages[] = array( 'id' => 'noreplies', 'name' => __( 'Topics no reply', 'otw_sml' ) );
+						$bbp_pages[] = array( 'id' => 'mostpopular', 'name' => __( 'Topics popular', 'otw_sml' ) );
+						$bbp_pages[] = array( 'id' => 'search', 'name' => __( 'Search', 'otw_sml' ) );
+						$bbp_pages[] = array( 'id' => 'singleuser', 'name' => __( 'User pages', 'otw_sml' ) );
 						
 						$all_items = count( $bbp_pages );
 						
@@ -1543,10 +1543,10 @@ if (!function_exists( "otw_sml_get_filtered_items" )){
 						$buddypress_pages = array();
 						
 						if( isset( $bp->pages->activity ) && $bp->pages->activity->id ){
-							$buddypress_pages[] = array( 'id' => $bp->pages->activity->id, 'name' => $bp->pages->activity->title.' '.__( 'page', 'otw_sbm' ) );
+							$buddypress_pages[] = array( 'id' => $bp->pages->activity->id, 'name' => $bp->pages->activity->title.' '.__( 'page', 'otw_sml' ) );
 						}
 						if( isset( $bp->pages->members ) && $bp->pages->members->id ){
-							$buddypress_pages[] = array( 'id' => $bp->pages->members->id, 'name' => $bp->pages->members->title.' '.__( 'pages', 'otw_sbm' ) );
+							$buddypress_pages[] = array( 'id' => $bp->pages->members->id, 'name' => $bp->pages->members->title.' '.__( 'pages', 'otw_sml' ) );
 						}
 						
 						$all_items = count( $buddypress_pages );

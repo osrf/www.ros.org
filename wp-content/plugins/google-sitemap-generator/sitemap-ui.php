@@ -493,6 +493,10 @@ HTML;
 				$this->sg->SetOption('i_hide_note',true);
 				$this->sg->SaveOptions();
 			}
+			if(isset($_GET['sm_hide_survey'])) {
+				$this->sg->SetOption('i_hide_survey',true);
+				$this->sg->SaveOptions();
+			}
 			if(isset($_GET['sm_hidedonors'])) {
 				$this->sg->SetOption('i_hide_donors',true);
 				$this->sg->SaveOptions();
@@ -509,25 +513,32 @@ HTML;
 
 			if(isset($_GET['sm_donated']) || ($this->sg->GetOption('i_donated')===true && $this->sg->GetOption('i_hide_donated')!==true)) {
 				?>
+				<!--
 				<div class="updated">
 					<strong><p><?php _e('Thank you very much for your donation. You help me to continue support and development of this plugin and other free software!','sitemap'); ?> <a href="<?php echo $this->sg->GetBackLink() . "&amp;sm_hidedonate=true"; ?>"><small style="font-weight:normal;"><?php _e('Hide this notice', 'sitemap'); ?></small></a></p></strong>
 				</div>
+				-->
 				<?php
 			} else if($this->sg->GetOption('i_donated') !== true && $this->sg->GetOption('i_install_date')>0 && $this->sg->GetOption('i_hide_note')!==true && time() > ($this->sg->GetOption('i_install_date') + (60*60*24*30))) {
 				?>
+				<!--
 				<div class="updated">
-					<strong><p><?php echo str_replace("%s",$this->sg->GetRedirectLink("sitemap-donate-note"),__('Thanks for using this plugin! You\'ve installed this plugin over a month ago. If it works and you are satisfied with the results, isn\'t it worth at least a few dollar? <a href="%s">Donations</a> help me to continue support and development of this <i>free</i> software! <a href="%s">Sure, no problem!</a>','sitemap')); ?> <a href="<?php echo $this->sg->GetBackLink() . "&amp;sm_donated=true"; ?>" style="float:right; display:block; border:none; margin-left:10px;"><small style="font-weight:normal; "><?php _e('Sure, but I already did!', 'sitemap'); ?></small></a> <a href="<?php echo $this->sg->GetBackLink() . "&amp;sm_hide_note=true"; ?>" style="float:right; display:block; border:none;"><small style="font-weight:normal; "><?php _e('No thanks, please don\'t bug me anymore!', 'sitemap'); ?></small></a></p></strong>
+					<strong><p><?php echo str_replace("%s",$this->sg->GetRedirectLink("sitemap-donate-note"),__('Thanks for using this plugin! You\'ve installed this plugin over a month ago. If it works and you are satisfied with the results, isn\'t it worth at least a few dollar? <a href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-donate-note">Donations</a> help me to continue support and development of this <i>free</i> software! <a href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-donate-note">Sure, no problem!</a>','sitemap')); ?> <a href="<?php echo $this->sg->GetBackLink() . "&amp;sm_donated=true"; ?>" style="float:right; display:block; border:none; margin-left:10px;"><small style="font-weight:normal; "><?php _e('Sure, but I already did!', 'sitemap'); ?></small></a> <a href="<?php echo $this->sg->GetBackLink() . "&amp;sm_hide_note=true"; ?>" style="float:right; display:block; border:none;"><small style="font-weight:normal; "><?php _e('No thanks, please don\'t bug me anymore!', 'sitemap'); ?></small></a></p></strong>
 					<div style="clear:right;"></div>
 				</div>
+				-->
 				<?php
 			} else if($this->sg->GetOption('i_install_date')>0 && $this->sg->GetOption('i_hide_works')!==true && time() > ($this->sg->GetOption('i_install_date') + (60*60*24*15))) {
 				?>
 				<div class="updated">
-					<strong><p><?php echo str_replace("%s",$this->sg->GetRedirectLink("sitemap-works-note"),__('Thanks for using this plugin! You\'ve installed this plugin some time ago. If it works and your are satisfied, why not <a href="%s">rate it</a> and <a href="%s">recommend it</a> to others? :-)','sitemap')); ?> <a href="<?php echo $this->sg->GetBackLink() . "&amp;sm_hide_works=true"; ?>" style="float:right; display:block; border:none;"><small style="font-weight:normal; "><?php _e('Don\'t show this anymore', 'sitemap'); ?></small></a></p></strong>
+					<strong><p><?php echo str_replace("%s",$this->sg->GetRedirectLink("sitemap-works-note"),__('Thanks for using this plugin! You\'ve installed this plugin some time ago. If it works and your are satisfied, why not <a href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-works-note">rate it</a> and <a href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-works-note">recommend it</a> to others? :-)','sitemap')); ?> <a href="<?php echo $this->sg->GetBackLink() . "&amp;sm_hide_works=true"; ?>" style="float:right; display:block; border:none;"><small style="font-weight:normal; "><?php _e('Don\'t show this anymore', 'sitemap'); ?></small></a></p></strong>
 					<div style="clear:right;"></div>
 				</div>
 				<?php
 			}
+
+			if ($this->sg->ShowSurvey())
+				$this->sg->HtmlSurvey();
 		}
 
 		?>
@@ -672,7 +683,7 @@ HTML;
 				<?php
 
 				if(get_option('blog_public')!=1) {
-					?><div class="error"><p><?php echo str_replace("%s","options-reading.php#blog_public",__('Your blog is currently blocking search engines! Visit the <a href="%s">Reading Settings</a> to change this.','sitemap')); ?></p></div><?php
+					?><div class="error"><p><?php echo str_replace("%s","options-reading.php#blog_public",__('Your site is currently blocking search engines! Visit the <a href="%s">Reading Settings</a> to change this.','sitemap')); ?></p></div><?php
 				}
 
 				?>
@@ -688,42 +699,28 @@ HTML;
 
 					<?php if(!$snl): ?>
 							<?php $this->HtmlPrintBoxHeader('sm_pnres',__('About this Plugin:','sitemap'),true); ?>
-								<a class="sm_button sm_pluginHome"    href="<?php echo $this->sg->GetRedirectLink('sitemap-home'); ?>"><?php _e('Plugin Homepage','sitemap'); ?></a>
-								<a class="sm_button sm_pluginHome"    href="<?php echo $this->sg->GetRedirectLink('sitemap-feedback'); ?>"><?php _e('Suggest a Feature','sitemap'); ?></a>
-								<a class="sm_button sm_pluginHelp"    href="<?php echo $this->sg->GetRedirectLink('sitemap-help'); ?>"><?php _e('Help / FAQ','sitemap'); ?></a>
-								<a class="sm_button sm_pluginList"    href="<?php echo $this->sg->GetRedirectLink('sitemap-list'); ?>"><?php _e('Notify List','sitemap'); ?></a>
-								<a class="sm_button sm_pluginSupport" href="<?php echo $this->sg->GetRedirectLink('sitemap-support'); ?>"><?php _e('Support Forum','sitemap'); ?></a>
-								<a class="sm_button sm_pluginBugs"    href="<?php echo $this->sg->GetRedirectLink('sitemap-bugs'); ?>"><?php _e('Report a Bug','sitemap'); ?></a>
+								<a class="sm_button sm_pluginHome"    href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-home"><?php _e('Plugin Homepage','sitemap'); ?></a>
+								<a class="sm_button sm_pluginHome"    href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-feedback"><?php _e('Suggest a Feature','sitemap'); ?></a>
+								<a class="sm_button sm_pluginHelp"    href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-help"><?php _e('Help / FAQ','sitemap'); ?></a>
+								<a class="sm_button sm_pluginList"    href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-list"><?php _e('Notify List','sitemap'); ?></a>
+								<a class="sm_button sm_pluginSupport" href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-support"><?php _e('Support Forum','sitemap'); ?></a>
+								<a class="sm_button sm_pluginBugs"    href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-bugs"><?php _e('Report a Bug','sitemap'); ?></a>
 
-								<a class="sm_button sm_donatePayPal"  href="<?php echo $this->sg->GetRedirectLink('sitemap-paypal'); ?>"><?php _e('Donate with PayPal','sitemap'); ?></a>
-								<a class="sm_button sm_donateAmazon"  href="<?php echo $this->sg->GetRedirectLink('sitemap-amazon'); ?>"><?php _e('My Amazon Wish List','sitemap'); ?></a>
 								<?php if(__('translator_name','sitemap')!='translator_name') {?><a class="sm_button sm_pluginSupport" href="<?php _e('translator_url','sitemap'); ?>"><?php _e('translator_name','sitemap'); ?></a><?php } ?>
 							<?php $this->HtmlPrintBoxFooter(true); ?>
 
 							<?php $this->HtmlPrintBoxHeader('sm_smres',__('Sitemap Resources:','sitemap'),true); ?>
-								<a class="sm_button sm_resGoogle"    href="<?php echo $this->sg->GetRedirectLink('sitemap-gwt'); ?>"><?php _e('Webmaster Tools','sitemap'); ?></a>
-								<a class="sm_button sm_resGoogle"    href="<?php echo $this->sg->GetRedirectLink('sitemap-gwb'); ?>"><?php _e('Webmaster Blog','sitemap'); ?></a>
+								<a class="sm_button sm_resGoogle"    href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-gwt"><?php _e('Webmaster Tools','sitemap'); ?></a>
+								<a class="sm_button sm_resGoogle"    href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-gwb"><?php _e('Webmaster Blog','sitemap'); ?></a>
 
-								<a class="sm_button sm_resYahoo"     href="<?php echo $this->sg->GetRedirectLink('sitemap-ywb'); ?>"><?php _e('Search Blog','sitemap'); ?></a>
+								<a class="sm_button sm_resYahoo"     href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-ywb"><?php _e('Search Blog','sitemap'); ?></a>
 
-								<a class="sm_button sm_resBing"      href="<?php echo $this->sg->GetRedirectLink('sitemap-lwt'); ?>"><?php _e('Webmaster Tools','sitemap'); ?></a>
-								<a class="sm_button sm_resBing"      href="<?php echo $this->sg->GetRedirectLink('sitemap-lswcb'); ?>"><?php _e('Webmaster Center Blog','sitemap'); ?></a>
+								<a class="sm_button sm_resBing"      href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-lwt"><?php _e('Webmaster Tools','sitemap'); ?></a>
+								<a class="sm_button sm_resBing"      href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-lswcb"><?php _e('Webmaster Center Blog','sitemap'); ?></a>
 								<br />
-								<a class="sm_button sm_resGoogle"    href="<?php echo $this->sg->GetRedirectLink('sitemap-prot'); ?>"><?php _e('Sitemaps Protocol','sitemap'); ?></a>
-								<a class="sm_button sm_resGoogle"    href="<?php echo $this->sg->GetRedirectLink('sitemap-ofaq'); ?>"><?php _e('Official Sitemaps FAQ','sitemap'); ?></a>
-								<a class="sm_button sm_pluginHome"   href="<?php echo $this->sg->GetRedirectLink('sitemap-afaq'); ?>"><?php _e('My Sitemaps FAQ','sitemap'); ?></a>
-							<?php $this->HtmlPrintBoxFooter(true); ?>
-
-							<?php $this->HtmlPrintBoxHeader('dm_donations',__('Recent Donations:','sitemap'),true); ?>
-								<?php if($this->sg->GetOption('i_hide_donors')!==true) { ?>
-									<iframe border="0" frameborder="0" scrolling="no" allowtransparency="yes" style="width:100%; height:80px;" src="<?php echo $this->sg->GetRedirectLink('sitemap-donorlist'); ?>">
-									<?php _e('List of the donors','sitemap'); ?>
-									</iframe><br />
-									<a href="<?php echo $this->sg->GetBackLink() . "&amp;sm_hidedonors=true"; ?>"><small><?php _e('Hide this list','sitemap'); ?></small></a><br /><br />
-								<?php } ?>
-								<a style="float:left; margin-right:5px; border:none;" href="javascript:document.getElementById('sm_donate_form').submit();"><img style="vertical-align:middle; border:none; margin-top:2px;" src="<?php echo $this->sg->GetPluginUrl(); ?>img/icon-donate.gif" border="0" alt="PayPal" title="Help me to continue support of this plugin :)" /></a>
-								<span><small><?php _e('Thanks for your support!','sitemap'); ?></small></span>
-								<div style="clear:left; height:1px;"></div>
+								<a class="sm_button sm_resGoogle"    href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-prot"><?php _e('Sitemaps Protocol','sitemap'); ?></a>
+								<a class="sm_button sm_resGoogle"    href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-ofat"><?php _e('Official Sitemaps FAQ','sitemap'); ?></a>
+								<a class="sm_button sm_pluginHome"   href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-afaq"><?php _e('My Sitemaps FAQ','sitemap'); ?></a>
 							<?php $this->HtmlPrintBoxFooter(true); ?>
 
 
@@ -789,7 +786,7 @@ HTML;
 								<?php
 
 								if($this->sg->OldFileExists()) {
-									echo "<li class=\"sm_error\">" . str_replace("%s",wp_nonce_url($this->sg->GetBackLink() . "&sm_delete_old=true",'sitemap'),__('There is still a sitemap.xml or sitemap.xml.gz file in your blog directory. Please delete them as no static files are used anymore or <a href="%s">try to delete them automatically</a>.','sitemap')) . "</li>";
+									echo "<li class=\"sm_error\">" . str_replace("%s",wp_nonce_url($this->sg->GetBackLink() . "&sm_delete_old=true",'sitemap'),__('There is still a sitemap.xml or sitemap.xml.gz file in your site directory. Please delete them as no static files are used anymore or <a href="%s">try to delete them automatically</a>.','sitemap')) . "</li>";
 								}
 
 								echo "<li>" . str_replace("%s",$this->sg->getXmlUrl(),__('The URL to your sitemap index file is: <a href="%s">%s</a>.','sitemap')) . "</li>";
@@ -826,7 +823,7 @@ HTML;
 							</ul>
 							<ul>
 								<li>
-									<?php echo sprintf(__('If you like the plugin, please <a target="_blank" href="%s">rate it 5 stars</a> or <a href="%s">donate</a> via PayPal! I\'m supporting this plugin since over 9 years! Thanks a lot! :)','sitemap'),$this->sg->GetRedirectLink('sitemap-works-note'),$this->sg->GetRedirectLink('sitemap-paypal')); ?>
+									<?php echo sprintf(__('If you like the plugin, please <a target="_blank" href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-works-note">rate it 5 stars</a>! :)','sitemap'),$this->sg->GetRedirectLink('sitemap-works-note'),$this->sg->GetRedirectLink('sitemap-paypal')); ?>
 								</li>
 
 							</ul>
@@ -857,13 +854,13 @@ HTML;
 					<ul>
 						<li>
 							<input type="checkbox" id="sm_b_ping" name="sm_b_ping" <?php echo ($this->sg->GetOption("b_ping")==true?"checked=\"checked\"":"") ?> />
-							<label for="sm_b_ping"><?php _e('Notify Google about updates of your Blog', 'sitemap') ?></label><br />
-							<small><?php echo str_replace("%s",$this->sg->GetRedirectLink('sitemap-gwt'),__('No registration required, but you can join the <a href="%s">Google Webmaster Tools</a> to check crawling statistics.','sitemap')); ?></small>
+							<label for="sm_b_ping"><?php _e('Notify Google about updates of your site', 'sitemap') ?></label><br />
+							<small><?php echo str_replace("%s",$this->sg->GetRedirectLink('sitemap-gwt'),__('No registration required, but you can join the <a href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-gwt">Google Webmaster Tools</a> to check crawling statistics.','sitemap')); ?></small>
 						</li>
 						<li>
 							<input type="checkbox" id="sm_b_pingmsn" name="sm_b_pingmsn" <?php echo ($this->sg->GetOption("b_pingmsn")==true?"checked=\"checked\"":"") ?> />
-							<label for="sm_b_pingmsn"><?php _e('Notify Bing (formerly MSN Live Search) about updates of your Blog', 'sitemap') ?></label><br />
-							<small><?php echo str_replace("%s",$this->sg->GetRedirectLink('sitemap-lwt'),__('No registration required, but you can join the <a href="%s">Bing Webmaster Tools</a> to check crawling statistics.','sitemap')); ?></small>
+							<label for="sm_b_pingmsn"><?php _e('Notify Bing (formerly MSN Live Search) about updates of your site', 'sitemap') ?></label><br />
+							<small><?php echo str_replace("%s",$this->sg->GetRedirectLink('sitemap-lwt'),__('No registration required, but you can join the <a href="https://8rkh4sskhh.execute-api.us-east-1.amazonaws.com/gsg/v1/sitemap-lwt">Bing Webmaster Tools</a> to check crawling statistics.','sitemap')); ?></small>
 						</li>
 						<li>
 							<label for="sm_b_robots">
@@ -872,7 +869,7 @@ HTML;
 							</label>
 
 							<br />
-							<small><?php _e('The virtual robots.txt generated by WordPress is used. A real robots.txt file must NOT exist in the blog directory!','sitemap'); ?></small>
+							<small><?php _e('The virtual robots.txt generated by WordPress is used. A real robots.txt file must NOT exist in the site directory!','sitemap'); ?></small>
 						</li>
 					</ul>
 					<?php if(is_super_admin()): ?>
@@ -898,7 +895,7 @@ HTML;
 							</li>
 							<li>
 								<label for="sm_b_baseurl"><?php _e('Override the base URL of the sitemap:', 'sitemap') ?> <input type="text" name="sm_b_baseurl" id="sm_b_baseurl"  value="<?php echo esc_attr($this->sg->GetOption("b_baseurl")); ?>" /></label><br />
-								<small><?php _e('Use this if your blog is in a sub-directory, but you want the sitemap be located in the root. Requires .htaccess modification.','sitemap'); ?> <a href="<?php echo $this->sg->GetRedirectLink('sitemap-help-options-adv-baseurl'); ?>"><?php _e('Learn more','sitemap'); ?></a></small>
+								<small><?php _e('Use this if your site is in a sub-directory, but you want the sitemap be located in the root. Requires .htaccess modification.','sitemap'); ?> <a href="<?php echo $this->sg->GetRedirectLink('sitemap-help-options-adv-baseurl'); ?>"><?php _e('Learn more','sitemap'); ?></a></small>
 							</li>
 							<li>
 								<label for="sm_b_html">
@@ -918,13 +915,13 @@ HTML;
 					<?php $this->HtmlPrintBoxFooter(); ?>
 
 					<?php if(is_super_admin()): ?>
-						<?php $this->HtmlPrintBoxHeader('sm_pages',__('Additional pages', 'sitemap')); ?>
+						<?php $this->HtmlPrintBoxHeader('sm_pages',__('Additional Pages', 'sitemap')); ?>
 
 						<?php
-							_e('Here you can specify files or URLs which should be included in the sitemap, but do not belong to your Blog/WordPress.<br />For example, if your domain is www.foo.com and your blog is located on www.foo.com/blog you might want to include your homepage at www.foo.com','sitemap');
+							_e('Here you can specify files or URLs which should be included in the sitemap, but do not belong to your Site/WordPress.<br />For example, if your domain is www.foo.com and your site is located on www.foo.com/site you might want to include your homepage at www.foo.com','sitemap');
 							echo "<ul><li>";
 							echo "<strong>" . __('Note','sitemap'). "</strong>: ";
-							_e("If your blog is in a subdirectory and you want to add pages which are NOT in the blog directory or beneath, you MUST place your sitemap file in the root directory (Look at the &quot;Location of your sitemap file&quot; section on this page)!",'sitemap');
+							_e("If your site is in a subdirectory and you want to add pages which are NOT in the site directory or beneath, you MUST place your sitemap file in the root directory (Look at the &quot;Location of your sitemap file&quot; section on this page)!",'sitemap');
 							echo "</li><li>";
 							echo "<strong>" . __('URL to the page','sitemap'). "</strong>: ";
 							_e("Enter the URL to the page. Examples: http://www.foo.com/index.html or www.foo.com/home ",'sitemap');
@@ -1123,7 +1120,7 @@ HTML;
 					<?php $this->HtmlPrintBoxFooter(); ?>
 
 					<!-- Excluded Items -->
-					<?php $this->HtmlPrintBoxHeader('sm_excludes',__('Excluded items', 'sitemap')); ?>
+					<?php $this->HtmlPrintBoxHeader('sm_excludes',__('Excluded Items', 'sitemap')); ?>
 
 						<b><?php _e('Excluded categories', 'sitemap') ?>:</b>
 
@@ -1143,7 +1140,7 @@ HTML;
 					<?php $this->HtmlPrintBoxFooter(); ?>
 
 					<!-- Change frequencies -->
-					<?php $this->HtmlPrintBoxHeader('sm_change_frequencies',__('Change frequencies', 'sitemap')); ?>
+					<?php $this->HtmlPrintBoxHeader('sm_change_frequencies',__('Change Frequencies', 'sitemap')); ?>
 
 						<p>
 							<b><?php _e('Note', 'sitemap') ?>:</b>
@@ -1294,16 +1291,16 @@ HTML;
 					}
 				?>
 				<input type="hidden" name="cmd" value="_donations" />
-				<input type="hidden" name="business" value="<?php echo "donate" /* N O S P A M */ . "@" . "arnebra" . "chhold.de"; ?>" />
+				<input type="hidden" name="business" value="<?php echo "xmlsitemapgen" /* N O S P A M */ . "@" . "gmai" . "l.com"; ?>" />
 				<input type="hidden" name="item_name" value="Sitemap Generator for WordPress. Please tell me if if you don't want to be listed on the donator list." />
 				<input type="hidden" name="no_shipping" value="1" />
-				<input type="hidden" name="return" value="<?php echo 'http://' . $_SERVER['HTTP_HOST'] . $this->sg->GetBackLink(); ?>&amp;sm_donated=true" />
-				<input type="hidden" name="currency_code" value="<?php echo $myLc["cc"]; ?>" />
+				<input type="hidden" name="return" value="<?php echo esc_attr($this->sg->GetBackLink('&sm_donated=true')) ?>" />
+				<input type="hidden" name="currency_code" value="<?php echo esc_attr($myLc["cc"]) ?>" />
 				<input type="hidden" name="bn" value="PP-BuyNowBF" />
-				<input type="hidden" name="lc" value="<?php echo $myLc["lc"]; ?>" />
+				<input type="hidden" name="lc" value="<?php echo esc_attr($myLc["lc"]) ?>" />
 				<input type="hidden" name="rm" value="2" />
 				<input type="hidden" name="on0" value="Your Website" />
-				<input type="hidden" name="os0" value="<?php echo get_bloginfo("url"); ?>"/>
+				<input type="hidden" name="os0" value="<?php echo esc_attr(get_bloginfo("url")) ?>"/>
 			</form>
 		</div>
 		<?php

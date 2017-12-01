@@ -96,11 +96,6 @@ function otw_sidebar_block_class( $item_type, $sidebar_data ){
 	}
 }
 ?>
-<div class="updated">
-<p>Sidebar Manager Light: <a href="http://otwthemes.com/online-documentation-sidebar-manager-light/?utm_source=wp.org&utm_medium=admin&utm_content=docs&utm_campaign=sml" target="_blank"> Documentation page</a></p>
-<p>Upgrade to the <strong>Pro version of <a href="http://codecanyon.net/item/sidebar-widget-manager-for-wordpress/2287447?ref=OTWthemes&utm_source=wp.org&utm_medium=admin&utm_content=upgrade&utm_campaign=sml" target="_blank">Sidebar and Widget Manager</a></strong> | <a href="http://otwthemes.com/demos/1ts/?item=Sidebar%20Widget%20Manager&utm_source=wp.org&utm_medium=admin&utm_content=upgrade&utm_campaign=sml" target="_blank">Demo site</a></p> 
-<p>Get some more awesome <strong>FREE plugins</strong>: <a href="http://otwthemes.com/product/portfolio-manager-lite-wordpress-plugin/?utm_source=wp.org&utm_medium=admin&utm_content=otherfreep&utm_campaign=sml" target="_blank">Portfolio Manager</a>, <a href="http://otwthemes.com/product/blog-manager-light-wordpress-plugin?utm_source=wp.org&utm_medium=admin&utm_content=otherfreep&utm_campaign=sml" target="_blank">Blog Manager</a>, <a href="http://otwthemes.com/product/content-manager-light-wordpress-plugin/?utm_source=wp.org&utm_medium=admin&utm_content=otherfreep&utm_campaign=sml" target="_blank">Content Manager</a></p>
-</div>
 <div class="wrap">
 	<div id="icon-edit" class="icon32"><br/></div>
 	<h2>
@@ -129,20 +124,20 @@ function otw_sidebar_block_class( $item_type, $sidebar_data ){
 								
 								<div class="meta-box-sortables">
 									<div class="postbox">
-										<div title="<?php _e('Click to toggle', 'otw_sbm')?>" class="handlediv sitem_toggle"><br></div>
+										<div title="<?php _e('Click to toggle', 'otw_sml')?>" class="handlediv sitem_toggle"><br></div>
 										<h3 class="hndle sitem_header"><span><?php echo $wp_item_data[1]?></span></h3>
 										
 										<div class="inside sitems<?php otw_sidebar_block_class( $wp_item_type, $otw_sidebar_values, $sbm_valid_for_values[ $wp_item_type ] )?>" id="otw_sbm_type_<?php echo $wp_item_type?>">
 											<div class="otw_sidebar_item_filter" id="otw_type_<?php echo $wp_item_type ?>_filter" >
 												<div id="otw_type_<?php echo $wp_item_type ?>_search" class="otw_sidebar_filter_search">
-													<label for="otw_type_<?php echo $wp_item_type ?>_search_field"><?php _e( 'Search', 'otw_sbm' )?></label>
+													<label for="otw_type_<?php echo $wp_item_type ?>_search_field"><?php _e( 'Search', 'otw_sml' )?></label>
 													<input type="text" id="otw_type_<?php echo $wp_item_type ?>_search_field" class="otw_sbm_q_filter" value=""/>
 												</div>
 												<div id="otw_type_<?php echo $wp_item_type ?>_clear" class="otw_sidebar_filter_clear">
-													<a href="javascript:;" id="otw_type_<?php echo $wp_item_type ?>_clear"><?php _e( 'reset', 'otw_sbm' )?></a>
+													<a href="javascript:;" id="otw_type_<?php echo $wp_item_type ?>_clear"><?php _e( 'reset', 'otw_sml' )?></a>
 												</div>
 												<div id="otw_type_<?php echo $wp_item_type ?>_order" class="otw_sidebar_filter_order">
-													<label for="otw_type_<?php echo $wp_item_type ?>_order_field"><?php _e( 'Order', 'otw_sbm' )?></label>
+													<label for="otw_type_<?php echo $wp_item_type ?>_order_field"><?php _e( 'Order', 'otw_sml' )?></label>
 													<select id="otw_type_<?php echo $wp_item_type ?>_order_field">
 														<?php $sort_options = otw_get_item_sort_options( $wp_item_type);?>
 														<?php if( count( $sort_options ) ){?>
@@ -153,22 +148,22 @@ function otw_sidebar_block_class( $item_type, $sidebar_data ){
 													</select>
 												</div>
 												<div id="otw_type_<?php echo $wp_item_type ?>_show" class="otw_sidebar_filter_show">
-													<label for="otw_type_<?php echo $wp_item_type ?>_show_field"><?php _e( 'Show', 'otw_sbm' )?></label>
+													<label for="otw_type_<?php echo $wp_item_type ?>_show_field"><?php _e( 'Show', 'otw_sml' )?></label>
 													<select id="otw_type_<?php echo $wp_item_type ?>_show_field">
-														<option value="all"><?php _e( 'All', 'otw_sbm' )?></option>
-														<option value="all_selected"><?php _e( 'All Selected', 'otw_sbm' )?></option>
-														<option value="all_unselected"><?php _e( 'All Unselected', 'otw_sbm' )?></option>
+														<option value="all"><?php _e( 'All', 'otw_sml' )?></option>
+														<option value="all_selected"><?php _e( 'All Selected', 'otw_sml' )?></option>
+														<option value="all_unselected"><?php _e( 'All Unselected', 'otw_sml' )?></option>
 													</select>
 												</div>
 											</div>
 											<div class="otw_sbm_all_actions">
 												<div class="otw_sbm_all_links">
-													<a href="javascript:;" class="otw_sbm_select_all_items" rel="<?php echo $wp_item_type?>"><?php _e( 'Select All', 'otw_sbm' )?></a>
+													<a href="javascript:;" class="otw_sbm_select_all_items" rel="<?php echo $wp_item_type?>"><?php _e( 'Select All', 'otw_sml' )?></a>
 													|
-													<a href="javascript:;" class="otw_sbm_unselect_all_items" rel="<?php echo $wp_item_type?>"><?php _e( 'Unselect All', 'otw_sbm' )?></a>
+													<a href="javascript:;" class="otw_sbm_unselect_all_items" rel="<?php echo $wp_item_type?>"><?php _e( 'Unselect All', 'otw_sml' )?></a>
 												</div>
 												<div class="otw_sbm_selected_items">
-													<span class="otw_selected_items_number"></span>&nbsp;<span class="otw_seleted_items_plural"><?php _e( 'items are', 'otw_sbm' );?></span><span class="otw_selected_items_singular"><?php _e('item is', 'otw_sbm' )?></span>&nbsp;<?php _e( 'selected', 'otw_sbm' )?>
+													<span class="otw_selected_items_number"></span>&nbsp;<span class="otw_seleted_items_plural"><?php _e( 'items are', 'otw_sml' );?></span><span class="otw_selected_items_singular"><?php _e('item is', 'otw_sml' )?></span>&nbsp;<?php _e( 'selected', 'otw_sml' )?>
 												</div>
 											</div>
 											<div class="a_item">
@@ -199,11 +194,11 @@ function otw_sidebar_block_class( $item_type, $sidebar_data ){
 							<p><?php _e( 'The name is how it appears on your site.' );?></p>
 						</div>
 						<div class="form-field">
-							<label for="sbm_status"><?php _e( 'Status', 'otw_sbm' );?></label>
+							<label for="sbm_status"><?php _e( 'Status', 'otw_sml' );?></label>
 							<select id="sbm_status" tabindex="2" style="width: 170px;" name="sbm_status">
 								<option value=""<?php if( $otw_sidebar_values['sbm_status'] == '' ){ echo ' selected="selected" ';}?>>--/--</option>
-								<option value="active"<?php if( $otw_sidebar_values['sbm_status'] == 'active' ){ echo ' selected="selected" ';}?>><?php _e( 'Active', 'otw_sbm' )?></option>
-								<option value="inactive"<?php if( $otw_sidebar_values['sbm_status'] == 'inactive' ){ echo ' selected="selected" ';}?>><?php _e( 'Inactive', 'otw_sbm' )?></option>
+								<option value="active"<?php if( $otw_sidebar_values['sbm_status'] == 'active' ){ echo ' selected="selected" ';}?>><?php _e( 'Active', 'otw_sml' )?></option>
+								<option value="inactive"<?php if( $otw_sidebar_values['sbm_status'] == 'inactive' ){ echo ' selected="selected" ';}?>><?php _e( 'Inactive', 'otw_sml' )?></option>
 							</select>
 						</div>
 						<?php if( is_array( $wp_registered_sidebars ) && count( $wp_registered_sidebars ) ){?>

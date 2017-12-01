@@ -200,7 +200,7 @@ class GoogleSitemapGeneratorStatus {
 class GoogleSitemapGeneratorPage {
 
 	/**
-	 * @var string $_url Sets the URL or the relative path to the blog dir of the page
+	 * @var string $_url Sets the URL or the relative path to the site dir of the page
 	 */
 	public $_url;
 
@@ -395,7 +395,7 @@ class GoogleSitemapGeneratorDebugEntry extends GoogleSitemapGeneratorXmlEntry {
 class GoogleSitemapGeneratorSitemapEntry {
 
 	/**
-	 * @var string $_url Sets the URL or the relative path to the blog dir of the page
+	 * @var string $_url Sets the URL or the relative path to the site dir of the page
 	 */
 	protected $_url;
 
@@ -660,7 +660,7 @@ class GoogleSitemapGeneratorPrioByAverageProvider implements  GoogleSitemapGener
 }
 
 /**
- * Class to generate a sitemaps.org Sitemaps compliant sitemap of a WordPress blog.
+ * Class to generate a sitemaps.org Sitemaps compliant sitemap of a WordPress site.
  *
  * @package sitemap
  * @author Arne Brachhold
@@ -843,9 +843,10 @@ final class GoogleSitemapGenerator {
 	 * @since 3.0
 	 * @return string The full url
 	 */
-	public static function GetBackLink() {
+	public static function GetBackLink($extra = '') {
 		global $wp_version;
-		$url = admin_url("options-general.php?page=" . GoogleSitemapGeneratorLoader::GetBaseName());
+		$url = admin_url("options-general.php?page=" . 
+			GoogleSitemapGeneratorLoader::GetBaseName() . $extra);
 		return $url;
 	}
 
@@ -873,7 +874,7 @@ final class GoogleSitemapGenerator {
 	}
 
 	/**
-	 * Returns if the blog is running in multi site mode
+	 * Returns if the site is running in multi site mode
 	 * @since 4.0
 	 * @return bool
 	 */
@@ -1185,6 +1186,7 @@ final class GoogleSitemapGenerator {
 		$this->options["sm_i_donated"] = false; //Did you donate? Thank you! :)
 		$this->options["sm_i_hide_donated"] = false; //And hide the thank you..
 		$this->options["sm_i_install_date"] = time(); //The installation date
+		$this->options["sm_i_hide_survey"] = false; //Hide the survey note
 		$this->options["sm_i_hide_note"] = false; //Hide the note which appears after 30 days
 		$this->options["sm_i_hide_works"] = false; //Hide the "works?" message which appears after 15 days
 		$this->options["sm_i_hide_donors"] = false; //Hide the list of donations
@@ -1205,14 +1207,10 @@ final class GoogleSitemapGenerator {
 
 		$this->InitOptions();
 
-		//Delete the options cache. This is unfortunately required for some hosts,
-		//but it is not that bad since it will only clear the options and only if a
-		//sitemap is actually served or the sitemap admin page is requested.
-		wp_cache_delete('alloptions', 'options');
-
 		//First init default values, then overwrite it with stored values so we can add default
 		//values with an update which get stored by the next edit.
 		$storedOptions = get_option("sm_options");
+
 		if($storedOptions && is_array($storedOptions)) {
 			foreach($storedOptions AS $k => $v) {
 				if(array_key_exists($k,$this->options))	$this->options[$k] = $v;
@@ -1365,7 +1363,7 @@ final class GoogleSitemapGenerator {
 		$p = $this->GetPluginPath();
 		if(file_exists($p . "sitemap.xsl")) {
 			$url = $this->GetPluginUrl();
-			//If called over the admin area using HTTPS, the stylesheet would also be https url, even if the blog frontend is not.
+			//If called over the admin area using HTTPS, the stylesheet would also be https url, even if the site frontend is not.
 			if(substr(get_bloginfo('url'), 0, 5) != "https" && substr($url, 0, 5) == "https") $url = "http" . substr($url, 5);
 			return $url . 'sitemap.xsl';
 		}
@@ -1426,7 +1424,7 @@ final class GoogleSitemapGenerator {
 	}
 
 	/**
-	 * Returns if there is still an old sitemap file in the blog directory
+	 * Returns if there is still an old sitemap file in the site directory
 	 *
 	 * @return Boolean True if a sitemap file still exists
 	 */
@@ -1436,7 +1434,7 @@ final class GoogleSitemapGenerator {
 	}
 
 	/**
-	 * Renames old sitemap files in the blog directory from previous versions of this plugin
+	 * Renames old sitemap files in the site directory from previous versions of this plugin
 	 * @return bool True on success
 	 */
 	public function DeleteOldFiles() {
@@ -2247,5 +2245,28 @@ final class GoogleSitemapGenerator {
 		}
 
 		return (boolean) $value;
+	}
+
+
+
+	public function ShowSurvey() {
+		$this->LoadOptions();
+
+		return (isset($_REQUEST['sm_survey']) || !$this->GetOption('i_hide_survey'));
+	}
+
+	public function HtmlSurvey() {
+		?>
+		<div class="updated">
+			<strong>
+				<p>
+					<?php echo str_replace('%s', 'https://w3edge.wufoo.com/forms/mex338s1ysw3i0/', 
+						__('Thank you for using Google XML Sitemaps! <a href="%s" target="_blank">Please help us improve by taking this short survey!</a>','sitemap')); 
+					?> <a href="<?php echo $this->GetBackLink() . "&amp;sm_hide_survey=true"; ?>" style="float:right; display:block; border:none;"><small style="font-weight:normal; "><?php _e('Don\'t show this anymore', 'sitemap'); ?></small></a>
+				</p>
+			</strong>
+			<div style="clear:right;"></div>
+		</div>
+		<?php		
 	}
 }

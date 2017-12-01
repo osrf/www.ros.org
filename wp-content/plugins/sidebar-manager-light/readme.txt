@@ -3,8 +3,8 @@ Contributors: OTWthemes
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CQH6CMTR42KS2
 Tags: replace sidebar, replace widget area, custom sidebar, custom widget area widgets, sidebar, widget area, custom layout, relevant content, dynamic sidebars
 Requires at least: 3.0
-Tested up to: 4.5
-Stable tag: 1.12
+Tested up to: 4.8
+Stable tag: 1.14
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,8 +18,6 @@ Once created all custom sidebars will be available in Appearance -> Widgets. You
 
 > Upgrade to the Pro version of this plugin - the worlds most complete Sidebar and Widget management system for WordPress including regular updates and premium support:
 > [Sidebar and Widget Manager](http://codecanyon.net/item/sidebar-widget-manager-for-wordpress/2287447?ref=OTWthemes&utm_source=wp.org&utm_medium=page&utm_content=upgrade&utm_campaign=sml) | [Demo site](http://otwthemes.com/demos/1ts/?item=Sidebar%20Widget%20Manager&utm_source=wp.org&utm_medium=page&utm_content=upgrade&utm_campaign=sml) 
-
-> Get some more awesome **FREE plugins**: <a href="https://wordpress.org/plugins/portfolio-manager-lite/" target="_blank">Portfolio Manager</a>, <a href="https://wordpress.org/plugins/blog-manager-light/" target="_blank">Blog Manager</a>, <a href="https://wordpress.org/plugins/content-manager-light/" target="_blank">Content Manager</a>
 
 Add as many sidebars (widget areas) as you need. Creating sidebars(widget areas) is unlimited. 
 
@@ -42,11 +40,6 @@ How Sidebar Manager Light works:
 * Choose which sidebar to replace
 * Choose pages that will display the new sidebar
 * Go to your widgets section and drop some widgets in your new sidebar
- 
-Follow on [Twitter](http://twitter.com/OTWthemes) |
-[Facebook](http://www.facebook.com/pages/OTWthemes/250294028325665) |
-[YouTube](http://www.youtube.com/OTWthemes) |
-[Google +](https://plus.google.com/117222060323479158835/about)
 
 
 == Installation ==
@@ -65,6 +58,18 @@ Please refer to [online documentation page](http://otwthemes.com/online-document
 == Changelog ==
 
 Updating to versiion 1.3 or higher requires deactivation of the old version first! More info [here](http://otwthemes.com/updating-widgetize-pages-light-to-1-5-version-sidebar-manager-light-to-1-3-widget-manager-light-to-1-3/?utm_source=wp.org&utm_medium=page&utm_content=site&utm_campaign=sml)  
+
+
+= 1.14 =
+
+* Updated: menu ordering
+* Updated: domain name
+* Updated: WordPress 4.8 compatibility
+
+= 1.13 =
+
+* Updated: WordPress 4.7.x compatibility
+* Updated: OTW core functions 
 
 = 1.12 =
 

@@ -287,24 +287,24 @@ $wp_item_data = $wp_sbm_int_items[$wp_item_type];
 		<?php if( isset( $pager_data['links'] ) && count( $pager_data['links']['page'] ) ){?>
 			<div class="otw_sidebar_pager_links">
 				<?php if( $pager_data['links']['first'] !== false ){?>
-					<a href="javascript:;" rel="<?php echo $pager_data['links']['first'] ?>"><?php _e( 'First', 'otw_sbm' )?></a>
+					<a href="javascript:;" rel="<?php echo $pager_data['links']['first'] ?>"><?php _e( 'First', 'otw_sml' )?></a>
 				<?php }?>
 				<?php if( $pager_data['links']['prev'] !== false ){?>
-					<a href="javascript:;" rel="<?php echo $pager_data['links']['prev'] ?>"><?php _e( 'Previous', 'otw_sbm' )?></a>
+					<a href="javascript:;" rel="<?php echo $pager_data['links']['prev'] ?>"><?php _e( 'Previous', 'otw_sml' )?></a>
 				<?php }?>
 				<?php foreach( $pager_data['links']['page'] as $l_page ){?>
 					<a href="javascript:;" rel="<?php echo $l_page?>"<?php if( $l_page == $current_page){ echo 'class="otw_selected_page"';}?>><?php echo $l_page + 1 ?></a>
 				<?php }?>
 				<?php if( $pager_data['links']['next'] !== false ){?>
-					<a href="javascript:;" rel="<?php echo $pager_data['links']['next'] ?>"><?php _e( 'Next', 'otw_sbm' )?></a>
+					<a href="javascript:;" rel="<?php echo $pager_data['links']['next'] ?>"><?php _e( 'Next', 'otw_sml' )?></a>
 				<?php }?>
 				<?php if( $pager_data['links']['last'] !== false ){?>
-					<a href="javascript:;" rel="<?php echo $pager_data['links']['last'] ?>"><?php _e( 'Last', 'otw_sbm' )?></a>
+					<a href="javascript:;" rel="<?php echo $pager_data['links']['last'] ?>"><?php _e( 'Last', 'otw_sml' )?></a>
 				<?php }?>
 			</div>
 		<?php }?>
 		<div class="otw_sidebar_pager_items">
-			<label for="otw_type_<?php echo $wp_item_type?>_per_page_field"><?php _e( 'Items on Page', 'otw_sbm' )?></label>
+			<label for="otw_type_<?php echo $wp_item_type?>_per_page_field"><?php _e( 'Items on Page', 'otw_sml' )?></label>
 			<select class="otw_sidebar_items_per_page" id="otw_type_<?php echo $wp_item_type?>_per_page_field">
 				<?php for( $cI = 5; $cI <= 50; $cI++ ){?>
 					<?php
@@ -334,24 +334,24 @@ $wp_item_data = $wp_sbm_int_items[$wp_item_type];
 		<?php if( isset( $pager_data['links'] ) && count( $pager_data['links']['page'] ) ){?>
 			<div class="otw_sidebar_pager_links">
 				<?php if( $pager_data['links']['first'] !== false ){?>
-					<a href="javascript:;" rel="<?php echo $pager_data['links']['first'] ?>"><?php _e( 'First', 'otw_sbm' )?></a>
+					<a href="javascript:;" rel="<?php echo $pager_data['links']['first'] ?>"><?php _e( 'First', 'otw_sml' )?></a>
 				<?php }?>
 				<?php if( $pager_data['links']['prev'] !== false ){?>
-					<a href="javascript:;" rel="<?php echo $pager_data['links']['prev'] ?>"><?php _e( 'Previous', 'otw_sbm' )?></a>
+					<a href="javascript:;" rel="<?php echo $pager_data['links']['prev'] ?>"><?php _e( 'Previous', 'otw_sml' )?></a>
 				<?php }?>
 				<?php foreach( $pager_data['links']['page'] as $l_page ){?>
 					<a href="javascript:;" rel="<?php echo $l_page?>"<?php if( $l_page == $current_page){ echo 'class="otw_selected_page"';}?>><?php echo $l_page + 1 ?></a>
 				<?php }?>
 				<?php if( $pager_data['links']['next'] !== false ){?>
-					<a href="javascript:;" rel="<?php echo $pager_data['links']['next'] ?>"><?php _e( 'Next', 'otw_sbm' )?></a>
+					<a href="javascript:;" rel="<?php echo $pager_data['links']['next'] ?>"><?php _e( 'Next', 'otw_sml' )?></a>
 				<?php }?>
 				<?php if( $pager_data['links']['last'] !== false ){?>
-					<a href="javascript:;" rel="<?php echo $pager_data['links']['last'] ?>"><?php _e( 'Last', 'otw_sbm' )?></a>
+					<a href="javascript:;" rel="<?php echo $pager_data['links']['last'] ?>"><?php _e( 'Last', 'otw_sml' )?></a>
 				<?php }?>
 			</div>
 		<?php }?>
 		<div class="otw_sidebar_pager_items">
-			<label for="otw_type_<?php echo $wp_item_type?>_per_page_field"><?php _e( 'Items on Page', 'otw_sbm' )?></label>
+			<label for="otw_type_<?php echo $wp_item_type?>_per_page_field"><?php _e( 'Items on Page', 'otw_sml' )?></label>
 			<select class="otw_sidebar_items_per_page" id="otw_type_<?php echo $wp_item_type?>_per_page_field">
 				<?php for( $cI = 5; $cI <= 50; $cI++ ){?>
 					<?php

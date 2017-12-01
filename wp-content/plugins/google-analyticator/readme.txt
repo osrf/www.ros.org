@@ -2,8 +2,8 @@
 Contributors: noahkagan
 Tags: google analytics plugin, stats, statistics, google, analytics, dashboard, google analytics, tracking, widget, marketing,pageviews,visits, web stats, javascript
 Requires at least: 3.2
-Tested up to: 4.7
-Stable tag: 6.5.1
+Tested up to: 4.8
+Stable tag: 6.5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -73,6 +73,12 @@ For any support issues, please use the official WordPress support forums.
 
 
 == Changelog ==
+= 6.5.4 =
+* Fix depricated API field name calls.
+* Check for is_preview() in ga_external_tracking_js()
+
+= 6.5.3 =
+* Use wp_get_current_user() instead of get_currentuserinfo()
 
 = 6.5.2 =
 * Small fix to widget markup.
@@ -470,10 +476,6 @@ For any support issues, please use the official WordPress support forums.
 
 == Upgrade Notice ==
 
-= 6.1.1 =
-
-Bug fix release. If you're having trouble accessing the settings page or use Internet Explorer, this is a recommended update.
-
-= 6.1 =
-
-Recommended update. Highlights include WordPress 3.0 support, updated async tracking code, dashboard stats by Analytics profile, more control over who gets tracked, and more control over who can see the dashboard widget. Settings have changed, so revisit the settings to verify.
+= 6.5.4 =
+* Fix depricated API field name calls.
+* Check for is_preview() in ga_external_tracking_js()
