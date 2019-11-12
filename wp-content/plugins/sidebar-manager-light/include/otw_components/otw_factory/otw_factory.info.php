@@ -4,7 +4,7 @@ Component Name: OTW Factory
 Plugin URI: http://OTWthemes.com
 Description:  OTW Form
 Author: OTWthemes.com
-Version: 0.1
+Version: 1.1
 Author URI: http://themeforest.net/user/OTWthemes
 */
 

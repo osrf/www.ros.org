@@ -3,8 +3,8 @@ Contributors: OTWthemes
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CQH6CMTR42KS2
 Tags: replace sidebar, replace widget area, custom sidebar, custom widget area widgets, sidebar, widget area, custom layout, relevant content, dynamic sidebars
 Requires at least: 3.0
-Tested up to: 4.8
-Stable tag: 1.14
+Tested up to: 4.9.8
+Stable tag: 1.15
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,7 +26,7 @@ WMPL plugin support so you can display sidebars and widgets based on language.
 Sidebars can be displayed based on User role too.
 
 
-Examples:
+Here are some examples:
 
 Lets say you would like to display a certain set of widgets on your blog page, different set of widgets on your portfolio, and different set on your contact page. All that on the spot where the primary sidebar of your theme is located. You can do that by creating 3 sidebars replacing the primary sidebar and set each custom sidebar to display on blog or portfolio or contacts.
 
@@ -59,6 +59,10 @@ Please refer to [online documentation page](http://otwthemes.com/online-document
 
 Updating to versiion 1.3 or higher requires deactivation of the old version first! More info [here](http://otwthemes.com/updating-widgetize-pages-light-to-1-5-version-sidebar-manager-light-to-1-3-widget-manager-light-to-1-3/?utm_source=wp.org&utm_medium=page&utm_content=site&utm_campaign=sml)  
 
+= 1.15 =
+
+* Updated: latest version of OTW factory
+* Fixed: error mode modification
 
 = 1.14 =
 

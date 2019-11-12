@@ -43,7 +43,7 @@ class Disable_Search_Test extends WP_UnitTestCase {
 		$all = array(
 			'is_single', 'is_preview', 'is_page', 'is_archive', 'is_date', 'is_year', 'is_month', 'is_day', 'is_time',
 			'is_author', 'is_category', 'is_tag', 'is_tax', 'is_search', 'is_feed', 'is_comment_feed', 'is_trackback',
-			'is_home', 'is_404', 'is_comments_popup', 'is_paged', 'is_admin', 'is_attachment', 'is_singular', 'is_robots',
+			'is_home', 'is_404', 'is_paged', 'is_admin', 'is_attachment', 'is_singular', 'is_robots',
 			'is_posts_page', 'is_post_type_archive',
 		);
 		$true = func_get_args();
@@ -86,7 +86,11 @@ class Disable_Search_Test extends WP_UnitTestCase {
 	}
 
 	public function test_version() {
-		$this->assertEquals( '1.6.1', c2c_DisableSearch::version() );
+		$this->assertEquals( '1.7.1', c2c_DisableSearch::version() );
+	}
+
+	public function test_hooks_plugins_loaded() {
+		$this->assertEquals( 10, has_action( 'plugins_loaded', array( 'c2c_DisableSearch', 'init' ) ) );
 	}
 
 	public function test_no_search_form_apppears_even_if_searchform_php_exists() {
@@ -96,7 +100,7 @@ class Disable_Search_Test extends WP_UnitTestCase {
 		switch_theme( $theme->get_stylesheet() );
 		$this->assertEquals( 'twentyseventeen', get_stylesheet() );
 		// Verify that the searchform.php file actually exists.
-		$this->assertEquals( get_stylesheet_directory() . '/searchform.php', locate_template( 'searchform.php' ) );
+		$this->assertTrue( file_exists( $theme->theme_root . '/twentyseventeen/searchform.php' ) );
 		// Now verify that the plugin prevents it from being used.
 		$this->assertEmpty( get_search_form( false ) );
 		// Ensure we restored the original theme.

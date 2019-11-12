@@ -1,6 +1,16 @@
 <div class="wrap">
 	<?php
-	if( $current_plugin && isset( $this->responses[ $current_plugin ] ) && isset( $this->responses[ $current_plugin ]['register_code'] ) ){
+		if( isset( $this->errors ) && count( $this->errors ) && $this->dmode == 2 ){
+			
+			foreach( $this->errors as $error_object ){?>
+			
+					<div class="error"><p><?php echo $error_object->get_error_message()?></p></div>
+			<?php
+			}
+		}
+	?>
+	<?php
+	if( $current_plugin && isset( $this->responses[ $current_plugin ] ) && isset( $this->responses[ $current_plugin ]['register_code'] ) && is_array( $this->responses[ $current_plugin ]['register_code'] ) ){
 		foreach( $this->responses[ $current_plugin ]['register_code'] as $message_type => $messages ){
 		
 			foreach( $messages as $message ){?>
@@ -77,6 +87,7 @@
 					<?php
 						if( $current_plugin && isset( $this->plugins[ $current_plugin ] ) && isset( $this->plugins[ $current_plugin ]['info']['keys'] ) ){?>
 						<form method="post" action="">
+							<?php wp_original_referer_field(true, 'previous'); wp_nonce_field('remove_pc_code'); ?>
 							<input type="hidden" name="otw_fc_action" value="remove_pc_code" />
 							<table width="100%" class="otw-factory-keys">
 								<?php foreach( $this->plugins[ $current_plugin ]['info']['keys'] as $key_data ){?>
@@ -94,6 +105,7 @@
 						
 						<form method="post" action="">
 						<input type="hidden" name="otw_fc_action" value="add_pc_code" />
+						<?php wp_original_referer_field(true, 'previous'); wp_nonce_field('add_pc_code'); ?>
 						<p><?php echo $this->get_label( 'Have a code, paste it here' )?></p>
 						<p><input type="text" name="otw_pc_code" value="" id="otw_pc_code" /><input type="submit" name=otw_submit_pc_code" class="otw_factory_button_action button button-primary" value="<?php echo $this->get_label('Submit Code')?>"</p>
 						</form>

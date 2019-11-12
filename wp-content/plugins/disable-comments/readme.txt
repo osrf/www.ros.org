@@ -1,9 +1,9 @@
 === Disable Comments ===
-Contributors: solarissmoke
+Contributors: solarissmoke, garrett-eclipse
 Donate link: http://www.rayofsolaris.net/donate/
 Tags: comments, disable, global
-Requires at least: 4.1
-Tested up to: 4.9
+Requires at least: 5.0
+Tested up to: 5.3
 Stable tag: trunk
 
 Allows administrators to globally disable comments on their site. Comments can be disabled according to post type. Multisite friendly. Provides tool to delete all comments or according to post type.
@@ -46,7 +46,7 @@ You can also bulk-edit the comment status of multiple posts from the [posts scre
 
 = I want to delete comments from my database. What do I do? =
 
-Go to the settings page for the disable comments plugin and utlize the Delete Comments tool to delete all comments or according to the specified post types from your database.
+Go to the tools page for the Disable Comments plugin and utlize the Delete Comments tool to delete all comments or according to the specified post types from your database.
 
 == Details ==
 
@@ -68,9 +68,21 @@ Some of the plugin's behaviour can be modified by site administrators and plugin
 
 * Define `DISABLE_COMMENTS_REMOVE_COMMENTS_TEMPLATE` and set it to `false` to prevent the plugin from replacing the theme's comment template with an empty one.
 
+* Define `DISABLE_COMMENTS_ALLOW_DISCUSSION_SETTINGS` and set it to `true` to prevent the plugin from hiding the Discussion settings page.
+
 These definitions can be made either in your main `wp-config.php` or in your theme's `functions.php` file.
 
 == Changelog ==
+
+= 1.10.0 =
+* Disable "recent comments" Gutenberg block.
+
+= 1.9.0 =
+* Fix compatibility with WordPress 5.0 and above.
+* Remove deprecated "persistent mode" feature.
+
+= 1.8.0 =
+* Added `DISABLE_COMMENTS_ALLOW_DISCUSSION_SETTINGS` configuration.
 
 = 1.7.1 =
 * Small enhancements to hiding comment-related functionality in the admin.

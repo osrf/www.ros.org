@@ -9,11 +9,15 @@ class OTW_Factory extends OTW_Component{
 	
 	private $upd_tm = 1440;
 	
+	private $remote_request_timeout = 120;
+	
+	private $dmode = 1;
+	
 	public $responses = array();
 	
 	public function __construct(){
 		
-		if( isset( $_SERVER['DOCUMENT_ROOT'] ) && preg_match( "/webserver\/otw_wp\/home\/web\/(4\.1|4\.6|4\.5\.3|3\.9)/", $_SERVER['DOCUMENT_ROOT'] ) ){
+		if( isset( $_SERVER['DOCUMENT_ROOT'] ) && preg_match( "/webserver\/otw_wp\/home\/web\/(4\.8\.1)/", $_SERVER['DOCUMENT_ROOT'] ) ){
 			$this->upd_tm = 0;
 			$this->api_url = 'http://otw_wp_api.com/v1/';
 		}
@@ -148,26 +152,34 @@ class OTW_Factory extends OTW_Component{
 			switch( $_POST['otw_fc_action'] ){
 				
 				case 'add_pc_code':
-						$current_plugin = $this->_get_lm_plugin();
 						
-						$request_data = array();
-						$request_data['code'] = $_POST['otw_pc_code'];
-						
-						$this->responses[ $current_plugin ]['register_code'] = $this->process_action( 'register_code', $current_plugin, $request_data );
+						if( check_admin_referer( $_POST['otw_fc_action'] ) ){
+							
+							$current_plugin = $this->_get_lm_plugin();
+							
+							$request_data = array();
+							$request_data['code'] = $_POST['otw_pc_code'];
+							
+							$this->responses[ $current_plugin ]['register_code'] = $this->process_action( 'register_code', $current_plugin, $request_data );
+						}
 					break;
 				case 'remove_pc_code':
-						$current_plugin = $this->_get_lm_plugin();
 						
-						if( isset( $this->plugins[ $current_plugin ] ) && isset( $this->plugins[ $current_plugin ]['info'] ) && isset( $this->plugins[ $current_plugin ]['info']['keys'] ) ){
-						
-							foreach( $this->plugins[ $current_plugin ]['info']['keys'] as $key_data ){
-								
-								if( isset( $_POST['remove_pc_code_'.$key_data['id'] ] ) && !empty( $_POST['remove_pc_code_'.$key_data['id'] ] ) ){
-								
-									$request_data = array();
-									$request_data['code'] = $key_data;
+						if( check_admin_referer( $_POST['otw_fc_action'] ) ){
+							
+							$current_plugin = $this->_get_lm_plugin();
+							
+							if( isset( $this->plugins[ $current_plugin ] ) && isset( $this->plugins[ $current_plugin ]['info'] ) && isset( $this->plugins[ $current_plugin ]['info']['keys'] ) ){
+							
+								foreach( $this->plugins[ $current_plugin ]['info']['keys'] as $key_data ){
 									
-									$this->responses[ $current_plugin ]['register_code'] = $this->process_action( 'deregister_code', $current_plugin, $request_data );
+									if( isset( $_POST['remove_pc_code_'.$key_data['id'] ] ) && !empty( $_POST['remove_pc_code_'.$key_data['id'] ] ) ){
+									
+										$request_data = array();
+										$request_data['code'] = $key_data;
+										
+										$this->responses[ $current_plugin ]['register_code'] = $this->process_action( 'deregister_code', $current_plugin, $request_data );
+									}
 								}
 							}
 						}
@@ -228,6 +240,7 @@ class OTW_Factory extends OTW_Component{
 				$plugin_param['id'] = $plugin;
 				
 				$args = array();
+				$args['timeout'] = $this->remote_request_timeout;
 				$args['method'] = 'POST';
 				$args['body'] = array();
 				$args['body']['request'] = 'plugin_action';
@@ -260,6 +273,10 @@ class OTW_Factory extends OTW_Component{
 	public function retrive_plungins_data( $force = false ){
 		
 		$last_update = get_site_transient( 'otw_upd_plug' );
+		
+		if( $force ){
+			$this->errors = array();
+		}
 		
 		if( !is_admin() ){
 		
@@ -298,14 +315,14 @@ class OTW_Factory extends OTW_Component{
 					}
 				}
 				
-				if( $all_set ){
-					return;
-				}
+				return;
+				
 			}
 		}
 		
 		if( is_array( $this->plugins ) && count( $this->plugins ) ){
 			$args = array();
+			$args['timeout'] = $this->remote_request_timeout;
 			$args['method'] = 'POST';
 			$args['body'] = array();
 			$args['body']['request'] = 'plugin_data';
