@@ -1,11 +1,11 @@
 === Page Links To ===
 
 Contributors: markjaquith  
-Donate link: http://txfx.net/wordpress-plugins/donate  
+Donate link: https://txfx.net/wordpress-plugins/donate  
 Tags: page, redirect, link, external link, repoint  
 Requires at least: 4.8  
-Tested up to: 5.2  
-Stable tag: 3.1.2  
+Tested up to: 5.4  
+Stable tag: 3.3.3  
 
 Lets you make a WordPress page (or port or other content type) link to a URL of your choosing (on your site, or on another site), instead of its normal WordPress URL.
 
@@ -76,6 +76,34 @@ Yes. Linking to `/my-photos.php` is a good idea, as it'll still work if you move
 You can contribute (or report bugs) on [Github](https://github.com/markjaquith/page-links-to/).
 
 == Changelog ==
+
+= 3.3.3 =
+* Add a SlotFill in the Block Editor, for extension.
+* Fix New Tab support in Internet Explorer.
+
+= 3.3.2 =
+* Fix a small new tab JS error.
+
+= 3.3.1 =
+* Fix WordPress 5.2 Block Editor (plugin will NOT be in its own panel if you're using WordPress 5.2).
+
+= 3.3.0 =
+* Move Block Editor UI into its own panel.
+* Compatibility with Elementor.
+* Allow posts to load in the customizer (used by some front-end editing plugins).
+* Allow the "open in new tab" functionality to be completely disabled with a filter.
+* Make "open in new tab" more reliable.
+
+= 3.2.2 =
+* Bug fixes
+* Better compat with custom post types in the Block Editor
+
+= 3.2.1 =
+* Bug fixes
+
+= 3.2.0 =
+* Block Editor improvements
+* Smaller build
 
 = 3.1.2 =
 * Customizer bug fix

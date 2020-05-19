@@ -5,8 +5,8 @@ Tags: search, disable, coffee2code
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
-Tested up to: 5.2
-Stable tag: 1.7.1
+Tested up to: 5.3
+Stable tag: 1.7.2
 
 Disable the built-in front-end search capabilities of WordPress.
 
@@ -62,6 +62,11 @@ Yes.
 
 == Changelog ==
 
+= 1.7.2 (2019-12-12) =
+* Change: Note compatibility through WP 5.3+
+* Change: Unit tests: Change method signature of `assertQueryTrue()` to match parent's update to use the spread operator
+* Change: Update copyright date (2020)
+
 = 1.7.1 (2019-06-17) =
 * Unit tests:
     * Change: Update unit test install script and bootstrap to use latest WP unit test repo
@@ -82,22 +87,13 @@ Yes.
 * Change: Update License URI to be HTTPS
 * Change: Split paragraph in README.md's "Support" section into two
 
-= 1.6.1 (2018-05-19) =
-* New: Add README.md
-* New: Add FAQ indicating that the plugin is GDPR-compliant
-* Unit tests:
-    * Change: Make local copy of `assertQueryTrue()`; apparently it's (now?) a test-specific assertion and not a globally aware assertion
-    * Change: Enable and update `test_no_search_form_appears_even_if_searchform_php_exists()` to use TwentySeventeen theme, since it has searchform.php
-    * Change: Minor whitespace tweaks to bootstrap
-* Change: Add GitHub link to readme
-* Change: Note compatibility through WP 4.9+
-* Change: Update copyright date (2018)
-* Change: Update installation instruction to prefer built-in installer over .zip file
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/disable-search/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 1.7.2 =
+Trivial update: noted compatibility through WP 5.3+, fixed minor unit test warning, and updated copyright date (2020).
 
 = 1.7.1 =
 Trivial update: modernized unit tests and noted compatibility through WP 5.2+

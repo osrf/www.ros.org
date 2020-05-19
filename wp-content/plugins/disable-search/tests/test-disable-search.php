@@ -10,11 +10,14 @@ class Disable_Search_Test extends WP_UnitTestCase {
 		remove_filter( 'get_search_form', array( $this, 'output_search_form' ) );
 	}
 
+
 	/*
 	 *
 	 * HELPER FUNCTIONS
 	 *
 	 */
+
+
 	public function output_search_form() {
 		return '<form><label for="s"><input type="search" name="s" /></label><input type="submit" name="Submit" /></form>';
 	}
@@ -38,7 +41,7 @@ class Disable_Search_Test extends WP_UnitTestCase {
 	 *
 	 * @param string $prop,... Any number of WP_Query properties that are expected to be true for the current request.
 	 */
-	public function assertQueryTrue(/* ... */) {
+	public function assertQueryTrue( ...$prop ) {
 		global $wp_query;
 		$all = array(
 			'is_single', 'is_preview', 'is_page', 'is_archive', 'is_date', 'is_year', 'is_month', 'is_day', 'is_time',
@@ -86,7 +89,7 @@ class Disable_Search_Test extends WP_UnitTestCase {
 	}
 
 	public function test_version() {
-		$this->assertEquals( '1.7.1', c2c_DisableSearch::version() );
+		$this->assertEquals( '1.7.2', c2c_DisableSearch::version() );
 	}
 
 	public function test_hooks_plugins_loaded() {

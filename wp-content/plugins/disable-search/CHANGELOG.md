@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.7.2 _(2019-12-12)_
+* Change: Note compatibility through WP 5.3+
+* Change: Unit tests: Change method signature of `assertQueryTrue()` to match parent's update to use the spread operator
+* Change: Update copyright date (2020)
+
 ## 1.7.1 _(2019-06-17)_
 * Unit tests:
     * Change: Update unit test install script and bootstrap to use latest WP unit test repo

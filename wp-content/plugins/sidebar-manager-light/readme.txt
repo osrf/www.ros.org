@@ -3,8 +3,8 @@ Contributors: OTWthemes
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CQH6CMTR42KS2
 Tags: replace sidebar, replace widget area, custom sidebar, custom widget area widgets, sidebar, widget area, custom layout, relevant content, dynamic sidebars
 Requires at least: 3.0
-Tested up to: 4.9.8
-Stable tag: 1.15
+Tested up to: 5.3.2
+Stable tag: 1.16
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,7 +17,7 @@ You can now replace an existing sidebar (widget area) with a custom sidebar for 
 Once created all custom sidebars will be available in Appearance -> Widgets. You can drop any number of widgets in any of your custom sidebars. They work exacly the same way as the default once.
 
 > Upgrade to the Pro version of this plugin - the worlds most complete Sidebar and Widget management system for WordPress including regular updates and premium support:
-> [Sidebar and Widget Manager](http://codecanyon.net/item/sidebar-widget-manager-for-wordpress/2287447?ref=OTWthemes&utm_source=wp.org&utm_medium=page&utm_content=upgrade&utm_campaign=sml) | [Demo site](http://otwthemes.com/demos/1ts/?item=Sidebar%20Widget%20Manager&utm_source=wp.org&utm_medium=page&utm_content=upgrade&utm_campaign=sml) 
+> [Sidebar and Widget Manager](https://1.envato.market/c/1246358/275988/4415?subId1=sbm&subId2=2020&subId3=https%3A%2F%2Fcodecanyon.net%2Fitem%2Fsidebar-widget-manager-for-wordpress%2F2287447&u=https%3A%2F%2Fcodecanyon.net%2Fitem%2Fsidebar-widget-manager-for-wordpress%2F2287447) | [Demo site](http://otwthemes.com/demos/1ts/?item=Sidebar%20Widget%20Manager&utm_source=wp.org&utm_medium=page&utm_content=upgrade&utm_campaign=sml) 
 
 Add as many sidebars (widget areas) as you need. Creating sidebars(widget areas) is unlimited. 
 
@@ -58,6 +58,10 @@ Please refer to [online documentation page](http://otwthemes.com/online-document
 == Changelog ==
 
 Updating to versiion 1.3 or higher requires deactivation of the old version first! More info [here](http://otwthemes.com/updating-widgetize-pages-light-to-1-5-version-sidebar-manager-light-to-1-3-widget-manager-light-to-1-3/?utm_source=wp.org&utm_medium=page&utm_content=site&utm_campaign=sml)  
+
+= 1.16 =
+
+* Updated: OTW core functions 
 
 = 1.15 =
 
