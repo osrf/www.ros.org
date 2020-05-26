@@ -70,7 +70,8 @@ class PageLinesTemplateHandler {
 	function json_blob(){
 		?><script>
 			!function ($) {
-
+				
+				var gt = new Gettext()
 				$.pl = {
 					data: {
 						local:  <?php echo json_encode( pl_arrays_to_objects( $this->current_page_data('local') ) ); ?>
@@ -91,7 +92,9 @@ class PageLinesTemplateHandler {
 						,	layoutMode: '<?php echo $this->layout->get_layout_mode();?>'
 						,	saving: false
 					}
-					
+					, lang: function( args ){
+					return gt.gettext( args )
+					}
 					, config: {
 						userID: '<?php echo $this->get_user_id();?>'
 						, currentURL: '<?php echo $this->current_url();?>'
@@ -212,14 +215,13 @@ class PageLinesTemplateHandler {
 			'id'		=> $key,
 			'object'	=> $key,
 			'offset'	=> 0,
-			'clone'		=> substr(uniqid(), -6),
-			'unique'	=> substr(uniqid(), -6),
 			'content'	=> array(),
 			'span'		=> 12,
 			'newrow'	=> 'false',
-		
+			'clone'    => pl_new_clone_id()
 		);
 
+		$defaults['unique'] = $defaults['clone'];
 		return $defaults;
 	}
 
@@ -244,17 +246,18 @@ class PageLinesTemplateHandler {
 				if( !isset( $a['object'] ) || !$a['object'] ){
 					$a['object'] = 'PLSectionArea';
 				}
-			
+				
+                if( !isset( $a['clone'] ) ){
+                        $a['clone'] = pl_new_clone_id();
+                        $clone_was_set = true;                     
+                }
+		
 				$a = wp_parse_args( $a, $this->meta_defaults( $area ) );
 				
 				$a['set'] = $this->optset->get_set( $a['clone'] ); 
 				
 				// Lets get rid of the number based clone system
-				if( strlen( $a['clone'] ) < 3 ){
-					$a['clone'] = pl_new_clone_id();
-					$clone_was_set = true;
-				}
-					
+
 				
 				$this->section_list[ ] = $a;
 				$this->section_list_unique[ $a['object'] ] = $a;
@@ -264,24 +267,30 @@ class PageLinesTemplateHandler {
 
 				foreach($a['content'] as $key => &$meta){
 
-					$meta = wp_parse_args($meta, $this->meta_defaults($key));
-					$meta['set'] = $this->optset->get_set( $meta['clone'] ); 
-
-					if( strlen( $meta['clone'] ) < 3 ){
+					if( !isset( $a['clone'] ) ){
 						$meta['clone'] = pl_new_clone_id();
 						$clone_was_set = true;
 					}
 
+					$meta = wp_parse_args($meta, $this->meta_defaults($key));
+					$meta['set'] = $this->optset->get_set( $meta['clone'] );
+					
+					
+					
+					
+					
+					
+					
 					if(!empty($meta['content'])){
 						foreach($meta['content'] as $subkey => &$sub_meta){
-							
-							$sub_meta = wp_parse_args($sub_meta, $this->meta_defaults($subkey));
-							$sub_meta['set'] = $this->optset->get_set( $sub_meta['clone'] ); 
-							
-							if( strlen( $sub_meta['clone'] ) < 3 ){
+														
+							if( ! isset( $sub_meta['clone'] ) ){
 								$sub_meta['clone'] = pl_new_clone_id();
 								$clone_was_set = true;
 							}
+							
+							$sub_meta = wp_parse_args($sub_meta, $this->meta_defaults($subkey));
+							$sub_meta['set'] = $this->optset->get_set( $sub_meta['clone'] );
 							
 							$this->section_list[  ] = $sub_meta;
 							$this->section_list_unique[$sub_meta['object']] = $sub_meta;
@@ -301,13 +310,6 @@ class PageLinesTemplateHandler {
 			unset($a); // set by reference
 		}
 
-		
-		// This sets a map for the page, if it isn't set with new clone IDs the options wont
-		// work until a user action causes the map to be saved, non-ideal
-		if( $clone_was_set )
-			$this->map_handler->save_map_draft( $this->page->id, $this->page->typeid, $this->map, $this->get_template_mode() ); 
-		
-	
 
 		// add passive sections (not in drag drop but added through options/hooks)
 		global $passive_sections;
@@ -321,6 +323,13 @@ class PageLinesTemplateHandler {
 				$this->section_list[  ] = $meta;
 				$this->section_list_unique[ $meta['object'] ] = $meta;
 			}
+		}
+		
+		// This sets a map for the page, if it isn't set with new clone IDs the options wont
+		// work until a user action causes the map to be saved, non-ideal
+		if( $clone_was_set ){
+			$this->map_handler->save_map_draft( $this->page->id, $this->page->typeid, $this->map, $this->get_template_mode() ); 
+		  
 		}
 	}
 

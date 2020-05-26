@@ -93,7 +93,8 @@ function get_all_active_sections() {
 
 
 function pl_set_css_headers(){
-	header( 'Content-type: text/css' );
+		
+	header( 'Content-type: text/css', true, 200 );
 	header( 'Expires: ' );
 	header( 'Cache-Control: max-age=604100, public' );
 }

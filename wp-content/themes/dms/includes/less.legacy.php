@@ -90,10 +90,6 @@ class EditorLessHandler{
 
 			pl_set_css_headers();
 
-			// If you set a static home page in WordPress then delete it you get no CSS, this fixes it ( WhitchCraft! )
-			if( ! is_object( $post ) )
-				header( 'Stefans Got No Pages', true, 200 );
-
 			if( is_file( $this->draft_less_file ) ) {
 				echo pl_file_get_contents( $this->draft_less_file );
 			} else {
@@ -121,7 +117,7 @@ class EditorLessHandler{
 		// make url safe.		
 		global $post;
 		
-		$url = ( is_object( $post ) ) ? untrailingslashit( get_permalink( $post->ID ) ) : trailingslashit( site_url() );
+		$url = ( is_object( $post ) && ! is_front_page() ) ? trailingslashit( get_permalink( $post->ID ) ) : trailingslashit( site_url() );
 		
 		wp_register_style( 'pagelines-draft',  add_query_arg( array( 'pagedraft' => 1 ), $url ), false, null, 'all' );
 		
@@ -243,7 +239,7 @@ class EditorLessHandler{
 		}
 		include_once( ABSPATH . 'wp-admin/includes/file.php' );
 		if ( is_writable( $folder ) ){
-			$creds = request_filesystem_credentials('', 'direct', false, false, null);
+			$creds = request_filesystem_credentials( site_url() );
 			if ( ! WP_Filesystem($creds) )
 				return false;
 		}
@@ -436,15 +432,15 @@ class PageLinesRenderCSS {
 		$folder = pl_get_css_dir( 'path' );
 		$url = pl_get_css_dir( 'url' );
 
-		$file = sprintf( 'compiled-css-%s.css', get_theme_mod( 'pl_save_version' ) );
-
+		if( '1' == pl_setting( 'alternative_css' ) )
+			$file = 'compiled-css.css';
+		else 
+			$file = sprintf( 'compiled-css-%s.css', get_theme_mod( 'pl_save_version' ) );
+			
 		if( file_exists( trailingslashit( $folder ) . $file ) ){
 			define( 'DYNAMIC_FILE_URL', trailingslashit( $url ) . $file );
 			return;
 		}
-
-		/*if( false == $this->check_posix() )
-			return pl_less_save_last_error( 'POSIX checks failed.', false );*/
 
 		$a = $this->get_compiled_core();
 		$b = $this->get_compiled_sections();
@@ -461,23 +457,6 @@ class PageLinesRenderCSS {
 		$this->write_css_file( $out );
 	}
 
-	function check_posix() {
-
-		if ( true == apply_filters( 'render_css_posix_', false ) )
-			return true;
-
-		if ( ! function_exists( 'posix_geteuid') || ! function_exists( 'posix_getpwuid' ) )
-			return false;
-
-		$User = posix_getpwuid( posix_geteuid() );
-		$File = posix_getpwuid( fileowner( __FILE__ ) );
-		if( $User['name'] !== $File['name'] )
-			return false;
-
-		return true;
-	}
-
-
 	function write_css_file( $txt ){
 
 
@@ -488,8 +467,12 @@ class PageLinesRenderCSS {
 		$url = 'themes.php?page=pagelines';
 
 		$folder = pl_get_css_dir( 'path' );
-		$file = sprintf( 'compiled-css-%s.css', get_theme_mod( 'pl_save_version' ) );
-
+		
+		if( '1' == pl_setting( 'alternative_css' ) )
+			$file = 'compiled-css.css';
+		else
+			$file = sprintf( 'compiled-css-%s.css', get_theme_mod( 'pl_save_version' ) );
+			
 		if( !is_dir( $folder ) ) {
 			if( true !== wp_mkdir_p( $folder ) )
 				return false;
@@ -498,7 +481,7 @@ class PageLinesRenderCSS {
 		include_once( ABSPATH . 'wp-admin/includes/file.php' );
 
 		if ( is_writable( $folder ) ){
-			$creds = request_filesystem_credentials($url, $method, false, false, null);
+			$creds = request_filesystem_credentials($url);
 			if ( ! WP_Filesystem($creds) )
 				return pl_less_save_last_error( 'Unable to set filesystem credentials', false );
 		}
@@ -573,8 +556,14 @@ class PageLinesRenderCSS {
 	 */
 	function load_less_css() {
 
-		wp_enqueue_style( 'pagelines-less',  $this->get_dynamic_url(), false, null, 'all' );
-
+		if( defined( 'DYNAMIC_FILE_URL' ) ) {
+			if( '1' == pl_setting( 'alternative_css' ) )
+				wp_enqueue_style( 'pagelines-less',  $this->get_dynamic_url(), false, get_theme_mod( "pl_save_version" ), 'all' );
+			else
+				wp_enqueue_style( 'pagelines-less',  $this->get_dynamic_url(), false, null, 'all' );
+		} else {
+			wp_enqueue_style( 'pagelines-less',  $this->get_dynamic_url(), false, null, 'all' );
+		}
 	}
 
 	function get_dynamic_url() {
@@ -779,8 +768,11 @@ class PageLinesRenderCSS {
 
 		$folder = trailingslashit( pl_get_css_dir( 'path' ) );
 
-		$file = sprintf( 'compiled-css-%s.css', get_theme_mod( 'pl_save_version' ) );
-
+		if( '1' == pl_setting( 'alternative_css' ) )
+			$file = 'compiled-css.css';
+		else
+			$file = sprintf( 'compiled-css-%s.css', get_theme_mod( 'pl_save_version' ) );
+			
 		if( is_file( $folder . $file ) )
 			@unlink( $folder . $file );
 

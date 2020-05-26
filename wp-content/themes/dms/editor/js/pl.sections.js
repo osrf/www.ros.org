@@ -17,8 +17,8 @@ $.plSections = {
 						mode: 'sections'
 					,	run: 'reload'
 					,	confirm: false
-					,	savingText: 'Reloading and Registering Sections'
-					,	refreshText: 'Sections reloaded. Refreshing page!'
+					,	savingText: $.pl.lang("Reloading and Registering Sections")
+					,	refreshText: $.pl.lang("Sections reloaded. Refreshing page!")
 					,	refresh: true
 					, 	log: true
 				}
@@ -145,7 +145,7 @@ $.plSections = {
 						if(response.notice){
 							element
 								.find(wrapSelect)
-								.append('<div class="loaded-notice"><div class="the-notice">Loaded! Note: For this section, page refresh may be needed for complete functionality (Javascript Loading).</div></div>')
+								.append($.pl.lang("<div class='loaded-notice'><div class='the-notice'>Loaded! Note: For this section, page refresh may be needed for complete functionality (Javascript Loading).</div></div>"))
 
 
 							setTimeout(function () {
@@ -168,8 +168,9 @@ $.plSections = {
 				
 					}
 				,	beforeSend: function( ){
+					var Text = $.pl.lang("Loading")
 						element
-							.html('<div class="pl-refresh-banner"><i class="icon-spinner icon-spin"></i> Loading</div>')
+							.html('<div class="pl-refresh-banner"><i class="icon-spinner icon-spin"></i> '+Text+'</div>')
 					}
 			}
 

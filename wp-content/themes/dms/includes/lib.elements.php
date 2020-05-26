@@ -90,9 +90,7 @@ function pagelines_standard_sidebar($name, $description){
  */
 function pagelines_search_form( $echo = true ){
 
-	// BPG: Change the text in the search box.  Poor form to edit this here, but I couldn't find a different place to do it.
-	//$searchfield = sprintf('<input type="text" value="" name="s" class="searchfield" placeholder="%s" />', __('Search', 'pagelines'));
-	$searchfield = sprintf('<input type="text" value="" name="s" class="searchfield" placeholder="%s" />', __('Enter a search term', 'pagelines'));
+	$searchfield = sprintf('<input type="text" value="" name="s" class="searchfield" placeholder="%s" />', __('Search', 'pagelines'));
 
 	$searchform = sprintf('<form method="get" class="searchform" onsubmit="this.submit();return false;" action="%s/" ><fieldset>%s</fieldset></form>', home_url(), $searchfield);
 

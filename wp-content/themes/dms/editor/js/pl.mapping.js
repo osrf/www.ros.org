@@ -114,7 +114,7 @@
 		, getColumnSize: function(column, defaultValue) {
 
 			if (column.hasClass("span12") || defaultValue) //full-width
-				return new Array("span12", "span2", "span11", "12/12", 12)
+				return new Array("span12", "span1", "span11", "12/12", 12)
 
 		    else if (column.hasClass("span11")) //five-sixth
 		        return new Array("span11", "span12", "span10", "11/12", 11)
@@ -144,8 +144,10 @@
 				return new Array("span3", "span4", "span2", "3/12", 3)
 
 		    else if (column.hasClass("span2")) // one-sixth
-		        return new Array("span2", "span3", "span12", "2/12", 2)
+		        return new Array("span2", "span3", "span1", "2/12", 2)
 
+			else if (column.hasClass("span1")) // one-twelth?
+			        return new Array("span1", "span2", "span12", "1/12", 1)
 			else
 				return false
 

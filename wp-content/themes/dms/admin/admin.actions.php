@@ -37,17 +37,8 @@ function pagelines_build_account_interface(){
 	$optionUI = new DMSOptionsUI( $args );
 }
 
-// Admin CSS
-add_action( 'admin_head', 'load_head' );
-function load_head(){
-
-	printf( '<link rel="stylesheet" href="%s/admin.css?ver=%s" type="text/css" media="screen" />', PL_ADMIN_URI, PL_CORE_VERSION );
-
-}
-
-
 /**
- * This is a necessary go-between to get our scripts and boxes loaded
+ * This is a necessary go-between to get our scripts and css loaded
  * on the theme settings page only, and not the rest of the admin
  */
 add_action( 'admin_menu', 'pagelines_theme_settings_init' );
@@ -55,16 +46,14 @@ function pagelines_theme_settings_init() {
 	global $_pagelines_account_hook;
 	
 	add_action( "admin_print_scripts-{$_pagelines_account_hook}", 'pagelines_theme_settings_scripts' );
-
-
 }
 
 
 
-// JS
+// JS/CSS
 function pagelines_theme_settings_scripts() {
 
-	
+	wp_enqueue_style( 'pagelines-css', sprintf( '%s/admin.css', PL_ADMIN_URI ), null, PL_CORE_VERSION );
 	wp_enqueue_script( 'pagelines-admin', PL_JS . '/admin.pagelines.js', array( 'jquery' ), PL_CORE_VERSION );
 	
 	pl_enqueue_codemirror();

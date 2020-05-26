@@ -187,7 +187,7 @@ function pl_create_id( $string ){
 }
 
 function pl_new_clone_id(){
-	return substr(uniqid(), -6);
+	return 'u' . substr(uniqid(), -5);
 }
 
 

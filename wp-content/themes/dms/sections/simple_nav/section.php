@@ -71,6 +71,7 @@ class SimpleNav extends PageLinesSection {
 		$classes = sprintf('inline-list simplenav font-sub %s', $align);
 
 		$args = array(
+			'theme_location'	=> 'simple_nav',
 			'menu_class'  	=> $classes,
 			'menu'			=> $menu,
 			'depth' 		=> 1,

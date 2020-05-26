@@ -139,9 +139,9 @@ function fix_wp_login_imagetitle( $url ){
 add_action('login_head', 'pl_fix_login_image');
 function pl_fix_login_image( ){
 
-	$image_url = (pl_setting('pl_login_image')) ? pl_setting('pl_login_image') : PL_ADMIN_IMAGES . '/login-pl.png';
+	$image_url = (pl_setting('pl_login_image')) ? pl_setting('pl_login_image') : PL_IMAGES . '/default-login-image.png';
 
-	$css = sprintf('body #login h1 a{background: url(%s) no-repeat top center;height: 80px;background-size:auto; background-size: auto 80px;}', $image_url);
+	$css = sprintf('body #login h1 a{background: url(%s) no-repeat top center;height: 80px; background-size:auto; width:auto;}', $image_url);
 
 	inline_css_markup('pagelines-login-css', $css);
 }

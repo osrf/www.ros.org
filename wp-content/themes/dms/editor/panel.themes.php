@@ -124,7 +124,7 @@ class EditorThemeHandler {
 
 				if($active_theme->stylesheet == $t->get_stylesheet()){
 					$class[] = 'active-theme';
-					$active = ' <span class="badge badge-info"><i class="icon-ok"></i> Active</span>';
+					$active = __( ' <span class="badge badge-info"><i class="icon-ok"></i> Active</span>', 'pagelines' );
 					$number = 0;
 				}else {
 					$active = '';

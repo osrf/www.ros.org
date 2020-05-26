@@ -105,10 +105,10 @@ define( 'PL_CHILD_LESS', PL_CHILD_DIR . '/less' );
 define( 'PL_CHILD_LESS_URL', PL_CHILD_URL . '/less' );
 
 
-if ( is_multisite() && ! is_super_admin() )
-	define( 'EXTEND_NETWORK', true);
-else
-	define( 'EXTEND_NETWORK', false);
+// if ( is_multisite() && ! is_super_admin() )
+// 	define( 'EXTEND_NETWORK', true);
+// else
+// 	define( 'EXTEND_NETWORK', false);
 
 
 /**
@@ -130,12 +130,16 @@ define( 'PL_ACTIVATE_URL' , apply_filters('pl_activate_url', home_url().'?tablin
  */
 if (is_dir( PL_CHILD_DIR . '/language' )) {
 	$lang = PL_CHILD_DIR . '/language';
+	$lang_url = PL_CHILD_URL . '/language';
 } elseif (is_dir( EXTEND_CHILD_DIR . '/language' )){
 	$lang = EXTEND_CHILD_DIR . '/language';
+	$lang_url = EXTEND_CHILD_URL . '/language';
 } else {
 	$lang = PL_PARENT_DIR . '/language';
+	$lang_url = PL_PARENT_URL . '/language';
 }
 define( 'PAGELINES_LANGUAGE_DIR', $lang );
+define( 'PAGELINES_LANGUAGE_URL', $lang_url );
 
 /**
  * Pro/Free Version Variables

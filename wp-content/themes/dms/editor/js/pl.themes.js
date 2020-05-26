@@ -10,10 +10,10 @@ $.plThemes = {
 					mode: 'themes'
 				,	run: 'activate'
 				,	confirm: true
-				,	confirmText: '<h3>Are you sure?</h3> <p>This will activate this theme sitewide.</p>'
-				,	savingText: 'Activating Theme'
+				,	confirmText: $.pl.lang("<h3>Are you sure?</h3> <p>This will activate this theme sitewide.</p>")
+				,	savingText: $.pl.lang("Activating Theme")
 				,	refresh: true
-				,	refreshText: 'Successfully Activated. Refreshing page'
+				,	refreshText: $.pl.lang("Successfully Activated. Refreshing page")
 				, 	log: true
 				,	stylesheet: $(this).data('stylesheet')
 			}
@@ -26,10 +26,10 @@ $.plThemes = {
 					mode: 'themes'
 				,	run: 'preview'
 				,	confirm: true
-				,	confirmText: '<h3>Activate Theme Preview?</h3> <p>This will activate a theme preview sitewide.<br/>(while in draft mode)</p>'
-				,	savingText: 'Loading Theme Preview'
+				,	confirmText: $.pl.lang("<h3>Activate Theme Preview?</h3> <p>This will activate a theme preview sitewide.<br/>(while in draft mode)</p>")
+				,	savingText: $.pl.lang("Loading Theme Preview")
 				,	refresh: false
-				,	refreshText: 'Successfully Loaded. Refreshing page'
+				,	refreshText: $.pl.lang("Successfully Loaded. Refreshing page")
 				, 	log: true
 				,	stylesheet: $(this).data('stylesheet')
 			}
@@ -42,7 +42,7 @@ $.plThemes = {
 		var buttons = ''
 		,	theme = sprintf('data-stylesheet="%s"', data.stylesheet)
 
-		buttons += sprintf('<a href="#" class="btn btn-primary btn-theme-activate x-remove" %s><i class="icon-bolt"></i> Activate</a> ', theme)
+		buttons += sprintf('<a href="#" class="btn btn-primary btn-theme-activate x-remove" %s><i class="icon-bolt"></i> %s</a> ', theme, $.pl.lang("Activate"))
 
 
 		// Can't get this to work because of a PHP loading issue

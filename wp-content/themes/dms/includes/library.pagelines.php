@@ -36,5 +36,5 @@ function pagelines_add_admin_menu() {
 		$menu['2.995'] = array( '', 'edit_theme_options', 'separator-pagelines', '', 'wp-menu-separator' );
 
 		// Create the new top-level Menu
-		add_menu_page( 'PageLines', 'PageLines', 'edit_theme_options', PL_MAIN_DASH, 'pagelines_build_account_interface', 'div', '2.996' );
+ 		add_menu_page( 'PageLines', 'PageLines', 'edit_theme_options', PL_MAIN_DASH, 'pagelines_build_account_interface', PL_PARENT_URL . '/images/admin-icon.png', '2.996' );
 }

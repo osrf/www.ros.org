@@ -29,7 +29,7 @@ class PLNavBar extends PageLinesSection {
 
 		wp_enqueue_script( 'navbar', $this->base_url.'/navbar.js', array( 'jquery' ), PL_CORE_VERSION, true );
 	}
-
+	
 	function section_head() {
 		?>
 			<!--[if IE 8]>
@@ -132,7 +132,7 @@ class PLNavBar extends PageLinesSection {
 	function add_settings( $settings ){
 
 		$settings[ $this->id ] = array(
-				'name' 	=> 'NavBar',
+				'name' 	=> __( 'NavBar', 'pagelines' ),
 				'icon'	=> 'icon-list-alt',
 				'pos'	=> 5,
 				'opts' 	=> $this->fixed_options()
@@ -198,12 +198,12 @@ class PLNavBar extends PageLinesSection {
 
 	function section_persistent() {
 
-
+		register_nav_menus( array( 'main_nav' => __( 'Main Nav Section', 'pagelines' ) ) );
 		add_filter('pl_settings_array', array( $this, 'add_settings'));
 
 		$option_args = array(
 
-			'name'		=> 'NavBar',
+			'name'		=> __( 'NavBar', 'pagelines' ),
 			'array'		=> $this->old_options(),
 			'icon'		=> $this->icon,
 			'position'	=> 6
@@ -309,7 +309,7 @@ class PLNavBar extends PageLinesSection {
 
 					}
 
-					if ( is_array( wp_get_nav_menu_items( $menu ) ) || has_nav_menu( 'primary' ) ) {
+					if ( is_array( wp_get_nav_menu_items( $menu ) ) || has_nav_menu( 'main_nav' ) ) {
 					wp_nav_menu(
 						array(
 							'menu_class'		=> 'font-sub navline pldrop ' . $align_class,
@@ -317,7 +317,8 @@ class PLNavBar extends PageLinesSection {
 							'container'			=> null,
 							'container_class'	=> '',
 							'depth'				=> 3,
-							'fallback_cb'		=> ''
+							'fallback_cb'		=> '',
+							'theme_location'	=> 'main_nav',
 						)
 					);
 					} else {

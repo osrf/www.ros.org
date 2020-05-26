@@ -243,7 +243,7 @@ function pl_upload_config_file(){
 		$response['import_file'] = $file;
 		$response['post'] = $_POST;
 	} else {
-		$reponse['import_error'] = 'filename?';
+		$response['import_error'] = $filename;
 	}
 
 	echo json_encode(  pl_arrays_to_objects( $response ) );
@@ -373,7 +373,7 @@ function pagelines_check_folders_dms( $note ) {
 			<div class="editor-alert alert">
 				
 			  	<strong><i class="icon-cogs"></i> <?php _e( 'Install DMS Utilities', 'pagelines' ); ?>
-			  	</strong><p><?php _e( 'Your site is "Pro activated" but you have not installed the DMS Pro tools plugin. Grab the plugin on <a href="http://www.pagelines.com/my-account" >PageLines.com &rarr; My-Account</a>.', 'pagelines' ); ?>
+			  	</strong><p><?php _e( 'Your site is "Pro activated" but we have detected that the DMS Pro Tools plugin is not activated. Grab this plugin if you have not installed it yet on <a href="http://www.pagelines.com/my-account" >PageLines.com &rarr; My-Account</a>.', 'pagelines' ); ?>
 			  	</p>
 
 			</div>
@@ -429,39 +429,49 @@ class PLImageUploader{
 			add_filter( 'media_upload_tabs', array( $this, 'filter_upload_tabs' ) );
 			add_filter( 'media_upload_mime_type_links', '__return_empty_array' );
 			add_action( 'media_upload_library' , array( $this, 'the_js' ), 15 );
+			add_action( 'admin_head', array( $this, 'media_css' ) );
+			add_action('admin_print_scripts', array( $this, 'dequeue_offending_scripts' ));
 		}
 	}
 
+	// dequeue scripts that break the image uploader.
+	function dequeue_offending_scripts() {
+		
+		// nextgen gallery destroys media uploader. 
+		wp_dequeue_script( 'frame_event_publisher' );
+	}
+
+	function media_css() {
+
+		echo '<style type="text/css">
+		#media-upload #filter, #media-upload #media-items {
+		width: 770px;
+		}</style>';
+	}
 
 	function the_js(){
 		?>
-
-		<script type="text/javascript">
+		<script>
 		jQuery(document).ready(function(){
 			jQuery('.pl-frame-button').on('click', function(){
 			
 				var oSel = parent.jQuery.pl.iframeSelector
 				,	optID = '#' + oSel
-				,	previewSel = '.pre_' + oSel
-				,	editorPrevew = '.opt-upload-thumb-' + oSel
 				,	imgURL = jQuery(this).data('imgurl')
 				,	imgURLShort = jQuery(this).data('short-img-url')
-				, 	theOption = '[id="'+oSel+'"]'
+				, 	theOption = jQuery( '[id="'+oSel+'"]', top.document) 
+				,	thePreview = theOption.closest('.img-upload-box').find('.opt-upload-thumb')
 				
-				console.log(theOption)
-
-				jQuery( theOption, top.document).val( imgURLShort )
+				theOption.val( imgURLShort )
 				
-				parent.jQuery( '.lstn' ).first().trigger('blur')
+				thePreview.html( '<div class="img-wrap"><img style="max-width:150px;max-height: 100px;" src="'+ imgURL +'" /></div>' )
 				
-				jQuery(previewSel, top.document).attr('src', imgURL)
-				
-				jQuery( editorPrevew, top.document).html( '<div class="img-wrap"><img style="max-width:200px;" src="'+ imgURL +'" /></div>' )
 				
 				parent.eval('jQuery(".bootbox").modal("hide")')
 			
-			});
-		});
+				
+			})
+		})
 		</script>
 
 		<?php

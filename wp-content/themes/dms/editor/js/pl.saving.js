@@ -12,9 +12,9 @@
 					mode: 'fast_save'
 				,	run: 'all'
 				,	store: $.pl.data
-				,	savingText: 'Saving.'
+				,	savingText: $.pl.lang("Saving.")
 				,	refresh: false
-				,	refreshText: 'Successfully saved! Refreshing page...'
+				,	refreshText: $.pl.lang("Successfully saved! Refreshing page...")
 				, 	templateMode: $.pl.config.templateMode || 'local'
 			}
 			

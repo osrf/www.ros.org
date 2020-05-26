@@ -6,29 +6,34 @@
  */
 
 !function ($) {
-	
+
 $(document).ready(function(){
 
 	if($("#pl-dms-less").length){
-	
+
 		var cm_mode = jQuery("#pl-dms-less").data('mode')
 		,	cm_config = jQuery.extend( cm_base_config, { cm_mode : cm_mode } )
 		,	editor3 = CodeMirror.fromTextArea(jQuery("#pl-dms-less").get(0), cm_config)
-		
+
 	}
 
 	if(jQuery("#pl-dms-scripts").length){
-		
+
 		var cm_mode = jQuery("#pl-dms-scripts").data('mode')
 		,	cm_config = jQuery.extend( cm_base_config, { cm_mode : cm_mode } )
 		,	editor4 = CodeMirror.fromTextArea(jQuery("#pl-dms-scripts").get(0), cm_config);
 	}
-	
+
 	jQuery('.dms-update-setting').on('submit', function(e){
-		
+
 		var theSetting = jQuery(this).data('setting')
 		,	theValue = jQuery('.input_'+theSetting).val()
-		,	saveText = jQuery(this).find('.saving-confirm');
+		,	saveText = jQuery(this).find('.saving-confirm')
+		,	Type = $(this).data('type') || false
+
+		if( 'check' == Type ) {
+			theValue = ( $('.input_'+theSetting).is(':checked') ) ? 1 : 0
+		}
 
 		jQuery.ajax({
 			type: 'POST',
@@ -41,23 +46,23 @@ $(document).ready(function(){
 				, flag: 'admin_fallback'
 			},
 			beforeSend: function(){
-			
-				
+
+
 				saveText.show().text('Saving'); // text while saving
-				
+
 				interval = window.setInterval(function(){
 					var text = saveText.text();
 					if (text.length < 10){	saveText.text(text + '.'); }
 					else { saveText.text('Saving'); }
 				}, 400);
-				
-				
+
+
 			},
 			success: function(response) {
 				window.clearInterval(interval); // clear dots...
-			
+
 				saveText.text('Saved!');
-				
+
 				saveText
 					.delay(800)
 					.fadeOut('slow')
@@ -65,7 +70,7 @@ $(document).ready(function(){
 		});
 
 		return false;
-		
+
 	})
 
 

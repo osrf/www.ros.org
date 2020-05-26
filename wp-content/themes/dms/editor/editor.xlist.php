@@ -78,7 +78,7 @@ class EditorXList{
 				</div>
 			</section>",
 			$args['id'],
-			substr(uniqid(), 0, 6),
+			pl_new_clone_id(),
 			'filter-'.$args['id'],
 			$classes,
 			$datas,

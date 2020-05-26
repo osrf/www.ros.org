@@ -244,34 +244,34 @@ class PLMasthead extends PageLinesSection {
 				'pagelines_masthead_splash_multi' => array(
 					'type' 				=> 'multi_option',
 					'title' 			=> __('Masthead Splash Options','pagelines'),
-					'shortexp'	=> __('Enter the options for the masthead splash image. If no options are specified, no image will be shown.', 'pagelines'),
+					'shortexp'	=> __( 'Enter the options for the masthead splash image. If no options are specified, no image will be shown.', 'pagelines' ),
 					'selectvalues'	=> array(
 						'pagelines_masthead_img' => array(
 							'type' 			=> 'image_upload',
 							'imagepreview' 	=> '270',
-							'inputlabel' 	=> 'Upload custom image',
+							'inputlabel' 	=> __( 'Upload custom image', 'pagelines' ),
 						),
 						'pagelines_masthead_html'   => array(
 							'type' 			=> 'textarea',
-							'inputlabel' 	=> 'Masthead Video (optional, to be used instead of image)',
+							'inputlabel' 	=> __( 'Masthead Video (optional, to be used instead of image)', 'pagelines' ),
 						),
 						'masthead_html_width'   => array(
 							'type' 			=> 'text',
-							'inputlabel' 	=> 'Maximum width of splash in px (default is full width)',
+							'inputlabel' 	=> __( 'Maximum width of splash in px (default is full width)', 'pagelines' ),
 						),
 					),
-					'exp'                   => 'Upload an image to serve as a splash image, or use an embed code for full width video.',
+					'exp'                   => __( 'Upload an image to serve as a splash image, or use an embed code for full width video.', 'pagelines' ),
 				),
 				'pagelines_masthead_text' => array(
 						'type' 				=> 'text_multi',
 						'layout'			=> 'full',
-						'inputlabel' 		=> 'Enter text for your masthead banner section',
-						'title' 			=> $this->name.' Text',
+						'inputlabel' 		=> __( 'Enter text for your masthead banner section', 'pagelines' ),
+						'title' 			=> $this->name . __( ' Text', 'pagelines' ),
 						'selectvalues'	=> array(
-							'pagelines_masthead_title'		=> array('inputlabel'=>'Title', 'default'=> ''),
-							'pagelines_masthead_tagline'	=> array('inputlabel'=>'Tagline', 'default'=> '')
+							'pagelines_masthead_title'		=> array('inputlabel'=>__( 'Title', 'pagelines' ), 'default'=> ''),
+							'pagelines_masthead_tagline'	=> array('inputlabel'=>__( 'Tagline', 'pagelines' ), 'default'=> '')
 						),
-						'shortexp' 			=> 'The text for the masthead section',
+						'shortexp' 			=> __( 'The text for the masthead section', 'pagelines' ),
 
 				),
 				'masthead_button_multi_1' => array(
@@ -281,30 +281,30 @@ class PLMasthead extends PageLinesSection {
 					'selectvalues'	=> array(
 						'masthead_button_link_1' => array(
 							'type' => 'text',
-							'inputlabel' => 'Enter the link destination (URL - Required)',
+							'inputlabel' => __( 'Enter the link destination (URL - Required)', 'pagelines' ),
 
 						),
 						'masthead_button_text_1' => array(
 							'type' 			=> 'text',
-							'inputlabel' 	=> 'Masthead Button Text',
+							'inputlabel' 	=> __( 'Masthead Button Text', 'pagelines' ),
 						 ),
 
 						'masthead_button_target_1' => array(
 							'type'			=> 'check',
 							'default'		=> false,
-							'inputlabel'	=> 'Open link in new window.',
+							'inputlabel'	=> __( 'Open link in new window.', 'pagelines' ),
 						),
 						'masthead_button_theme_1' => array(
 							'type'			=> 'select',
 							'default'		=> false,
-							'inputlabel'	=> 'Select Button Color',
+							'inputlabel'	=> __( 'Select Button Color', 'pagelines' ),
 							'selectvalues'	=> array(
-								'primary'	=> array('name' => 'Blue'),
-								'warning'	=> array('name' => 'Orange'),
-								'important'	=> array('name' => 'Red'),
-								'success'	=> array('name' => 'Green'),
-								'info'		=> array('name' => 'Light Blue'),
-								'reverse'	=> array('name' => 'Grey'),
+								'primary'	=> array('name' => __( 'Blue', 'pagelines' )),
+								'warning'	=> array('name' => __( 'Orange', 'pagelines' )),
+								'important'	=> array('name' => __( 'Red', 'pagelines' )),
+								'success'	=> array('name' => __( 'Green', 'pagelines' )),
+								'info'		=> array('name' => __( 'Light Blue', 'pagelines' )),
+								'reverse'	=> array('name' => __( 'Grey', 'pagelines' )),
 							),
 						),
 					)
@@ -316,45 +316,45 @@ class PLMasthead extends PageLinesSection {
 					'selectvalues'	=> array(
 						'masthead_button_link_2' => array(
 							'type' => 'text',
-							'inputlabel' => 'Enter the link destination (URL - Required)',
+							'inputlabel' => __( 'Enter the link destination (URL - Required)', 'pagelines' ),
 
 						),
 						'masthead_button_text_2' => array(
 							'type' 			=> 'text',
-							'inputlabel' 	=> 'Masthead Button Text',
+							'inputlabel' 	=> __( 'Masthead Button Text', 'pagelines' ),
 						 ),
 
 						'masthead_button_target_2' => array(
 							'type'			=> 'check',
 							'default'		=> false,
-							'inputlabel'	=> 'Open link in new window.',
+							'inputlabel'	=> __( 'Open link in new window.', 'pagelines' ),
 						),
 						'masthead_button_theme_2' => array(
 							'type'			=> 'select',
 							'default'		=> false,
-							'inputlabel'	=> 'Select Button Color',
+							'inputlabel'	=> __( 'Select Button Color', 'pagelines' ),
 							'selectvalues'	=> array(
-								'primary'	=> array('name' => 'Blue'),
-								'warning'	=> array('name' => 'Orange'),
-								'important'	=> array('name' => 'Red'),
-								'success'	=> array('name' => 'Green'),
-								'info'		=> array('name' => 'Light Blue'),
-								'reverse'	=> array('name' => 'Grey'),
+								'primary'	=> array('name' => __( 'Blue', 'pagelines' )),
+								'warning'	=> array('name' => __( 'Orange', 'pagelines' )),
+								'important'	=> array('name' => __( 'Red', 'pagelines' )),
+								'success'	=> array('name' => __( 'Green', 'pagelines' )),
+								'info'		=> array('name' => __( 'Light Blue', 'pagelines' )),
+								'reverse'	=> array('name' => __( 'Grey', 'pagelines' )),
 							),
 						),
 					)
 				),
 				'masthead_menu' => array(
-					'shortexp'	=> __('Choose a Wordpress menu to display (optional)', 'pagelines'),
+					'shortexp'	=> __( 'Choose a Wordpress menu to display (optional)', 'pagelines' ),
 						'type' 			=> 'select_menu',
-						'title'			=> 'Masthead Menu',
-						'inputlabel' 	=> 'Select Masthead Menu',
+						'title'			=> __( 'Masthead Menu', 'pagelines' ),
+						'inputlabel' 	=> __( 'Select Masthead Menu', 'pagelines' ),
 					),
 				'masthead_meta' => array(
-					'shortexp'	=> __('Enter text to be shown on Masthead (optional)', 'pagelines'),
+					'shortexp'	=> __( 'Enter text to be shown on Masthead (optional)', 'pagelines' ),
 						'type' 			=> 'textarea',
-						'title'			=> 'Masthead Meta',
-						'inputlabel' 	=> 'Enter Masthead Meta Text',
+						'title'			=> __( 'Masthead Meta', 'pagelines' ),
+						'inputlabel' 	=> __( 'Enter Masthead Meta Text', 'pagelines' ),
 					),
 
 			);

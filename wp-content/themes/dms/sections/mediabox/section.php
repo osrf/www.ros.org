@@ -52,6 +52,7 @@ class PageLinesMediaBox extends PageLinesSection {
 							'center'		=> array('name' => __( 'Align Center (Default)', 'pagelines' )),
 							'left'			=> array('name' => __( 'Align Left', 'pagelines' )),
 							'right'			=> array('name' => __( 'Align Right', 'pagelines' )),
+							'none'                  => array('name' => __( 'None', 'pagelines' )),
 						)
 					),
 					array(
@@ -125,6 +126,8 @@ class PageLinesMediaBox extends PageLinesSection {
 			$align_class = 'textright alignright';
 		elseif($align == 'left')
 			$align_class = 'textleft alignleft';
+		elseif($align == 'none')
+                        $align_class = '';
 		else
 			$align_class = 'center';
 		

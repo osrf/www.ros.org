@@ -30,7 +30,7 @@ class PageLinesUpdateCheck {
 
 		if( 'dms' != $folder )
 			return;
-		
+
 		add_action('admin_notices', array( $this,'pagelines_theme_update_nag') );
 		add_filter('site_transient_update_themes', array( $this,'pagelines_theme_update_push') );
 		add_filter('transient_update_themes', array( $this,'pagelines_theme_update_push') );
@@ -77,29 +77,36 @@ class PageLinesUpdateCheck {
 
 		if ( ! is_super_admin() || ! $pagelines_update || ! current_user_can( 'edit_themes' ) )
 			return false;
+		$screen = get_current_screen();
 
-		if ( $this->email == '' || $this->key == '' || $pagelines_update['package'] == 'bad' ) {
-
-			//	add_filter('pagelines_admin_notifications', array( $this,'bad_creds') );
-
-		}
-
-		echo '<div class="updated">';
-
-		printf( '<p>%s v%s is available.', $this->theme, esc_html( $pagelines_update['new_version'] ) );
+		if( ! in_array( $screen->id, array( 'update-core', 'dashboard', 'toplevel_page_PageLines-Admin' ) ) )
+			return false;
 
 		$account_set_url = add_query_arg( array( 'tablink' => 'account', 'tabsublink' => 'pl_account#pl_account' ), site_url() );
 
-		printf(
-			' %s',
-			( $pagelines_update['package'] != 'bad' )
-				? sprintf( 'You should <a href="%s">update now</a>.', admin_url('update-core.php') )
-				: sprintf( '<a href="%s">Click here</a> to setup your PageLines account.', $account_set_url )
-		);
+		$details_button = ( $pagelines_update['extra'] ) ? '<span style="float:right" class="pl_updates"><a href="#">Details</a></span><span style="float:right" class="pl_updates hidden"><a href="#">Hide</a></span>' : '';
 
-		echo ( $pagelines_update['extra'] ) ? sprintf('<br />%s', $pagelines_update['extra'] ) : '';
-		echo '</div></p>';
+		$warning = ( $screen->id == 'update-core' ) ? '<br /><strong>Please</strong> update all plugins before upgrading DMS.' : '';
 
+		$details = ( $pagelines_update['extra'] ) ? sprintf( '<div id="pl_updates_data" style="display:none"><br />%s</div>', $pagelines_update['extra'] ) : '';
+
+		$content = sprintf( 'There is an update for DMS, version %s is now available. %s%s%s%s',
+
+		$pagelines_update['new_version'],
+		( $pagelines_update['package'] != 'bad' )
+			? sprintf( 'You should <a href="%s">update now</a>.', admin_url('update-core.php') )
+			: sprintf( '<a href="%s">Click here</a> to setup your PageLines account.', $account_set_url ),
+			$details_button,
+			$warning,
+			$details
+		 );
+		printf( '<div class="updated"><p>%s</p></div>
+			<script>
+				jQuery( ".pl_updates" ).click(function() {
+					jQuery( "#pl_updates_data" ).toggle( "slow" )
+					jQuery( ".pl_updates" ).toggle()
+				})
+			</script>', $content );
 	}
 
 	/**

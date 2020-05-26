@@ -1332,7 +1332,7 @@ class PageLines_ShortCodes {
 					});
 				</script><?php
 
-		   		printf( '<div id="modal_%6$s" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"><div class="modal-header"><a class="close" data-dismiss="modal" aria-hidden="true">×</a><h3>%s</h3></div><div class="modal-body"><p>%4$s</p></div><div class="modal-footer"><a href="#" class="btn btn-%3$s" data-dismiss="modal" aria-hidden="true">%7$s</a></div></div><a data-toggle="modal" role="button" href="#modal_%6$s" class="%2$s %2$s-%3$s">%5$s</a>',
+			  printf( '<a data-toggle="modal" role="button" href="#modal_%6$s" class="%2$s %2$s-%3$s">%5$s</a><div id="modal_%6$s" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"><div class="modal-header"><a class="close" data-dismiss="modal" aria-hidden="true">×</a><h3>%s</h3></div><div class="modal-body"><p>%4$s</p></div><div class="modal-footer"><a href="#" class="btn btn-%3$s" data-dismiss="modal" aria-hidden="true">%7$s</a></div></div>',
 				$title,
 				$type,
 				$colortype,
@@ -1424,15 +1424,15 @@ class PageLines_ShortCodes {
 
 
     		case 'vimeo':
-    			$out = sprintf( '<div class="pl-video vimeo"><iframe src="http://player.vimeo.com/video/%s" width="%s" height="%s"  frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen wmode="transparent"></iframe></div>',$id, $width, $height );
+    			$out = sprintf( '<div class="pl-video vimeo"><iframe src="//player.vimeo.com/video/%s" width="%s" height="%s"  frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen wmode="transparent"></iframe></div>',$id, $width, $height );
     			break;
 
     		case 'dailymotion':
-    			$out = sprintf( '<div class="pl-video dailymotion"><iframe src="http://www.dailymotion.com/embed/video/%s" width="%s" height="%s"  frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen wmode="transparent"></iframe></div>',$id, $width, $height );
+    			$out = sprintf( '<div class="pl-video dailymotion"><iframe src="//www.dailymotion.com/embed/video/%s" width="%s" height="%s"  frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen wmode="transparent"></iframe></div>',$id, $width, $height );
     			break;
 
     		default:
-    			$out = sprintf('<div class="pl-video youtube"><iframe src="http://www.youtube.com/embed/%s%s" width="%s" height="%s" frameborder="0" allowfullscreen wmode="transparent"></iframe></div>', $id, $related, $width, $height);
+    			$out = sprintf('<div class="pl-video youtube"><iframe src="//www.youtube.com/embed/%s%s" width="%s" height="%s" frameborder="0" allowfullscreen wmode="transparent"></iframe></div>', $id, $related, $width, $height);
     	}
 	    return $out;
     }

@@ -1,0 +1,3568 @@
+# 
+# Translators:
+# Banncan Lueng <banncan@qq.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: PageLines DMS\n"
+"POT-Creation-Date: 2013-11-05 18:32-0000\n"
+"PO-Revision-Date: 2013-11-06 09:20+0000\n"
+"Last-Translator: Dionizio Bonfim Bach <translations@djio.com.br>\n"
+"Language-Team: Chinese (Taiwan) (http://www.transifex.com/projects/p/pagelines-dms/language/zh_TW/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_TW\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;lang\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../comments.php:23
+msgid "Comments are closed."
+msgstr "評論被關閉。"
+
+#: ../comments.php:38
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr "這是一篇受密碼保護。輸入密碼查看任何意見。"
+
+#: ../comments.php:44
+#, php-format
+msgid "One Response to %2$s"
+msgid_plural "%1$s Responses to %2$s"
+msgstr[0] ""
+
+#: ../comments.php:52
+msgid "<span class='meta-nav'>&larr;</span> Older Comments"
+msgstr "<span class='meta-nav'>&larr;</span> 舊評論"
+
+#: ../comments.php:53
+msgid "Newer Comments <span class='meta-nav'>&rarr;</span>"
+msgstr "較新的評論<span class='meta-nav'>&rarr;</span>"
+
+#: ../admin/admin.actions.php:18
+msgid "DMS Tools"
+msgstr ""
+
+#: ../admin/admin.actions.php:34
+msgid "PageLines DMS"
+msgstr ""
+
+#: ../admin/admin.actions.php:102
+#, php-format
+msgid ""
+"<div class='config-error'><h2>PHP Version Problem</h2>Looks like you are "
+"using PHP version: <strong>%s</strong>. To run this framework you will need "
+"PHP <strong>5.0</strong> or better...<br/><br/> Don't worry though! Just "
+"check with your host about a quick upgrade.</div>"
+msgstr "<div class='config-error'><h2>PHP版本問題</h2>看起來你正在使用的PHP版本：<strong> %s </strong>。要運行這個框架，您將需要PHP  <strong>5.0</strong>或更高的......<br/><br/>請不要擔心！只是檢查你的主機快速升級。</div>"
+
+#: ../admin/admin.editor.php:18
+msgid "PageLines DMS Settings"
+msgstr ""
+
+#: ../admin/admin.editor.php:22
+msgid "Editing Your Site With DMS"
+msgstr ""
+
+#: ../admin/admin.editor.php:26
+msgid "Welcome to DMS!"
+msgstr ""
+
+#: ../admin/admin.editor.php:31
+msgid "DMS Fallbacks"
+msgstr ""
+
+#: ../admin/admin.editor.php:32
+msgid ""
+"Below are secondary fallbacks to the DMS code editors. You may need these if"
+" you create errors or issues on the front end."
+msgstr ""
+
+#: ../admin/admin.editor.php:36
+msgid "DMS LESS Fallback"
+msgstr "DMS LESS故障預置"
+
+#: ../admin/admin.editor.php:40
+msgid "DMS Header Scripts Fallback"
+msgstr "DMS頁頭腳本故障預置"
+
+#: ../admin/admin.editor.php:54
+msgid ""
+"Editing with DMS is done completely on the front end of your site. This "
+"allows you to customize in a way that feels more direct and intuitive than "
+"when using the admin."
+msgstr ""
+
+#: ../admin/admin.editor.php:55
+msgid "Just visit the front end of your site (as an admin) and get started!"
+msgstr ""
+
+#: ../admin/admin.editor.php:57
+msgid "Edit Site Using DMS"
+msgstr ""
+
+#: ../admin/admin.editor.php:69
+msgid "Save LESS"
+msgstr "保存LESS"
+
+#: ../admin/admin.editor.php:81
+msgid "Save Scripts"
+msgstr "保存腳本"
+
+#: ../editor/editor.account.php:199
+msgid "DMS"
+msgstr ""
+
+#: ../editor/editor.account.php:207
+msgid "Your Account"
+msgstr "您的帳戶"
+
+#: ../editor/editor.account.php:213
+msgid "Getting Started"
+msgstr "入門"
+
+#: ../editor/editor.account.php:219
+msgid "Support"
+msgstr "支持"
+
+#: ../editor/editor.account.php:441
+msgid "Get PRO stuff free with Karma."
+msgstr ""
+
+#: ../editor/editor.account.php:443
+msgid ""
+"For every friend you invite who joins and installs PageLines, we'll give you"
+" and your friend 50 karma points! Karma points can be redeemed as cash with "
+"PageLines."
+msgstr ""
+
+#: ../editor/editor.account.php:447
+msgid "Invite Friends by Email"
+msgstr ""
+
+#: ../editor/editor.account.php:450
+msgid "Add emails (Comma separated)"
+msgstr ""
+
+#: ../editor/editor.account.php:452
+msgid "Invite"
+msgstr ""
+
+#: ../editor/editor.account.php:455 ../editor/editor.account.php:467
+msgid " Add/Update Account Info"
+msgstr ""
+
+#: ../editor/editor.account.php:457
+msgid "Name and invite link needed."
+msgstr ""
+
+#: ../editor/editor.account.php:462
+msgid "Your Invite Link"
+msgstr ""
+
+#: ../editor/editor.account.php:483
+msgid " Your Karma"
+msgstr "你的Karma"
+
+#: ../editor/editor.account.php:489
+msgid " Current"
+msgstr "當前"
+
+#: ../editor/editor.account.php:496
+msgid " Lifetime"
+msgstr ""
+
+#: ../editor/editor.account.php:505
+msgid "Get karma"
+msgstr "獲取karma"
+
+#: ../editor/editor.account.php:507
+msgid "Use karma"
+msgstr "使用karma"
+
+#: ../editor/editor.account.php:509
+msgid "Learn more about karma"
+msgstr "學習更多關於karma"
+
+#: ../editor/editor.account.php:561 ../editor/editor.interface.php:347
+#: ../editor/js/pl.editor.js:175
+msgid "Saving"
+msgstr "保存中"
+
+#: ../editor/editor.account.php:566
+msgid "Site Not Activated"
+msgstr "網站沒被激活"
+
+#: ../editor/editor.account.php:575
+msgid "Pro Activated!"
+msgstr "專業版已激活!"
+
+#: ../editor/editor.account.php:579
+msgid "Update Info"
+msgstr "更新信息"
+
+#: ../editor/editor.account.php:581
+msgid "Deactivate"
+msgstr "停用"
+
+#: ../editor/editor.account.php:591
+msgid "PageLines Account"
+msgstr "PageLines帳號"
+
+#: ../editor/editor.account.php:599
+msgid "Pro Activation Key"
+msgstr "專業版激活Key"
+
+#: ../editor/editor.account.php:600
+msgid "optional"
+msgstr "可選"
+
+#: ../editor/editor.account.php:602
+msgid "Enter Pro Key"
+msgstr "輸入專業版Key"
+
+#: ../editor/editor.account.php:608
+msgid "Update"
+msgstr "更新"
+
+#: ../editor/editor.account.php:617
+msgid "PageLines Account Info"
+msgstr "PageLines賬戶信息"
+
+#: ../editor/editor.account.php:624
+msgid "PageLines account not added or incorrect."
+msgstr ""
+
+#: ../editor/editor.account.php:625
+msgid ""
+"Add account to configure PageLines APIs, karma system and store access."
+msgstr ""
+
+#: ../editor/editor.account.php:631
+msgid "Profile"
+msgstr ""
+
+#: ../editor/editor.account.php:641
+msgid "My Account"
+msgstr "我的賬戶"
+
+#: ../editor/editor.account.php:643
+msgid "Edit Profile"
+msgstr ""
+
+#: ../editor/editor.account.php:668
+msgid "Congratulations!"
+msgstr "恭喜！"
+
+#: ../editor/editor.account.php:675
+msgid "Setup PageLines Account"
+msgstr "設置PageLines賬戶"
+
+#: ../editor/editor.account.php:678
+msgid "Getting Started Video"
+msgstr ""
+
+#: ../editor/editor.account.php:689
+msgid "The PageLines Experience"
+msgstr ""
+
+#: ../editor/editor.account.php:692
+msgid "We want you to have a most amazing time as a PageLines customer."
+msgstr ""
+
+#: ../editor/editor.account.php:694
+msgid "That's why we have a ton of people standing by to make you happy."
+msgstr ""
+
+#: ../editor/editor.account.php:698
+msgid "PageLines Forum"
+msgstr "PageLines論壇"
+
+#: ../editor/editor.account.php:700
+msgid "DMS Documentation"
+msgstr ""
+
+#: ../editor/editor.actions.php:332
+msgid "Unsupported file type!"
+msgstr "不支持的文件類型！"
+
+#: ../editor/editor.actions.php:335
+#, php-format
+msgid "Upload Error: %s"
+msgstr "上傳錯誤： %s"
+
+#: ../editor/editor.actions.php:375
+msgid "Install DMS Utilities"
+msgstr ""
+
+#: ../editor/editor.actions.php:376
+msgid ""
+"Your site is \"Pro activated\" but you have not installed the DMS Pro tools "
+"plugin. Grab the plugin on <a href=\"http://www.pagelines.com/my-account\" "
+">PageLines.com &rarr; My-Account</a>."
+msgstr ""
+
+#: ../editor/editor.actions.php:392
+msgid "Upgrade to Pro!"
+msgstr ""
+
+#: ../editor/editor.actions.php:394
+msgid ""
+"You are currently using the basic DMS version. Pro activate this site for "
+"tons more features and support."
+msgstr ""
+
+#: ../editor/editor.actions.php:396
+msgid "Learn More About Pro"
+msgstr ""
+
+#: ../editor/editor.actions.php:398
+msgid "Already a Pro?"
+msgstr ""
+
+#: ../editor/editor.actions.php:399
+msgid "Activate Site"
+msgstr ""
+
+#: ../editor/editor.actions.php:494
+msgid "Select This Image For Option"
+msgstr "選擇此選項圖像"
+
+#: ../editor/editor.actions.php:516 ../editor/js/pl.optpanel.js:1514
+msgid "Media Library"
+msgstr "媒體庫"
+
+#: ../editor/editor.areas.php:57 ../editor/editor.interface.php:541
+msgid "Delete"
+msgstr "刪除"
+
+#: ../editor/editor.areas.php:59 ../editor/editor.interface.php:540
+msgid "Clone"
+msgstr "複製"
+
+#: ../editor/editor.areas.php:61
+msgid "Move"
+msgstr ""
+
+#: ../editor/editor.areas.php:63 ../editor/editor.interface.php:539
+#: ../includes/class.objects.php:109
+msgid "Edit"
+msgstr "編輯"
+
+#: ../editor/editor.color.php:186
+msgid "Color <span class=\"spamp\">&amp;</span> BG"
+msgstr ""
+
+#: ../editor/editor.color.php:201
+msgid "Site Base Colors"
+msgstr ""
+
+#: ../editor/editor.color.php:202
+msgid ""
+"The \"base\" color are a few standard colors used throughout DMS that "
+"plugins may use to calculate contrast or other colors to make sure "
+"everything looks great."
+msgstr ""
+
+#: ../editor/editor.color.php:207
+msgid "Background Base Color"
+msgstr ""
+
+#: ../editor/editor.color.php:214
+msgid "Text Base Color"
+msgstr ""
+
+#: ../editor/editor.color.php:222
+msgid "Link Base Color"
+msgstr ""
+
+#: ../editor/editor.color.php:232 ../sections/pl_area/section.php:128
+msgid "Background Image"
+msgstr "背景圖片"
+
+#: ../editor/editor.color.php:241
+msgid "Page Background Image"
+msgstr "頁面背景圖片"
+
+#: ../editor/editor.color.php:253
+msgid "Background Image Settings"
+msgstr "背景圖片設置"
+
+#: ../editor/editor.color.php:259
+msgid "Fit image to page?"
+msgstr "適應圖像到頁面？"
+
+#: ../editor/editor.color.php:262
+msgid ""
+"If you use this option the image will be fit \"responsively\" to the "
+"background of your page. This means the settings below will have no effect."
+msgstr ""
+
+#: ../editor/editor.color.php:267
+msgid "Background Repeat"
+msgstr "背景重複"
+
+#: ../editor/editor.color.php:270
+msgid "No Repeat"
+msgstr ""
+
+#: ../editor/editor.color.php:271
+msgid "Repeat"
+msgstr ""
+
+#: ../editor/editor.color.php:272
+msgid "Repeat Horizontally"
+msgstr "水平重複"
+
+#: ../editor/editor.color.php:273
+msgid "Repeat Vertically"
+msgstr "垂直重複"
+
+#: ../editor/editor.color.php:281
+msgid "Vertical Background Position in Percent"
+msgstr "垂直背景位置百分比"
+
+#: ../editor/editor.color.php:292
+msgid "Horizontal Background Position in Percent"
+msgstr "水平的背景位置百分比"
+
+#: ../editor/editor.color.php:303
+msgid "Set Background Attachment"
+msgstr "設置背景附件"
+
+#: ../editor/editor.color.php:306
+msgid "Scroll"
+msgstr "滾動"
+
+#: ../editor/editor.color.php:307
+msgid "Fixed"
+msgstr "固定"
+
+#: ../editor/editor.importexport.php:18
+msgid "Import + Export"
+msgstr ""
+
+#: ../editor/editor.importexport.php:42
+msgid "Import Page Templates"
+msgstr ""
+
+#: ../editor/editor.importexport.php:44
+msgid "Add new templates and overwrite ones with the same name."
+msgstr ""
+
+#: ../editor/editor.importexport.php:51
+msgid "Import New Global Settings"
+msgstr ""
+
+#: ../editor/editor.importexport.php:53
+msgid "Overwrite global settings with ones from this import."
+msgstr ""
+
+#: ../editor/editor.importexport.php:60
+msgid "Import Post Type Settings"
+msgstr ""
+
+#: ../editor/editor.importexport.php:62
+msgid "Overwrite post type settings with ones from this import."
+msgstr ""
+
+#: ../editor/editor.importexport.php:70
+msgid "DMS Config Import"
+msgstr ""
+
+#: ../editor/editor.importexport.php:75
+msgid "Select config file (.json)"
+msgstr ""
+
+#: ../editor/editor.importexport.php:84
+msgid "Child Theme Config Import"
+msgstr ""
+
+#: ../editor/editor.importexport.php:88
+msgid "Load Child Theme Config"
+msgstr ""
+
+#: ../editor/editor.importexport.php:91
+msgid ""
+"Reset theme settings using custom config file from child theme.<br />\n"
+"\t\t\t\t\t<strong>Note:</strong> Once you have completed this action, you may want to publish these changes to your live site."
+msgstr ""
+
+#: ../editor/editor.importexport.php:108
+msgid "Select User Templates"
+msgstr ""
+
+#: ../editor/editor.importexport.php:116
+msgid "Select All"
+msgstr ""
+
+#: ../editor/editor.importexport.php:116
+msgid "Deselect All"
+msgstr ""
+
+#: ../editor/editor.importexport.php:137 ../editor/panel.settings.php:51
+msgid "Global Settings"
+msgstr "全局設置"
+
+#: ../editor/editor.importexport.php:141
+msgid "Export Site Global Settings"
+msgstr ""
+
+#: ../editor/editor.importexport.php:143
+msgid ""
+"This will export your sites global settings. This includes everything in the"
+" options panel, as well as settings directed at sections in your \"global\" "
+"regions like your header and footer."
+msgstr ""
+
+#: ../editor/editor.importexport.php:148
+msgid "Post Type Settings"
+msgstr ""
+
+#: ../editor/editor.importexport.php:153
+msgid "Export Post Type Settings"
+msgstr ""
+
+#: ../editor/editor.importexport.php:155
+msgid ""
+"This exports settings such as the template defaults for various post types."
+msgstr ""
+
+#: ../editor/editor.importexport.php:160
+msgid "Theme Config Publishing"
+msgstr ""
+
+#: ../editor/editor.importexport.php:170
+msgid "(Disabled! No child theme active)"
+msgstr ""
+
+#: ../editor/editor.importexport.php:170
+msgid "Publish Configuration to Child Theme (No Download File)"
+msgstr ""
+
+#: ../editor/editor.importexport.php:172
+msgid ""
+"Check this to publish your site configuration as a theme configuration file "
+"in your themes root directory. When a user activates your theme it will ask "
+"if it can overwrite their settings to attain a desired initial experience to"
+" the theme."
+msgstr ""
+
+#: ../editor/editor.importexport.php:178 ../editor/editor.interface.php:342
+msgid "Publish"
+msgstr "發佈"
+
+#: ../editor/editor.importexport.php:179
+msgid "Download DMS Config"
+msgstr ""
+
+#: ../editor/editor.importexport.php:195
+msgid "Export DMS Config"
+msgstr "導出DMS配置"
+
+#: ../editor/editor.importexport.php:201
+msgid "Import DMS Config"
+msgstr "導入DMS配置"
+
+#: ../editor/editor.interface.php:152
+msgid "Deactivate Editor (View Live)"
+msgstr ""
+
+#: ../editor/editor.interface.php:165
+msgid "Preview (alt+a)"
+msgstr "預覽 (alt+a)"
+
+#: ../editor/editor.interface.php:323
+msgid "Undo All Unpublished Changes"
+msgstr ""
+
+#: ../editor/editor.interface.php:325
+msgid "Undo Unpublished Global Changes"
+msgstr ""
+
+#: ../editor/editor.interface.php:328
+msgid "Undo Unpublished Post Type Changes"
+msgstr ""
+
+#: ../editor/editor.interface.php:330
+msgid "Undo Unpublished Local Changes"
+msgstr ""
+
+#: ../editor/editor.interface.php:332
+msgid "No Unpublished Changes"
+msgstr ""
+
+#: ../editor/editor.interface.php:339
+msgid "Refresh needed to view changes."
+msgstr ""
+
+#: ../editor/editor.interface.php:341
+msgid "Publish Live"
+msgstr ""
+
+#: ../editor/editor.interface.php:350
+msgid "Width"
+msgstr "寬度"
+
+#: ../editor/editor.interface.php:530
+msgid "Decrease Width"
+msgstr ""
+
+#: ../editor/editor.interface.php:531
+msgid "Column Width"
+msgstr ""
+
+#: ../editor/editor.interface.php:532
+msgid "Increase Width"
+msgstr ""
+
+#: ../editor/editor.interface.php:533
+msgid "Offset Left"
+msgstr ""
+
+#: ../editor/editor.interface.php:534
+msgid "Offset Amount"
+msgstr ""
+
+#: ../editor/editor.interface.php:535
+msgid "Offset Right"
+msgstr ""
+
+#: ../editor/editor.interface.php:536
+msgid "Force to New Row"
+msgstr ""
+
+#: ../editor/editor.layout.php:25
+msgid "Layout <span class=\"spamp\">&amp;</span> Nav"
+msgstr ""
+
+#: ../editor/editor.layout.php:43
+msgid "Select Layout Mode"
+msgstr "選擇佈局模式"
+
+#: ../editor/editor.layout.php:44
+msgid "Layout Mode"
+msgstr "佈局模式"
+
+#: ../editor/editor.layout.php:46
+msgid "Pixel Width Based Layout"
+msgstr ""
+
+#: ../editor/editor.layout.php:47
+msgid "Percentage Width Based Layout"
+msgstr ""
+
+#: ../editor/editor.layout.php:50
+msgid ""
+"Select pixel width mode and your site maximum width will be controlled by "
+"pixels.<br/><br/> If you select \"percent\" width the width of your content "
+"will be a percentage of window size."
+msgstr "選擇像素寬度模式，您的網站的最大像素的寬度將被控制。<br/><br/>如果你選擇 \"百分比\"寬度寬你的內容將是一個窗口大小的百分比。"
+
+#: ../editor/editor.layout.php:55
+msgid "Select Layout Display"
+msgstr "選擇佈局顯示"
+
+#: ../editor/editor.layout.php:56
+msgid "Display Mode"
+msgstr "顯示模式"
+
+#: ../editor/editor.layout.php:58
+msgid "Full Width Display"
+msgstr ""
+
+#: ../editor/editor.layout.php:59
+msgid "Boxed Display"
+msgstr ""
+
+#: ../editor/editor.layout.php:62
+msgid ""
+"\"Full\" display mode allows areas to be the full width of the window, with "
+"content width sections.<br/><br/> \"Boxed\" mode contains everything in a "
+"central content box. Boxed mode is ideal for use with background images."
+msgstr ""
+
+#: ../editor/editor.layout.php:75
+msgid "Global Navigation Setup"
+msgstr ""
+
+#: ../editor/editor.layout.php:80
+msgid "Select Primary Navigation Menu"
+msgstr "選擇主導航菜單"
+
+#: ../editor/editor.layout.php:82
+msgid ""
+"This will be used in mobile menus and optionally other places throughout "
+"your site."
+msgstr "這將用於整個網站的手機菜單和任選的其它地方。"
+
+#: ../editor/editor.layout.php:87
+msgid "Select Secondary Navigation Menu"
+msgstr "選擇輔助導航菜單"
+
+#: ../editor/editor.layout.php:89
+msgid ""
+"This will be shown subtly in areas throughout the site and in your mobile "
+"menu."
+msgstr "這將是巧妙地顯示整個網站，並在您的手機菜單區域。"
+
+#: ../editor/editor.loader.php:99
+msgid "Loading DMS Editor"
+msgstr ""
+
+#: ../editor/editor.loader.php:102
+msgid ""
+"Issues loading? See the <a href=\"http://docs.pagelines.com/support-"
+"troubleshooting/common-issues\" target=\"_blank\">troubleshooting guide</a>."
+msgstr ""
+
+#: ../editor/editor.regions.php:20
+msgid "Global Scope Region"
+msgstr "全局範圍區域"
+
+#: ../editor/editor.regions.php:24
+msgid "Local Scope Region"
+msgstr "本地範圍區域"
+
+#: ../editor/editor.settings.config.php:21
+msgid "Site Images"
+msgstr ""
+
+#: ../editor/editor.settings.config.php:28
+msgid "Social <span class=\"spamp\">&amp;</span> Local"
+msgstr ""
+
+#: ../editor/editor.settings.config.php:35
+msgid "Advanced"
+msgstr "高級"
+
+#: ../editor/editor.settings.config.php:42
+msgid "Resets"
+msgstr ""
+
+#: ../editor/editor.settings.config.php:85
+msgid "<i class=\"icon-home\"></i> Set Site Homepage"
+msgstr ""
+
+#: ../editor/editor.settings.config.php:89
+msgid "Site Homepage"
+msgstr "網站主頁"
+
+#: ../editor/editor.settings.config.php:93
+msgid "<i class=\"icon-link\"></i> Permalinks"
+msgstr ""
+
+#: ../editor/editor.settings.config.php:97
+msgid "Manage Permalinks"
+msgstr "管理固定鏈接"
+
+#: ../editor/editor.settings.config.php:102
+msgid "<i class=\"icon-reorder\"></i> Manage Menus"
+msgstr ""
+
+#: ../editor/editor.settings.config.php:107
+msgid "Manage Menus"
+msgstr "管理菜單"
+
+#: ../editor/editor.settings.config.php:113
+msgid "<i class=\"icon-retweet\"></i> Manage Widgets"
+msgstr ""
+
+#: ../editor/editor.settings.config.php:117
+msgid "Manage Widgetized Areas"
+msgstr "管理部件化區域"
+
+#: ../editor/editor.settings.config.php:123
+msgid "<i class=\"icon-cog\"></i> Site Settings"
+msgstr ""
+
+#: ../editor/editor.settings.config.php:127
+msgid "Site Settings"
+msgstr "網站設置"
+
+#: ../editor/editor.settings.config.php:132
+msgid "<i class=\"icon-download\"></i> Plugins Admin"
+msgstr ""
+
+#: ../editor/editor.settings.config.php:136
+msgid "Manage Extensions"
+msgstr "管理擴展"
+
+#: ../editor/editor.settings.config.php:145
+msgid "<i class=\"icon-ambulance\"></i> View Debug Info"
+msgstr ""
+
+#: ../editor/editor.settings.config.php:149
+msgid "Debug Enabled"
+msgstr "啟用調試"
+
+#: ../editor/editor.settings.config.php:163
+msgid "Upload Favicon (32px by 32px)"
+msgstr ""
+
+#: ../editor/editor.settings.config.php:167
+msgid "Favicon Image"
+msgstr "網站圖標圖片"
+
+#: ../editor/editor.settings.config.php:168
+msgid ""
+"Enter the full URL location of your custom <strong>favicon</strong> which is"
+" visible in browser favorites and tabs.<br/> <strong>Must be .png or .ico "
+"file - 32px by 32px</strong>."
+msgstr "輸入完整的URL位置定制你的<strong>網站圖標</strong>，顯示在瀏覽器的收藏夾和標籤。<br/> <strong>必須是png或ico文件 - 32px X 32px</strong>。"
+
+#: ../editor/editor.settings.config.php:177
+msgid "Upload Login Image (160px Height)"
+msgstr ""
+
+#: ../editor/editor.settings.config.php:180
+msgid "Login Page Image"
+msgstr "登錄頁面圖片"
+
+#: ../editor/editor.settings.config.php:182
+msgid ""
+"This image will be used on the login page to your admin. Use an image that "
+"is approximately <strong>80px</strong> in height."
+msgstr "此圖片將用於您的管理員在登錄頁面上。使用圖像高度約<strong>80px</strong>。"
+
+#: ../editor/editor.settings.config.php:188
+msgid "Upload Touch Image (144px by 144px)"
+msgstr ""
+
+#: ../editor/editor.settings.config.php:191
+msgid "Mobile Touch Image"
+msgstr "手機觸摸圖片"
+
+#: ../editor/editor.settings.config.php:193
+msgid ""
+"Enter the full URL location of your Apple Touch Icon which is visible when "
+"your users set your site as a <strong>webclip</strong> in Apple Iphone and "
+"Touch Products. It is an image approximately 144px by 144px in either .jpg, "
+".gif or .png format."
+msgstr "輸入完整的蘋果觸摸圖標的URL位置，當你的用戶設置您的網站作為的<strong>webclip</strong>蘋果iPhone和觸控產品時可見。它是一種形象約 144px X 144px 無論是JPG，GIF或PNG格式。"
+
+#: ../editor/editor.settings.config.php:211
+msgid "Your Twitter Username"
+msgstr "你的Twitter用戶名"
+
+#: ../editor/editor.settings.config.php:212
+msgid "Twitter Integration"
+msgstr "Twitter的整合"
+
+#: ../editor/editor.settings.config.php:213
+msgid ""
+"This places your Twitter feed on the site. Leave blank if you want to hide "
+"or not use."
+msgstr "在網站上，這會將你的Twitter的飼料。留空，如果你想要隱藏或不使用。"
+
+#: ../editor/editor.settings.config.php:225
+msgid "Your Facebook Page Name"
+msgstr "你的Facebook頁面名稱"
+
+#: ../editor/editor.settings.config.php:226
+msgid "Facebook Page"
+msgstr "Facebook專頁"
+
+#: ../editor/editor.settings.config.php:227
+msgid ""
+"Enter the name component of your Facebook page URL. (For example, what comes"
+" after the facebook url: www.facebook.com/[name])"
+msgstr "輸入你的Facebook頁面的URL的名稱組件。 （例如，隨之而來的facebook的網址：www.facebook.com/[名稱]）"
+
+#: ../editor/editor.settings.config.php:232
+msgid "Your Facebook App ID"
+msgstr "你的Facebook應用程序ID"
+
+#: ../editor/editor.settings.config.php:233
+msgid "Facebook App ID"
+msgstr "Facebook應用程序ID"
+
+#: ../editor/editor.settings.config.php:234
+msgid "Add your Facebook Application ID here."
+msgstr "在這裡添加您的Facebook應用程序ID。"
+
+#: ../editor/editor.settings.config.php:243
+msgid "Your Website Hashtag"
+msgstr "您的網站Hashtag標籤"
+
+#: ../editor/editor.settings.config.php:244
+msgid "Website Hashtag"
+msgstr "網站Hashtag標籤"
+
+#: ../editor/editor.settings.config.php:245
+msgid ""
+"This hashtag will be used in social media (e.g. Twitter) and elsewhere to "
+"create feeds."
+msgstr "Hashtag標籤將被用來在社交媒體（如 Twitter，微博）和其他地方建的聚合。"
+
+#: ../editor/editor.settings.config.php:251
+msgid "Sharebar Options"
+msgstr ""
+
+#: ../editor/editor.settings.config.php:256
+msgid "Enable Google+"
+msgstr "啟用Google+"
+
+#: ../editor/editor.settings.config.php:262
+msgid "Enable Facebook"
+msgstr "啟用Facebook"
+
+#: ../editor/editor.settings.config.php:268
+msgid "Enable Twitter"
+msgstr "啟用Twitter"
+
+#: ../editor/editor.settings.config.php:274
+msgid "Enable LinkedIn"
+msgstr "啟用LinkedIn"
+
+#: ../editor/editor.settings.config.php:279
+msgid "Enable Pinterest"
+msgstr "啟用Pinterest"
+
+#: ../editor/editor.settings.config.php:284
+msgid "Enable Buffer"
+msgstr "啟用Buffer"
+
+#: ../editor/editor.settings.config.php:289
+msgid "Enable Stumbleupon"
+msgstr "啟用Stumbleupon"
+
+#: ../editor/editor.settings.config.php:304
+msgid "Debug Options"
+msgstr ""
+
+#: ../editor/editor.settings.config.php:309
+msgid "Enable debug?"
+msgstr "啟用調試嗎？"
+
+#: ../editor/editor.settings.config.php:310
+msgid "PageLines debug"
+msgstr "PageLines調試"
+
+#: ../editor/editor.settings.config.php:311
+#, php-format
+msgid "This information can be useful in the forums if you have a problem. %s"
+msgstr "這些信息可以在論壇中是有用的，如果你有問題。 %s"
+
+#: ../editor/editor.settings.config.php:319
+msgid "Disable Error Notices?"
+msgstr ""
+
+#: ../editor/editor.settings.config.php:320
+msgid "Less Notices"
+msgstr ""
+
+#: ../editor/editor.settings.config.php:321
+msgid "Disable any error notices sent to wp-admin by the less system"
+msgstr ""
+
+#: ../editor/editor.settings.config.php:328
+msgid "Enable Code Prettify?"
+msgstr "啟用代碼美化？"
+
+#: ../editor/editor.settings.config.php:329
+msgid "Google Prettify Code"
+msgstr "谷歌美化代碼"
+
+#: ../editor/editor.settings.config.php:330
+msgid ""
+"Add a class of 'prettyprint' to code or pre tags, or optionally use the "
+"[pl_codebox] shortcode. Wrap the codebox shortcode using [pl_raw] if "
+"Wordpress inserts line breaks."
+msgstr "添加一類美觀列印代碼或預標籤，或選擇性地使用 [pl_codebox] 簡碼。包裹CodeBox對簡碼使用 [pl_raw] 如果WordPress插入換行符。"
+
+#: ../editor/editor.settings.config.php:336
+msgid "Enter Partner Link"
+msgstr "輸入合作夥伴鏈接"
+
+#: ../editor/editor.settings.config.php:337
+msgid "PageLines Affiliate/Partner Link"
+msgstr "PageLines聯盟/合作夥伴鏈接"
+
+#: ../editor/editor.settings.config.php:338
+msgid ""
+"If you are a <a target='_blank' href='http://www.pagelines.com'>PageLines "
+"Partner</a> enter your link here and the footer link will become a partner "
+"or affiliate link."
+msgstr "如果你是一個<a target='_blank' href='http://www.pagelines.com'>PageLines合作夥伴</ a>的進入你的鏈接在這裡和頁腳鏈接將成為合作夥伴或分支機構鏈接。"
+
+#: ../editor/editor.settings.config.php:344
+msgid "Install Class"
+msgstr "安裝式樣"
+
+#: ../editor/editor.settings.config.php:345
+msgid "Current Install Class"
+msgstr "目前安裝式樣"
+
+#: ../editor/editor.settings.config.php:346
+msgid ""
+"Use this option to add a class to the &gt;body&lt; element of the website. "
+"This can be useful when using the same child theme on several installations "
+"or sub domains and can be used to control CSS customizations."
+msgstr "使用此選項可添加式樣到網站&gt;body&lt;標籤。 這可有助於當使用相同的子主題幾個安裝或子域，並可以用來控制CSS自定義。"
+
+#: ../editor/editor.settings.config.php:361
+msgid "<i class=\"icon-undo\"></i> Reset Global Settings"
+msgstr "<i class=\"icon-undo\"></i>重置全局設置"
+
+#: ../editor/editor.settings.config.php:362
+msgid "Reset Global Site Settings"
+msgstr "重置全球網站設置"
+
+#: ../editor/editor.settings.config.php:363
+msgid ""
+"Use this button to reset all global settings to their default state. "
+"<br/><strong>Note:</strong> Once you've completed this action, you may want "
+"to publish these changes to your live site."
+msgstr "使用此按鈕來重置全局所有設置為默認狀態。 <br/><strong>注意：</strong>一旦你完成了這個動作，你可能要發布這些變化給你實時站點。"
+
+#: ../editor/editor.settings.config.php:369
+msgid "<i class=\"icon-undo\"></i> Reset Current Page Settings"
+msgstr "<i class=\"icon-undo\"></i>重設當前頁設置"
+
+#: ../editor/editor.settings.config.php:370
+msgid "Reset Current Page Settings"
+msgstr "重置當前頁設置"
+
+#: ../editor/editor.settings.config.php:371
+msgid ""
+"Use this button to reset all settings on the current page back to their "
+"default state. <br/><strong>Note:</strong> Once you've completed this "
+"action, you may want to publish these changes to your live site."
+msgstr "使用此按鈕將當前頁面上的所有設置重置為默認狀態。<br/><strong>注意：</strong>一旦你完成了這個動作，你可能要發布這些變化給你實時站點。"
+
+#: ../editor/editor.settings.config.php:378
+msgid "<i class=\"icon-trash\"></i> Flush Caches"
+msgstr "<i class=\"icon-trash\"></i>刷新緩存"
+
+#: ../editor/editor.settings.config.php:379
+msgid "Clear all CSS/LESS cached data."
+msgstr "清除所有的CSS/LESS緩存數據。"
+
+#: ../editor/editor.settings.config.php:380
+msgid ""
+"Use this button to purge the stored LESS/CSS data. This will also clear "
+"cached pages if wp-super-cache or w3-total-cache are detected."
+msgstr "使用此按鈕來清除存儲的LESS/CSS數據。這也將清除緩存頁面，如果 wp-super-cache 或 w3-total-cache 已刪除。"
+
+#: ../editor/editor.settings.config.php:396
+msgid "Standard Options"
+msgstr "標準選項"
+
+#: ../editor/editor.settings.config.php:402
+msgid "Styling Classes"
+msgstr "生成式樣中"
+
+#: ../editor/editor.settings.config.php:403
+msgid "Separate with a space \" \""
+msgstr "分離空間 \" \""
+
+#: ../editor/editor.templates.php:202
+msgid "Templates"
+msgstr "模板"
+
+#: ../editor/editor.templates.php:207 ../editor/js/pl.optpanel.js:1148
+msgid "Page Templates"
+msgstr "頁面模板"
+
+#: ../editor/editor.templates.php:209
+msgid "Your Templates"
+msgstr "你的模板"
+
+#: ../editor/editor.templates.php:215 ../editor/editor.templates.php:333
+msgid "Save New Template"
+msgstr "保存新模板"
+
+#: ../editor/editor.templates.php:249
+msgid "Load Template"
+msgstr "加載模板"
+
+#: ../editor/editor.templates.php:252
+msgid "Active Template"
+msgstr "激活模板"
+
+#: ../editor/editor.templates.php:257
+msgid "Actions"
+msgstr ""
+
+#: ../editor/editor.templates.php:262
+msgid "Update Template with Current Configuration"
+msgstr ""
+
+#: ../editor/editor.templates.php:267
+msgid "Set as Page Global Default"
+msgstr ""
+
+#: ../editor/editor.templates.php:272
+msgid "Delete This Template"
+msgstr ""
+
+#: ../editor/editor.templates.php:320
+msgid ""
+"Fill out this form and the current template will be saved for use throughout"
+" your site."
+msgstr ""
+
+#: ../editor/editor.templates.php:322
+msgid ""
+"<strong>Note:</strong> Both the current page's local settings and section "
+"configurations will be saved."
+msgstr ""
+
+#: ../editor/editor.templates.php:325
+msgid "Template Name (required)"
+msgstr ""
+
+#: ../editor/editor.templates.php:329
+msgid "Template Description"
+msgstr ""
+
+#: ../editor/editor.templates.php:355
+msgid "No Name"
+msgstr ""
+
+#: ../editor/editor.templates.php:509
+msgid "Default"
+msgstr "默認"
+
+#: ../editor/editor.templates.php:510
+msgid "Standard page configuration. (Content and Primary Sidebar.)"
+msgstr ""
+
+#: ../editor/editor.templates.php:517
+msgid "Feature Template"
+msgstr "特色模板"
+
+#: ../editor/editor.templates.php:518
+msgid ""
+"A page template designed to quickly and concisely show off key features or "
+"points. (RevSlider, iBoxes, Flipper)"
+msgstr ""
+
+#: ../editor/editor.templates.php:539
+msgid "Landing Page"
+msgstr "加載頁面"
+
+#: ../editor/editor.templates.php:540
+msgid "A simple page design with highlight section and postloop (content)."
+msgstr ""
+
+#: ../editor/editor.templates.php:566
+msgid "DMS Page Setup"
+msgstr "DMS頁面設置"
+
+#: ../editor/editor.templates.php:618
+msgid "Load PageLines Template"
+msgstr "加載PageLines模板"
+
+#: ../editor/editor.templates.php:631
+msgid "(no parent)"
+msgstr "（無上級）"
+
+#: ../editor/editor.templates.php:639
+msgid "Parent Page"
+msgstr "父頁面"
+
+#: ../editor/editor.templates.php:644
+msgid "Page Order"
+msgstr "頁面順序"
+
+#: ../editor/editor.typography.php:69
+msgid "Typography"
+msgstr "版式"
+
+#: ../editor/editor.typography.php:85
+msgid "Primary Text"
+msgstr "主文本"
+
+#: ../editor/editor.typography.php:86
+msgid ""
+"The base font size is a reference that will be scaled for text used "
+"throughout the site. "
+msgstr "基本字體大小是一個參考，將整個站點使用的文字縮放。"
+
+#: ../editor/editor.typography.php:91
+msgid "Select Font Face"
+msgstr ""
+
+#: ../editor/editor.typography.php:101 ../editor/editor.typography.php:142
+msgid "Base Font Size"
+msgstr "基本字體大小"
+
+#: ../editor/editor.typography.php:108 ../editor/editor.typography.php:149
+msgid "Font Weight"
+msgstr ""
+
+#: ../editor/editor.typography.php:116
+msgid "*These weights don't always have an effect."
+msgstr ""
+
+#: ../editor/editor.typography.php:125
+msgid "Text Headers <small>(h1-h6)</small>"
+msgstr "文本標題<small>(h1-h6)</small>"
+
+#: ../editor/editor.typography.php:126
+msgid "Configure the typography for the text headers across your site."
+msgstr "配置的文字排版，整個網站的標題。"
+
+#: ../editor/editor.typography.php:131
+msgid "Header Font"
+msgstr ""
+
+#: ../editor/editor.typography.php:164
+msgid "Extra Fonts"
+msgstr "額外的字體"
+
+#: ../editor/editor.typography.php:165
+msgid ""
+"<p>Add additional <a href=\"http://www.google.com/fonts\" "
+"target=\"_blank\">Google fonts</a> to your sites using this "
+"option.</p><p>For example, to add \"Yellowtail\" and \"Lato Bold\" you would"
+" enter: <strong>Yellowtail|Lato:700</strong>.</p><p> You can then reference "
+"these fonts in custom CSS.</p>"
+msgstr "<p>添加額外的<a href=\"http://www.google.com/fonts\" target=\"_blank\">谷歌字體</a>在您的網站使用此選項，。</p><p>例如，添加 \"Yellowtail\" 和 \"Lato Bold\"，請輸入：<strong>Yellowtail|Lato:700</strong>。</p><p>然後，您可以參考這些字體自定義CSS。</p>"
+
+#: ../editor/editor.typography.php:170
+msgid "Extra Google Fonts"
+msgstr ""
+
+#: ../editor/panel.code.php:37
+msgid "Custom"
+msgstr ""
+
+#: ../editor/panel.code.php:42
+msgid "Custom Design"
+msgstr "自定義設計"
+
+#: ../editor/panel.code.php:45 ../editor/panel.code.php:70
+#: ../editor/panel.code.php:74
+msgid "Custom LESS/CSS"
+msgstr "自定義LESS/CSS"
+
+#: ../editor/panel.code.php:50 ../editor/panel.code.php:87
+msgid "Custom Scripts"
+msgstr "自定義腳本"
+
+#: ../editor/panel.code.php:75
+msgid "Tip"
+msgstr "提示"
+
+#: ../editor/panel.code.php:75
+msgid "Hit [Cmd&#8984;+Return] or [Ctrl+Return] to Preview Live"
+msgstr ""
+
+#: ../editor/panel.code.php:91
+msgid "Custom Javascript or Header HTML"
+msgstr ""
+
+#: ../editor/panel.extend.php:21
+msgid "Store"
+msgstr "應用商店"
+
+#: ../editor/panel.extend.php:25
+msgid "Extend PageLines"
+msgstr ""
+
+#: ../editor/panel.extend.php:27
+msgid "PageLines Store"
+msgstr "PageLines應用商店"
+
+#: ../editor/panel.extend.php:41
+msgid "Featured"
+msgstr "精選"
+
+#: ../editor/panel.extend.php:48
+msgid "Sections"
+msgstr "Sections"
+
+#: ../editor/panel.extend.php:54
+msgid "Plugins"
+msgstr "插件"
+
+#: ../editor/panel.extend.php:60
+msgid "Themes"
+msgstr "主題"
+
+#: ../editor/panel.extend.php:66
+msgid "Free"
+msgstr "免費"
+
+#: ../editor/panel.extend.php:72
+msgid "Premium"
+msgstr "付費"
+
+#: ../editor/panel.extend.php:84 ../includes/lib.elements.php:93
+msgid "Search"
+msgstr "搜索"
+
+#: ../editor/panel.extend.php:99
+msgid "Upload a .zip extension into your PageLines install using this tool."
+msgstr ""
+
+#: ../editor/panel.extend.php:101
+msgid "Extension File (zip file - required)"
+msgstr ""
+
+#: ../editor/panel.extend.php:104
+msgid "Upload Extension"
+msgstr ""
+
+#: ../editor/panel.extend.php:116
+msgid "Search the PageLines store for extensions."
+msgstr ""
+
+#: ../editor/panel.extend.php:121
+msgid "Search Store"
+msgstr "搜索應用商店"
+
+#: ../editor/panel.extend.php:143
+msgid " found for "
+msgstr ""
+
+#: ../editor/panel.extend.php:151
+msgid "Demo "
+msgstr "演示"
+
+#: ../editor/panel.extend.php:157
+msgid "Overview "
+msgstr ""
+
+#: ../editor/panel.extend.php:192 ../editor/panel.extend.php:195
+msgid "Free!"
+msgstr "免費！"
+
+#: ../editor/panel.extend.php:197
+msgid "<i class=\"icon-sun\"></i> Karma"
+msgstr ""
+
+#: ../editor/panel.sections.php:21
+msgid "Add To Page"
+msgstr ""
+
+#: ../editor/panel.sections.php:25
+msgid "<i class='icon-random'></i> Drag to Add"
+msgstr ""
+
+#: ../editor/panel.sections.php:27
+msgid "Your Sections"
+msgstr "你的Sections"
+
+#: ../editor/panel.sections.php:29
+msgid "Drag on to page to add"
+msgstr ""
+
+#: ../editor/panel.sections.php:30
+msgid "Reload Sections"
+msgstr "重新加載Sections"
+
+#: ../editor/panel.sections.php:36
+msgid "Get More Sections"
+msgstr "獲取更多Sections"
+
+#: ../editor/panel.sections.php:40
+msgid "<i class='icon-filter'></i> Filters"
+msgstr ""
+
+#: ../editor/panel.sections.php:42 ../editor/panel.sections.php:113
+msgid "Components"
+msgstr "組件"
+
+#: ../editor/panel.sections.php:48 ../editor/panel.sections.php:114
+msgid "Layouts"
+msgstr "佈局"
+
+#: ../editor/panel.sections.php:54 ../editor/panel.sections.php:115
+msgid "Full Width"
+msgstr "全寬度"
+
+#: ../editor/panel.sections.php:60 ../editor/panel.sections.php:116
+msgid "Post Layouts"
+msgstr ""
+
+#: ../editor/panel.sections.php:66 ../editor/panel.sections.php:117
+msgid "Galleries"
+msgstr ""
+
+#: ../editor/panel.sections.php:72 ../editor/panel.sections.php:118
+msgid "Navigation"
+msgstr "導航"
+
+#: ../editor/panel.sections.php:78 ../editor/panel.sections.php:119
+msgid "Sliders"
+msgstr "滑塊"
+
+#: ../editor/panel.sections.php:84 ../editor/panel.sections.php:120
+msgid "Social"
+msgstr "社交"
+
+#: ../editor/panel.sections.php:90 ../editor/panel.sections.php:121
+msgid "Widgetized"
+msgstr "部件化"
+
+#: ../editor/panel.sections.php:96 ../editor/panel.sections.php:122
+msgid "Miscellaneous"
+msgstr ""
+
+#: ../editor/panel.sections.php:191
+msgid "<span class=\"badge badge-important\">PRO ONLY</span>"
+msgstr ""
+
+#: ../editor/panel.settings.php:27
+msgid "Settings"
+msgstr "設置"
+
+#: ../editor/panel.settings.php:34 ../editor/panel.settings.php:73
+#: ../editor/panel.settings.php:81
+msgid "Section Options"
+msgstr "Section選項"
+
+#: ../editor/panel.themes.php:23
+msgid "Theme"
+msgstr "主題"
+
+#: ../editor/panel.themes.php:39
+msgid "Your Themes"
+msgstr ""
+
+#: ../editor/panel.themes.php:46
+msgid "Import Config"
+msgstr "導入配置"
+
+#: ../editor/panel.themes.php:53
+msgid "Get More Themes"
+msgstr "獲取更多的主題"
+
+#: ../editor/panel.themes.php:74
+msgid "Theme Options"
+msgstr "主題選項"
+
+#: ../editor/panel.themes.php:127
+msgid " <span class=\"badge badge-info\"><i class=\"icon-ok\"></i> Active</span>"
+msgstr ""
+
+#: ../editor/panel.themes.php:173 ../editor/panel.themes.php:193
+msgid "Theme does not exist or is not allowed"
+msgstr ""
+
+#: ../editor/panel.themes.php:235
+msgid " this is the end of the world.... >> "
+msgstr ""
+
+#: ../includes/class.register.php:358
+msgid "<h2>Unable to fetch from API</h2>"
+msgstr "<h2>無法獲取API</h2>"
+
+#: ../includes/class.shortcodes.php:317
+msgid "<span class='editpage sc'>Edit</span>"
+msgstr "<span class='editpage sc'>編輯</span>"
+
+#: ../includes/class.shortcodes.php:367
+msgid "Tagged With: "
+msgstr "標籤："
+
+#: ../includes/class.shortcodes.php:391
+msgid "Type: "
+msgstr "類型："
+
+#: ../includes/class.shortcodes.php:422
+msgid "Add Comment"
+msgstr "添加評論"
+
+#: ../includes/class.shortcodes.php:423
+msgid "<span class='num'>1</span> Comment"
+msgstr "<span class='num'>1</span>評論"
+
+#: ../includes/class.shortcodes.php:424
+msgid "<span class='num'>%</span> Comments"
+msgstr "<span class='num'>%</span>評論"
+
+#: ../includes/class.shortcodes.php:501
+#, php-format
+msgid "Visit %s&#8217;s website"
+msgstr "訪問%s的網站"
+
+#: ../includes/class.shortcodes.php:1342 ../editor/js/pl.xlist.js:119
+msgid "Close"
+msgstr "關閉"
+
+#: ../includes/deprecated.php:272
+#, php-format
+msgid ""
+"%1$s is <strong>deprecated</strong> since version %2$s of PageLines DMS! Use"
+" %3$s instead."
+msgstr ""
+
+#: ../includes/deprecated.php:274
+#, php-format
+msgid ""
+"%1$s is <strong>deprecated</strong> since version %2$s of PageLines DMS with"
+" no alternative available."
+msgstr ""
+
+#: ../includes/deprecated.php:1349
+msgid "No Image"
+msgstr "沒有圖片"
+
+#: ../includes/deprecated.php:1557 ../includes/deprecated.php:1558
+msgid "Add New "
+msgstr "添加新"
+
+#: ../includes/deprecated.php:1559 ../includes/deprecated.php:1560
+msgid "Edit "
+msgstr "編輯"
+
+#: ../includes/deprecated.php:1561 ../includes/deprecated.php:1562
+msgid "View "
+msgstr "視圖"
+
+#: ../includes/less.legacy.php:453
+#, php-format
+msgid ""
+"%s/* CSS was compiled at %s and took %s seconds using %sMB of unicorn "
+"dust%s.*/"
+msgstr "%s/* CSS was compiled at %s and took %s seconds using %sMB of unicorn dust%s.*/"
+
+#: ../includes/less.legacy.php:505
+msgid "LESS Compile error!"
+msgstr "LESS編譯錯誤！"
+
+#: ../includes/less.legacy.php:512
+#, php-format
+msgid "Error in %s Less code: %s"
+msgstr "錯誤在 %s LESS代碼：%s"
+
+#: ../includes/less.legacy.php:739
+#, php-format
+msgid ""
+"%s/* CSS was compiled in legacy mode at %s and took %s seconds using %sMB of"
+" unicorn dust%s.*/"
+msgstr ""
+
+#: ../includes/lib.editor.php:72
+msgid "(Pro Edition Only)"
+msgstr "（僅專業版）"
+
+#: ../includes/lib.elements.php:39
+msgid "Add Widgets &rarr;"
+msgstr "添加小工具&rarr;"
+
+#: ../includes/lib.elements.php:126
+msgid "&larr; Previous Entries"
+msgstr "&larr;以前的條目"
+
+#: ../includes/lib.elements.php:129
+msgid "Next Entries &rarr;"
+msgstr "下一個條目&rarr;"
+
+#: ../includes/lib.elements.php:166
+#, php-format
+msgid ""
+"<ul class='inline-list'>Please select a nav menu for this area in the <a "
+"href='%s'>WordPress menu admin</a>.</ul>"
+msgstr "<ul class='inline-list'>請選擇此區域的導航菜單<a href='%s'>WordPress的菜單管理</a>。</ul>"
+
+#: ../includes/lib.elements.php:272
+msgid "edit"
+msgstr "編輯"
+
+#: ../includes/lib.head.php:65
+msgid "Google Profile URL"
+msgstr "谷歌個人網址"
+
+#: ../includes/lib.head.php:299
+#, php-format
+msgid "Page %s"
+msgstr "頁%s"
+
+#: ../includes/lib.head.php:321
+msgid "|"
+msgstr "|"
+
+#: ../includes/lib.head.php:333
+#, php-format
+msgid "Search Results: %s"
+msgstr "搜索結果：%s"
+
+#: ../includes/lib.head.php:337
+#, php-format
+msgid "Page: %s"
+msgstr "頁：%s"
+
+#: ../includes/lib.utils.php:140
+#, php-format
+msgid "Configure %s <i class=\"icon-arrow-right\"></i>"
+msgstr "配置 %s <i class=\"icon-arrow-right\"></i>"
+
+#: ../includes/lib.utils.php:144
+msgid "Configure this section"
+msgstr "配置本Section"
+
+#: ../includes/library.pagelines.php:14
+msgid "Dashboard"
+msgstr "儀表盤"
+
+#: ../sections/columnizer/section.php:52
+msgid "Columnizer Configuration"
+msgstr "Columnizer配置"
+
+#: ../sections/columnizer/section.php:59
+msgid "Select Widgetized Area"
+msgstr "選擇部件區域"
+
+#: ../sections/columnizer/section.php:60
+msgid "Select widgetized area"
+msgstr "選擇部件區域"
+
+#: ../sections/columnizer/section.php:61
+msgid "Select the widgetized area you would like to use with this instance."
+msgstr "選擇部件化的區域，你想用這個實例。"
+
+#: ../sections/columnizer/section.php:69
+msgid "Number of Grid Columns for Each Widget (12 Col Grid)"
+msgstr "每個部件的網格列數（12列網格）"
+
+#: ../sections/columnizer/section.php:79
+msgid "Widgetized Areas Help"
+msgstr "部件化區域幫助"
+
+#: ../sections/columnizer/section.php:80
+msgid "Edit Widgetized Areas"
+msgstr "編輯部件區域"
+
+#: ../sections/columnizer/section.php:81
+msgid ""
+"This section uses widgetized areas that are created and edited in inside "
+"your admin."
+msgstr "本Section採用部件化的區域，創建和編輯您的管理員在裡面。"
+
+#: ../sections/columnizer/section.php:88 ../sections/columnizer/section.php:89
+msgid "Column Site Description"
+msgstr "列網站描述"
+
+#: ../sections/columnizer/section.php:90
+msgid ""
+"If you use the default display of the columnizer, this field is used as a "
+"description of your company. You may want to add your address or links."
+msgstr "如果您使用的默認顯示Columnizer，作為這這一字段描述你的公司。您可能要添加您的地址或鏈接。"
+
+#: ../sections/columnizer/section.php:100
+msgid "Get A Sidebars Plugin"
+msgstr ""
+
+#: ../sections/columnizer/section.php:101
+msgid "<i class=\"icon-external-link\"></i> Check out Sidebar Manager plugin"
+msgstr ""
+
+#: ../sections/columnizer/section.php:102
+msgid ""
+"We have detected that you don't either the Custom Sidebars or Sidebar "
+"Manager plugins installed. We recommend you install a plugin that allows you"
+" to create custom widgetized areas on demand."
+msgstr ""
+
+#: ../sections/columnizer/section.php:147
+msgid "Stay in Touch!"
+msgstr "保持聯繫！"
+
+#: ../sections/columnizer/section.php:173
+msgid "The Latest"
+msgstr "最新"
+
+#: ../sections/columnizer/section.php:197 ../sections/rapidtabs/section.php:56
+#: ../sections/rapidtabs/section.php:138
+msgid "Tags"
+msgstr "標籤"
+
+#: ../sections/columnizer/section.php:208
+#: ../sections/sb_primary/section.php:42
+msgid "Categories"
+msgstr "分類"
+
+#: ../sections/columnizer/section.php:222 ../editor/js/pl.optpanel.js:817
+#: ../editor/js/pl.optpanel.js:908
+msgid "More Info"
+msgstr "更多信息"
+
+#: ../sections/flipper/section.php:47
+msgid "Flipper Setup"
+msgstr "Flipper設置"
+
+#: ../sections/flipper/section.php:55
+msgid "Which post type should Flipper use?"
+msgstr "哪個文章類型需Flipper使用？"
+
+#: ../sections/flipper/section.php:56
+msgid ""
+"<strong>Note</strong><br/> Post types for this section must have \"featured "
+"images\" enabled and be public.<br/><strong>Tip</strong><br/> Use a plugin "
+"to create custom post types for use with Flipper."
+msgstr "<strong>注意</strong><br/>文章類型對於本Section必須有\"特色圖片\"啟用並發佈。<br/><strong>提示</strong><br/>使用一個插件創建自定義文章類型Flipper使用。"
+
+#: ../sections/flipper/section.php:69
+msgid "Max Number of Posts Shown"
+msgstr "最大顯示的文章數"
+
+#: ../sections/flipper/section.php:70
+msgid ""
+"This controls the maximum number of posts shown. A smaller amount may be "
+"shown based on layout width."
+msgstr "這控制所示最大文章數量。可能會顯示一個較小的數值，根據佈局寬度。"
+
+#: ../sections/flipper/section.php:77
+msgid "Select Image Size"
+msgstr "選擇圖片尺寸"
+
+#: ../sections/flipper/section.php:84
+msgid "Flipper Title"
+msgstr "Flipper標題"
+
+#: ../sections/flipper/section.php:86
+msgid "Options to control the text and link in the Flipper title."
+msgstr "控制Flipper標題中的文本和鏈接的選項。"
+
+#: ../sections/flipper/section.php:91
+msgid "Flipper Title Text"
+msgstr "Flipper標題文本"
+
+#: ../sections/flipper/section.php:96
+msgid "Hide Title Link?"
+msgstr "隱藏標題鏈接？"
+
+#: ../sections/flipper/section.php:108
+msgid "Flipper Meta"
+msgstr "Flipper Meta"
+
+#: ../sections/flipper/section.php:109
+msgid ""
+"Use shortcodes to control the dynamic meta info. Example shortcodes you can "
+"use are: <ul><li><strong>[post_categories]</strong> - List of "
+"categories</li><li><strong>[post_edit]</strong> - Link for admins to edit "
+"the post</li><li><strong>[post_tags]</strong> - List of post "
+"tags</li><li><strong>[post_comments]</strong> - Link to post "
+"comments</li><li><strong>[post_author_posts_link]</strong> - Author and link"
+" to archive</li><li><strong>[post_author_link]</strong> - Link to author "
+"URL</li><li><strong>[post_author]</strong> - Post author with no "
+"link</li><li><strong>[post_time]</strong> - Time of "
+"post</li><li><strong>[post_date]</strong> - Date of "
+"post</li><li><strong>[post_type]</strong> - Type of post</li></ul>"
+msgstr "使用簡碼，控制在你Meta的動態信息。例如您可以使用簡：<ul><li><strong> [post_categories] </strong>  - 分類列表</li><li><strong>[post_edit]</strong>  - 管理員文章編輯鏈接</li><li><strong>[post_tags]</strong>  - 文章標籤列表</li><li><strong>[post_comments]</strong>  - 鏈接發表評論</li><li><strong>[post_author_posts_link]</strong>  - 作者和鏈接到存檔</li><li><strong>[post_author_link]</strong>  - 作者網址鏈接</li><li><strong>[post_author]</strong>  - 文章作者沒有鏈接</li><li><strong>[post_time]</strong>  - 文章時間</li><li><strong>[post_date]</strong>  - 文章日期</li><li><strong>[post_type]</strong>  - 文章類型</li></ul>"
+
+#: ../sections/flipper/section.php:117
+msgid "Total Posts Loaded"
+msgstr "文章被加載總數"
+
+#: ../sections/flipper/section.php:126
+msgid "Meta Key"
+msgstr "Meta關鍵字"
+
+#: ../sections/flipper/section.php:127
+msgid ""
+"Select only posts which have a certain meta key and corresponding meta "
+"value. Useful for featured posts, or similar."
+msgstr "只選擇文章具有一定的meta關鍵字和相應的meta值。有用的特色文章，或相似的。"
+
+#: ../sections/flipper/section.php:133
+msgid "Meta Key Value"
+msgstr "Meta關鍵字的值"
+
+#: ../sections/flipper/section.php:148
+msgid "Only applies for standard blog posts."
+msgstr "僅適用於標準的博客文章。"
+
+#: ../sections/flipper/section.php:157
+msgid "Additional Post Selection"
+msgstr "額外的文章選擇"
+
+#: ../sections/flipper/section.php:219
+msgid " / View All"
+msgstr " /查看全部"
+
+#: ../sections/flipper/section.php:224
+msgid " / View Blog"
+msgstr "/查看博客"
+
+#: ../sections/flipper/section.php:266
+#: ../sections/postloop/class.posts.php:505
+msgid "View"
+msgstr "視圖"
+
+#: ../sections/hero/section.php:27
+msgid "Hero Settings"
+msgstr "Hero設置"
+
+#: ../sections/hero/section.php:34
+msgid "Heading"
+msgstr "標題"
+
+#: ../sections/hero/section.php:39
+msgid "Subtext"
+msgstr "副標題"
+
+#: ../sections/hero/section.php:44
+msgid "Hero Image"
+msgstr "Hero圖片"
+
+#: ../sections/hero/section.php:50
+msgid "Upload Custom Image"
+msgstr "上傳自定義圖片"
+
+#: ../sections/hero/section.php:55
+msgid "Reverse the Hero unit (image on left)"
+msgstr "反向Hero Unit（左側圖像）"
+
+#: ../sections/hero/section.php:59
+msgid "Content Widths"
+msgstr "內容寬度"
+
+#: ../sections/hero/section.php:65
+msgid "Text Area Width"
+msgstr "文本區域寬度"
+
+#: ../sections/hero/section.php:81
+msgid "Image Area Width"
+msgstr "圖像區域寬度"
+
+#: ../sections/hero/section.php:99
+msgid "Hero Action Button"
+msgstr "Hero動作按鈕"
+
+#: ../sections/hero/section.php:107
+msgid "Button link destination (URL - Required)"
+msgstr "按鈕鏈接目的地（網址 - 必需）"
+
+#: ../sections/hero/section.php:112
+msgid "Hero Button Text"
+msgstr "Hero按鈕文本"
+
+#: ../sections/hero/section.php:118 ../sections/icallout/section.php:57
+msgid "Open link in new window"
+msgstr "在新窗口中打開鏈接"
+
+#: ../sections/hero/section.php:121 ../sections/masthead/section.php:118
+#: ../sections/masthead/section.php:300 ../sections/masthead/section.php:335
+msgid "Select Button Color"
+msgstr "選擇按鈕顏色"
+
+#: ../sections/hero/section.php:127 ../sections/masthead/section.php:302
+#: ../sections/masthead/section.php:337 ../sections/navbar/section.php:65
+#: ../sections/navbar/section.php:370 ../sections/navbar/section.php:382
+msgid "Blue"
+msgstr "藍色"
+
+#: ../sections/hero/section.php:128 ../sections/masthead/section.php:303
+#: ../sections/masthead/section.php:338 ../sections/navbar/section.php:67
+#: ../sections/navbar/section.php:372 ../sections/navbar/section.php:384
+msgid "Orange"
+msgstr "橙色"
+
+#: ../sections/hero/section.php:129 ../sections/masthead/section.php:304
+#: ../sections/masthead/section.php:339 ../sections/navbar/section.php:68
+#: ../sections/navbar/section.php:373 ../sections/navbar/section.php:385
+msgid "Red"
+msgstr "紅色"
+
+#: ../sections/hero/section.php:130 ../sections/masthead/section.php:305
+#: ../sections/masthead/section.php:340
+msgid "Green"
+msgstr "綠色"
+
+#: ../sections/hero/section.php:131 ../sections/masthead/section.php:306
+#: ../sections/masthead/section.php:341
+msgid "Light Blue"
+msgstr "淺藍"
+
+#: ../sections/hero/section.php:132 ../sections/masthead/section.php:307
+#: ../sections/masthead/section.php:342
+msgid "Grey"
+msgstr "灰色"
+
+#: ../sections/hero/section.php:166
+msgid "The Hero!"
+msgstr "Hero！"
+
+#: ../sections/hero/section.php:167
+msgid "Now just set up your Hero section options"
+msgstr "現在只要設置你的Hero Section選項"
+
+#: ../sections/highlight/section.php:29
+msgid "Select Format"
+msgstr "選擇格式"
+
+#: ../sections/highlight/section.php:31
+msgid "Highlight Format"
+msgstr "突出顯示格式"
+
+#: ../sections/highlight/section.php:33 ../sections/highlight/section.php:123
+msgid "Image on top of text"
+msgstr "圖像在文本上"
+
+#: ../sections/highlight/section.php:34 ../sections/highlight/section.php:124
+msgid "Image on bottom of text"
+msgstr "圖片在文字底"
+
+#: ../sections/highlight/section.php:35 ../sections/highlight/section.php:125
+msgid "No text, just the image"
+msgstr "沒有文字，只是圖像"
+
+#: ../sections/highlight/section.php:41
+msgid "Highlight Text"
+msgstr "突出顯示文本"
+
+#: ../sections/highlight/section.php:48 ../sections/highlight/section.php:97
+#: ../sections/highlight/section.php:104
+msgid "Highlight Header Text (Optional)"
+msgstr "高亮顯示標題文本（可選）"
+
+#: ../sections/highlight/section.php:54 ../sections/highlight/section.php:110
+msgid "Highlight Subheader Text (Optional)"
+msgstr "高亮副標題文本（可選）"
+
+#: ../sections/highlight/section.php:62
+msgid "Highlight Image and Format"
+msgstr "突出顯示圖像和格式"
+
+#: ../sections/highlight/section.php:68 ../sections/highlight/section.php:116
+msgid "Upload Splash Image"
+msgstr "上傳Splash圖片"
+
+#: ../sections/highlight/section.php:73 ../sections/highlight/section.php:130
+msgid "Add frame to image?"
+msgstr "添加圖像邊框？"
+
+#: ../sections/highlight/section.php:98
+msgid "Add the main header text for the highlight section."
+msgstr "添加主標題文本的突出顯示Section。"
+
+#: ../sections/highlight/section.php:121
+msgid "Highlight Image Style"
+msgstr "突出顯示圖片樣式"
+
+#: ../sections/highlight/section.php:167
+msgid "Here's to the crazy ones..."
+msgstr "這裡是瘋狂的..."
+
+#: ../sections/highlight/section.php:168
+msgid "This is your Highlight section. Set up the options to configure."
+msgstr "這是你的突出顯示Section。設置選項來配置。"
+
+#: ../sections/ibox/section.php:23
+msgid "iBox Configuration"
+msgstr "iBox配置"
+
+#: ../sections/ibox/section.php:33
+msgid "Number of iBoxes to Configure"
+msgstr "配置iBoxes數"
+
+#: ../sections/ibox/section.php:41
+msgid "Number of Columns for Each Box (12 Col Grid)"
+msgstr "每個盒子的列數（12列網格）"
+
+#: ../sections/ibox/section.php:47
+msgid "Icon Font"
+msgstr "圖標字體"
+
+#: ../sections/ibox/section.php:48
+msgid "Images"
+msgstr "圖片"
+
+#: ../sections/ibox/section.php:49
+msgid "Text Only, No Media"
+msgstr "僅文本，無媒體"
+
+#: ../sections/ibox/section.php:52
+msgid "Select iBox Media Type"
+msgstr "選擇iBox媒體類型"
+
+#: ../sections/ibox/section.php:58
+msgid "Media on Top"
+msgstr "媒體在頂"
+
+#: ../sections/ibox/section.php:59
+msgid "Media at Left"
+msgstr "媒體在左"
+
+#: ../sections/ibox/section.php:62
+msgid "Select the iBox Media Location"
+msgstr "選擇iBox媒體位置"
+
+#: ../sections/ibox/section.php:72
+msgid "iBoxes Setup"
+msgstr ""
+
+#: ../sections/ibox/section.php:73
+msgid "iBox"
+msgstr ""
+
+#: ../sections/ibox/section.php:77
+msgid "iBox Title"
+msgstr "iBox標題"
+
+#: ../sections/ibox/section.php:82
+msgid "iBox Text"
+msgstr "iBox文本"
+
+#: ../sections/ibox/section.php:87
+msgid "iBox Link (Optional)"
+msgstr "iBox鏈接（可選）"
+
+#: ../sections/ibox/section.php:92
+msgid "iBox Class (Optional)"
+msgstr "iBox Class (可選)"
+
+#: ../sections/ibox/section.php:97
+msgid "iBox Icon"
+msgstr "iBox圖標"
+
+#: ../sections/ibox/section.php:102
+msgid "iBox Image"
+msgstr "iBox圖片"
+
+#: ../sections/ibox/section.php:162 ../sections/ibox/section.php:276
+msgid "More"
+msgstr "更多"
+
+#: ../sections/ibox/section.php:271
+msgid "iBox "
+msgstr "iBox"
+
+#: ../sections/icallout/section.php:24
+msgid "Callout Format"
+msgstr "Callout格式"
+
+#: ../sections/icallout/section.php:26
+msgid "Text on top of button"
+msgstr "按鈕上的文字"
+
+#: ../sections/icallout/section.php:27
+msgid "Text/Button Inline"
+msgstr "文本/按鈕Inline"
+
+#: ../sections/icallout/section.php:32 ../sections/icallout/section.php:38
+msgid "Callout Text"
+msgstr "Callout文本"
+
+#: ../sections/icallout/section.php:51
+msgid "URL"
+msgstr "URL"
+
+#: ../sections/icallout/section.php:62
+msgid "Text on Button"
+msgstr "按鈕上的文字"
+
+#: ../sections/icallout/section.php:67
+msgid "Button Color"
+msgstr "按鈕顏色"
+
+#: ../sections/icallout/section.php:89
+msgid "Call to action!"
+msgstr "執行！"
+
+#: ../sections/masthead/section.php:47 ../sections/masthead/section.php:246
+msgid "Masthead Splash Options"
+msgstr "刊頭Splash選項"
+
+#: ../sections/masthead/section.php:53 ../sections/masthead/section.php:252
+msgid "Upload custom image"
+msgstr "上傳自定義圖像"
+
+#: ../sections/masthead/section.php:58 ../sections/masthead/section.php:256
+msgid "Masthead Video (optional, to be used instead of image)"
+msgstr "刊頭視頻（可選的，使用代替圖像）"
+
+#: ../sections/masthead/section.php:63 ../sections/masthead/section.php:260
+msgid "Maximum width of splash in px (default is full width)"
+msgstr "Splash的最大寬度用px（默認是全寬）"
+
+#: ../sections/masthead/section.php:66 ../sections/masthead/section.php:263
+msgid ""
+"Upload an image to serve as a splash image, or use an embed code for full "
+"width video."
+msgstr "上傳的圖像作為Splash圖像，或者使用全寬視頻的嵌入代碼。"
+
+#: ../sections/masthead/section.php:71
+msgid "Masthead Text"
+msgstr "刊頭文字"
+
+#: ../sections/masthead/section.php:72 ../sections/masthead/section.php:269
+msgid " Text"
+msgstr "文本"
+
+#: ../sections/masthead/section.php:77 ../sections/masthead/section.php:271
+#: ../sections/mediabox/section.php:30 ../sections/popthumbs/section.php:69
+#: ../sections/propricing/section.php:53
+msgid "Title"
+msgstr "標題"
+
+#: ../sections/masthead/section.php:82 ../sections/masthead/section.php:272
+msgid "Tagline"
+msgstr "標語"
+
+#: ../sections/masthead/section.php:94
+msgid "Masthead Action Button "
+msgstr "刊頭動作按鈕"
+
+#: ../sections/masthead/section.php:99 ../sections/masthead/section.php:284
+#: ../sections/masthead/section.php:319
+msgid "Enter the link destination (URL - Required)"
+msgstr "輸入目標鏈接（URL  - 必需）"
+
+#: ../sections/masthead/section.php:105 ../sections/masthead/section.php:289
+#: ../sections/masthead/section.php:324
+msgid "Masthead Button Text"
+msgstr "刊頭按鈕文本"
+
+#: ../sections/masthead/section.php:112 ../sections/masthead/section.php:295
+#: ../sections/masthead/section.php:330
+msgid "Open link in new window."
+msgstr "在新窗口中打開鏈接。"
+
+#: ../sections/masthead/section.php:130 ../sections/masthead/section.php:350
+msgid "Masthead Menu"
+msgstr "報頭菜單"
+
+#: ../sections/masthead/section.php:131 ../sections/masthead/section.php:351
+msgid "Select Masthead Menu"
+msgstr "選擇報頭菜單"
+
+#: ../sections/masthead/section.php:136 ../sections/masthead/section.php:356
+msgid "Masthead Meta"
+msgstr "報頭Meta"
+
+#: ../sections/masthead/section.php:137 ../sections/masthead/section.php:357
+msgid "Enter Masthead Meta Text"
+msgstr "輸入報頭Meta文本"
+
+#: ../sections/masthead/section.php:194
+msgid "Start Here"
+msgstr "從這裡開始"
+
+#: ../sections/masthead/section.php:247
+msgid ""
+"Enter the options for the masthead splash image. If no options are "
+"specified, no image will be shown."
+msgstr "輸入的刊頭Splash圖像的選項。如果沒有指定任何選項，無圖像將被顯示。"
+
+#: ../sections/masthead/section.php:268
+msgid "Enter text for your masthead banner section"
+msgstr ""
+
+#: ../sections/masthead/section.php:274
+msgid "The text for the masthead section"
+msgstr ""
+
+#: ../sections/masthead/section.php:279
+msgid "Masthead Action Button 1"
+msgstr "刊頭動作按鈕1"
+
+#: ../sections/masthead/section.php:280 ../sections/masthead/section.php:315
+msgid ""
+"Enter the options for the masthead button. If no options are specified, no "
+"button will be shown."
+msgstr "輸入刊頭按鈕的選項。如果沒有指定任何選項，沒有按鈕將會顯示出來。"
+
+#: ../sections/masthead/section.php:314
+msgid "Masthead Action Button 2"
+msgstr "刊頭動作按鈕2"
+
+#: ../sections/masthead/section.php:348
+msgid "Choose a Wordpress menu to display (optional)"
+msgstr "選擇一個WordPress的菜單顯示（可選）"
+
+#: ../sections/masthead/section.php:354
+msgid "Enter text to be shown on Masthead (optional)"
+msgstr "輸入文本顯示在報頭（可選）"
+
+#: ../sections/mediabox/section.php:18
+msgid "MediaBox Media"
+msgstr "MediaBox的媒體"
+
+#: ../sections/mediabox/section.php:25
+msgid "MediaBox Image"
+msgstr "MediaBox的圖片"
+
+#: ../sections/mediabox/section.php:35
+msgid "Text and Embed HTML"
+msgstr "文本和嵌入HTML"
+
+#: ../sections/mediabox/section.php:36
+msgid ""
+"Enter rich media \"embed\" HTML in this field to add videos, etc.. instead "
+"of an image."
+msgstr "在這一字段輸入富媒體 \"嵌入\" 的HTML添加視頻等。而不是圖像。"
+
+#: ../sections/mediabox/section.php:50
+msgid "Text/Media Alignment"
+msgstr "文字/媒體對齊"
+
+#: ../sections/mediabox/section.php:52
+msgid "Align Center (Default)"
+msgstr "居中對齊（默認）"
+
+#: ../sections/mediabox/section.php:53
+msgid "Align Left"
+msgstr "左對齊"
+
+#: ../sections/mediabox/section.php:54
+msgid "Align Right"
+msgstr "右對齊"
+
+#: ../sections/mediabox/section.php:61
+msgid "MediaBox Min Height (px)"
+msgstr "MediaBox的最小高度（px）"
+
+#: ../sections/mediabox/section.php:62
+msgid ""
+"Required for \"cover\" mode. Otherwise the mediabox will be drawn at the "
+"height of the media."
+msgstr "\"覆蓋\"模式所必需的。否則mediabox將被繪製了媒體時的高度。"
+
+#: ../sections/mediabox/section.php:67
+msgid "Disable Media Vertical Centering?"
+msgstr "禁用媒體垂直居中？"
+
+#: ../sections/mediabox/section.php:72 ../sections/textbox/section.php:70
+msgid "Viewport Animation"
+msgstr "窗口動畫"
+
+#: ../sections/mediabox/section.php:73 ../sections/textbox/section.php:71
+msgid "Optionally animate the appearance of this section on view."
+msgstr "可以選擇動畫在這Section的外觀。"
+
+#: ../sections/mediabox/section.php:86
+msgid "MediaBox Background Image"
+msgstr "媒體框背景圖片"
+
+#: ../sections/navbar/section.php:61 ../sections/navbar/section.php:379
+msgid "Standard NavBar - Select Theme"
+msgstr "標準導航欄 - 選擇主題"
+
+#: ../sections/navbar/section.php:63
+msgid "Base Color"
+msgstr "基本顏色"
+
+#: ../sections/navbar/section.php:64 ../sections/navbar/section.php:369
+#: ../sections/navbar/section.php:381
+msgid "Black (Default)"
+msgstr "黑色（默認）"
+
+#: ../sections/navbar/section.php:66 ../sections/navbar/section.php:371
+#: ../sections/navbar/section.php:383
+msgid "Light Grey"
+msgstr "淺灰色"
+
+#: ../sections/navbar/section.php:72
+msgid "NavBar Theme"
+msgstr "導航條主題"
+
+#: ../sections/navbar/section.php:73 ../sections/navbar/section.php:391
+msgid ""
+"The NavBar comes with several color options. Select one to automatically "
+"configure."
+msgstr "導航條帶有多種顏色選擇。選擇一個自動配置。"
+
+#: ../sections/navbar/section.php:79
+msgid "NavBar Menu"
+msgstr "導航條菜單"
+
+#: ../sections/navbar/section.php:80 ../sections/navbar/section.php:412
+msgid "The NavBar uses WordPress menus. Select one for use."
+msgstr "導航條使用WordPress的菜單。選擇一個使用。"
+
+#: ../sections/navbar/section.php:85 ../sections/simple_nav/section.php:34
+#: ../sections/simple_nav/section.php:40 ../editor/js/pl.optpanel.js:687
+msgid "Select Menu"
+msgstr "選擇菜單"
+
+#: ../sections/navbar/section.php:94
+msgid "NavBar Configuration Options"
+msgstr "導航條配置選項"
+
+#: ../sections/navbar/section.php:99 ../sections/navbar/section.php:100
+#: ../sections/navbar/section.php:445 ../sections/navbar/section.php:446
+msgid "NavBar Title"
+msgstr "導航條標題"
+
+#: ../sections/navbar/section.php:101 ../sections/navbar/section.php:448
+msgid ""
+"Add text to the NavBar to serve as a title, but only displayed on small "
+"screens."
+msgstr "文本添加到導航欄作為標題，但只能在小屏幕上顯示。"
+
+#: ../sections/navbar/section.php:106 ../sections/navbar/section.php:422
+msgid "Activate dropdowns on hover."
+msgstr "激活下拉菜單上懸停。"
+
+#: ../sections/navbar/section.php:113
+msgid "Align Menu Right? (Defaults Left)"
+msgstr "右對齊菜單？ （默認左）"
+
+#: ../sections/navbar/section.php:118
+msgid "Hide Search?"
+msgstr "隱藏搜索？"
+
+#: ../sections/navbar/section.php:135 ../sections/navbar/section.php:206
+msgid "NavBar"
+msgstr "導航條"
+
+#: ../sections/navbar/section.php:152 ../sections/navbar/section.php:153
+#: ../sections/navbar/section.php:344 ../sections/navbar/section.php:345
+msgid "Enable Fixed Navigation Bar"
+msgstr "啟用固定導航欄"
+
+#: ../sections/navbar/section.php:154 ../sections/navbar/section.php:347
+msgid ""
+"Use this feature to add the NavBar section as a fixed navigation bar on the "
+"top of your site."
+msgstr "使用此功能可作為一個固定在您的網站頂部的導航欄添加導航欄Section。"
+
+#: ../sections/navbar/section.php:162 ../sections/navbar/section.php:163
+msgid "NavBar Logo"
+msgstr ""
+
+#: ../sections/navbar/section.php:164 ../sections/navbar/section.php:356
+msgid ""
+"Use this feature to add the NavBar section as a fixed navigation bar on the "
+"top of your site.<br/><br/><strong>Notes:</strong> <br/>1. Only visible in "
+"Fixed Mode.<br/>2. Image Height is constricted to a maximum 29px."
+msgstr "作為一個固定在您的網站頂部的導航欄，使用該功能可以添加導航欄Section。<br/><br/><strong>注：</strong> <br/> 1.唯一可見：固定模式。<br/>2.圖片高度收縮的最大29px。"
+
+#: ../sections/navbar/section.php:293
+msgid "MENU"
+msgstr "菜單"
+
+#: ../sections/navbar/section.php:346 ../sections/navbar/section.php:355
+msgid "Applies a fixed navigation bar to the top of your site"
+msgstr "您的網站頂端套用一個固定的導航欄"
+
+#: ../sections/navbar/section.php:353
+msgid "Fixed NavBar Logo"
+msgstr "固定導航欄Logo"
+
+#: ../sections/navbar/section.php:354
+msgid "Fixed NavBar - NavBar Logo"
+msgstr "固定導航欄 - 導航欄Logo"
+
+#: ../sections/navbar/section.php:367
+msgid "Fixed NavBar - Select Theme"
+msgstr "固定導航欄 - 選擇主題"
+
+#: ../sections/navbar/section.php:389
+msgid "NavBar and Fixed NavBar Theme"
+msgstr "導航欄和固定導航條主題"
+
+#: ../sections/navbar/section.php:390
+msgid "Select the color and theme of the NavBar"
+msgstr "選擇導航條的顏色和主題"
+
+#: ../sections/navbar/section.php:402
+msgid "Fixed NavBar - Select Menu"
+msgstr "固定導航欄 - 選擇菜單"
+
+#: ../sections/navbar/section.php:407
+msgid "Standard NavBar - Select Menu"
+msgstr "標準導航欄 - 選擇菜單"
+
+#: ../sections/navbar/section.php:410
+msgid "NavBar and Fixed NavBar Menu"
+msgstr "導航欄和固定導航欄菜單"
+
+#: ../sections/navbar/section.php:411
+msgid "Select the WordPress Menu for the NavBar(s)"
+msgstr "選擇WordPress的菜單為導航條"
+
+#: ../sections/navbar/section.php:426
+msgid "Fixed NavBar - Align Menu Right? (Defaults Left)"
+msgstr "固定導航欄 - 菜單右對齊？（默認左）"
+
+#: ../sections/navbar/section.php:429
+msgid "Fixed NavBar - Hide Searchform?"
+msgstr "固定導航條 - 隱藏搜索？"
+
+#: ../sections/navbar/section.php:432
+msgid "Standard NavBar - Align Menu Right? (Defaults Left)"
+msgstr "標準導航條 - 菜單右對齊？ （默認左）"
+
+#: ../sections/navbar/section.php:435
+msgid "Standard NavBar - Hide Searchform?"
+msgstr "標準導航條 - 隱藏搜索？"
+
+#: ../sections/navbar/section.php:438
+msgid "Configure Options for NavBars"
+msgstr "配置導航條的選項"
+
+#: ../sections/navbar/section.php:439
+msgid "NavBar and Fixed NavBar Configuration Options"
+msgstr "導航欄和固定導航欄配置選項"
+
+#: ../sections/navbar/section.php:440
+msgid "Control various appearance options for the NavBars"
+msgstr "控制導航條的各種外觀選項"
+
+#: ../sections/navbar/section.php:447
+msgid "Applies text to NavBar on small screens. Not available on Fixed NavBar"
+msgstr "適用於文本導航條的小屏幕。不適用於固定導航欄"
+
+#: ../sections/noposts/section.php:22
+msgid ""
+"Direct Previewing <em>of</em> &quot;Special Post Types&quot; Not "
+"Available... Yet"
+msgstr "直接預覽 <em>對於</em> &quot;特殊文章類型&quot; 但不可用..."
+
+#: ../sections/noposts/section.php:23
+msgid ""
+"Sorry, direct previewing of special post types such as "
+"<strong>features</strong> or <strong>boxes</strong> is unavailable. This "
+"WordPress functionality is new and rapidly developing, so it should be "
+"available soon."
+msgstr "對不起，直接預覽的功能，如特殊文章類型如<strong>特色圖片</strong>或<strong>盒子</strong>是不可用的。這WordPress的功能是新的，快速發展的，所以它應該是很快面市。"
+
+#: ../sections/noposts/section.php:25
+msgid ""
+"To preview a &quot;custom post type&quot; just view a page with that "
+"&quot;section&quot; on it."
+msgstr "預覽 &quot;自定義文章類型&quot; 與查看頁面在 &quot;Section&quot; 上。"
+
+#: ../sections/noposts/section.php:30
+msgid "404!"
+msgstr "404！"
+
+#: ../sections/noposts/section.php:31
+msgid "Sorry, This Page Does not exist."
+msgstr "很抱歉，此頁面不存在。"
+
+#: ../sections/noposts/section.php:31
+msgid "Go"
+msgstr "轉到"
+
+#: ../sections/noposts/section.php:31
+msgid "home"
+msgstr "首頁"
+
+#: ../sections/noposts/section.php:31
+msgid "or try a search?"
+msgstr "或嘗試搜索？"
+
+#: ../sections/pl_area/section.php:27
+msgid "Section Area Layout"
+msgstr ""
+
+#: ../sections/pl_area/section.php:32
+msgid "Default Area Padding (px)"
+msgstr "默認區域內邊距（px）"
+
+#: ../sections/pl_area/section.php:36
+msgid ""
+"If sections are added to full width areas, the area will be givin this "
+"default padding."
+msgstr "如果Sections添加到全寬區域，區域將會得到默認內邊距。"
+
+#: ../sections/pl_area/section.php:53
+msgid "Set Area Padding"
+msgstr "設置區域內邊距"
+
+#: ../sections/pl_area/section.php:61
+msgid "Area Padding (px)"
+msgstr "區域內邊距（px）"
+
+#: ../sections/pl_area/section.php:69
+msgid "Area Padding Bottom (if different)"
+msgstr "區域內邊距底部（如果不同）"
+
+#: ../sections/pl_area/section.php:81
+msgid "Area Styling"
+msgstr "區域式樣"
+
+#: ../sections/pl_area/section.php:103
+msgid "Area Theme"
+msgstr "區域主題"
+
+#: ../sections/pl_area/section.php:109
+msgid "Area Minimum Height (px)"
+msgstr "區域最小高度（px）"
+
+#: ../sections/pl_area/section.php:121
+msgid "Area Background"
+msgstr "區域背景"
+
+#: ../sections/pl_area/section.php:133
+msgid "Repeat Background Image"
+msgstr "重複背景圖像"
+
+#: ../sections/pl_area/section.php:138
+msgid "Enable Background Parallax"
+msgstr "啟用背景視差"
+
+#: ../sections/popthumbs/section.php:42
+msgid "PopThumb Configuration"
+msgstr "PopThumb配置"
+
+#: ../sections/popthumbs/section.php:51
+msgid "Number of Columns for Each Thumb (12 Col Grid)"
+msgstr "列數為每個縮略圖（12列網格）"
+
+#: ../sections/popthumbs/section.php:62
+msgid "PopThumbs Setup"
+msgstr ""
+
+#: ../sections/popthumbs/section.php:63 ../sections/popthumbs/section.php:80
+msgid "Thumb"
+msgstr ""
+
+#: ../sections/popthumbs/section.php:74
+msgid "Text"
+msgstr ""
+
+#: ../sections/popthumbs/section.php:85
+msgid "Image"
+msgstr ""
+
+#: ../sections/postauthor/section.php:35
+msgid "Author Setup"
+msgstr "作者設置"
+
+#: ../sections/postauthor/section.php:37
+msgid ""
+"This section uses the author's profile information. Set that in your admin."
+msgstr "本Section使用作者的主頁信息。你的管理員設置。"
+
+#: ../sections/postauthor/section.php:68
+msgid "Author"
+msgstr "作者"
+
+#: ../sections/postauthor/section.php:77
+msgid "Visit Authors Website &rarr;"
+msgstr "訪問作者的網站&rarr;"
+
+#: ../sections/postauthor/section.php:80
+msgid "Authors Google Profile &rarr;"
+msgstr "作者Google主頁&rarr;"
+
+#: ../sections/postloop/class.posts.php:37
+#: ../sections/postloop/section.php:186
+msgid "Read More &raquo;"
+msgstr "閱讀更多&raquo;"
+
+#: ../sections/postloop/class.posts.php:240
+msgid "<div class='pagination'><span class='desc'>pages:</span><ul>"
+msgstr "<div class='pagination'><span class='desc'>頁面：</span><ul>"
+
+#: ../sections/postloop/class.posts.php:253
+msgid "<span class='note'>Tagged with &rarr;</span> "
+msgstr "<span class='note'>標記&rarr;</span> "
+
+#: ../sections/postloop/class.posts.php:405
+msgid "Link To"
+msgstr "鏈接"
+
+#: ../sections/postloop/class.posts.php:430
+#: ../sections/postloop/class.posts.php:435
+msgid "On"
+msgstr "上"
+
+#: ../sections/postloop/class.posts.php:430
+#: ../sections/postloop/class.posts.php:435
+msgid "By"
+msgstr "由"
+
+#: ../sections/postloop/class.posts.php:435
+msgid "In"
+msgstr "在"
+
+#: ../sections/postloop/class.posts.php:696
+#, php-format
+msgid "No results for &quot;%s&quot;"
+msgstr "沒有結果&quot;%s&quot;"
+
+#: ../sections/postloop/class.posts.php:696
+msgid "Nothing Found"
+msgstr "未找到"
+
+#: ../sections/postloop/class.posts.php:698
+msgid "Try another search?"
+msgstr "嘗試其他搜索？"
+
+#: ../sections/postloop/class.posts.php:698
+msgid "Sorry, what you are looking for isn't here."
+msgstr "對不起，你正在尋找的不在這裡。"
+
+#: ../sections/postloop/section.php:28
+msgid "Edit Post Content"
+msgstr "編輯文章內容"
+
+#: ../sections/postloop/section.php:29
+msgid "<i class=\"icon-edit\"></i> Edit Post Info"
+msgstr "<i class=\"icon-edit\"></i>編輯文章信息"
+
+#: ../sections/postloop/section.php:30
+msgid ""
+"This section uses WordPress posts. Edit post information using WordPress "
+"admin."
+msgstr "本Section使用WordPress的文章。編輯文章的信息使用WordPress管理。"
+
+#: ../sections/postloop/section.php:37
+msgid "Page Title"
+msgstr "頁面標題"
+
+#: ../sections/postloop/section.php:43
+msgid "Layout <span class=\"spamp\">&amp;</span> Config"
+msgstr "佈局<span class=\"spamp\">&amp;</span>配置"
+
+#: ../sections/postloop/section.php:52
+msgid "Magazine Layout Mode"
+msgstr "雜誌版面模式"
+
+#: ../sections/postloop/section.php:53
+msgid "List Layout Mode"
+msgstr "列表佈局模式"
+
+#: ../sections/postloop/section.php:55 ../sections/postloop/section.php:56
+msgid "Posts Layout Mode"
+msgstr "文章佈局模式"
+
+#: ../sections/postloop/section.php:57
+msgid ""
+"Choose between two magazine or blog layout mode. <br/><br/> <strong>Magazine"
+" Layout Mode</strong><br/> Magazine layout mode makes use of post "
+"<strong>clips</strong>. These are summarized excerpts shown at half the "
+"width of the main content column.<br/>  <strong>Note:</strong> There is an "
+"option for showing <strong>full-width</strong> posts on your main "
+"<strong>posts</strong> page.<br/><br/><strong>List Layout Mode</strong><br/>"
+" This is your classical post list layout. Posts span the entire width of the"
+" main content column."
+msgstr "兩個雜誌或博客的佈局模式之間選擇。<br/><br/> <strong>雜誌佈局模式</strong><br/>雜誌佈局模式使用文章<strong>剪輯</strong>。在這些概述的主要內容列的寬度的一半顯示摘錄。<br/>  <strong>注意：</strong>有一個選項用於顯示<strong>全寬</strong>文章在您的主<strong>文章</strong>頁面。<br/><br/><strong>博客佈局模式</strong><br/>這是您的經典博客佈局。文章跨越的主要內容列的整個寬度上。"
+
+#: ../sections/postloop/section.php:66
+msgid "Number of Full Width Posts? (Mag. Mode)"
+msgstr "全寬帖子數？（雜誌模式）"
+
+#: ../sections/postloop/section.php:67
+msgid "Full Width Posts (Magazine Layout Mode Only)"
+msgstr "全寬度文章（僅雜誌版面模式）"
+
+#: ../sections/postloop/section.php:68
+msgid ""
+"Select the number of posts you would like shown at the full width of the "
+"main content column in magazine layout mode (the rest will be half-width "
+"post <strong>clips</strong>)."
+msgstr "選擇您想在全寬度的主要內容列在雜誌版面模式（其餘的將一半寬度文章<strong>剪輯</strong>）所示的文章數量。"
+
+#: ../sections/postloop/section.php:75
+msgid "Show Full Post Content"
+msgstr "顯示全部帖子內容"
+
+#: ../sections/postloop/section.php:76
+msgid "Optionally show full post content on special post listing pages."
+msgstr "選擇顯示全部內容後對特殊上市後頁。"
+
+#: ../sections/postloop/section.php:84
+msgid "Meta Config"
+msgstr "Meta配置"
+
+#: ../sections/postloop/section.php:87
+msgid ""
+"Use shortcodes to control the dynamic information in your metabar. Example "
+"shortcodes you can use are: <ul><li><strong>[post_categories]</strong> - "
+"List of categories</li><li><strong>[post_edit]</strong> - Link for admins to"
+" edit the post</li><li><strong>[post_tags]</strong> - List of post "
+"tags</li><li><strong>[post_comments]</strong> - Link to post "
+"comments</li><li><strong>[post_author_posts_link]</strong> - Author and link"
+" to archive</li><li><strong>[post_author_link]</strong> - Link to author "
+"URL</li><li><strong>[post_author]</strong> - Post author with no "
+"link</li><li><strong>[post_time]</strong> - Time of "
+"post</li><li><strong>[post_date]</strong> - Date of "
+"post</li><li><strong>[post_type]</strong> - Type of post</li></ul>"
+msgstr "使用簡碼，控制在你Metabar的動態信息。例如您可以使用簡：<ul><li><strong> [post_categories] </strong>  - 分類列表</li><li><strong>[post_edit]</strong>  - 管理員文章編輯鏈接</li><li><strong>[post_tags]</strong>  - 文章標籤列表</li><li><strong>[post_comments]</strong>  - 鏈接發表評論</li><li><strong>[post_author_posts_link]</strong>  - 作者和鏈接到存檔</li><li><strong>[post_author_link]</strong>  - 作者網址鏈接</li><li><strong>[post_author]</strong>  - 文章作者沒有鏈接</li><li><strong>[post_time]</strong>  - 文章時間</li><li><strong>[post_date]</strong>  - 文章日期</li><li><strong>[post_type]</strong>  - 文章類型</li></ul>"
+
+#: ../sections/postloop/section.php:92
+msgid "Select Meta Mode"
+msgstr "選擇Meta模式"
+
+#: ../sections/postloop/section.php:93
+msgid "Meta Mode"
+msgstr "Meta模式"
+
+#: ../sections/postloop/section.php:98
+msgid ""
+"Instead of the standard metabar (beneath post title), you can use author "
+"meta mode. This mode displays the author avatar and publish date on left."
+msgstr ""
+
+#: ../sections/postloop/section.php:105
+msgid "Configure Full Width Post Metabar"
+msgstr "配置全寬文章的Metabar"
+
+#: ../sections/postloop/section.php:106
+msgid "Post Meta Information"
+msgstr "文章的Meta信息"
+
+#: ../sections/postloop/section.php:114 ../sections/postloop/section.php:115
+msgid "Configure Clip Metabar"
+msgstr "配置剪輯Metabar"
+
+#: ../sections/postloop/section.php:122
+msgid "Thumbs"
+msgstr "縮略圖"
+
+#: ../sections/postloop/section.php:133 ../sections/postloop/section.php:149
+msgid "Left Justified"
+msgstr "左對齊"
+
+#: ../sections/postloop/section.php:134 ../sections/postloop/section.php:150
+msgid "On Top"
+msgstr "在上面"
+
+#: ../sections/postloop/section.php:135 ../sections/postloop/section.php:151
+msgid "Left, In Excerpt"
+msgstr "左，在摘錄"
+
+#: ../sections/postloop/section.php:136 ../sections/postloop/section.php:152
+msgid "Right, In Excerpt"
+msgstr "右，在摘錄"
+
+#: ../sections/postloop/section.php:138
+msgid "Full Width Thumbs Layout"
+msgstr "全寬縮略圖佈局"
+
+#: ../sections/postloop/section.php:139
+msgid ""
+"Use this option to configure how thumbs will be shown in full-width posts on"
+" your blog page."
+msgstr "使用此選項來配置將如何顯示縮略圖在你的博客頁面上的全寬文章。"
+
+#: ../sections/postloop/section.php:154
+msgid "Clip Thumbs Layout"
+msgstr "剪輯縮略圖佈局的"
+
+#: ../sections/postloop/section.php:155
+msgid ""
+"Use this option to configure how thumbs will be shown in clips. These are "
+"the smaller <strong>magazine</strong> style excerpts on your blog page."
+msgstr "使用此選項來配置將如何顯示縮略圖在剪輯。這些較小的的<strong>雜誌</strong>在你的博客頁面的風格摘錄。"
+
+#: ../sections/postloop/section.php:161
+msgid "Hide thumbs?"
+msgstr "隱藏縮略圖？"
+
+#: ../sections/postloop/section.php:162
+msgid "Post Thumbnails"
+msgstr "文章縮略圖"
+
+#: ../sections/postloop/section.php:163
+msgid "Use this option to hide or show thumbs for posts on pages."
+msgstr "使用此選項可以隱藏或顯示網頁上的文章的縮略圖。"
+
+#: ../sections/postloop/section.php:172
+msgid "Excerpts"
+msgstr "摘錄"
+
+#: ../sections/postloop/section.php:179
+msgid "Hide excerpts?"
+msgstr "隱藏摘錄？"
+
+#: ../sections/postloop/section.php:180
+msgid "Hide Post Excerpt"
+msgstr "隱藏文章摘錄"
+
+#: ../sections/postloop/section.php:181
+msgid ""
+"Excerpts are short pieces of content that are shown to give users a preview "
+"of a post. Hide them using this option."
+msgstr "摘錄的內容顯示給用戶預覽後的小段。隱藏他們使用此選項。"
+
+#: ../sections/postloop/section.php:188
+msgid "Continue Reading Link Text"
+msgstr "繼續閱讀連結文字"
+
+#: ../sections/postloop/section.php:189
+msgid "Excerpts <strong>Continue Reading</strong> Text"
+msgstr "摘錄<strong>繼續閱讀</strong>文本"
+
+#: ../sections/postloop/section.php:190
+msgid ""
+"This text will be used as the link to your full article when viewing "
+"articles on your posts page (when excerpts are turned on)."
+msgstr "該文本將作為您的全篇文章的鏈接查看文章時在您的文章頁面（當摘錄開啟時）。"
+
+#: ../sections/postloop/section.php:197
+msgid "Number of words."
+msgstr "單詞的數量。"
+
+#: ../sections/postloop/section.php:198
+msgid "Excerpt Length"
+msgstr "摘錄長度"
+
+#: ../sections/postloop/section.php:199
+msgid "Excerpts are set to 55 words by default."
+msgstr "摘錄默認情況下被設置為55個字。"
+
+#: ../sections/postloop/section.php:206
+msgid "Allowed Tags"
+msgstr "允許的標籤"
+
+#: ../sections/postloop/section.php:207
+msgid "Allow Tags in Excerpt"
+msgstr "允許標籤在摘錄"
+
+#: ../sections/postloop/section.php:208
+msgid ""
+"By default WordPress strips all HTML tags from excerpts. You can use this "
+"option to allow certain tags. Simply enter the allowed tags in this field. "
+"<br/>An example of allowed tags could be: "
+"<strong>&lt;p&gt;&lt;br&gt;&lt;a&gt;</strong>. <br/><br/> "
+"<strong>Note:</strong> Enter a period <strong>.</strong> to disallow all "
+"tags."
+msgstr "默認情況下，WordPress的剝離所有HTML標籤摘錄。您可以使用此選項，允許特定的標籤。只需輸入允許標籤在這一字段。 <br/>允許標籤的一個例子可能是: <strong>&lt;p&gt;&lt;br&gt;&lt;a&gt;</strong>. <br/><br/> <strong>注意：</strong> 輸入一個點號<strong>.</strong>禁止所有標籤."
+
+#: ../sections/postsinfo/section.php:29
+msgid "Search results for"
+msgstr "搜索結果"
+
+#: ../sections/postsinfo/section.php:31
+msgid "Currently viewing the category:"
+msgstr "目前查看的類別："
+
+#: ../sections/postsinfo/section.php:33
+msgid "Currently viewing the tag:"
+msgstr "目前查看的標籤："
+
+#: ../sections/postsinfo/section.php:40
+msgid "Posts by:"
+msgstr "帖子："
+
+#: ../sections/postsinfo/section.php:42
+msgid "From the daily archives:"
+msgstr "從每日檔案："
+
+#: ../sections/postsinfo/section.php:44
+msgid "From the monthly archives:"
+msgstr "從每月檔案："
+
+#: ../sections/postsinfo/section.php:46
+msgid "From the yearly archives:"
+msgstr "從每年檔案："
+
+#: ../sections/postsinfo/section.php:57
+msgid "Viewing archives for "
+msgstr "查看檔案"
+
+#: ../sections/propricing/section.php:28
+msgid "ProPricing Configuration"
+msgstr "ProPricing配置"
+
+#: ../sections/propricing/section.php:38
+msgid "Number of Columns for Each Plan (12 Col Grid)"
+msgstr "每個計劃的列數（12列網格）"
+
+#: ../sections/propricing/section.php:48
+msgid "Pricing Setup"
+msgstr ""
+
+#: ../sections/propricing/section.php:49
+msgid "Column"
+msgstr ""
+
+#: ../sections/propricing/section.php:58
+msgid "Price"
+msgstr ""
+
+#: ../sections/propricing/section.php:63
+msgid "Before Price Text"
+msgstr ""
+
+#: ../sections/propricing/section.php:65
+msgid "Typically you will add the monetary unit here. E.g. \"$\""
+msgstr "通常情況下，你會在這裡添加的貨幣單位。例如：\"$\""
+
+#: ../sections/propricing/section.php:69
+msgid "After Price Text"
+msgstr ""
+
+#: ../sections/propricing/section.php:71
+msgid "Typically you will add the recurring amount here. E.g. \"/ MO\""
+msgstr "通常你會在這裡增加的經常性數額。例如 \"/ MO\""
+
+#: ../sections/propricing/section.php:75
+msgid "Sub Text"
+msgstr ""
+
+#: ../sections/propricing/section.php:80
+msgid "Link URL"
+msgstr ""
+
+#: ../sections/propricing/section.php:85
+msgid "Link Text"
+msgstr ""
+
+#: ../sections/propricing/section.php:90
+msgid "Button Theme"
+msgstr ""
+
+#: ../sections/propricing/section.php:95
+msgid "Attributes"
+msgstr ""
+
+#: ../sections/propricing/section.php:97
+msgid "Add each attribute on a new line. Add a \"*\" in front to add emphasis."
+msgstr "每個屬性添加一個新行。在前面添加 \"*\" 加強調。"
+
+#: ../sections/quickslider/section.php:157
+#: ../sections/revslider/section.php:22
+msgid "Slider Configuration"
+msgstr "滑塊配置"
+
+#: ../sections/quickslider/section.php:164
+msgid "Select Transition Type"
+msgstr "選擇過渡類型"
+
+#: ../sections/quickslider/section.php:166
+msgid "Use Fading Transition"
+msgstr "使用褪色過渡"
+
+#: ../sections/quickslider/section.php:167
+msgid "Use Slide/Horizontal Transition"
+msgstr "使用滑動/水平過渡"
+
+#: ../sections/quickslider/section.php:174
+msgid "Use Both Arrow and Slide Control Navigation"
+msgstr "同時使用箭頭鍵和滑動控制導航"
+
+#: ../sections/quickslider/section.php:175
+msgid "No Navigation"
+msgstr "沒有導航"
+
+#: ../sections/quickslider/section.php:176
+msgid "Slide Controls Only"
+msgstr "僅滑動控制"
+
+#: ../sections/quickslider/section.php:177
+msgid "Arrow Navigation Only"
+msgstr "僅箭頭導航"
+
+#: ../sections/quickslider/section.php:179
+msgid "Slider Navigation Mode"
+msgstr ""
+
+#: ../sections/quickslider/section.php:185
+msgid "Animate Slideshow Automatically?"
+msgstr "自動動畫連續播放？"
+
+#: ../sections/quickslider/section.php:197
+#: ../sections/revslider/section.php:39
+msgid "Slides Setup"
+msgstr ""
+
+#: ../sections/quickslider/section.php:198
+#: ../sections/revslider/section.php:40
+msgid "Slide"
+msgstr ""
+
+#: ../sections/quickslider/section.php:202
+#: ../sections/revslider/section.php:44
+msgid "Slide Background Image"
+msgstr "幻燈片背景圖片"
+
+#: ../sections/quickslider/section.php:205
+#: ../sections/revslider/section.php:47
+msgid "For high resolution, 2000px wide x 800px tall images. (2MB Limit)"
+msgstr ""
+
+#: ../sections/quickslider/section.php:211
+#: ../sections/revslider/section.php:53
+msgid "Slide Text"
+msgstr "幻燈片文本"
+
+#: ../sections/quickslider/section.php:216
+#: ../sections/revslider/section.php:58
+msgid "Slide Link URL"
+msgstr "幻燈片鏈接網址"
+
+#: ../sections/quickslider/section.php:221
+#: ../sections/revslider/section.php:63
+msgid "Slide Text Location"
+msgstr "幻燈片文本位置"
+
+#: ../sections/rapidtabs/section.php:53
+msgid "Popular"
+msgstr "流行"
+
+#: ../sections/rapidtabs/section.php:54
+msgid "Recent"
+msgstr "最近"
+
+#: ../sections/rapidtabs/section.php:55 ../sections/rapidtabs/section.php:105
+msgid "Comments"
+msgstr "評論"
+
+#: ../sections/rapidtabs/section.php:61
+msgid "Popular Posts"
+msgstr "熱門文章"
+
+#: ../sections/rapidtabs/section.php:83
+msgid "Recent Posts"
+msgstr "最近的帖子"
+
+#: ../sections/revslider/section.php:29
+msgid "Time Per Slide (in Milliseconds)"
+msgstr "每張幻燈片的時間（以毫秒為單位）"
+
+#: ../sections/revslider/section.php:73
+msgid "Slide Transition"
+msgstr "幻燈片過渡"
+
+#: ../sections/revslider/section.php:79
+msgid "Slide Extra Elements"
+msgstr "滑動額外的元素"
+
+#: ../sections/revslider/section.php:81
+msgid ""
+"Add extra Revolution Slider markup here. Rev slider is based on Revolution "
+"Slider, a jQuery plugin. It supports a wide array of functionality including"
+" video embeds and additional transitions if you can handle HTML. Check out "
+"the <a href=\"http://www.orbis-"
+"ingenieria.com/code/documentation/documentation.html\" "
+"target=\"_blank\">docs here</a>."
+msgstr "添加額外的Revolution Slider標記這裡。Rev滑塊基於Revolution Slider，一個jQuery插件。它支持廣泛的功能，包括視頻嵌入和額外的轉換，如果你能處理HTML。點擊<a href=\"http://www.orbis-ingenieria.com/code/documentation/documentation.html\" target=\"_blank\">文檔這裡</ a>。"
+
+#: ../sections/revslider/section.php:284
+msgid "Read More"
+msgstr "閱讀更多"
+
+#: ../sections/sb_primary/section.php:51
+msgid "Archives"
+msgstr "檔案"
+
+#: ../sections/sb_primary/section.php:60
+msgid "Calendar"
+msgstr "日曆"
+
+#: ../sections/sb_primary/section.php:69
+msgid "Meta"
+msgstr "Meta"
+
+#: ../sections/sb_primary/section.php:74
+msgid "Entries (RSS)"
+msgstr "文章（RSS）"
+
+#: ../sections/sharebar/section.php:30
+msgid ""
+"You have no shares setup, please look at Global Options > Social & Local; or"
+" deactivate the Sharebar from the Blog Post Template."
+msgstr ""
+
+#: ../sections/sharebar/section.php:30
+msgid "Social Settings"
+msgstr "社交設置"
+
+#: ../sections/sharebar/section.php:34
+msgid "Share &rarr;"
+msgstr "分享&rarr;"
+
+#: ../sections/simple_nav/section.php:25
+msgid "Simple Nav Section"
+msgstr "簡單的導航Section"
+
+#: ../sections/simple_nav/section.php:35
+msgid "The SimpleNav uses WordPress menus. Select one for use."
+msgstr "該SimpleNav使用WordPress的菜單。選擇一個使用。"
+
+#: ../sections/simple_nav/section.php:50
+msgid "Select Alignment"
+msgstr "選擇對齊"
+
+#: ../sections/starbars/section.php:29
+msgid "StarBar Configuration"
+msgstr "StarBar配置"
+
+#: ../sections/starbars/section.php:38 ../sections/starbars/section.php:211
+msgid "Number of StarBars to Configure"
+msgstr "配置StarBars數"
+
+#: ../sections/starbars/section.php:44 ../sections/starbars/section.php:216
+msgid "Starbar Total Count (Number)"
+msgstr "Starbar總數（數字）"
+
+#: ../sections/starbars/section.php:45
+msgid ""
+"This number will be used to calculate the percent of the bar filled. The "
+"StarBar values will be shown as a percentage of this value. Default is 100."
+msgstr "該數字將被用於計算百分數的填充欄。StarBar值會顯示這個值的百分比。默認值是100。"
+
+#: ../sections/starbars/section.php:52 ../sections/starbars/section.php:221
+msgid "Starbar Modifier (Text Added to Stats)"
+msgstr "Starbar修改（文本添加到統計）"
+
+#: ../sections/starbars/section.php:53
+msgid "This will be added to the stat number."
+msgstr "這將被添加到的統計編號。"
+
+#: ../sections/starbars/section.php:63 ../sections/starbars/section.php:230
+msgid "Starbar Format"
+msgstr "Starbar格式"
+
+#: ../sections/starbars/section.php:69 ../sections/starbars/section.php:235
+msgid "StarBar Title (Optional)"
+msgstr "StarBar標題（可選）"
+
+#: ../sections/starbars/section.php:82
+msgid "Descriptor"
+msgstr "描述符"
+
+#: ../sections/starbars/section.php:86
+msgid "Value"
+msgstr "值"
+
+#: ../sections/starbars/section.php:88
+msgid "Shown as a percentage of the StarBar total in the config."
+msgstr "顯示作為在配置StarBar總的百分比。"
+
+#: ../sections/starbars/section.php:95
+msgid "<i class=\"icon-star\"></i> StarBar #"
+msgstr "<i class=\"icon-star\"></i> StarBar #"
+
+#: ../sections/starbars/section.php:252
+#, php-format
+msgid "Starbar #%s Description"
+msgstr "Starbar #%s 說明"
+
+#: ../sections/starbars/section.php:256
+#, php-format
+msgid "Starbar #%s Value"
+msgstr "Starbar＃ %s值"
+
+#: ../sections/starbars/section.php:262
+msgid "StarBar Values"
+msgstr "StarBar值"
+
+#: ../sections/starbars/section.php:269
+msgid "Starbar"
+msgstr "Starbar"
+
+#: ../sections/textbox/section.php:23
+msgid "Title (Optional)"
+msgstr "標題（可選）"
+
+#: ../sections/textbox/section.php:28
+msgid "Text Content"
+msgstr "文字內容"
+
+#: ../sections/textbox/section.php:42
+msgid "Padding <small>(CSS Shorthand)</small>"
+msgstr "內邊距<small>(CSS簡寫)</small>"
+
+#: ../sections/textbox/section.php:43
+msgid ""
+"This option uses CSS padding shorthand. For example, use \"15px 30px\" for "
+"15px padding top/bottom, and 30 left/right."
+msgstr "此選項使用CSS填充簡寫。例如，可以使用 \"15px 30px\"，15px的填充頂部/底部，左/右30。"
+
+#: ../sections/textbox/section.php:52
+msgid "Textbox Font Size"
+msgstr "文本框字體大小"
+
+#: ../sections/watermark/section.php:22
+msgid "Website Watermark"
+msgstr "網站水印"
+
+#: ../sections/watermark/section.php:23
+msgid ""
+"The website watermark is a small version of your logo for your footer. "
+"Recommended width/height is 90px."
+msgstr "該網站的水印您的標誌是一個小版本，為您的頁腳。推薦寬度/高度為90像素。"
+
+#: ../sections/watermark/section.php:29
+msgid "Watermark Image"
+msgstr "水印圖像"
+
+#: ../sections/watermark/section.php:36
+msgid "Watermark Link (Blank for None)"
+msgstr "水印鏈接（無空白）"
+
+#: ../sections/watermark/section.php:42
+msgid "Watermark Link alt text"
+msgstr "水印鏈接alt文本"
+
+#: ../sections/watermark/section.php:43
+msgid "Build a website with PageLines"
+msgstr "建立一個網站用PageLines"
+
+#: ../sections/watermark/section.php:48
+msgid "Hide Watermark"
+msgstr "隱藏水印"
+
+#: ../sections/watermark/section.php:55
+msgid "Setting Up Social Shares"
+msgstr "設置社交分享"
+
+#: ../sections/watermark/section.php:56
+msgid ""
+"To set up social, you need to set your global social user names under "
+"\"options\" > \"social &amp; local\"<br/><br/> After you have done that, "
+"these values will fill automatically."
+msgstr "要設置社交，你需要設置你的全局社交下的用戶名 \"選項\" > \"社交 &amp; 本地\"<br/><br/> 當你這樣做，這些值會自動填寫。"
+
+#: ../sections/watermark/section.php:83
+msgid "was created with"
+msgstr "創建"
+
+#: ../editor/js/pl.ajax.js:21
+msgid "Are you sure?"
+msgstr "你確定嗎？"
+
+#: ../editor/js/pl.ajax.js:24
+msgid "Refreshing page..."
+msgstr ""
+
+#: ../editor/js/pl.ajax.js:147
+msgid "Saving Settings"
+msgstr ""
+
+#: ../editor/js/pl.ajax.js:149
+msgid "Settings successfully saved! Refreshing page..."
+msgstr ""
+
+#: ../editor/js/pl.ajax.js:173
+msgid ""
+"<h3>Turn Off DMS Editor?</h3><p>(Note: Draft mode is disabled when editor is"
+" off.)</p>"
+msgstr ""
+
+#: ../editor/js/pl.ajax.js:181
+msgid "Deactivating..."
+msgstr ""
+
+#: ../editor/js/pl.ajax.js:186
+msgid "Editor deactivated! Reloading page."
+msgstr ""
+
+#: ../editor/js/pl.ajax.js:236
+#, c-format
+msgid ""
+"<h3>Are you sure?</h3><p>This will revert <strong>%s</strong> changes to "
+"your last published configuration.</p>"
+msgstr ""
+
+#: ../editor/js/pl.ajax.js:237
+msgid "Reverting Draft"
+msgstr ""
+
+#: ../editor/js/pl.ajax.js:238 ../editor/js/pl.templates.js:113
+msgid "Template successfully updated!"
+msgstr ""
+
+#: ../editor/js/pl.areas.js:123
+msgid ""
+"<h3>Are you sure?</h3><p>This action will delete this area and all its "
+"elements from this page.</p>"
+msgstr ""
+
+#: ../editor/js/pl.editor.js:204
+msgid "Refreshing Page"
+msgstr ""
+
+#: ../editor/js/pl.editor.js:475
+msgid ""
+"<h3>Welcome to DMS!</h3><p>A cutting-edge drag & drop design management "
+"system for your website. <br/>Watch the video below for help getting "
+"started.</p><iframe width='700' height='420' "
+"src='//www.youtube.com/embed/BracDuhEHls?rel=0&vq=hd720' frameborder='0' "
+"allowfullscreen></iframe>"
+msgstr ""
+
+#: ../editor/js/pl.editor.js:682
+msgid "Learn more about being a PRO"
+msgstr ""
+
+#: ../editor/js/pl.editor.js:685
+msgid "<h4>This capability is pro edition only.</h4>"
+msgstr ""
+
+#: ../editor/js/pl.editor.js:689
+msgid "Edit (Pro Only)"
+msgstr ""
+
+#: ../editor/js/pl.editor.js:690
+msgid ""
+"<h4>This is a Pro Section</h4>Editing Pro sections requires Pro "
+"Membership.<br/>"
+msgstr ""
+
+#: ../editor/js/pl.editor.js:744
+msgid ""
+"<h3>Are you sure?</h3><p>This will remove this section and its settings from"
+" this page.</p>"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:112
+msgid "There are no options for this section."
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:114 ../editor/js/pl.optpanel.js:115
+msgid "No Options"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:124
+msgid "scope"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:426
+msgid "Option"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:535
+msgid "Refresh for preview."
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:535
+msgid "Syncs with element."
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:634
+msgid "Remove"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:689
+msgid "Configure Menus"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:723
+msgid "reverse"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:754
+msgid "SELECT"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:817
+msgid ""
+"Select which registered thumbnail size to use for the images. To add new "
+"sizes see: <a "
+"href='http://codex.wordpress.org/Function_Reference/add_image_size'>The "
+"Codex</a>"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:863
+msgid "Edit Sets"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:884
+msgid "Select Font"
+msgstr "選擇字體"
+
+#: ../editor/js/pl.optpanel.js:886
+msgid "Font Preview"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:887
+msgid "The quick brown fox jumps over the lazy dog"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:898
+msgid "Type Still Needed"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:944
+msgid "global site options"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:944
+msgid "local page options"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:946
+#, c-format
+msgid ""
+"<h3>Are you sure?</h3><p>This will reset <strong>%s</strong> to their "
+"defaults.<br/>(Once reset, this will still need to be published live.)</p>"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:951
+msgid "<span class='btn btn-mini btn-info'>Page Templates</span>&nbsp;"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:952
+msgid "<span class='btn btn-mini btn-info'>Global Options</span>&nbsp;"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:953
+msgid "<span class='btn btn-mini btn-info'>Type Options</span>"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:954
+msgid "Resetting Options"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:955
+msgid "Successfully Reset. Refreshing page"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:959 ../editor/js/pl.optpanel.js:1153
+#, c-format
+msgid ""
+"<h3>Are you sure?</h3><p>Importing this file will replace the following "
+"settings.<br /><strong>%s%s%s</strong></p>"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:960
+msgid "Importing From Child Theme"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:961
+msgid "Successfully Imported. Refreshing page"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:992
+msgid "Flushing Caches"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:994
+msgid "Success! Refreshing page"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:1005
+msgid ""
+"<h3>Are you sure?</h3><p>This will write all settings to a config file in "
+"your child theme named pl-config.json</p>"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:1014
+msgid "Exporting Options"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:1124
+msgid "Refresh Page for Image Uploader"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:1149
+msgid "Global Options"
+msgstr "全局選項"
+
+#: ../editor/js/pl.optpanel.js:1150
+msgid "Type Options"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:1171
+msgid "<h3>Settings Imported</h3>"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:1183
+msgid "Imported Settings"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:1184
+msgid "Importing"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:1509
+msgid "Upload Image"
+msgstr "上傳圖片"
+
+#: ../editor/js/pl.saving.js:15
+msgid "Saving."
+msgstr ""
+
+#: ../editor/js/pl.saving.js:17
+msgid "Successfully saved! Refreshing page..."
+msgstr ""
+
+#: ../editor/js/pl.sections.js:20
+msgid "Reloading and Registering Sections"
+msgstr ""
+
+#: ../editor/js/pl.sections.js:21
+msgid "Sections reloaded. Refreshing page!"
+msgstr ""
+
+#: ../editor/js/pl.sections.js:148
+msgid ""
+"<div class='loaded-notice'><div class='the-notice'>Loaded! Note: For this "
+"section, page refresh may be needed for complete functionality (Javascript "
+"Loading).</div></div>"
+msgstr ""
+
+#: ../editor/js/pl.sections.js:172
+msgid "Loading"
+msgstr ""
+
+#: ../editor/js/pl.templates.js:29
+msgid ""
+"<h3>Are you sure?</h3><p>Loading a new template will overwrite the current "
+"page's configuration.</p>"
+msgstr ""
+
+#: ../editor/js/pl.templates.js:30
+msgid "Loading Template"
+msgstr ""
+
+#: ../editor/js/pl.templates.js:32 ../editor/js/pl.themes.js:32
+msgid "Successfully Loaded. Refreshing page"
+msgstr ""
+
+#: ../editor/js/pl.templates.js:53
+msgid ""
+"<h3>Are you sure?</h3><p>This will delete this template. All pages using "
+"this template will be reverted to their default page configuration.</p>"
+msgstr ""
+
+#: ../editor/js/pl.templates.js:54
+msgid "Deleting Template"
+msgstr ""
+
+#: ../editor/js/pl.templates.js:84
+msgid "Saving Template"
+msgstr ""
+
+#: ../editor/js/pl.templates.js:85
+msgid "Successfully Saved. Refreshing page"
+msgstr ""
+
+#: ../editor/js/pl.templates.js:110
+msgid ""
+"<h3>Are you sure?</h3><p>This action will overwrite this template and its "
+"configuration. All pages using this template will be updated with the new "
+"config as well.</p>"
+msgstr ""
+
+#: ../editor/js/pl.templates.js:111
+msgid "Updating Template"
+msgstr ""
+
+#: ../editor/js/pl.themes.js:13
+msgid "<h3>Are you sure?</h3> <p>This will activate this theme sitewide.</p>"
+msgstr ""
+
+#: ../editor/js/pl.themes.js:14
+msgid "Activating Theme"
+msgstr ""
+
+#: ../editor/js/pl.themes.js:16
+msgid "Successfully Activated. Refreshing page"
+msgstr ""
+
+#: ../editor/js/pl.themes.js:29
+msgid ""
+"<h3>Activate Theme Preview?</h3> <p>This will activate a theme preview "
+"sitewide.<br/>(while in draft mode)</p>"
+msgstr ""
+
+#: ../editor/js/pl.themes.js:30
+msgid "Loading Theme Preview"
+msgstr ""
+
+#: ../editor/js/pl.themes.js:45
+msgid "Activate"
+msgstr "激活"
+
+#: ../editor/js/pl.xlist.js:67
+msgid "Drag Thumb to Page"
+msgstr ""
+
+#: ../editor/js/pl.xlist.js:121
+msgid "Description"
+msgstr ""
+
+#: ../editor/js/pl.xlist.js:125
+msgid "Drag This"
+msgstr ""

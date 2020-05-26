@@ -49,6 +49,7 @@ class PageLinesDebug {
 		foreach($this->debug_info as $element ) {
 
 			$class = '';
+			$style = '';
 			if ( $element['value'] ) {
 				if( isset( $element['style'] ) )
 					$style = sprintf( ' style="%s"', $element['style'] );
@@ -83,6 +84,11 @@ class PageLinesDebug {
 				'value' => $wp_version,
 			);
 
+			$this->debug_info[] = array(
+				'title'	=> 'WordPress Debug',
+				'value' => ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? 'Enabled' : 'Disabled',
+			);
+			
 			$this->debug_info[] = array(
 				'title'	=> 'Multisite Enabled',
 				'value' => ( is_multisite() ) ? 'Yes' : 'No',

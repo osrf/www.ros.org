@@ -12,7 +12,7 @@
 			, settings: {}
 			, objectID: ''
 			, scope: 'global'
-			
+
 		}
 
 		, cascade: ['local', 'type', 'global']
@@ -63,10 +63,10 @@
 			$('.ui-tabs li').on('click.options-tab', $.proxy(that.setPanel, that))
 
 		}
-		
+
 		, panelRender: function( index, theOptions ){
 			var that = this
-			
+
 			tab = $("[data-panel='"+index+"']")
 
 			opts = that.runEngine( theOptions, index )
@@ -74,7 +74,7 @@
 			tab.find('.panel-tab-content').html( opts )
 
 			that.runScriptEngine( index, theOptions )
-			
+
 		}
 
 		, settingsRender: function( settings ) {
@@ -109,23 +109,23 @@
 			else{
 
 				opt_array = [{
-					help: "There are no options for this section."
+					help: $.pl.lang("There are no options for this section.")
 					, key: "no-opts"
-					, label: "No Options"
-					, title: "No Options"
+					, label: $.pl.lang("No Options")
+					, title: $.pl.lang("No Options")
 					, type: "help"
 
 				}]
 			}
 
 			$.each(cascade, function( i, scope ){
-		
+
 				var sel = sprintf("[data-panel='%s']", scope)
-				, 	clone_text = sprintf('<i class="icon-screenshot"></i> %s <i class="icon-map-marker"></i> %s scope', uniqueID, scope)
+				, 	clone_text = sprintf('<i class="icon-screenshot"></i> %s <i class="icon-map-marker"></i> %s %s', uniqueID, scope, $.pl.lang( "scope" ) )
 				, 	clone_desc = sprintf(' <span class="clip-desc"> &rarr; %s</span>', clone_text)
-				
+
 				tab = $(sel)
-				
+
 				tab.attr('data-clone', uniqueID)
 
 				opts = that.runEngine( opt_array, scope )
@@ -136,39 +136,39 @@
 				tab.find('.panel-tab-content').html( opts )
 
 				that.runScriptEngine( 0, opt_array )
-			
+
 			})
-			
+
 			var theTabs = $('[data-key="section-options"]')
-		
+
 			var section = $('section[data-clone="'+uniqueID+'"]')
 			,	panelScope
-			
+
 			if( section.closest('[data-region="header"]').length || section.closest('[data-region="footer"]').length )
 				panelScope = 'global'
-			else 
+			else
 				panelScope = $.pl.config.templateMode
-				
-			
-			
+
+
+
 			$('[data-tab-action]').show()
-			
+
 			if(panelScope == 'global'){
-				
+
 				theTabs.tabs("option", {
 				    "disabled": [1]
 				})
 				theTabs.tabs( "option", "active", 0 )
 				$('[data-tab-action="type"]').hide()
-				
+
 			} else if(panelScope == 'local'){
-				
+
 				theTabs.tabs("option", {
 				    "disabled": [0, 1]
 				})
 				theTabs.tabs( "option", "active", 2 )
 				$('[data-tab-action="global"], [data-tab-action="type"]').hide()
-				
+
 			} else {
 				theTabs.tabs("option", {
 				    "disabled": [0]
@@ -176,7 +176,7 @@
 				theTabs.tabs( "option", "active", 1 )
 				$('[data-tab-action="global"]').hide()
 			}
-			
+
 
 		}
 
@@ -220,7 +220,7 @@
 			$('.lstn').on('keyup.optlstn blur.optlstn change.optlstn paste.optlstn', function( e ){
 
 				// FORM PREP
-				// First do checkbox switching... 
+				// First do checkbox switching...
 				if($(this).hasClass('checkbox-input')){
 
 					var checkToggle = $(this).prev()
@@ -234,7 +234,7 @@
 					that.checkboxDisplay( checkGroup )
 
 				}
-				
+
 				// FORM SAVING
 				// Form is ready, set up saving vars
 				var theInput = $(this)
@@ -245,29 +245,31 @@
 				,	uniqueID = (thePanel.attr('data-clone')) ? thePanel.attr('data-clone') : false
 				,	formData = that.activeForm.formParams()
 
-				
+
 				$.pl.data[scope] = $.extend(true, $.pl.data[scope], formData)
-		
+
 				// for array option types, the extend is not allowing deletion, this corrects
 				$.each( formData, function(i, o){
-					$.each( o, function(i2, o2){
-						if( typeof(o2) == 'object' ){
-							
-							$.pl.data[scope][i][i2] = o2
-						}
-					
-					})
+					if( typeof(o) == 'object' ){
+						$.each( o, function(i2, o2){
+							if( typeof(o2) == 'object' ){
+
+								$.pl.data[scope][i][i2] = o2
+							}
+
+						})
+					}
 				})
-			
+
 				if(uniqueID)
 					var sel = sprintf('[data-clone="%s"] [data-sync="%s"]', uniqueID, theInput.attr('id'))
-				else 	
+				else
 					var sel = sprintf('[data-sync="%s"]', theInput.attr('id'))
-					
-			
+
+
 
 				if( $( sel ).length > 0 ){
-					
+
 					$( sel ).each(function(i){
 						var el = $(this)
 						,	syncMode = el.data('sync-mode') || ''
@@ -288,16 +290,16 @@
 						}
 
 					})
-					
+
 				} else {
-				
+
 					$.pl.flags.refreshOnSave = true
 					$('.li-refresh').show()
 				}
 
 
 				if( e.type == 'blur' || ( e.type == 'change' && ( iType == 'checkbox' || iType == 'select') ) ){
-					
+
 					$.plSave.save({
 						run: 'form'
 						, store: formData
@@ -309,36 +311,36 @@
 
 			})
 		}
-		
+
 		, updateAccordion: function( theAccordion ){
 				theAccordion.find('.opt-group').each( function(indx, el) {
-				
+
 					var $that = $( this )
 					,	itemNum = indx + 1
 					,	itemNumber = $that.attr('data-item-num')
-				
+
 					$that.find('.lstn').each( function(inputIndex, inputElement){
-					
+
 						var optName = $( this ).attr('name')
 						,	optID = $( this ).attr('id')
-					
+
 						if(optName)
 							optName = optName.replace('item'+itemNumber, 'item'+itemNum )
-					
+
 						if(optID)
 							optID = optID.replace('item'+itemNumber, 'item'+itemNum )
-					
+
 						$( this )
 							.attr('name', optName)
 							.attr('id', optID)
-					
+
 					})
-				
+
 					$that.attr('data-item-num', itemNum)
-				
-					
+
+
 				})
-			
+
 				theAccordion.find('.lstn').first().trigger('blur')
 		}
 
@@ -346,11 +348,11 @@
 			var that = this
 
 			$('.opt-form.isotope').isotope( 'destroy' )
-			
+
 			that.panel.find('.tab-panel').each(function(){
-				
+
 				if( $(this).is(":visible") || that.load == $(this).data('panel') ){
-					
+
 					that.activeForm = $(this).find('.opt-form')
 					that.optScope = that.activeForm.data('scope')
 					that.optSID = that.activeForm.data('sid')
@@ -358,9 +360,9 @@
 					$(this).find('.opt-tabs').tabs()
 
 					that.accordionArea = $(this).find('.opt-accordion')
-					
+
 					that.activeForm.imagesLoaded( function(){
-						
+
 						that.accordionArea
 							.accordion({
 								header: ".opt-name"
@@ -369,18 +371,18 @@
 							})
 							.sortable({
 								axis: "y"
-								,	containment: "parent" 
+								,	containment: "parent"
 								,	handle: ".opt-name"
 								,	cursor: "move"
 								,	stop: function(){
-									
+
 										that.updateAccordion( that.accordionArea )
 									}
 								})
-							
-						
-						
-						
+
+
+
+
 						// that.activeForm.isotope({
 						// 							itemSelector : '.opt'
 						// 							, masonry: {
@@ -413,17 +415,17 @@
 		}
 
 		, runEngine: function( opts, tabKey ){
-			
+
 			var that = this
 			, 	optionHTML
 			, 	optsOut = ''
 			,	optCols = {}
 			,	colOut = ''
-			
+
 			$.each( opts , function(index, o) {
 
 				var specialClass = ''
-				,	theTitle = o.title || o.label || 'Option'
+				,	theTitle = o.title || o.label || $.pl.lang("Option")
 				, 	uniqueKey = ( o.key ) ? o.key : 'no-key-'+plUniqueID()
 				, 	colNum = ( o.col ) ? o.col : 1
 
@@ -434,26 +436,26 @@
 				optionHTML = that.optEngine( tabKey, o )
 
 				optsOut += sprintf( '<div id="%s" class="opt opt-%s opt-type-%s %s" data-number="%s"><div class="opt-name">%s</div><div class="opt-box">%s</div></div>', uniqueKey, uniqueKey, o.type, specialClass, index, theTitle, optionHTML )
-				
+
 				if( typeof optCols[ colNum ] == 'undefined' )
 					optCols[ colNum ] = ''
-	
+
 				optCols[ colNum ] += sprintf( '<div id="%s" class="opt opt-%s opt-type-%s %s" data-number="%s"><div class="opt-name">%s</div><div class="opt-box">%s</div></div>', uniqueKey, uniqueKey, o.type, specialClass, index, theTitle, optionHTML )
-				
+
 
 			})
 
 
 			var colSpan = 12 / ( Object.keys(optCols).length )
-			
+
 			$.each( optCols , function(index, o) {
-				
+
 				colOut += sprintf( '<div class="span%s">%s</div>', colSpan, o )
-				
+
 			} )
 
 		//	console.log(optCols)
-			
+
 			var optionInterface = sprintf( '<div class="opt-columns row fix"> %s </div>', colOut )
 
 			return sprintf( '<form class="form-%1$s-%2$s form-scope-%2$s opt-area opt-form" data-sid="%1$s" data-scope="%2$s">%3$s</form>', that.sid, tabKey, optionInterface )
@@ -462,7 +464,7 @@
 		}
 
 		, optValue: function( scope, key, index, subkey ){
-			
+
 			var that = this
 			, 	pageData = $.pl.data
 			,	index = index || false
@@ -477,16 +479,16 @@
 			if( pageData[ scope ] && pageData[ scope ][ that.uniqueID ] && pageData[ scope ][ that.uniqueID ][ key ]){
 				value = pl_html_input( pageData[ scope ][ that.uniqueID ][ key ] )
 			}
-			
+
 			if( value != '' && index && subkey ){
-				
+
 				if( value[index] && value[index][subkey] ){
 					value = value[index][subkey]
-				} else 
+				} else
 					value = ''
-				
+
 			}
-				
+
 			return value
 
 
@@ -501,12 +503,12 @@
 			}
 
 		}
-		
+
 		, addOptionObjectMeta: function( tabIndex, o, optLevel, parent ) {
 
 			var that = this
 			,	oNew = o
-			
+
 			oNew.classes = o.classes || ''
 
 			if( optLevel == 3 ){
@@ -522,7 +524,7 @@
 			return oNew
 
 		}
-		
+
 		, optEngine: function( tabIndex, o, optLevel, parent ) {
 
 			var that = this
@@ -532,8 +534,8 @@
 			,	optLabel = o.label || o.title
 			,	sel = sprintf('[data-clone="%s"] [data-sync="%s"]', that.uniqueID, o.key)
 			,	syncType = (o.type != 'multi' && $(sel).length > 0) ? 'exchange' : 'refresh'
-			,	syncTooltip = (syncType == 'refresh') ? 'Refresh for preview.' : 'Syncs with element.'
-			,	syncIcon = (syncType == 'refresh') ? 'refresh' : 'exchange' 
+			,	syncTooltip = (syncType == 'refresh') ? $.pl.lang("Refresh for preview.") : $.pl.lang("Syncs with element.")
+			,	syncIcon = (syncType == 'refresh') ? 'refresh' : 'exchange'
 			,	optDefault = o.default || ''
 			,	parent = parent || {}
 
@@ -541,17 +543,17 @@
 
 		//	o.classes = o.classes || ''
 			//o.label = o.label || o.title
-			
+
 			if( o.type != 'edit_post' && o.type != 'link' && o.type != 'action_button' ){
 				optLabel += sprintf(' <span data-key="%s" class="pl-help-text btn btn-mini pl-tooltip sync-btn-%s" title="%s"><i class="icon-%s"></i></span>', o.key, syncType, syncTooltip, syncIcon)
 			}
-			
-			
-				
-						// 	
-						// 	
-						// 
-						// 
+
+
+
+						//
+						//
+						//
+						//
 						// if(optLevel == 3){
 						// 	o.name = sprintf('%s[%s][%s][%s]', that.uniqueID, parent.key, parent.itemNumber, o.key )
 						// 	o.value =  that.optValue( tabIndex, parent.key, parent.itemNumber, o.key )
@@ -561,7 +563,7 @@
 						// 	o.value =  that.optValue( tabIndex, o.key )
 						// 	o.inputID = o.key
 						// }
-						// 
+						//
 
 
 
@@ -573,41 +575,41 @@
 
 					})
 				}
-				
+
 			}
-			
+
 			else if( o.type == 'accordion' ){
-				
-				// option value should be an array, so foreach 
-			
+
+				// option value should be an array, so foreach
+
 				var optionArray = ( typeof(o.value) == 'object' || typeof(o.value) == 'array' ) ? o.value : [[],[],[]]
 				,	itemType = o.post_type || 'Item'
 				, 	itemNumber = 1
 				, 	totalNum = optionArray.length || Object.keys(optionArray).length
 				, 	removeShow = ( totalNum <= 1 ) ? 'display: none;' : ''
-				
+
 				oHTML += sprintf("<div class='opt-accordion toolbox-sortable'>")
-				
+
 				$.each( optionArray, function( ind, vals ){
-				
-					
+
+
 					o.itemNumber = 'item'+itemNumber
-					
+
 					oHTML += sprintf("<div class='opt-group' data-item-num='%s'><h4 class='opt-name'><span class='bar-title'>%s %s</span> <span class='btn btn-mini remove-item' style='%s'><i class='icon-remove'></i></span></h4><div class='opt-accordion-opts'>", itemNumber, itemType, itemNumber, removeShow )
-					
+
 					if( o.opts ){
 						$.each( o.opts , function(index, osub) {
-							
-							
+
+
 							oHTML += that.optEngine(tabIndex, osub, 3, o) // recursive array
 
 						})
 					}
 					oHTML += sprintf("</div></div>")
-					
+
 					itemNumber++
 				})
-				
+
 				oHTML += sprintf("</div><div class='accordion-tools'><span class='btn btn-mini add-accordion-item' data-uid='' data-scope='' data-key=''><i class='icon-plus-sign'></i> Add %s</span></div>", itemType)
 
 			}
@@ -615,12 +617,12 @@
 			else if( o.type == 'disabled' ){ }
 
 			else if( o.type == 'color' ){
-				
+
 				var prepend = '<span class="btn add-on trigger-color"> <i class="icon-tint"></i> </span>'
 				,	colorVal = (o.value != '') ? o.value : optDefault
 				,	cssCompile = o.compile || ""
-				
-			
+
+
 				oHTML += sprintf('<label for="%s">%s</label>', o.inputID, optLabel )
 				oHTML += sprintf('<div class="input-prepend">%4$s<input type="text" id="%1$s" name="%3$s" class="lstn lstn-css pl-colorpicker color-%1$s" data-var="%5$s" value="%2$s" /></div>', o.inputID, o.value, o.name, prepend, cssCompile )
 
@@ -631,7 +633,7 @@
 			  	var imgSize = o.imgsize || 200
 				,	size = imgSize + 'px'
 				,	sizeMode = o.sizemode || 'width'
-				,	remove = '<a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>'
+				,	remove = sprintf('<a href="#" class="btn fileupload-exists" data-dismiss="fileupload">%s</a>', $.pl.lang("Remove") )
 				,	thm = (o.value != '') ? sprintf('<div class="img-wrap"><img src="%s" style="max-%s: %s" /></div>', o.value, sizeMode, size) : ''
 
 				oHTML += '<div class="img-upload-box">'
@@ -641,11 +643,11 @@
 				oHTML += sprintf('<label for="%s">%s</label>', o.inputID, optLabel )
 
 				oHTML += sprintf('<input id="%1$s" name="%2$s" type="text" class="lstn text-input upload-input" placeholder="" value="%3$s" />', o.inputID, o.name, o.value )
-				
+
 				var attach_key = o.key + "_attach_id"
 				,	attach_value =  that.optValue( tabIndex, attach_key )
 				,	attach_name = (optLevel == 3) ? sprintf('%s[%s][%s][%s]', that.uniqueID, parent.key, parent.itemNumber, attach_key ) : sprintf('%s[%s]', that.uniqueID, attach_key )
-				
+
 				oHTML += sprintf('<input id="%1$s" name="%2$s" type="hidden" class="lstn hidden-input" value="%3$s" />', attach_key, attach_name, attach_value)
 
 				oHTML += sprintf('<div id="upload-%1$s" class="fineupload upload-%1$s fileupload-new" data-provides="fileupload"></div>', o.inputID)
@@ -684,9 +686,9 @@
 				}
 
 				oHTML += sprintf('<label for="%s">%s</label>', o.inputID, optLabel )
-				oHTML += sprintf('<select id="%s" name="%s" class="lstn"><option value="">&mdash; Select Menu &mdash;</option>%s</select>', o.inputID, o.name, select_opts)
+				oHTML += sprintf('<select id="%s" name="%s" class="lstn"><option value="">&mdash; %s &mdash;</option>%s</select>', o.inputID, o.name, $.pl.lang("Select Menu"), select_opts)
 
-				oHTML += sprintf('<br/><a href="%s" class="btn btn-mini" ><i class="icon-edit"></i> %s</a>', configure, 'Configure Menus' )
+				oHTML += sprintf('<br/><a href="%s" class="btn btn-mini" ><i class="icon-edit"></i> %s</a>', configure, $.pl.lang( "Configure Menus") )
 			}
 
 			else if( o.type == 'action_button' ){
@@ -720,7 +722,7 @@
 				, 	checkedFlip = (!valFlip || valFlip == 0 || valFlip == '') ? '' : 'checked'
 				,	toggleValueFlip = (checkedFlip == 'checked') ? 1 : 0
 				, 	nameFlip = sprintf('%s[%s]', that.uniqueID, keyFlip)
-				,	labelFlip = (o.fliplabel) ? o.fliplabel : '( <i class="icon-undo"></i> reverse ) ' + optLabel
+				,	labelFlip = (o.fliplabel) ? o.fliplabel : sprintf( '( <i class="icon-undo"></i> %s ) ', $.pl.lang("reverse") )  + optLabel
 				,	auxFlip = sprintf('<input name="%s" class="checkbox-toggle lstn" type="hidden" value="%s" />', nameFlip, toggleValueFlip )
 				, 	showFlip = false
 				, 	globalVal = (that.optValue( 'global', o.key ) == 1) ? true : false
@@ -750,9 +752,9 @@
 				|| o.type == 'select_imagesizes'
 			){
 
-			
-				var select_opts = (o.type != 'select_multi') ? '<option value="" >&mdash; SELECT &mdash;</option>' : ''
-				
+
+				var select_opts = (o.type != 'select_multi') ? sprintf( '<option value="" >&mdash; %s &mdash;</option>', $.pl.lang( "SELECT" ))  : ''
+
 				if(o.type == 'count_select' || o.type == 'count_select_same'){
 
 					var cnt_start = (o.count_start) ? o.count_start : 0
@@ -760,19 +762,19 @@
 					,	suffix = (o.suffix) ? o.suffix : ''
 
 					o.opts = {}
-					
+
 					if( o.type == 'count_select_same' ){
-						
+
 						for(i = cnt_start; i <= cnt_num; i++)
 							o.opts[i+suffix] = {name: i+suffix}
-							
+
 					} else {
-						
+
 						for(i = cnt_start; i <= cnt_num; i++)
 							o.opts[i] = {name: i+suffix}
-							
+
 					}
-					
+
 
 
 				}
@@ -812,18 +814,18 @@
 						$.each(sizes, function(key, s){
 							o.opts[ s ] = {name: s}
 						})
-						
+
 						if ( ! o.ref )
-							oHTML += sprintf('<div class="opt-ref"><a href="#" class="btn btn-info btn-mini btn-ref"><i class="icon-info-sign"></i> More Info</a><div class="help-block">%s</div></div>', 'Select which registered thumbnail size to use for the images. To add new sizes see: <a href="http://codex.wordpress.org/Function_Reference/add_image_size">The Codex</a>')
+							oHTML += sprintf('<div class="opt-ref"><a href="#" class="btn btn-info btn-mini btn-ref"><i class="icon-info-sign"></i> %s</a><div class="help-block">%s</div></div>', $.pl.lang("More Info"), $.pl.lang("Select which registered thumbnail size to use for the images. To add new sizes see: <a href='http://codex.wordpress.org/Function_Reference/add_image_size'>The Codex</a>"))
 					}
 
 				if(o.opts){
 
 					$.each(o.opts, function(key, s){
-						
+
 						var optValue = (o.type == 'select_same') ? s : key
 						,	optName = (o.type == 'select_same') ? s : s.name
-						
+
 						// Multi Select
 						if(typeof o.value == 'object'){
 							var selected = ''
@@ -831,35 +833,36 @@
 								if(optValue == val)
 									selected = 'selected'
 							})
-							
+
 						} else {
-							
+
 							if(o.value != '')
 								var selected = (o.value == optValue) ? 'selected' : ''
 							else if( plIsset(o.default) )
 								var selected = (o.default == optValue) ? 'selected' : ''
-							
+
 						}
-							
-					
-						
+
+
+
 						select_opts += sprintf('<option value="%s" %s >%s</option>', optValue, selected, optName)
 
 					})
 				}
-				
+
 
 				var multi = (o.type == 'select_multi') ? 'multiple' : ''
-					
+
 
 				oHTML += sprintf('<label for="%s">%s</label>', o.inputID, optLabel )
 				oHTML += sprintf('<select id="%s" name="%s" class="%s lstn" data-type="%s" %s>%s</select>', o.inputID, o.name, o.classes, o.type, multi, select_opts)
 
 				if(o.type == 'select_taxonomy' && o.post_type)
 					oHTML += sprintf(
-						'<div style="margin-bottom: 10px;"><a href="%sedit.php?post_type=%s" target="_blank" class="btn btn-mini btn-info"><i class="icon-edit"></i> Edit Sets</a></div>',
+						'<div style="margin-bottom: 10px;"><a href="%sedit.php?post_type=%s" target="_blank" class="btn btn-mini btn-info"><i class="icon-edit"></i> %s</a></div>',
 						$.pl.config.urls.adminURL,
-						o.post_type
+						o.post_type,
+						$.pl.lang("Edit Sets")
 					)
 
 			}
@@ -880,10 +883,10 @@
 				}
 
 				oHTML += sprintf('<label for="%s">%s</label>', o.inputID, optLabel )
-				oHTML += sprintf('<select id="%s" name="%s" class="font-selector lstn"><option value="">&mdash; Select Font &mdash;</option>%s</select>', o.inputID, o.name, select_opts)
+				oHTML += sprintf('<select id="%s" name="%s" class="font-selector lstn"><option value="">&mdash; %s &mdash;</option>%s</select>', o.inputID, o.name, $.pl.lang("Select Font"), select_opts)
 
-				oHTML += sprintf('<label for="preview-%s">Font Preview</label>', o.key)
-				oHTML += sprintf('<textarea class="type-preview" id="preview-%s" style="">The quick brown fox jumps over the lazy dog.</textarea>', o.key)
+				oHTML += sprintf('<label for="preview-%s">%s</label>', o.key, $.pl.lang("Font Preview") )
+				oHTML += sprintf('<textarea class="type-preview" id="preview-%s" style="">%s.</textarea>', o.key, $.pl.lang( "The quick brown fox jumps over the lazy dog" ) )
 			}
 
 			else if( o.type == 'template' ){
@@ -893,9 +896,9 @@
 			else if( o.type == 'help' ){
 
 			} else {
-				
-				oHTML += sprintf('<div class="needed">%s Type Still Needed</div>', o.type)
-			
+
+				oHTML += sprintf('<div class="needed">%s %s</div>', o.type, $.pl.lang( "Type Still Needed" ) )
+
 			}
 
 			// Add help block
@@ -904,7 +907,7 @@
 
 			// Add help block
 			if ( o.ref )
-				oHTML += sprintf('<div class="opt-ref"><a href="#" class="btn btn-info btn-mini btn-ref"><i class="icon-info-sign"></i> More Info</a><div class="help-block">%s</div></div>', o.ref)
+				oHTML += sprintf('<div class="opt-ref"><a href="#" class="btn btn-info btn-mini btn-ref"><i class="icon-info-sign"></i> %s</a><div class="help-block">%s</div></div>', $.pl.lang("More Info"),o.ref)
 
 			if(level == 2)
 				return sprintf('<div class="input-wrap">%s</div>', oHTML)
@@ -916,11 +919,11 @@
 		, runScriptEngine: function ( tabIndex, opts ) {
 
 			var that = this
-			
-		
+
+
 
 			$.each(opts, function(index, o){
-				
+
 				that.scriptEngine(tabIndex, o)
 			})
 
@@ -929,7 +932,6 @@
 		, onceOffScripts: function() {
 
 			var that = this
-			
 
 			// Settings Actions
 			$(".settings-action").on("click.settingsAction", function(e) {
@@ -941,24 +943,24 @@
 
 				if( theAction == 'reset_global' || theAction == 'reset_local' || theAction == 'reset_global_child' ){
 
-					var context = (theAction == 'reset_global') ? "global site options" : "local page options"
+					var context = (theAction == 'reset_global') ? $.pl.lang("global site options") : $.pl.lang("local page options")
 
-					,	confirmText = sprintf("<h3>Are you sure?</h3><p>This will reset <strong>%s</strong> to their defaults.<br/>(Once reset, this will still need to be published live.)</p>", context)
+					,	confirmText = sprintf( $.pl.lang("<h3>Are you sure?</h3><p>This will reset <strong>%s</strong> to their defaults.<br/>(Once reset, this will still need to be published live.)</p>"), context)
 
 					,	page_tpl_import = $('[data-scope="importexport"] #page_tpl_import').attr('checked') || 'undefined'
 					,	global_import = $('[data-scope="importexport"] #global_import').attr('checked') || 'undefined'
 					,	type_import = $('[data-scope="importexport"] #type_import').attr('checked') || 'undefined'
-					,	page_tpl_ = ('checked' == page_tpl_import ) ? '<span class="btn btn-mini btn-info">Page Templates</span>&nbsp;': ''
-					,	global_ = ('checked' == global_import ) ? '<span class="btn btn-mini btn-info">Global Options</span>&nbsp;': ''
-					,	type_ = ('checked' == type_import ) ? '<span class="btn btn-mini btn-info">Type Options</span>': ''
-					,	savingText = 'Resetting Options'
-					,	refreshText = 'Successfully Reset. Refreshing page'
-					
+					,	page_tpl_ = ('checked' == page_tpl_import ) ? $.pl.lang("<span class='btn btn-mini btn-info'>Page Templates</span>&nbsp;"): ''
+					,	global_ = ('checked' == global_import ) ? $.pl.lang("<span class='btn btn-mini btn-info'>Global Options</span>&nbsp;"): ''
+					,	type_ = ('checked' == type_import ) ? $.pl.lang("<span class='btn btn-mini btn-info'>Type Options</span>"): ''
+					,	savingText = $.pl.lang("Resetting Options")
+					,	refreshText = $.pl.lang("Successfully Reset. Refreshing page")
+
 					if( theAction == 'reset_global_child' ) {
-						
-						var confirmText = sprintf( "<h3>Are you sure?</h3><p>Importing this file will replace the following settings.<br /><strong>%s%s%s</strong></p>", page_tpl_, global_,type_ )
-						,	savingText = 'Importing From Child Theme'
- 						,	refreshText = 'Successfully Imported. Refreshing page'
+
+						var confirmText = sprintf( $.pl.lang("<h3>Are you sure?</h3><p>Importing this file will replace the following settings.<br /><strong>%s%s%s</strong></p>"), page_tpl_, global_,type_ )
+						,	savingText = $.pl.lang("Importing From Child Theme")
+ 						,	refreshText = $.pl.lang("Successfully Imported. Refreshing page")
 					}
 
 					var args = {
@@ -975,43 +977,43 @@
 						,	type_import: type_import
 
 					}
-					
+
 			//		console.log(theAction)
 
 					var response = $.plAJAX.run( args )
 
 				}
-				
-				
+
+
 				if( theAction == 'reset_cache') {
 					var args = {
 							mode: 'settings'
 						,	run: theAction
 						,	confirm: false
 						,	confirmText: confirmText
-						,	savingText: 'Flushing Caches'
+						,	savingText: $.pl.lang("Flushing Caches")
 						,	refresh: false
-						,	refreshText: 'Success! Refreshing page'
+						,	refreshText: $.pl.lang("Success! Refreshing page")
 						, 	log: true
 					}
 					var response = $.plAJAX.run( args )
 				}
-				
-				
+
+
 				if( theAction == 'opt_dump' ){
-				
+
 					var formDataObject = $('[data-scope="importexport"]').formParams()
 					var dump = formDataObject.publish_config || false
-					var confirmText = "<h3>Are you sure?</h3><p>This will write all settings to a config file in your child theme named pl-config.json</p>"
-					
+					var confirmText = $.pl.lang("<h3>Are you sure?</h3><p>This will write all settings to a config file in your child theme named pl-config.json</p>")
+
 					if(dump) {
-						
+
 						var args = {
 								mode: 'settings'
 							,	run: 'exporter'
 							,	confirm: dump
 							,	confirmText: confirmText
-							,	savingText: 'Exporting Options'
+							,	savingText: $.pl.lang("Exporting Options")
 							,	refresh: false
 							,	refreshText: ''
 							, 	log: true
@@ -1034,7 +1036,7 @@
 							endpoint = endpoint + '&export_global=1'
 						}
 						if( templates ) {
-							
+
 							plPrint(templates)
 							var tpls = []
 							$.each( templates, function(key, value){
@@ -1055,102 +1057,104 @@
 							pl_url_refresh(url + endpoint)
 						}
 					}
-					
+
 				}
 			})
-			
+
 			$('.checklist-tool').on('click', function (e) {
 				e.preventDefault();
 				var action = $(this).data('action')
 				,	field = $(this).closest('fieldset')
-				
+
 				if(action == 'checkall'){
-					
+
 					field.find(':checkbox').prop('checked', true)
-					
+
 				} else if (action == 'uncheckall'){
-					
+
 					field.find(':checkbox').prop('checked', false)
-					
+
 				}
-				
+
 		    })
 
 
 			$('.opt-name .remove-item').on('click', function (e) {
-				
-				
-				
+
+
+
 				var accord = $(this).closest('.opt-accordion')
-				
+
 				if( accord.find('.opt-group').length <= 2){
 					accord.find('.remove-item').hide()
 				}
-				
+
 				$(this).closest('.opt-group').remove()
-				
+
 				that.updateAccordion( accord )
-				
+
 			//	accord.find('.lstn').first().trigger('blur')
-				
+
 		    })
-		
+
 			$('.add-accordion-item').on('click', function (e) {
-				
+
 				var theOpt = $(this).closest('.opt-box')
 				, 	theAccordion = theOpt.find('.opt-accordion')
-				
+
 				theNew = theOpt.find('.opt-group').first().clone( true )
-				
+
 				theNew.find('.bar-title').html('New Item')
 				theNew.find('.ui-icon').remove()
 				theNew.find('.lstn').val('')
 				theNew.find('.remove-item').show()
 				theNew.find('.img-wrap').remove()
-				
+
 				// add to accordion
 				theAccordion.append( theNew )
-				
+
 				theAccordion.accordion("destroy").accordion({
 					header: ".opt-name"
 					,	collapsible: true
 					,	active: false
 				})
-				
+
 				// Work around til we get a better image uploader script.
-				// Can't figure out how to reinitialize so that it works 
-				theOpt
-					.find('.img-upload-box')
-					.html('<div class="help-block">Refresh Page for Image Uploader</div>')
-				
+				// Can't figure out how to reinitialize so that it works
+				theNew
+					.find('.fineupload')
+					.html(sprintf('<div class="help-block">%s</div>',$.pl.lang("Refresh Page for Image Upload Button")))
+
 				// change the name stuff
 				// relight UI stuff
-				
+
 				that.updateAccordion( theAccordion )
-				
+
 				$('.lstn').off('keyup.optlstn blur.optlstn change.optlstn paste.optlstn')
-				
+
 				that.setBinding()
-				
+
+
+
 		    })
 
-		
-			
+
+
 			$('#fileupload').fileupload({
 				url: ajaxurl
 				, dataType: 'json'
-				, formData: { }
+				, formData: {}
 				, add: function(e, data){
 					var toolBoxOpen = $.toolbox('open')
-		
-		
+
+
 					$.toolbox('hide')
-					var page_tpl_import = ('checked' == $('[data-scope="importexport"] #page_tpl_import').attr('checked') ) ? '<span class="btn btn-mini btn-info">Page Templates</span>&nbsp;': ''
-					, global_import = ('checked' == $('[data-scope="importexport"] #global_import').attr('checked') ) ? '<span class="btn btn-mini btn-info">Global Options</span>&nbsp;': ''
-					, type_import = ('checked' == $('[data-scope="importexport"] #type_import').attr('checked') ) ? '<span class="btn btn-mini btn-info">Type Options</span>': ''
+					var page_tpl_import = ('checked' == $('[data-scope="importexport"] #page_tpl_import').attr('checked') ) ? sprintf( '<span class="btn btn-mini btn-info">%s</span>&nbsp;', $.pl.lang("Page Templates") ) : ''
+					, global_import = ('checked' == $('[data-scope="importexport"] #global_import').attr('checked') ) ? sprintf( '<span class="btn btn-mini btn-info">%s</span>&nbsp;', $.pl.lang("Global Options") ): ''
+					, type_import = ('checked' == $('[data-scope="importexport"] #type_import').attr('checked') ) ? sprintf( '<span class="btn btn-mini btn-info">%s</span>', $.pl.lang("Type Options") ): ''
 
 					bootbox.confirm(
-						sprintf( "<h3>Are you sure?</h3><p>Importing this file will replace the following settings.<br /><strong>%s%s%s</strong></p>", page_tpl_import, global_import,type_import )
+						sprintf( $.pl.lang("<h3>Are you sure?</h3><p>Importing this file will replace the following settings.<br /><strong>%s%s%s</strong></p>"), page_tpl_import, global_import,type_import )
 						, function( result ){
 
 							if(result == true){
@@ -1164,24 +1168,45 @@
 							}
 
 					})
-					
+
 				}
 				, complete: function (response) {
+
+					console.log(response)
+					var result = $.parseJSON(response.responseText)
+					,	error = result.import_error || false
+
+				if( error ) {
 					window.onbeforeunload = null
-					bootbox.dialog( "<h3>Settings Imported</h3>" )
-					var url = $.pl.config.siteURL
-					pl_url_refresh(url, 2000)
+
+					var txt = sprintf( '<h3>%s</h3>%s%s',
+					sprintf('<h3>%s</h3>', $.pl.lang("Import Failed!") ),
+					sprintf( '%s %s', $.pl.lang("Looks like you tried to upload"), error ),
+					sprintf( '<br />The proper file naming format has to look like this<br />pl-config_2014-02-27_20-00-51.json' )
+					 )
+					bootbox.confirm( txt )
+				} else {
+						window.onbeforeunload = null
+						bootbox.dialog( $.pl.lang("<h3>Settings Imported</h3>") )
+						var url = $.pl.config.siteURL
+						pl_url_refresh(url, 2000)
+				}
+
+				//	window.onbeforeunload = null
+				//	bootbox.dialog( $.pl.lang("<h3>Settings Imported</h3>") )
+				//	var url = $.pl.config.siteURL
+				//	pl_url_refresh(url, 2000)
 				}
 			})
-			
+
 			$('#fileupload').bind('fileuploadsubmit', function (e, data) {
-			    
+
 			    data.formData = {
 					action: 'upload_config_file'
 					, mode: 'fileupload'
 					, refresh: true
-					, refreshText: 'Imported Settings'
-					, savingText: 'Importing'
+					, refreshText: $.pl.lang("Imported Settings")
+					, savingText: $.pl.lang("Importing")
 					, run: 'upload_config'
 					, page_tpl_import: $('[data-scope="importexport"] #page_tpl_import').attr('checked')
 					, global_import: $('[data-scope="importexport"] #global_import').attr('checked')
@@ -1230,17 +1255,18 @@
 			})
 
 			$('.pl-load-media-lib').on('click', function(){
-				
+
 				var mediaFrame = $.pl.config.urls.mediaLibrary
-			
-				var optionID = $(this).closest('.img-upload-box').find('.upload-input').attr('id')
-				,	mediaFrame = $.pl.config.urls.mediaLibrary + '&oid=' + optionID 
-				
+
+				var theInput = $(this).closest('.img-upload-box').find('.upload-input')
+				, 	optionID = theInput.attr('id')
+				,	mediaFrame = $.pl.config.urls.mediaLibrary + '&oid=' + optionID
+
 				$.pl.iframeSelector = optionID
-				
+
 				$.toolbox('hide')
-			
-				bootbox.dialog( 
+
+				bootbox.dialog(
 					sprintf('<iframe src="%s"></iframe>', mediaFrame)
 					, [ ]
 					, {
@@ -1249,22 +1275,26 @@
 						, backdrop: true
 					}
 				)
-			
-				
-			
+
+
+
 				$('.bootbox').on('hidden.mediaDialog', function () {
-					
+
 					$.toolbox('show')
+
+
+					theInput.trigger('blur').closest('.ui-accordion').accordion('refresh')
+
 					$('.bootbox').off('hidden.mediaDialog')
-						
+
 				})
-				
-				
-			
+
+
+
 			})
-			
+
 			$('.rmv-upload').on('click', function(){
-				
+
 				$(this).closest('.img-upload-box')
 					.find('.upload-input')
 						.val('').trigger('blur')
@@ -1274,62 +1304,62 @@
 					.end()
 					.find('.lstn')
 						.first().trigger('blur')
-					
+
 				that.reloadOptionLayout( $(this) )
-				
+
 			})
-			
+
 			// Tooltips inside of options
 			$('.pl-tooltip')
 				.tooltip({placement: 'top'})
-				
+
 			// Syncing buttons
 			$('.sync-btn-exchange').on('click', function(e){
-				
+
 				e.preventDefault()
-				
+
 				var btn = $(this)
 				,	key = btn.data('key')
 				,	sel = sprintf('[data-clone="%s"] [data-sync="%s"]', that.uniqueID, key)
 				,	el = $( sel )
 				, 	offTop = el.offset().top - 120
-				
-				
+
+
 				// Add Actions
 				btn.find('i').addClass('icon-spin')
 				el.removeClass('stop-focus').addClass('pl-focus')
-				
+
 				// Remove Actions
 				setTimeout(function () {
 				    el.addClass('stop-focus')
 					btn.find('i').removeClass('icon-spin')
 				}, 1000);
-				
+
 				// Scroll Page
 				jQuery('html,body').animate({scrollTop: offTop}, 500);
-				
-				
+
+
 			})
-			
+
 			$('.sync-btn-refresh').on('click', function(e){
-			
+
 				e.preventDefault()
-			
+
 				var $that = $(this)
-				
+
 				$that.find('i').addClass('icon-spin')
-				window.onbeforeunload = null	
-					
+				window.onbeforeunload = null
+
 				plCallWhenSet( 'saving', function(){
-					
+
 					location.reload()
-				
+
 				}, true )
-			
-				
-				
+
+
+
 			})
-			
+
 			$( '.btn-refresh' ).on('click.saveButton', function(){
 
 				$(this).find('i').addClass('icon-spin')
@@ -1338,7 +1368,7 @@
 				location.reload()
 
 			})
-		
+
 
 			// Reference Help Toggle
 			$('.btn-ref').on('click.ref', function(){
@@ -1356,7 +1386,7 @@
 				that.reloadOptionLayout( closestRef )
 			})
 		}
-		
+
 		, reloadOptionLayout: function( element ){
 			element.closest('.isotope').isotope( 'reLayout' )
 			element.closest('.opt-box').find('.opt-accordion').accordion('refresh')
@@ -1386,7 +1416,7 @@
 			} else {
 				$('#'+loader).remove()
 			}
-			
+
 			selector
 				.next()
 				.next()
@@ -1402,14 +1432,14 @@
 
 		//	o = that.addOptionObjectMeta( tabIndex, o, optLevel, parent )
 			//console.log(o)
-			
+
 			if( optLevel == 3 ){
 				o.inputID = sprintf('%s_%s_%s', parent.key, parent.itemNumber, o.key )
-			} 
-			
+			}
+
 			// Multiple Options
 			if( o.type == 'multi' ){
-					
+
 				if(o.opts){
 					$.each( o.opts , function(index, osub) {
 
@@ -1419,39 +1449,39 @@
 				}
 
 			}
-			
+
 			else if( o.type == 'accordion' ){
-				
-				// option value should be an array, so foreach 
-				
+
+				// option value should be an array, so foreach
+
 				var optionArray = ( typeof(o.value) == 'object' || typeof(o.value) == 'array' ) ? o.value : [[],[],[]]
 				, 	itemNumber = 1
 
-				
+
 				$.each( optionArray, function( ind, vals ){
-				
+
 					o.itemNumber = 'item'+itemNumber
-				
+
 					if( o.opts ){
 						$.each( o.opts , function(index, osub) {
-							
-							
+
+
 							that.scriptEngine(tabIndex, osub, 3, o) // recursive array
 
 						})
 					}
 					itemNumber++
 				})
-				
+
 
 			}
 
 			else if( o.type == 'color' ){
 
 				var dflt = ( isset( o.default ) ) ? o.default : '#ffffff'
-				
+
 				dflt = dflt.replace('#', '')
-				
+
 				$( '.color-'+o.inputID ).colorpicker({
 					color: dflt
 					, allowNull: true
@@ -1476,17 +1506,17 @@
 			}
 
 			else if( o.type == 'image_upload' ){
-			
+
 				that.theImageUploader( '.fineupload', o.sizelimit, o.extension )
 			}
 
 		}
-		
+
 		, theImageUploader: function( inputSelector, sizeLimit, extension ){
 				var selector = inputSelector || '.fineupload'
 				, 	sizeLimit = sizeLimit || 512000 // 500 kB
 				,	extension = extension || null
-				,	allowedExtensions = ['jpeg', 'jpg', 'gif', 'png']
+				,	allowedExtensions = ['jpeg', 'jpg', 'gif', 'png', 'ico']
 
 				if(extension) {
 					allowedExtensions = extension.split(',')
@@ -1506,33 +1536,33 @@
 							sizeLimit: sizeLimit
 						}
 					,	text: {
-							uploadButton: '<i class="icon-upload"></i> Upload Image'
+							uploadButton: sprintf( '<i class="icon-upload"></i> %s', $.pl.lang("Upload Image") )
 						}
 					// , 	debug: true
 					,	template: '<div class="qq-uploader span12">' +
-					                      '<pre class="qq-upload-drop-area span12"><span>{dragZoneText}</span></pre>' +
-					                      '<div class="qq-upload-button btn btn-primary btn-mini" style="width: auto;">{uploadButtonText}</div> <div class="pl-load-media-lib btn btn-mini" >Media Library</div>  <div class="btn  btn-mini rmv-upload"><i class="icon-remove"></i></div>' +
+					                      '<pre class="qq-upload-drop-area span12 hidden"><span>{dragZoneText}</span></pre>' +
+					                      sprintf( '<div class="qq-upload-button btn btn-primary btn-mini" style="width: auto;">{uploadButtonText}</div> <div class="pl-load-media-lib btn btn-mini" >%s</div>  <div class="btn  btn-mini rmv-upload"><i class="icon-remove"></i></div>', $.pl.lang("Media Library") ) +
 					                      '<span class="qq-drop-processing"><span>{dropProcessingText}</span><span class="icon-spinner icon-spin spin-fast"></span></span>' +
 					                      '<ul class="qq-upload-list" style="margin-top: 10px; text-align: center;"></ul>' +
 					                    '</div>'
 
 				}).on('complete', function(event, id, fileName, response) {
-				
+
 					var optBox = $(this).closest('.img-upload-box')
-					
+
 						if (response.success) {
 							var theThumb = optBox.find('.opt-upload-thumb')
 							, 	imgStyle = theThumb.data('imgstyle')
 							, 	imgURL = pl_do_shortcode(response.url)
-							
+
 							theThumb.fadeIn().html( sprintf('<div class="img-wrap"><img src="%s" style="%s"/></div>', imgURL, imgStyle ))
-							
+
 							optBox.find('.text-input').val(response.url).change()
-							
+
 							optBox.find('.hidden-input').val(response.attach_id).change()
-							
+
 							optBox.find('.lstn').first().trigger('blur')
-							
+
 							optBox.imagesLoaded( function(){
 								optBox.closest('.isotope').isotope( 'reLayout' )
 								optBox.closest('.opt-box').find('.opt-accordion').accordion('refresh')

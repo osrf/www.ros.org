@@ -1,18 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: DMS\n"
-"POT-Creation-Date: 2013-10-25 17:32-0000\n"
-"PO-Revision-Date: 2013-10-25 17:33-0000\n"
+"POT-Creation-Date: 2013-11-05 18:32-0000\n"
+"PO-Revision-Date: 2013-11-05 18:33-0000\n"
 "Last-Translator: Simon <simon@pagelines.com>\n"
-"Language-Team: PageLines <hello@pagelines.com>\n"
-"Language: en_US\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
-"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"lang\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -187,7 +187,8 @@ msgstr ""
 msgid "Learn more about karma"
 msgstr ""
 
-#: ../editor/editor.account.php:561 ../editor/editor.interface.php:331
+#: ../editor/editor.account.php:561 ../editor/editor.interface.php:347
+#: ../editor/js/pl.editor.js:175
 msgid "Saving"
 msgstr ""
 
@@ -329,15 +330,15 @@ msgstr ""
 msgid "Select This Image For Option"
 msgstr ""
 
-#: ../editor/editor.actions.php:516
+#: ../editor/editor.actions.php:516 ../editor/js/pl.optpanel.js:1514
 msgid "Media Library"
 msgstr ""
 
-#: ../editor/editor.areas.php:57 ../editor/editor.interface.php:525
+#: ../editor/editor.areas.php:57 ../editor/editor.interface.php:541
 msgid "Delete"
 msgstr ""
 
-#: ../editor/editor.areas.php:59 ../editor/editor.interface.php:524
+#: ../editor/editor.areas.php:59 ../editor/editor.interface.php:540
 msgid "Clone"
 msgstr ""
 
@@ -345,9 +346,13 @@ msgstr ""
 msgid "Move"
 msgstr ""
 
-#: ../editor/editor.areas.php:63 ../editor/editor.interface.php:523
+#: ../editor/editor.areas.php:63 ../editor/editor.interface.php:539
 #: ../includes/class.objects.php:109
 msgid "Edit"
+msgstr ""
+
+#: ../editor/editor.color.php:186
+msgid "Color <span class=\"spamp\">&amp;</span> BG"
 msgstr ""
 
 #: ../editor/editor.color.php:201
@@ -546,7 +551,7 @@ msgid ""
 "the theme."
 msgstr ""
 
-#: ../editor/editor.importexport.php:178 ../editor/editor.interface.php:326
+#: ../editor/editor.importexport.php:178 ../editor/editor.interface.php:342
 msgid "Publish"
 msgstr ""
 
@@ -562,71 +567,71 @@ msgstr ""
 msgid "Import DMS Config"
 msgstr ""
 
-#: ../editor/editor.interface.php:136
+#: ../editor/editor.interface.php:152
 msgid "Deactivate Editor (View Live)"
 msgstr ""
 
-#: ../editor/editor.interface.php:149
+#: ../editor/editor.interface.php:165
 msgid "Preview (alt+a)"
 msgstr ""
 
-#: ../editor/editor.interface.php:307
+#: ../editor/editor.interface.php:323
 msgid "Undo All Unpublished Changes"
 msgstr ""
 
-#: ../editor/editor.interface.php:309
+#: ../editor/editor.interface.php:325
 msgid "Undo Unpublished Global Changes"
 msgstr ""
 
-#: ../editor/editor.interface.php:312
+#: ../editor/editor.interface.php:328
 msgid "Undo Unpublished Post Type Changes"
 msgstr ""
 
-#: ../editor/editor.interface.php:314
+#: ../editor/editor.interface.php:330
 msgid "Undo Unpublished Local Changes"
 msgstr ""
 
-#: ../editor/editor.interface.php:316
+#: ../editor/editor.interface.php:332
 msgid "No Unpublished Changes"
 msgstr ""
 
-#: ../editor/editor.interface.php:323
+#: ../editor/editor.interface.php:339
 msgid "Refresh needed to view changes."
 msgstr ""
 
-#: ../editor/editor.interface.php:325
+#: ../editor/editor.interface.php:341
 msgid "Publish Live"
 msgstr ""
 
-#: ../editor/editor.interface.php:334
+#: ../editor/editor.interface.php:350
 msgid "Width"
 msgstr ""
 
-#: ../editor/editor.interface.php:514
+#: ../editor/editor.interface.php:530
 msgid "Decrease Width"
 msgstr ""
 
-#: ../editor/editor.interface.php:515
+#: ../editor/editor.interface.php:531
 msgid "Column Width"
 msgstr ""
 
-#: ../editor/editor.interface.php:516
+#: ../editor/editor.interface.php:532
 msgid "Increase Width"
 msgstr ""
 
-#: ../editor/editor.interface.php:517
+#: ../editor/editor.interface.php:533
 msgid "Offset Left"
 msgstr ""
 
-#: ../editor/editor.interface.php:518
+#: ../editor/editor.interface.php:534
 msgid "Offset Amount"
 msgstr ""
 
-#: ../editor/editor.interface.php:519
+#: ../editor/editor.interface.php:535
 msgid "Offset Right"
 msgstr ""
 
-#: ../editor/editor.interface.php:520
+#: ../editor/editor.interface.php:536
 msgid "Force to New Row"
 msgstr ""
 
@@ -893,6 +898,10 @@ msgid ""
 "create feeds."
 msgstr ""
 
+#: ../editor/editor.settings.config.php:251
+msgid "Sharebar Options"
+msgstr ""
+
 #: ../editor/editor.settings.config.php:256
 msgid "Enable Google+"
 msgstr ""
@@ -1055,7 +1064,7 @@ msgstr ""
 msgid "Templates"
 msgstr ""
 
-#: ../editor/editor.templates.php:207
+#: ../editor/editor.templates.php:207 ../editor/js/pl.optpanel.js:1148
 msgid "Page Templates"
 msgstr ""
 
@@ -1188,7 +1197,7 @@ msgid "Font Weight"
 msgstr ""
 
 #: ../editor/editor.typography.php:116
-msgid "*These weights don't alwaye have an effect."
+msgid "*These weights don't always have an effect."
 msgstr ""
 
 #: ../editor/editor.typography.php:125
@@ -1357,44 +1366,48 @@ msgstr ""
 msgid "<i class='icon-filter'></i> Filters"
 msgstr ""
 
-#: ../editor/panel.sections.php:42
+#: ../editor/panel.sections.php:42 ../editor/panel.sections.php:113
 msgid "Components"
 msgstr ""
 
-#: ../editor/panel.sections.php:48
+#: ../editor/panel.sections.php:48 ../editor/panel.sections.php:114
 msgid "Layouts"
 msgstr ""
 
-#: ../editor/panel.sections.php:54
+#: ../editor/panel.sections.php:54 ../editor/panel.sections.php:115
 msgid "Full Width"
 msgstr ""
 
-#: ../editor/panel.sections.php:60
+#: ../editor/panel.sections.php:60 ../editor/panel.sections.php:116
 msgid "Post Layouts"
 msgstr ""
 
-#: ../editor/panel.sections.php:66
+#: ../editor/panel.sections.php:66 ../editor/panel.sections.php:117
 msgid "Galleries"
 msgstr ""
 
-#: ../editor/panel.sections.php:72
+#: ../editor/panel.sections.php:72 ../editor/panel.sections.php:118
 msgid "Navigation"
 msgstr ""
 
-#: ../editor/panel.sections.php:78
+#: ../editor/panel.sections.php:78 ../editor/panel.sections.php:119
 msgid "Sliders"
 msgstr ""
 
-#: ../editor/panel.sections.php:84
+#: ../editor/panel.sections.php:84 ../editor/panel.sections.php:120
 msgid "Social"
 msgstr ""
 
-#: ../editor/panel.sections.php:90
+#: ../editor/panel.sections.php:90 ../editor/panel.sections.php:121
 msgid "Widgetized"
 msgstr ""
 
-#: ../editor/panel.sections.php:96
+#: ../editor/panel.sections.php:96 ../editor/panel.sections.php:122
 msgid "Miscellaneous"
+msgstr ""
+
+#: ../editor/panel.sections.php:191
+msgid "<span class=\"badge badge-important\">PRO ONLY</span>"
 msgstr ""
 
 #: ../editor/panel.settings.php:27
@@ -1424,6 +1437,11 @@ msgstr ""
 
 #: ../editor/panel.themes.php:74
 msgid "Theme Options"
+msgstr ""
+
+#: ../editor/panel.themes.php:127
+msgid ""
+" <span class=\"badge badge-info\"><i class=\"icon-ok\"></i> Active</span>"
 msgstr ""
 
 #: ../editor/panel.themes.php:173 ../editor/panel.themes.php:193
@@ -1467,57 +1485,57 @@ msgstr ""
 msgid "Visit %s&#8217;s website"
 msgstr ""
 
-#: ../includes/class.shortcodes.php:1342
+#: ../includes/class.shortcodes.php:1342 ../editor/js/pl.xlist.js:119
 msgid "Close"
 msgstr ""
 
-#: ../includes/deprecated.php:268
+#: ../includes/deprecated.php:272
 #, php-format
 msgid ""
 "%1$s is <strong>deprecated</strong> since version %2$s of PageLines DMS! Use "
 "%3$s instead."
 msgstr ""
 
-#: ../includes/deprecated.php:270
+#: ../includes/deprecated.php:274
 #, php-format
 msgid ""
 "%1$s is <strong>deprecated</strong> since version %2$s of PageLines DMS with "
 "no alternative available."
 msgstr ""
 
-#: ../includes/deprecated.php:1345
+#: ../includes/deprecated.php:1349
 msgid "No Image"
 msgstr ""
 
-#: ../includes/deprecated.php:1552 ../includes/deprecated.php:1553
+#: ../includes/deprecated.php:1557 ../includes/deprecated.php:1558
 msgid "Add New "
 msgstr ""
 
-#: ../includes/deprecated.php:1554 ../includes/deprecated.php:1555
+#: ../includes/deprecated.php:1559 ../includes/deprecated.php:1560
 msgid "Edit "
 msgstr ""
 
-#: ../includes/deprecated.php:1556 ../includes/deprecated.php:1557
+#: ../includes/deprecated.php:1561 ../includes/deprecated.php:1562
 msgid "View "
 msgstr ""
 
-#: ../includes/less.legacy.php:460
+#: ../includes/less.legacy.php:453
 #, php-format
 msgid ""
 "%s/* CSS was compiled at %s and took %s seconds using %sMB of unicorn dust%s."
 "*/"
 msgstr ""
 
-#: ../includes/less.legacy.php:529
+#: ../includes/less.legacy.php:505
 msgid "LESS Compile error!"
 msgstr ""
 
-#: ../includes/less.legacy.php:536
+#: ../includes/less.legacy.php:512
 #, php-format
 msgid "Error in %s Less code: %s"
 msgstr ""
 
-#: ../includes/less.legacy.php:763
+#: ../includes/less.legacy.php:739
 #, php-format
 msgid ""
 "%s/* CSS was compiled in legacy mode at %s and took %s seconds using %sMB of "
@@ -1635,6 +1653,17 @@ msgstr ""
 msgid "Get A Sidebars Plugin"
 msgstr ""
 
+#: ../sections/columnizer/section.php:101
+msgid "<i class=\"icon-external-link\"></i> Check out Sidebar Manager plugin"
+msgstr ""
+
+#: ../sections/columnizer/section.php:102
+msgid ""
+"We have detected that you don't either the Custom Sidebars or Sidebar "
+"Manager plugins installed. We recommend you install a plugin that allows you "
+"to create custom widgetized areas on demand."
+msgstr ""
+
 #: ../sections/columnizer/section.php:147
 msgid "Stay in Touch!"
 msgstr ""
@@ -1653,7 +1682,8 @@ msgstr ""
 msgid "Categories"
 msgstr ""
 
-#: ../sections/columnizer/section.php:222
+#: ../sections/columnizer/section.php:222 ../editor/js/pl.optpanel.js:817
+#: ../editor/js/pl.optpanel.js:908
 msgid "More Info"
 msgstr ""
 
@@ -1813,33 +1843,40 @@ msgid "Open link in new window"
 msgstr ""
 
 #: ../sections/hero/section.php:121 ../sections/masthead/section.php:118
+#: ../sections/masthead/section.php:300 ../sections/masthead/section.php:335
 msgid "Select Button Color"
 msgstr ""
 
-#: ../sections/hero/section.php:127 ../sections/navbar/section.php:65
+#: ../sections/hero/section.php:127 ../sections/masthead/section.php:302
+#: ../sections/masthead/section.php:337 ../sections/navbar/section.php:65
 #: ../sections/navbar/section.php:370 ../sections/navbar/section.php:382
 msgid "Blue"
 msgstr ""
 
-#: ../sections/hero/section.php:128 ../sections/navbar/section.php:67
+#: ../sections/hero/section.php:128 ../sections/masthead/section.php:303
+#: ../sections/masthead/section.php:338 ../sections/navbar/section.php:67
 #: ../sections/navbar/section.php:372 ../sections/navbar/section.php:384
 msgid "Orange"
 msgstr ""
 
-#: ../sections/hero/section.php:129 ../sections/navbar/section.php:68
+#: ../sections/hero/section.php:129 ../sections/masthead/section.php:304
+#: ../sections/masthead/section.php:339 ../sections/navbar/section.php:68
 #: ../sections/navbar/section.php:373 ../sections/navbar/section.php:385
 msgid "Red"
 msgstr ""
 
-#: ../sections/hero/section.php:130
+#: ../sections/hero/section.php:130 ../sections/masthead/section.php:305
+#: ../sections/masthead/section.php:340
 msgid "Green"
 msgstr ""
 
-#: ../sections/hero/section.php:131
+#: ../sections/hero/section.php:131 ../sections/masthead/section.php:306
+#: ../sections/masthead/section.php:341
 msgid "Light Blue"
 msgstr ""
 
-#: ../sections/hero/section.php:132
+#: ../sections/hero/section.php:132 ../sections/masthead/section.php:307
+#: ../sections/masthead/section.php:342
 msgid "Grey"
 msgstr ""
 
@@ -2028,19 +2065,19 @@ msgstr ""
 msgid "Masthead Splash Options"
 msgstr ""
 
-#: ../sections/masthead/section.php:53
+#: ../sections/masthead/section.php:53 ../sections/masthead/section.php:252
 msgid "Upload custom image"
 msgstr ""
 
-#: ../sections/masthead/section.php:58
+#: ../sections/masthead/section.php:58 ../sections/masthead/section.php:256
 msgid "Masthead Video (optional, to be used instead of image)"
 msgstr ""
 
-#: ../sections/masthead/section.php:63
+#: ../sections/masthead/section.php:63 ../sections/masthead/section.php:260
 msgid "Maximum width of splash in px (default is full width)"
 msgstr ""
 
-#: ../sections/masthead/section.php:66
+#: ../sections/masthead/section.php:66 ../sections/masthead/section.php:263
 msgid ""
 "Upload an image to serve as a splash image, or use an embed code for full "
 "width video."
@@ -2050,16 +2087,17 @@ msgstr ""
 msgid "Masthead Text"
 msgstr ""
 
-#: ../sections/masthead/section.php:72
+#: ../sections/masthead/section.php:72 ../sections/masthead/section.php:269
 msgid " Text"
 msgstr ""
 
-#: ../sections/masthead/section.php:77 ../sections/mediabox/section.php:30
-#: ../sections/popthumbs/section.php:69 ../sections/propricing/section.php:53
+#: ../sections/masthead/section.php:77 ../sections/masthead/section.php:271
+#: ../sections/mediabox/section.php:30 ../sections/popthumbs/section.php:69
+#: ../sections/propricing/section.php:53
 msgid "Title"
 msgstr ""
 
-#: ../sections/masthead/section.php:82
+#: ../sections/masthead/section.php:82 ../sections/masthead/section.php:272
 msgid "Tagline"
 msgstr ""
 
@@ -2067,31 +2105,34 @@ msgstr ""
 msgid "Masthead Action Button "
 msgstr ""
 
-#: ../sections/masthead/section.php:99
+#: ../sections/masthead/section.php:99 ../sections/masthead/section.php:284
+#: ../sections/masthead/section.php:319
 msgid "Enter the link destination (URL - Required)"
 msgstr ""
 
-#: ../sections/masthead/section.php:105
+#: ../sections/masthead/section.php:105 ../sections/masthead/section.php:289
+#: ../sections/masthead/section.php:324
 msgid "Masthead Button Text"
 msgstr ""
 
-#: ../sections/masthead/section.php:112
+#: ../sections/masthead/section.php:112 ../sections/masthead/section.php:295
+#: ../sections/masthead/section.php:330
 msgid "Open link in new window."
 msgstr ""
 
-#: ../sections/masthead/section.php:130
+#: ../sections/masthead/section.php:130 ../sections/masthead/section.php:350
 msgid "Masthead Menu"
 msgstr ""
 
-#: ../sections/masthead/section.php:131
+#: ../sections/masthead/section.php:131 ../sections/masthead/section.php:351
 msgid "Select Masthead Menu"
 msgstr ""
 
-#: ../sections/masthead/section.php:136
+#: ../sections/masthead/section.php:136 ../sections/masthead/section.php:356
 msgid "Masthead Meta"
 msgstr ""
 
-#: ../sections/masthead/section.php:137
+#: ../sections/masthead/section.php:137 ../sections/masthead/section.php:357
 msgid "Enter Masthead Meta Text"
 msgstr ""
 
@@ -2103,6 +2144,14 @@ msgstr ""
 msgid ""
 "Enter the options for the masthead splash image. If no options are "
 "specified, no image will be shown."
+msgstr ""
+
+#: ../sections/masthead/section.php:268
+msgid "Enter text for your masthead banner section"
+msgstr ""
+
+#: ../sections/masthead/section.php:274
+msgid "The text for the masthead section"
 msgstr ""
 
 #: ../sections/masthead/section.php:279
@@ -2224,7 +2273,7 @@ msgid "The NavBar uses WordPress menus. Select one for use."
 msgstr ""
 
 #: ../sections/navbar/section.php:85 ../sections/simple_nav/section.php:34
-#: ../sections/simple_nav/section.php:40
+#: ../sections/simple_nav/section.php:40 ../editor/js/pl.optpanel.js:687
 msgid "Select Menu"
 msgstr ""
 
@@ -2253,6 +2302,10 @@ msgstr ""
 
 #: ../sections/navbar/section.php:118
 msgid "Hide Search?"
+msgstr ""
+
+#: ../sections/navbar/section.php:135 ../sections/navbar/section.php:206
+msgid "NavBar"
 msgstr ""
 
 #: ../sections/navbar/section.php:152 ../sections/navbar/section.php:153
@@ -3150,4 +3203,362 @@ msgstr ""
 
 #: ../sections/watermark/section.php:83
 msgid "was created with"
+msgstr ""
+
+#: ../editor/js/pl.ajax.js:21
+msgid "Are you sure?"
+msgstr ""
+
+#: ../editor/js/pl.ajax.js:24
+msgid "Refreshing page..."
+msgstr ""
+
+#: ../editor/js/pl.ajax.js:147
+msgid "Saving Settings"
+msgstr ""
+
+#: ../editor/js/pl.ajax.js:149
+msgid "Settings successfully saved! Refreshing page..."
+msgstr ""
+
+#: ../editor/js/pl.ajax.js:173
+msgid ""
+"<h3>Turn Off DMS Editor?</h3><p>(Note: Draft mode is disabled when editor is "
+"off.)</p>"
+msgstr ""
+
+#: ../editor/js/pl.ajax.js:181
+msgid "Deactivating..."
+msgstr ""
+
+#: ../editor/js/pl.ajax.js:186
+msgid "Editor deactivated! Reloading page."
+msgstr ""
+
+#: ../editor/js/pl.ajax.js:236
+#, c-format
+msgid ""
+"<h3>Are you sure?</h3><p>This will revert <strong>%s</strong> changes to "
+"your last published configuration.</p>"
+msgstr ""
+
+#: ../editor/js/pl.ajax.js:237
+msgid "Reverting Draft"
+msgstr ""
+
+#: ../editor/js/pl.ajax.js:238 ../editor/js/pl.templates.js:113
+msgid "Template successfully updated!"
+msgstr ""
+
+#: ../editor/js/pl.areas.js:123
+msgid ""
+"<h3>Are you sure?</h3><p>This action will delete this area and all its "
+"elements from this page.</p>"
+msgstr ""
+
+#: ../editor/js/pl.editor.js:204
+msgid "Refreshing Page"
+msgstr ""
+
+#: ../editor/js/pl.editor.js:475
+msgid ""
+"<h3>Welcome to DMS!</h3><p>A cutting-edge drag & drop design management "
+"system for your website. <br/>Watch the video below for help getting started."
+"</p><iframe width='700' height='420' src='//www.youtube.com/embed/"
+"BracDuhEHls?rel=0&vq=hd720' frameborder='0' allowfullscreen></iframe>"
+msgstr ""
+
+#: ../editor/js/pl.editor.js:682
+msgid "Learn more about being a PRO"
+msgstr ""
+
+#: ../editor/js/pl.editor.js:685
+msgid "<h4>This capability is pro edition only.</h4>"
+msgstr ""
+
+#: ../editor/js/pl.editor.js:689
+msgid "Edit (Pro Only)"
+msgstr ""
+
+#: ../editor/js/pl.editor.js:690
+msgid ""
+"<h4>This is a Pro Section</h4>Editing Pro sections requires Pro Membership."
+"<br/>"
+msgstr ""
+
+#: ../editor/js/pl.editor.js:744
+msgid ""
+"<h3>Are you sure?</h3><p>This will remove this section and its settings from "
+"this page.</p>"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:112
+msgid "There are no options for this section."
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:114 ../editor/js/pl.optpanel.js:115
+msgid "No Options"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:124
+msgid "scope"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:426
+msgid "Option"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:535
+msgid "Refresh for preview."
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:535
+msgid "Syncs with element."
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:634
+msgid "Remove"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:689
+msgid "Configure Menus"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:723
+msgid "reverse"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:754
+msgid "SELECT"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:817
+msgid ""
+"Select which registered thumbnail size to use for the images. To add new "
+"sizes see: <a href='http://codex.wordpress.org/Function_Reference/"
+"add_image_size'>The Codex</a>"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:863
+msgid "Edit Sets"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:884
+msgid "Select Font"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:886
+msgid "Font Preview"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:887
+msgid "The quick brown fox jumps over the lazy dog"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:898
+msgid "Type Still Needed"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:944
+msgid "global site options"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:944
+msgid "local page options"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:946
+#, c-format
+msgid ""
+"<h3>Are you sure?</h3><p>This will reset <strong>%s</strong> to their "
+"defaults.<br/>(Once reset, this will still need to be published live.)</p>"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:951
+msgid "<span class='btn btn-mini btn-info'>Page Templates</span>&nbsp;"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:952
+msgid "<span class='btn btn-mini btn-info'>Global Options</span>&nbsp;"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:953
+msgid "<span class='btn btn-mini btn-info'>Type Options</span>"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:954
+msgid "Resetting Options"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:955
+msgid "Successfully Reset. Refreshing page"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:959 ../editor/js/pl.optpanel.js:1153
+#, c-format
+msgid ""
+"<h3>Are you sure?</h3><p>Importing this file will replace the following "
+"settings.<br /><strong>%s%s%s</strong></p>"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:960
+msgid "Importing From Child Theme"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:961
+msgid "Successfully Imported. Refreshing page"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:992
+msgid "Flushing Caches"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:994
+msgid "Success! Refreshing page"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:1005
+msgid ""
+"<h3>Are you sure?</h3><p>This will write all settings to a config file in "
+"your child theme named pl-config.json</p>"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:1014
+msgid "Exporting Options"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:1124
+msgid "Refresh Page for Image Uploader"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:1149
+msgid "Global Options"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:1150
+msgid "Type Options"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:1171
+msgid "<h3>Settings Imported</h3>"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:1183
+msgid "Imported Settings"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:1184
+msgid "Importing"
+msgstr ""
+
+#: ../editor/js/pl.optpanel.js:1509
+msgid "Upload Image"
+msgstr ""
+
+#: ../editor/js/pl.saving.js:15
+msgid "Saving."
+msgstr ""
+
+#: ../editor/js/pl.saving.js:17
+msgid "Successfully saved! Refreshing page..."
+msgstr ""
+
+#: ../editor/js/pl.sections.js:20
+msgid "Reloading and Registering Sections"
+msgstr ""
+
+#: ../editor/js/pl.sections.js:21
+msgid "Sections reloaded. Refreshing page!"
+msgstr ""
+
+#: ../editor/js/pl.sections.js:148
+msgid ""
+"<div class='loaded-notice'><div class='the-notice'>Loaded! Note: For this "
+"section, page refresh may be needed for complete functionality (Javascript "
+"Loading).</div></div>"
+msgstr ""
+
+#: ../editor/js/pl.sections.js:172
+msgid "Loading"
+msgstr ""
+
+#: ../editor/js/pl.templates.js:29
+msgid ""
+"<h3>Are you sure?</h3><p>Loading a new template will overwrite the current "
+"page's configuration.</p>"
+msgstr ""
+
+#: ../editor/js/pl.templates.js:30
+msgid "Loading Template"
+msgstr ""
+
+#: ../editor/js/pl.templates.js:32 ../editor/js/pl.themes.js:32
+msgid "Successfully Loaded. Refreshing page"
+msgstr ""
+
+#: ../editor/js/pl.templates.js:53
+msgid ""
+"<h3>Are you sure?</h3><p>This will delete this template. All pages using "
+"this template will be reverted to their default page configuration.</p>"
+msgstr ""
+
+#: ../editor/js/pl.templates.js:54
+msgid "Deleting Template"
+msgstr ""
+
+#: ../editor/js/pl.templates.js:84
+msgid "Saving Template"
+msgstr ""
+
+#: ../editor/js/pl.templates.js:85
+msgid "Successfully Saved. Refreshing page"
+msgstr ""
+
+#: ../editor/js/pl.templates.js:110
+msgid ""
+"<h3>Are you sure?</h3><p>This action will overwrite this template and its "
+"configuration. All pages using this template will be updated with the new "
+"config as well.</p>"
+msgstr ""
+
+#: ../editor/js/pl.templates.js:111
+msgid "Updating Template"
+msgstr ""
+
+#: ../editor/js/pl.themes.js:13
+msgid "<h3>Are you sure?</h3> <p>This will activate this theme sitewide.</p>"
+msgstr ""
+
+#: ../editor/js/pl.themes.js:14
+msgid "Activating Theme"
+msgstr ""
+
+#: ../editor/js/pl.themes.js:16
+msgid "Successfully Activated. Refreshing page"
+msgstr ""
+
+#: ../editor/js/pl.themes.js:29
+msgid ""
+"<h3>Activate Theme Preview?</h3> <p>This will activate a theme preview "
+"sitewide.<br/>(while in draft mode)</p>"
+msgstr ""
+
+#: ../editor/js/pl.themes.js:30
+msgid "Loading Theme Preview"
+msgstr ""
+
+#: ../editor/js/pl.themes.js:45
+msgid "Activate"
+msgstr ""
+
+#: ../editor/js/pl.xlist.js:67
+msgid "Drag Thumb to Page"
+msgstr ""
+
+#: ../editor/js/pl.xlist.js:121
+msgid "Description"
+msgstr ""
+
+#: ../editor/js/pl.xlist.js:125
+msgid "Drag This"
 msgstr ""

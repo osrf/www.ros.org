@@ -98,8 +98,8 @@ class PageLinesColumnizer extends PageLinesSection {
 				'col'	=> 3,
 				'url'	=> 'http://wordpress.org/plugins/sidebar-manager-light/screenshots/',
 				'title'	=> __( 'Get A Sidebars Plugin', 'pagelines' ),
-				'label'		=>	'<i class="icon-external-link"></i> Check out Sidebar Manager plugin',
-				'help'		=> "We have detected that you don't either the Custom Sidebars or Sidebar Manager plugins installed. We recommend you install a plugin that allows you to create custom widgetized areas on demand.",
+				'label'		=> __( '<i class="icon-external-link"></i> Check out Sidebar Manager plugin', 'pagelines' ),
+				'help'		=> __( "We have detected that you don't either the Custom Sidebars or Sidebar Manager plugins installed. We recommend you install a plugin that allows you to create custom widgetized areas on demand.", 'pagelines' ),
 			);
 		}
 

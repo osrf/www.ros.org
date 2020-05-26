@@ -174,7 +174,7 @@ class EditorSettings {
 				'key'			=> 'pl_login_image',
 				'type' 			=> 	'image_upload',
 				'col'			=> 2,
-				'label'			=> __( 'Upload Login Image (160px Height)', 'pagelines' ),
+				'label'			=> __( 'Upload Login Image (80px Height)', 'pagelines' ),
 				'imgsize' 			=> 	'80',
 				'sizemode'		=> 'height',
 				'title' 		=> __( 'Login Page Image', 'pagelines' ),
@@ -248,7 +248,7 @@ class EditorSettings {
 				'key'		=> 'sb_multi',
 				'type'		=> 'multi', 
 				'col'		=> 3,
-				'title'		=> 'Sharebar Options',
+				'title'		=> __( 'Sharebar Options', 'pagelines' ),
 				'opts'		=> array(
 					array(
 						'key'		=> 'share_google',
@@ -345,8 +345,14 @@ class EditorSettings {
 					'title'		=> __( 'Current Install Class', 'pagelines' ),
 					'help'		=> __( "Use this option to add a class to the &gt;body&lt; element of the website. This can be useful when using the same child theme on several installations or sub domains and can be used to control CSS customizations.", 'pagelines' )
 			),
-			
-			
+			array(
+				'key'		=> 'alternative_css',
+				'default'	=> false,
+				'type'		=> 'check',
+				'col'		=> 1,
+				'label'		=> __( 'Enable Alternative CSS URLS', 'pagelines' ),
+				'help'		=> __( 'Some hosts with aggressive caches have issues with the CSS files, this is a possible workaround.')				
+				)		
 		);
 		return $settings;
 	}
@@ -414,5 +420,5 @@ function pl_standard_section_options( ){
 
 	);
 	
-	return $options;
+	return apply_filters( 'pl_standard_section_options', $options );
 }

@@ -17,14 +17,36 @@
 		$.plParallax.init()
 		
 		$('.pl-credit').show()
+		
+		$.BodyClass.init()
 	})
 	
 	$(window).load(function() {
 		$.plCommon.plVerticalCenter('.pl-centerer', '.pl-centered')
-		$('.pl-section').on('resize', function(){
+		$('.pl-section').on('plresize', function(){
 			$.plCommon.plVerticalCenter('.pl-centerer', '.pl-centered')
 		})
 	})
+	
+	$.BodyClass = {
+		init: function(){
+			$(window).resize(function () {
+				$.BodyClass.doResize()
+			})
+			$.BodyClass.doResize()
+		}
+		,	doResize: function(){
+			$(document.body).removeClass('pl-res-phone pl-res-tablet pl-res-desktop')
+			var width = $(window).width()		
+			if( width < 480 ) {
+				$(document.body).addClass('pl-res-phone')
+			} else if( width < 1024 ){
+				$(document.body).addClass('pl-res-tablet')
+			} else {
+				$(document.body).addClass('pl-res-desktop')
+			}
+		} 
+	}
 	
 	$.plNavigation = {
 		init: function(){
@@ -117,7 +139,7 @@
 					siteWrap
 						.addClass('show-mm')
 					
-					$('.site-wrap, .mm-close').one('click touchstart', function(){
+					$('.site-wrap, .mm-close').one('click', function(){
 						siteWrap.removeClass('show-mm')
 						setTimeout(function () {
 						    mobileMenu.hide()
@@ -229,7 +251,7 @@
 
 			$.resize.delay = 100 // resize throttle
 
-			$('.pl-fixed-top').on('resize', function(){
+			$('.pl-fixed-top').on('plresize', function(){
 				that.setHeight()
 			})
 			

@@ -64,7 +64,7 @@
 			} else if ( panel == 'x-themes' ){
 				buttons += $.plThemes.actionButtons( data )
 			} else if ( panel == 'x-sections' ){
-				buttons += sprintf('<a href="#" class="btn btn-small disabled"><i class="icon-random"></i> Drag Thumb to Page</a> ')
+				buttons += sprintf('<a href="#" class="btn btn-small disabled"><i class="icon-random"></i> %s</a> ', $.pl.lang( "Drag Thumb to Page" ) )
 			}
 
 
@@ -116,13 +116,13 @@
 				
 
 					var splash	= sprintf('<div class="x-pane-frame"><img src="%s" /></div>', ext.splash)
-					,	btnClose = sprintf('<a class="x-close x-remove %s btn btn-close"><i class="icon-remove"></i> Close</a>', filterID)
+					,	btnClose = sprintf('<a class="x-close x-remove %s btn btn-close"><i class="icon-remove"></i> %s</a>', filterID, $.pl.lang( "Close" ) )
 					,	btns = sprintf('<div class="x-pane-btns fix">%s %s</div>', that.loadButtons( panel, theExtension.data() ), btnClose)
-					,	desc = sprintf('<div class="x-pane-info"><strong>Description</strong><br/>%s</div>', ext.desc)
+					,	desc = sprintf('<div class="x-pane-info"><strong>%s</strong><br/>%s</div>', $.pl.lang( "Description"), ext.desc)
 					,	extPane = $( sprintf('<div class="x-pane x-remove x-item %s" data-extend-id="%s"><div class="x-pane-pad"><h3 class="x-pane-title">%s</h3>%s %s %s</div></div>', filterID, theID, ext.name, btns, splash, desc) )
 
 					if( panel == 'x-sections' ){
-						var prep = sprintf('<span class="x-remove badge badge-info %s"><i class="icon-arrow-up"></i> Drag This</span>', filterID)
+						var prep = sprintf('<span class="x-remove badge badge-info %s"><i class="icon-arrow-up"></i> %s</span>', filterID, $.pl.lang( "Drag This" ) )
 
 						theIsotope.find('.pl-sortable').append(prep)
 					}

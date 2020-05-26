@@ -19,12 +19,12 @@ function plCallWhenSet( flag, callback, flip ){
 }
 
 function plUniqueID( length ) {
-	var length = length || 6
+	var length = length || 5
 	
   // Math.random should be unique because of its seeding algorithm.
   // Convert it to base 36 (numbers + letters), and grab the first 9 characters
   // after the decimal.
-  return Math.random().toString(36).substr(2, length);
+  return 'u'+Math.random().toString(36).substr(2, length);
 };
 
 function plIsset(variable){

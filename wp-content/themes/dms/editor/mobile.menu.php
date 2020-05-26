@@ -32,9 +32,7 @@ class PageLinesMobileMenu {
 							'menu'				=> $menu,
 							'container'			=> null,
 							'container_class'	=> '',
-							//BPG: increase depth of menu display on mobile
-							//'depth'				=> 2,
-							'depth'				=> 3,
+							'depth'				=> 2,
 							'fallback_cb'		=> ''
 						)
 					);

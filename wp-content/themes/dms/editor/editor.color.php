@@ -183,7 +183,7 @@ class EditorColor{
 	function add_settings( $settings ){
 
 		$settings['color_control'] = array(
-			'name' 	=> 'Color <span class="spamp">&amp;</span> BG',
+			'name' 	=> __( 'Color <span class="spamp">&amp;</span> BG', 'pagelines' ),
 			'icon'	=> 'icon-tint',
 			'pos'	=> 3,
 			'opts' 	=> $this->options()

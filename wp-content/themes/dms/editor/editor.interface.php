@@ -89,6 +89,13 @@ class EditorInterface {
 			
 			wp_enqueue_script( 'js-hotkeys', PL_JS . '/utils.hotkeys.js', array( 'jquery'), PL_CORE_VERSION );
 
+
+			// i18n test
+			wp_enqueue_script( 'js-i18n', $this->url . '/js/Gettext.js', PL_CORE_VERSION );
+							
+			add_action( 'wp_head', array( $this, 'lang_head' ) );
+
+
 		// Action in to scripts here...
 		pagelines_register_hook('pagelines_editor_scripts'); // Hook
 
@@ -122,7 +129,16 @@ class EditorInterface {
 			wp_localize_script( 'pl-editor-js', 'ajaxurl', array( $ajax_url ) );
 	}
 
+	function lang_head() {
+		$locale = get_locale();
+		$text = '';
+		$langurl = sprintf( '%s/%s.po', PAGELINES_LANGUAGE_URL, $locale );
+		$langfile = sprintf( '%s/%s.po', PAGELINES_LANGUAGE_DIR, $locale );
+		if( is_file( $langfile ) )
+			$text = sprintf( "\n<link rel='gettext' type='application/x-po' href='%s' />", $langurl );
 
+		echo $text;
+	}
 	function toolbar_config(){
 
 		// actions show up in a dropup
@@ -202,12 +218,12 @@ class EditorInterface {
 		} else {
 			$target = "target='_blank'";
 			$activate_url = 'http://www.google.com/chrome';
-			$text = 'Chrome is required to use PageLines Editor';
+			$text = 'Please use Google Chrome to edit with DMS';
 
 		}
 		?>
 			<span id="toolbox-activate" data-href="<?php echo $activate_url;?>" class="toolbox-activate pl-make-link" <?php echo $target;?>>
-				<i class="icon-off transit"></i> <span class="txt"><?php echo $text; ?></span></span>
+				<i class="icon-pagelines"></i> <span class="txt"><?php echo $text; ?></span></span>
 			</span>
 
 		<?php

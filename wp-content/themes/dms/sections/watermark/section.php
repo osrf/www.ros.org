@@ -103,12 +103,15 @@ class PLWatermark extends PageLinesSection {
 	<div class="pl-watermark">
 		<div class="pl_global_social stack-element">
 
+			<?php if( pl_setting( 'share_facebook' ) ) :?>
 			<div class="fb-like" data-href="<?php echo $facebook_url;?>" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false" data-font="arial" style="vertical-align: top"></div>
-
+			<?php endif; ?>
+			<?php if( pl_setting( 'share_google' ) ) :?>
 			<div class="g-plusone" data-size="medium" data-width="80" data-href="<?php echo $home; ?>"></div>
-
+			<?php endif; ?>
+			<?php if( pl_setting( 'share_twitter' ) ) :?>
 			<a href="<?php echo $twitter_url;?>" class="twitter-follow-button" data-width="150px" data-show-count="true" data-lang="en" data-show-screen-name="false">&nbsp;</a>
-
+			<?php endif; ?>
 		</div>
 		<?php if(!pl_is_pro()):?>
 		<div class="powered-by stack-element" style="display: block; visibility: visible; opacity: 1;">

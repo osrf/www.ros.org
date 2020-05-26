@@ -120,7 +120,7 @@
 		, deleteArea: function( btn ){
 
 			var currentArea = btn.closest('.pl-area')
-			, 	confirmText = '<h3>Are you sure?</h3><p>This action will delete this area and all its elements from this page.</p>'
+			, 	confirmText = $.pl.lang("<h3>Are you sure?</h3><p>This action will delete this area and all its elements from this page.</p>")
 
 			bootbox.confirm( confirmText, function( result ){
 				if(result == true){

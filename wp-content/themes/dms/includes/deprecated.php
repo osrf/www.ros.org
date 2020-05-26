@@ -14,17 +14,21 @@ function pagelines_layout_mode( ){
 
 }
 
+if ( !class_exists('PageLinesColor') ) :
 class PageLinesColor{
 	function c(){
 		_pl_deprecated_function( __FUNCTION__, '1.1', 'an alternative as PageLinesColor has been removed from core DMS.' );
 	}
 }
+endif;
 
+if ( !class_exists('PageLinesMetaPanel') ) :
 class PageLinesMetaPanel{
 	function register_tab(){
 		_pl_deprecated_function( __FUNCTION__, '1.1', 'an alternative as PageLinesMetaPanel has been removed from core DMS. See <a href="https://github.com/pagelines/DMS/issues/448#issuecomment-26383046">this issue</a> for more details and possible solutions.' );
 	}
 }
+endif;
 
 function pl_link_color() {
 	_pl_deprecated_function( __FUNCTION__, '1.0' );
@@ -44,7 +48,7 @@ function register_metatab($settings, $option_array, $section = '', $location = '
 
 		do_action('override_metatab_register', $option_array);
 
-	} 
+	}
 
 }
 
@@ -133,9 +137,9 @@ function pl_get_themes() {
  * @since 2.0.0
  */
 function pl_is_integration(){
-	
+
 	_pl_deprecated_function( __FUNCTION__, '1.1', 'integrations not supported' );
-	
+
 	global $pl_integration;
 
 	return (isset($pl_integration) && $pl_integration) ? true : false;
@@ -149,7 +153,7 @@ function pl_is_integration(){
  */
 function pl_get_integration(){
 	_pl_deprecated_function( __FUNCTION__, '1.1', 'integrations not supported' );
-	
+
 	global $pl_integration;
 
 	return (isset($pl_integration) && $pl_integration) ? sprintf('%s', $pl_integration) : false;
@@ -246,9 +250,9 @@ function pagelines_nav_classes(){
 
 // DEPRECATED for pl_nav_fallback
 function pagelines_nav_fallback() {
-	
+
 	_pl_deprecated_function( __FUNCTION__, '1.1', 'old style navigation from PL Framework' );
-	
+
 	global $post; ?>
 
 	<ul id="menu-nav" class="main-nav<?php echo pagelines_nav_classes();?>">
@@ -291,7 +295,7 @@ define( 'SECTION_ROOT', get_template_directory_uri() . '/sections');
 class PageLinesOptionsUI {
 	function __construct( $args ) {
 		_pl_deprecated_function( 'PageLinesOptionsUI', '1.1', 'DMSOptionsUI' );
-		
+
 		return new DMSOptionsUI($args);
 	}
 }
@@ -1249,8 +1253,8 @@ function get_pagelines_credentials( $t ) {
  */
 function pagelines_check_credentials( $type = 'setup' ) {
 
-	return true; 
-	
+	return true;
+
 	switch( $type ) {
 
 		case 'setup':
@@ -1469,6 +1473,7 @@ function grid_row_end( $count, $total_count, $perline){
 
 
 
+if ( !class_exists('PageLinesPostType') ) :
 /**
  *
  *
@@ -1740,6 +1745,7 @@ class PageLinesPostType {
 		}
 
 }
+endif;
 
 
 

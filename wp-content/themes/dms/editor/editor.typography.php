@@ -113,7 +113,7 @@ class EditorTypography{
 							'800'	=> array('name' => 'Bold (800)')
 						),
 						'default' 		=> '300',
-						'help'			=> __( '*These weights don\'t alwaye have an effect.', 'pagelines' ),
+						'help'			=> __( '*These weights don\'t always have an effect.', 'pagelines' ),
 					),
 					
 				),

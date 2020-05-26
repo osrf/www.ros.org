@@ -26,10 +26,10 @@ $.plTemplates = {
 					mode: 'templates'
 				,	run: 'load'
 				,	confirm: true
-				,	confirmText: "<h3>Are you sure?</h3><p>Loading a new template will overwrite the current page's configuration.</p>"
-				,	savingText: 'Loading Template'
+				,	confirmText: $.pl.lang("<h3>Are you sure?</h3><p>Loading a new template will overwrite the current page's configuration.</p>")
+				,	savingText: $.pl.lang("Loading Template")
 				,	refresh: true
-				,	refreshText: 'Successfully Loaded. Refreshing page'
+				,	refreshText: $.pl.lang("Successfully Loaded. Refreshing page")
 				, 	log: true
 				,	key: $(this).closest('.x-item').data('key')
 				,	templateMode: $.pl.config.templateMode
@@ -50,8 +50,8 @@ $.plTemplates = {
 						mode: 'templates'
 					,	run: 'delete'
 					,	confirm: true
-					,	confirmText: '<h3>Are you sure?</h3><p>This will delete this template. All pages using this template will be reverted to their default page configuration.</p>'
-					,	savingText: 'Deleting Template'
+					,	confirmText: $.pl.lang("<h3>Are you sure?</h3><p>This will delete this template. All pages using this template will be reverted to their default page configuration.</p>")
+					,	savingText: $.pl.lang("Deleting Template")
 					,	refresh: false
 					, 	log: true
 					,	key: key
@@ -81,8 +81,8 @@ $.plTemplates = {
 						mode: 'templates'
 					,	run: 'save'
 					,	confirm: false
-					,	savingText: 'Saving Template'
-					,	refreshText: 'Successfully Saved. Refreshing page'
+					,	savingText: $.pl.lang("Saving Template")
+					,	refreshText: $.pl.lang("Successfully Saved. Refreshing page")
 					,	refresh: true
 					, 	log: true
 					,	map: $.plMapping.getCurrentMap()
@@ -107,10 +107,10 @@ $.plTemplates = {
 						mode: 'templates'
 					,	run: 'update'
 					,	confirm: true
-					,	confirmText: '<h3>Are you sure?</h3><p>This action will overwrite this template and its configuration. All pages using this template will be updated with the new config as well.</p>'
-					,	savingText: 'Updating Template'
+					,	confirmText: $.pl.lang("<h3>Are you sure?</h3><p>This action will overwrite this template and its configuration. All pages using this template will be updated with the new config as well.</p>")
+					,	savingText: $.pl.lang("Updating Template")
 					,	successNote: true
-					,	successText: 'Template successfully updated!'
+					,	successText: $.pl.lang("Template successfully updated!")
 					,	refresh: false
 					, 	log: true
 					,	key: key
@@ -171,25 +171,10 @@ $.plTemplates = {
 								plPrint('Response was false.')
 								plPrint( response )
 							}
-
-
-
-
 						}
 				}
-
 			var response = $.plAJAX.run( args )
-
-
 		})
-
-
-
-
-
 	}
-
-
 }
-
 }(window.jQuery);

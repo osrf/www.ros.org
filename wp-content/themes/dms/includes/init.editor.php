@@ -21,9 +21,9 @@ class PageLinesEditor {
 		add_action( 'admin_init', array( $this, 'load_libs' ), 5);
 
 		add_action('wp_enqueue_scripts', array( $this, 'process_styles' ));
+
 		add_action( 'wp_head', array( $this, 'process_head' ) );
 		add_action( 'wp_footer', array( $this, 'process_foot' ) );
-
 
 		// RENDER SECTION TEMPLATES ACTIONS
 		add_action( 'pagelines_header', array( $this, 'process_header' ) );
@@ -168,15 +168,24 @@ class PageLinesEditor {
 
 	function process_head(){
 
+		if( ! is_object( $this->handler ) )
+			return false;
+			
 		$this->handler->process_head();
 	}
 
 	function process_foot(){
 
-		$this->handler->process_foot();
+			if( ! is_object( $this->handler ) )
+				return false;
+
+			$this->handler->process_foot();
 	}
 
 	function process_header(){
+
+		if( ! is_object( $this->handler ) )
+			return false;
 
 		$this->handler->process_region('header');
 

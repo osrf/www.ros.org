@@ -9,6 +9,9 @@ function pl_settings_default(){
 function pl_setting( $key, $args = array() ){
 	global $plopts;
 
+	if( has_filter( "pl_setting-$key" ) )
+		return apply_filters( "pl_setting-$key", $val );
+
 	if(!is_object($plopts)){
 		$plpg = new PageLinesPage;
 		$pldraft = new EditorDraft;
