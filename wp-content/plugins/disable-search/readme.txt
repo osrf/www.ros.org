@@ -5,15 +5,15 @@ Tags: search, disable, coffee2code
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
-Tested up to: 5.3
-Stable tag: 1.7.2
+Tested up to: 5.4
+Stable tag: 1.8
 
 Disable the built-in front-end search capabilities of WordPress.
 
 
 == Description ==
 
-Prevent WordPress from allowing and handling any search requests for the site. Specifically, this plugin:
+This plugin prevents WordPress from allowing and handling any search requests from the front-end of the site. Specifically, this plugin:
 
 * Prevents the search form from appearing if the theme uses the standard `get_search_form()` function to display the search form.
 * Prevents the search form from appearing if the theme uses a searchform.php template
@@ -23,10 +23,11 @@ Prevent WordPress from allowing and handling any search requests for the site. S
   * Deactivates any search widgets currently in use in any sidebars (they are hidden, not deleted; they'll still be in the proper locations if this plugin gets deactivated)
 * With or without the search form, the plugin prevents any direct or manual requests by visitors, via either GET or POST requests, from actually returning any search results.
 * Submitted attempts at a search will be given a 404 File Not Found response, rendered by your site's 404.php template, if present.
+* Disables output of `SearchAction` in SEO schema by the [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/) plugin.
 
 The plugin only affects search on the front-end of the site. It does not disable searching in the admin section of the site.
 
-Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/disable-search/) | [Plugin Directory Page](https://wordpress.org/plugins/disable-search/) | [GitHub](https://github.com/coffee2code/disable-search/) | [Author Homepage](http://coffee2code.com)
+Links: [Plugin Homepage](https://coffee2code.com/wp-plugins/disable-search/) | [Plugin Directory Page](https://wordpress.org/plugins/disable-search/) | [GitHub](https://github.com/coffee2code/disable-search/) | [Author Homepage](https://coffee2code.com)
 
 
 == Installation ==
@@ -62,6 +63,17 @@ Yes.
 
 == Changelog ==
 
+= 1.8 (2020-06-02) =
+* New: Disable output of `SearchAction` in SEO schema by Yoast SEO. Props @galengidman.
+* New: Add TODO.md and move existing TODO list from top of main plugin file into it (and add to it)
+* Change: Use HTTPS for link to WP SVN repository in bin script for configuring unit tests
+* Change: Note compatibility through WP 5.4+
+* Change: Update links to coffee2code.com to be HTTPS
+* Unit tests:
+    * New: Add tests for hooking actions and filters
+    * New: Add test for backend searches not being affected
+    * Change: Remove unnecessary unregistering of hooks and thusly delete `tearDown()`
+
 = 1.7.2 (2019-12-12) =
 * Change: Note compatibility through WP 5.3+
 * Change: Unit tests: Change method signature of `assertQueryTrue()` to match parent's update to use the spread operator
@@ -74,23 +86,13 @@ Yes.
 * Change: Note compatibility through WP 5.2+
 * Change: Add link to CHANGELOG.md in README.md
 
-= 1.7 (2019-03-27) =
-* New: Add CHANGELOG.md file and move all but most recent changelog entries into it
-* Change: Initialize plugin on 'plugins_loaded' action instead of on load
-* Change: Merge `do_init()` into `init()`
-* Unit tests:
-    * Fix: Discontinue testing deprecated `is_comments_popup` condition
-    * Fix: Use `file_exists()` instead of `locate_template()` to verify presence of file in theme (the latter is unreliable since it is based on constants)
-* Change: Note compatibility through WP 5.1+
-* Change: Add README.md link to plugin's page in Plugin Directory
-* Change: Update copyright date (2019)
-* Change: Update License URI to be HTTPS
-* Change: Split paragraph in README.md's "Support" section into two
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/disable-search/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 1.8 =
+Minor update: Disabled output of SearchAction from schema output by the Yoast SEO plugin, added TODO.md file, updated a few URLs to be HTTPS, added more unit tests, and noted compatibility through WP 5.4+
 
 = 1.7.2 =
 Trivial update: noted compatibility through WP 5.3+, fixed minor unit test warning, and updated copyright date (2020).

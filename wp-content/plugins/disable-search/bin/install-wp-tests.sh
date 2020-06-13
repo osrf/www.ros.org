@@ -14,7 +14,7 @@ DB_HOST=$5
 set -ex
 
 # set up testing suite
-svn co --ignore-externals --quiet http://develop.svn.wordpress.org/tags/$WP_VERSION $WP_TESTS_DIR
+svn co --ignore-externals --quiet https://develop.svn.wordpress.org/tags/$WP_VERSION $WP_TESTS_DIR
 
 cd $WP_TESTS_DIR
 cp wp-tests-config-sample.php wp-tests-config.php

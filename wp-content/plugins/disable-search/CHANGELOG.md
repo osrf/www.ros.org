@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.8 _(2020-06-02)_
+* New: Disable output of `SearchAction` in SEO schema by Yoast SEO. Props @galengidman.
+* New: Add TODO.md and move existing TODO list from top of main plugin file into it (and add to it)
+* Change: Use HTTPS for link to WP SVN repository in bin script for configuring unit tests
+* Change: Note compatibility through WP 5.4+
+* Change: Update links to coffee2code.com to be HTTPS
+* Unit tests:
+    * New: Add tests for hooking actions and filters
+    * New: Add test for backend searches not being affected
+    * Change: Remove unnecessary unregistering of hooks and thusly delete `tearDown()`
+
 ## 1.7.2 _(2019-12-12)_
 * Change: Note compatibility through WP 5.3+
 * Change: Unit tests: Change method signature of `assertQueryTrue()` to match parent's update to use the spread operator

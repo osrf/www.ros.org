@@ -4,13 +4,6 @@ defined( 'ABSPATH' ) or die();
 
 class Disable_Search_Test extends WP_UnitTestCase {
 
-	public function tearDown() {
-		parent::tearDown();
-		// Ensure the filter gets removed
-		remove_filter( 'get_search_form', array( $this, 'output_search_form' ) );
-	}
-
-
 	/*
 	 *
 	 * HELPER FUNCTIONS
@@ -79,6 +72,24 @@ class Disable_Search_Test extends WP_UnitTestCase {
 
 	//
 	//
+	// DATA PROVIDERS
+	//
+	//
+
+
+	public static function get_default_hooks() {
+		return array(
+			array( 'action', 'widgets_init',                 'disable_search_widget',   1 ),
+			array( 'action', 'parse_query',                  'parse_query',             5 ),
+			array( 'filter', 'get_search_form',              'get_search_form',       999 ),
+			array( 'action', 'admin_bar_menu',               'admin_bar_menu',         11 ),
+			array( 'filter', 'disable_wpseo_json_ld_search', '__return_true',          10, false ),
+		);
+	}
+
+
+	//
+	//
 	// TESTS
 	//
 	//
@@ -89,11 +100,27 @@ class Disable_Search_Test extends WP_UnitTestCase {
 	}
 
 	public function test_version() {
-		$this->assertEquals( '1.7.2', c2c_DisableSearch::version() );
+		$this->assertEquals( '1.8', c2c_DisableSearch::version() );
 	}
 
 	public function test_hooks_plugins_loaded() {
 		$this->assertEquals( 10, has_action( 'plugins_loaded', array( 'c2c_DisableSearch', 'init' ) ) );
+	}
+
+	/**
+	 * @dataProvider get_default_hooks
+	 */
+	public function test_default_hooks( $hook_type, $hook, $function, $priority, $class_method = true ) {
+		$callback = $class_method ? array( 'c2c_DisableSearch', $function ) : $function;
+
+		$prio = $hook_type === 'action' ?
+			has_action( $hook, $callback ) :
+			has_filter( $hook, $callback );
+
+		$this->assertNotFalse( $prio );
+		if ( $priority ) {
+			$this->assertEquals( $priority, $prio );
+		}
 	}
 
 	public function test_no_search_form_apppears_even_if_searchform_php_exists() {
@@ -167,7 +194,45 @@ class Disable_Search_Test extends WP_UnitTestCase {
 	}
 
 	/*
-	 * TEST TODO:
-	 * - Backend search is not affected
+	 * TESTS AFTER THIS SHOULD ASSUME THEY ARE IN THE ADMIN AREA
 	 */
+
+	// This should be the first of the true admin area tests and is
+	// necessary to set the environment to be the admin area.
+	public function test_in_admin_area() {
+		define( 'WP_ADMIN', true );
+
+		$this->assertTrue( is_admin() );
+	}
+
+	public function test_does_not_hook_parse_query_in_admin() {
+		// Remove query altering hook.
+		remove_action( 'parse_query', array( 'c2c_DisableSearch', 'parse_query' ), 5 );
+		// Also remove a hook as a way to verify hooks are otherwise re-registered.
+		remove_action( 'widgets_init', array( 'c2c_DisableSearch', 'disable_search_widget' ), 1 );
+
+		// Refire registration of hooks.
+		c2c_DisableSearch::init();
+
+		$this->assertFalse( has_action( 'parse_query', array( 'c2c_DisableSearch', 'parse_query' ) ) );
+		$this->assertEquals( 1, has_action( 'widgets_init', array( 'c2c_DisableSearch', 'disable_search_widget' ) ) );
+	}
+
+	public function test_backend_search_unaffected() {
+		// Remove query altering hook.
+		remove_action( 'parse_query', array( 'c2c_DisableSearch', 'parse_query' ), 5 );
+		// Refire registration of hooks.
+		c2c_DisableSearch::init();
+
+		list( $post_id1, $post_id2 ) = $this->create_posts();
+
+		$this->go_to( 'wp-admin/edit.php?s=gallifrey&post_status=all&post_type=post' );
+
+		$this->assertTrue( $GLOBALS['wp_query']->is_main_query() );
+		$this->assertEquals( get_query_var( 's' ), 'gallifrey' );
+		$this->assertQueryTrue( 'is_admin', 'is_search' );
+		$this->assertEquals( 1, count( $GLOBALS['wp_query']->posts ) );
+		$this->assertEquals( $post_id1, $GLOBALS['wp_query']->posts[0]->ID );
+	}
+
 }

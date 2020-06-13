@@ -1,16 +1,16 @@
 <?php
 /**
  * Plugin Name: Disable Search
- * Version:     1.7.2
- * Plugin URI:  http://coffee2code.com/wp-plugins/disable-search/
+ * Version:     1.8
+ * Plugin URI:  https://coffee2code.com/wp-plugins/disable-search/
  * Author:      Scott Reilly
- * Author URI:  http://coffee2code.com/
+ * Author URI:  https://coffee2code.com/
  * Text Domain: disable-search
  * License:     GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Description: Disable the built-in front-end search capabilities of WordPress.
  *
- * Compatible with WordPress 4.6 through 5.3+.
+ * Compatible with WordPress 4.6 through 5.4+.
  *
  * =>> Read the accompanying readme.txt file for instructions and documentation.
  * =>> Also, visit the plugin's homepage for additional information and updates.
@@ -18,19 +18,7 @@
  *
  * @package Disable_Search
  * @author  Scott Reilly
- * @version 1.7.2
- */
-
-/*
- * TODO:
- * - Rather than responding to search requests with a 404 error, allow response to be configurable:
- *     404
- *     404 with custom error message (e.g. Search has been disabled)
- *     Redirect to a post or page
- *     Redirect back home (but set some sort of flag that can be detected so the theme can display a message)
- *     Act as if search was performed but no results were found
- * - Filter to allows searching to be conditionally enabled (query obj as arg)
- * - Allow front-end searches for admins (and/or all logged in users?), via a Reading option and/or filters
+ * @version 1.8
  */
 
 /*
@@ -63,7 +51,7 @@ class c2c_DisableSearch {
 	 * @since 1.3
 	 */
 	public static function version() {
-		return '1.7.2';
+		return '1.8';
 	}
 
 	/**
@@ -95,6 +83,8 @@ class c2c_DisableSearch {
 		add_filter( 'get_search_form', array( __CLASS__, 'get_search_form' ), 999 );
 
 		add_action( 'admin_bar_menu',  array( __CLASS__, 'admin_bar_menu' ), 11 );
+
+		add_filter( 'disable_wpseo_json_ld_search', '__return_true' );
 	}
 
 	/**
