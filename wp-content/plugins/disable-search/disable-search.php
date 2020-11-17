@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Disable Search
- * Version:     1.8
+ * Version:     1.8.1
  * Plugin URI:  https://coffee2code.com/wp-plugins/disable-search/
  * Author:      Scott Reilly
  * Author URI:  https://coffee2code.com/
@@ -10,7 +10,7 @@
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Description: Disable the built-in front-end search capabilities of WordPress.
  *
- * Compatible with WordPress 4.6 through 5.4+.
+ * Compatible with WordPress 4.6 through 5.5+.
  *
  * =>> Read the accompanying readme.txt file for instructions and documentation.
  * =>> Also, visit the plugin's homepage for additional information and updates.
@@ -18,7 +18,7 @@
  *
  * @package Disable_Search
  * @author  Scott Reilly
- * @version 1.8
+ * @version 1.8.1
  */
 
 /*
@@ -51,7 +51,7 @@ class c2c_DisableSearch {
 	 * @since 1.3
 	 */
 	public static function version() {
-		return '1.8';
+		return '1.8.1';
 	}
 
 	/**

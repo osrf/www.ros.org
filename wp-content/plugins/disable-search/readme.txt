@@ -5,8 +5,8 @@ Tags: search, disable, coffee2code
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 4.6
-Tested up to: 5.4
-Stable tag: 1.8
+Tested up to: 5.5
+Stable tag: 1.8.1
 
 Disable the built-in front-end search capabilities of WordPress.
 
@@ -63,6 +63,15 @@ Yes.
 
 == Changelog ==
 
+= 1.8.1 (2020-09-07) =
+* Change: Restructure unit test file structure
+    * New: Create new subdirectory `phpunit/` to house all files related to unit testing
+    * Change: Move `bin/` to `phpunit/bin/`
+    * Change: Move `tests/bootstrap.php` to `phpunit/`
+    * Change: Move `tests/` to `phpunit/tests/`
+    * Change: Rename `phpunit.xml` to `phpunit.xml.dist` per best practices
+* Change: Note compatibility through WP 5.5+
+
 = 1.8 (2020-06-02) =
 * New: Disable output of `SearchAction` in SEO schema by Yoast SEO. Props @galengidman.
 * New: Add TODO.md and move existing TODO list from top of main plugin file into it (and add to it)
@@ -79,17 +88,13 @@ Yes.
 * Change: Unit tests: Change method signature of `assertQueryTrue()` to match parent's update to use the spread operator
 * Change: Update copyright date (2020)
 
-= 1.7.1 (2019-06-17) =
-* Unit tests:
-    * Change: Update unit test install script and bootstrap to use latest WP unit test repo
-    * New: Test that the plugin hooks `plugins_loaded` for initialization
-* Change: Note compatibility through WP 5.2+
-* Change: Add link to CHANGELOG.md in README.md
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/disable-search/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 1.8.1 =
+Trivial update: Restructured unit test file structure and noted compatibility through WP 5.5+.
 
 = 1.8 =
 Minor update: Disabled output of SearchAction from schema output by the Yoast SEO plugin, added TODO.md file, updated a few URLs to be HTTPS, added more unit tests, and noted compatibility through WP 5.4+

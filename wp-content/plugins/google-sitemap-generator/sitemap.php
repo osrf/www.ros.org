@@ -10,22 +10,20 @@
 
  For additional details like installation instructions, please check the readme.txt and documentation.txt files.
 
- Have fun!
-   Arne
 
  Info for WordPress:
  ==============================================================================
  Plugin Name: Google XML Sitemaps
  Plugin URI: http://www.arnebrachhold.de/redir/sitemap-home/
  Description: This plugin improves SEO using sitemaps for best indexation by search engines like Google, Bing, Yahoo and others.
- Version: 4.1.0
- Author: Arne Brachhold
+ Version: 4.1.1
+ Author: Auctollo
  Author URI: http://www.arnebrachhold.de/
  Text Domain: sitemap
  Domain Path: /lang
 
 
- Copyright 2005 - 2018 ARNE BRACHHOLD  (email : himself - arnebrachhold - de)
+ Copyright 2005 - 2018 AUCTOLLO
 
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by

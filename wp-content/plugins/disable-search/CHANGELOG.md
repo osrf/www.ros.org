@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.8.1 _(2020-09-07)_
+* Change: Restructure unit test file structure
+    * New: Create new subdirectory `phpunit/` to house all files related to unit testing
+    * Change: Move `bin/` to `phpunit/bin/`
+    * Change: Move `tests/bootstrap.php` to `phpunit/`
+    * Change: Move `tests/` to `phpunit/tests/`
+    * Change: Rename `phpunit.xml` to `phpunit.xml.dist` per best practices
+* Change: Note compatibility through WP 5.5+
+
 ## 1.8 _(2020-06-02)_
 * New: Disable output of `SearchAction` in SEO schema by Yoast SEO. Props @galengidman.
 * New: Add TODO.md and move existing TODO list from top of main plugin file into it (and add to it)
