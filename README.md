@@ -21,3 +21,9 @@ You also need to set up the database, which will involve at least something like
     git checkout wordpressdb
     <undump the content of wordpress.sql into your mysql database>
     <configure the username and password in /var/www/wp-config.php>
+
+
+Also set up the following cron jobs
+
+    0 */6 * * * /home/ros/www.ros.org_cron_scripts/commit-db.sh > /dev/null 2> /dev/null
+    0 */6 * * * /home/ros/www.ros.org_cron_scripts/commit-website.sh > /dev/null 2> /dev/null
