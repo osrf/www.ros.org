@@ -1,3 +1,9 @@
+DEPRECATED
+==========
+
+This has been replaced by https://github.com/ros-infrastructure/www.ros.org
+
+
 www.ros.org
 ===========
 
